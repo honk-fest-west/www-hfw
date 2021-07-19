@@ -1,0 +1,45 @@
+---
+import HeadGoogle from '../components/head/HeadGoogle.astro'
+import HeadMailChimp from '../components/head/HeadMailChimp.astro'
+import HeadOpenGraph from '../components/head/HeadOpenGraph.astro'
+import BackgroundImage from '../components/BackgroundImage.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+const title = 'Home';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description="
+      content="HONK! Fest West is an accessible community music festival driven by the energetic performances of street bands in public spaces."
+    />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>{ title }</title>
+
+    <HeadGoogle></HeadGoogle>
+    <HeadMailChimp></HeadMailChimp>
+    <HeadOpenGraph title={ title }></HeadOpenGraph>
+  </head>
+
+  <body class="font-sans antialiased text-gray-600 min-h-full flex flex-col">
+    <BackgroundImage></BackgroundImage>
+    <header>
+	    <Header></Header>
+    </header>
+	  <main>
+		  <slot></slot>
+	  </main>
+    <footer>
+	    <Footer></Footer>
+    </footer>
+  </body>
+
+</html>

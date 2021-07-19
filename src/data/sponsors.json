@@ -1,0 +1,75 @@
+{
+	"shunpike": {
+	   "name": "Shunpike",
+	   "link": "http://shunpike.org",
+	   "image": "/assets/images/sponsors/shunpike.gif"
+	},
+	"kuow": {
+	   "name": "KUOW",
+	   "link": "http://kuow.org",
+	   "image": "/assets/images/sponsors/kuow.png"
+	},
+	"neighborhoods": {
+	   "name": "Seattle Department of Neighborhoods",
+	   "link": "https://www.seattle.gov/neighborhoods",
+	   "image": "/assets/images/sponsors/dept_of_neighborhoods.png"
+	},
+	"arts": [
+	   {
+		  "name": "Tides Foundation",
+		  "link": "http://www.tides.org",
+		  "image": "/assets/images/sponsors/tides.png"
+	   },
+	   {
+		  "name": "4 Culture",
+		  "link": "http://www.4culture.org",
+		  "image": "/assets/images/sponsors/4culture.png"
+	   },
+	   {
+		  "name": "King County",
+		  "link": "https://www.kingcounty.gov",
+		  "image": "/assets/images/sponsors/king_county.png"
+	   }
+	],
+	"food": [
+	   {
+		  "name": "nuflours",
+		  "link": "https://www.nuflours.com",
+		  "image": "/assets/images/sponsors/nuflours.jpeg"
+	   },
+	   {
+		  "name": "Macrina Bakery",
+		  "link": "http://macrinabakery.com",
+		  "image": "/assets/images/sponsors/macrina.png"
+	   },
+	   {
+		  "name": "Fresh Flours",
+		  "link": "http://www.freshfloursseattle.com",
+		  "image": "/assets/images/sponsors/fresh_flours.jpeg"
+	   },
+	   {
+		  "name": "Ada's Discovery Cafe",
+		  "link": "https://www.discovery.adasbooks.com/",
+		  "image": "/assets/images/sponsors/adas.jpg"
+	   }
+	],
+	"venues": [
+	   {
+		  "name": "NEPANTLA Cultural Arts",
+		  "link": "https://www.nepantlaculturalarts.com/",
+		  "image": "/assets/images/sponsors/nepantla_logo_960.jpg"
+	   },
+	   {
+		  "name": "Miss Sheryl's",
+		  "link": "https://www.misssherylsballet.com/",
+		  "image": "/assets/images/sponsors/misssheryl.jpg"
+	   }
+	],
+	"transportation": [
+	   {
+		  "name": "Lime",
+		  "link": "https://www.li.me/",
+		  "image": "/assets/images/sponsors/lime.png"
+	   }
+	]
+ }

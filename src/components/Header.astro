@@ -1,0 +1,40 @@
+---
+import navigation from '../data/navigation.json';
+---
+
+<div class="navbar-container">
+	<div class="row">
+		<div class="col-10 col-md-4 mx-auto">
+		<a class="d-block mx-auto my-4" href="/">
+			<img
+			class="logo"
+			src="{ '/assets/images/logo-2021.svg' }"
+			alt="HONK! Fest West"
+			/>
+		</a>
+		</div>
+	</div>
+	<nav>
+		<ul class="nav justify-content-center">
+			{navigation.main.map((item) => (
+				<>
+					<li class="nav-item">
+        				<a
+          					class="nav-link ft-fml-1 {Astro.request.url == item.link ? 'active' : ''}"
+          					href={ item.link }
+          				>{ item.name }</a>
+      				</li>
+      				<li><span class="nav-bullet">&#8226;</span></li>
+				</>
+			))}
+
+			<li class="nav-item social-links">
+				{navigation.social.map((item) => (
+					<a class="social-link" target="_blank" href={ item.link }>
+						<i class="fab { item.icon }"></i>
+					</a>
+				))}
+			</li>
+		</ul>
+	</nav>
+</div>

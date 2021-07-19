@@ -1,0 +1,42 @@
+{
+	"main": [
+	   {
+		  "name": "About",
+		  "link": "/about.html"
+	   },
+	   {
+		  "name": "Volunteer",
+		  "link": "/volunteer.html"
+	   },
+	   {
+		  "name": "Donate",
+		  "link": "/donate.html"
+	   },
+	   {
+		  "name": "Sponsors",
+		  "link": "/sponsors.html"
+	   },
+	   {
+		  "name": "Contact",
+		  "link": "/contact.html"
+	   }
+	],
+	"social": [
+	   {
+		  "icon": "fa-facebook",
+		  "link": "https://www.facebook.com/HONKFestWest/"
+	   },
+	   {
+		  "icon": "fa-twitter",
+		  "link": "https://twitter.com/honkfestwest"
+	   },
+	   {
+		  "icon": "fa-instagram",
+		  "link": "https://www.instagram.com/honkfestwest/"
+	   },
+	   {
+		  "icon": "fa-flickr",
+		  "link": "https://www.flickr.com/groups/1352913@N23/"
+	   }
+	]
+ }
