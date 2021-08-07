@@ -4,6 +4,7 @@ import SocialLinks from '@components/SocialLinks'
 import navigation from '@data/navigation.json';
 ---
 
+<!-- H!FW LOGO -->
 <div class="flex justify-center">
 	<a class="block mx-auto mb-4 mt-8 w-4/5 md:w-1/3" href="/">
 		<img
@@ -13,20 +14,25 @@ import navigation from '@data/navigation.json';
 		/>
 	</a>
 </div>
-<nav>
+
+<nav class="my-3">
 	<ul class="flex justify-center items-center">
+
+		<!-- MAIN NAV -->
 		{navigation.main.map((item) => (
-			<li class="nav-item">
+			<li class="text-3xl text-nav-color flex items-center">
 				<a
-					class="nav-link ft-fml-1 {Astro.request.url == item.link ? 'active' : ''}"
+					class="mx-2 block font-title {Astro.request.url == item.link ? 'active' : ''}"
 					href={ item.link }
 				>{ item.name }</a>
-				<span class="nav-bullet">&#8226;</span>
+				<span class="mx-2 block h-11">&#8226;</span>
 			</li>
 		))}
+
+		<!-- SOCIAL NAV -->
 		{Object.keys(navigation.social).map((item) => (
-			<li>
-				<SocialLinks link={item}/>
+			<li class="text-2xl text-nav-color px-1 h-9">
+				<SocialLinks link={item} size="1.875rem" />
 			</li>
 		))}
 	</ul>
