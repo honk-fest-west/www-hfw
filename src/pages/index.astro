@@ -1,10 +1,16 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '@layouts/BaseLayout.astro'
+import Head from '@components/BaseHead.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
 
 const title = 'Home';
 ---
 
-<BaseLayout title={title}>
-    <h1>Test this home page</h1>
+<BaseLayout>
+  <Head slot="head" title={title} />
+  <Header slot="header" />
+  <h1>Test this home page</h1>
+  <Footer slot="footer" />
 </BaseLayout>
 

@@ -1,5 +1,5 @@
 ---
-const pdidies = Astro.props;
+const {title = ''} = Astro.props;
 ---
 
 <meta
@@ -7,14 +7,14 @@ const pdidies = Astro.props;
 	content="https://www.honkfestwest.org{ Astro.request.url }"
 />
 <meta property="og:type" content="website" />
-<meta property="og:title" content={ pdidies } />
+<meta property="og:title" content={ title } />
 <meta
 	property="og:description"
 	content="HONK! Fest West is an accessible community music festival driven by the energetic performances of street bands in public spaces."
 />
 <meta
 	property="og:image"
-	content="https://www.honkfestwest.org/assets/images/festival/2021/og-image-2021.png"
+	content="https://ik.imagekit.io/thegoldendino/hfw/festival/2021/og-image-2021_C6BNZCjKDUy.png?updatedAt=1628273288458&tr=w-1200,h-630,fo-auto"
 />
 <meta property="og:image:width" content="600" />
 <meta property="og:image:height" content="315" />

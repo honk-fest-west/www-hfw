@@ -1,75 +1,75 @@
 {
-	"shunpike": {
-	   "name": "Shunpike",
-	   "link": "http://shunpike.org",
-	   "image": "/assets/images/sponsors/shunpike.gif"
-	},
-	"kuow": {
-	   "name": "KUOW",
-	   "link": "http://kuow.org",
-	   "image": "/assets/images/sponsors/kuow.png"
-	},
-	"neighborhoods": {
-	   "name": "Seattle Department of Neighborhoods",
-	   "link": "https://www.seattle.gov/neighborhoods",
-	   "image": "/assets/images/sponsors/dept_of_neighborhoods.png"
-	},
-	"arts": [
-	   {
-		  "name": "Tides Foundation",
-		  "link": "http://www.tides.org",
-		  "image": "/assets/images/sponsors/tides.png"
-	   },
-	   {
-		  "name": "4 Culture",
-		  "link": "http://www.4culture.org",
-		  "image": "/assets/images/sponsors/4culture.png"
-	   },
-	   {
-		  "name": "King County",
-		  "link": "https://www.kingcounty.gov",
-		  "image": "/assets/images/sponsors/king_county.png"
-	   }
-	],
-	"food": [
-	   {
-		  "name": "nuflours",
-		  "link": "https://www.nuflours.com",
-		  "image": "/assets/images/sponsors/nuflours.jpeg"
-	   },
-	   {
-		  "name": "Macrina Bakery",
-		  "link": "http://macrinabakery.com",
-		  "image": "/assets/images/sponsors/macrina.png"
-	   },
-	   {
-		  "name": "Fresh Flours",
-		  "link": "http://www.freshfloursseattle.com",
-		  "image": "/assets/images/sponsors/fresh_flours.jpeg"
-	   },
-	   {
-		  "name": "Ada's Discovery Cafe",
-		  "link": "https://www.discovery.adasbooks.com/",
-		  "image": "/assets/images/sponsors/adas.jpg"
-	   }
-	],
-	"venues": [
-	   {
-		  "name": "NEPANTLA Cultural Arts",
-		  "link": "https://www.nepantlaculturalarts.com/",
-		  "image": "/assets/images/sponsors/nepantla_logo_960.jpg"
-	   },
-	   {
-		  "name": "Miss Sheryl's",
-		  "link": "https://www.misssherylsballet.com/",
-		  "image": "/assets/images/sponsors/misssheryl.jpg"
-	   }
-	],
-	"transportation": [
-	   {
-		  "name": "Lime",
-		  "link": "https://www.li.me/",
-		  "image": "/assets/images/sponsors/lime.png"
-	   }
-	]
- }
+  "shunpike": {
+    "name": "Shunpike",
+    "link": "http://shunpike.org",
+    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/shunpike_IPvJZWnb8w.gif?updatedAt=1628178274416"
+  },
+  "kuow": {
+    "name": "KUOW",
+    "link": "http://kuow.org",
+    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/kuow_ZcbdUxa5OuFV.png?updatedAt=1628178274430"
+  },
+  "neighborhoods": {
+    "name": "Seattle Department of Neighborhoods",
+    "link": "https://www.seattle.gov/neighborhoods",
+    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/dept_of_neighborhoods_JG5xzNrmmG.png?updatedAt=1628178274439"
+  },
+  "arts": [
+    {
+      "name": "Tides Foundation",
+      "link": "http://www.tides.org",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/tides_VKjzaCtWeMpd.png?updatedAt=1628178274414"
+    },
+    {
+      "name": "4 Culture",
+      "link": "http://www.4culture.org",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/4culture_IW6D7aOFH.png?updatedAt=1628178274430"
+    },
+    {
+      "name": "King County",
+      "link": "https://www.kingcounty.gov",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/king_county_JDT5vipxhD.png?updatedAt=1628178274419"
+    }
+  ],
+  "food": [
+    {
+      "name": "nuflours",
+      "link": "https://www.nuflours.com",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/nuflours_utz4ZMMdXR.jpeg?updatedAt=1628178274450"
+    },
+    {
+      "name": "Macrina Bakery",
+      "link": "http://macrinabakery.com",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/macrina_bUJj010TKAZN.png?updatedAt=1628178274420"
+    },
+    {
+      "name": "Fresh Flours",
+      "link": "http://www.freshfloursseattle.com",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/fresh_flours_nawYVSrZVWn3.jpeg?updatedAt=1628178274417"
+    },
+    {
+      "name": "Ada's Discovery Cafe",
+      "link": "https://www.discovery.adasbooks.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/adas_pe9wg09osnm.jpg?updatedAt=1628178274476"
+    }
+  ],
+  "venues": [
+    {
+      "name": "NEPANTLA Cultural Arts",
+      "link": "https://www.nepantlaculturalarts.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/nepantla_logo_960_-p-rdHvM4K-s.jpg?updatedAt=1628178274426"
+    },
+    {
+      "name": "Miss Sheryl's",
+      "link": "https://www.misssherylsballet.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/misssheryl_EE1e6K6JIA.jpg?updatedAt=1628178274423"
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Lime",
+      "link": "https://www.li.me/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/lime_AMueV5FcF7.png?updatedAt=1628178274442"
+    }
+  ]
+}

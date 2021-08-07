@@ -1,6 +1,8 @@
 ---
-import sponsors from '../data/sponsors.json'
-import navigation from '../data/navigation.json';
+import SocialLinks from '@components/SocialLinks'
+
+import sponsors from '@data/sponsors.json'
+import navigation from '@data/navigation.json';
 
 const golden_dino = true;
 ---
@@ -84,14 +86,11 @@ const golden_dino = true;
       </div>
       <div class="col-md-4 text-center">
         <ul class="nav justify-content-around">
-          {navigation.social.map((item) => (
-          <li class="nav-item social-links">
-            <a class="social-link" target="_blank" href="{ item.link }"
-              ><i class="fab { item.icon }"></i
-            ></a>
-          </li>
-
-		  ))}
+          {Object.keys(navigation.social).map((item) => (
+            <li>
+              <SocialLinks link={item}/>
+            </li>
+          ))}
         </ul>
       </div>
       <div class="col-md-4 text-center"><a href="#">Back to top</a></div>

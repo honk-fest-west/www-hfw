@@ -1,0 +1,25 @@
+---
+import Google from '@components/BaseHead/Google.astro'
+import MailChimp from '@components/BaseHead/MailChimp.astro'
+import OpenGraph from '@components/BaseHead/OpenGraph.astro'
+
+const { title = '' } = Astro.props;
+---
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta
+	name="description="
+	content="HONK! Fest West is an accessible community music festival driven by the energetic performances of street bands in public spaces."
+/>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/style/global.css">
+
+<title>{ title }</title>
+
+<Google />
+<MailChimp />
+<OpenGraph title={ title } />
+
+<slot />
