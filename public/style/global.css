@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content-container {
+  @apply bg-white bg-opacity-40 p-5 rounded;
+}
+
+.title {
+  @apply text-3xl font-title border-b-4 border-opacity-60 border-accent-color border-dotted mb-3;
+}

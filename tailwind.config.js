@@ -19,9 +19,8 @@ module.exports = {
         900: '#142924',
       },
       'title-primary-color': '#489ca7',
-      'title-secondary-color': '#6c757d',
       'accent-color': '#dc5849',
-      gray: colors.trueGray,
+      gray: colors.coolGray,
       white: colors.white,
     },
     extend: {
