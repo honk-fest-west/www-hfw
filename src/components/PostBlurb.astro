@@ -1,0 +1,31 @@
+---
+import { Markdown } from 'astro/components'
+
+const {post} = Astro.props;
+---
+
+<style>
+	a {
+		@apply text-accent-color font-bold
+	}
+</style>
+
+<div>
+	<h1 class="text-3xl font-title border-b-4 border-opacity-60 border-accent-color border-dotted mb-3">
+		<span class="text-title-primary-color pr-3">
+			{post.title}
+		</span>
+		<span class="text-title-secondary-color">
+			{post.subtitle}
+		</span>
+	</h1>
+
+	<div class="flex">
+		<a class="block w-1/4 flex-none mr-5" href={post.url}>
+			<img class="w-full border-2 border-accent-color" src={post.image_url} alt={`${post.title} ${post.subtitle}`}/>
+		</a>
+		<div class="font-base antialiased text-main-color-800 leading-7 text-lg">
+			<Markdown content={post.astro.source} />
+		</div>
+	</div>
+</div>

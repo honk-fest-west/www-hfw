@@ -3,5 +3,6 @@ export default {
     '@components': './src/components',
     '@layouts': './src/layouts',
     '@data': './src/data',
+    '@pages': './src/pages',
   },
 };

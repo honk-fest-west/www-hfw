@@ -20,7 +20,8 @@ module.exports = {
       },
       'title-primary-color': '#489ca7',
       'title-secondary-color': '#6c757d',
-      'link-color': '#dc5849',
+      'accent-color': '#dc5849',
+      gray: colors.trueGray,
       white: colors.white,
     },
     extend: {

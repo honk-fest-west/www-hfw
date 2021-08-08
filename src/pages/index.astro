@@ -3,8 +3,11 @@ import BaseLayout from '@layouts/BaseLayout.astro'
 import Head from '@components/BaseHead.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
+import PostBlurb from '@components/PostBlurb.astro'
 
 const title = 'Home';
+
+const posts = Astro.fetchContent('@pages/post/*.md');
 ---
 
 <BaseLayout>
@@ -15,10 +18,10 @@ const title = 'Home';
     <!-- INFO BLOCK -->
     <div class="col-span-3 bg-white bg-opacity-40 p-5 rounded">
       <div class="flex flex-col items-center text-4xl font-emphasis font-medium tracking-wide">
-        <span class="block  text-title-primary-color mb-1">
+        <span class="block text-title-primary-color mb-1">
           HONK! FEST WEST
         </span>
-        <span class="block text-link-color mb-2 tracking-normal">
+        <span class="block text-accent-color mb-2 tracking-normal">
           SAVE THE DATE » <u>SEPTEMBER 18TH, 2021</u>
         </span>
         <span class="block text-title-primary-color">
@@ -42,21 +45,8 @@ const title = 'Home';
           target="_blank" 
           novalidate="">
 
-          <div id="mc_embed_signup_scroll" class="
-              flex
-              flex-col
-              justify-center
-              items-center
-              w-full
-            ">
-            <div class="
-                mc-field-group
-                hidden md:flex
-                w-full
-                mb-2
-                justify-center
-                items-center
-              ">
+          <div id="mc_embed_signup_scroll" class="flex flex-col justify-center items-center w-full">
+            <div class="hidden md:flex w-full mb-2 justify-center items-center">
               <label class="text-title-secondary-color mr-2 mb-0 block text-center" for="mce-EMAIL">
                 EMAIL
               </label>
@@ -83,7 +73,11 @@ const title = 'Home';
     </div>
 
     <!-- POSTS -->
-    <div class="col-span-6 bg-white bg-opacity-40 p-5"></div>
+    {posts.map((post) => (
+      <article class="col-span-6 bg-white bg-opacity-40 p-5">
+        <PostBlurb post={post}/>
+      </article>
+    ))}
   </div>
   <Footer slot="footer" />
 </BaseLayout>
