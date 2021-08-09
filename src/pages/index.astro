@@ -6,6 +6,8 @@ import Footer from '@components/Footer.astro'
 import PostBlurb from '@components/PostBlurb.astro'
 import LinkBlurb from '@components/LinkBlurb.astro'
 
+import Slideshow from '../components/Slideshow.astro'
+
 const title = 'Home';
 
 const posts = Astro.fetchContent('@pages/post/*.md');
@@ -115,6 +117,10 @@ const posts = Astro.fetchContent('@pages/post/*.md');
       <a class="font-base link text-accent-color font-bold text-lg" href="https://www.duwamishtribe.org/donate">
         » Please support the Duwamish Tribe
       </a>
+    </div>
+
+    <div class="col-span-6 content-container">
+      <Slideshow client:visible />
     </div>
 
   </div>

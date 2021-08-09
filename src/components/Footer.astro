@@ -6,12 +6,15 @@ import navigation from '@data/navigation.json';
 
 const golden_dino = true;
 ---
+<div class="border-t-4 border-t-main-color-700 bg-white bg-opacity-40">
 
-<div class="footer-inner">
-  <div class="container py-3">
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <h3 class="ft-fml-2 ft-clr-3">Media Sponsor</h3>
+  <!-- SPONSORS -->
+  <div class="border-t-4 border-b-4 border-main-color-600 bg-main-color-500 bg-opacity-40">
+    <div class="max-w-screen-xl w-full mx-auto p-4 grid grid-cols-3 gap-4">
+
+      <!-- MEDIA SPONSOR -->
+      <div class="flex flex-col items-center">
+        <h3 class="font-emphasis text-main-color-800 text-3xl">MEDIA SPONSOR</h3>
         <a href="{ sponsors.kuow.link }" target="_blank">
           <img
             src="{ sponsors.kuow.image }"
@@ -20,16 +23,17 @@ const golden_dino = true;
           />
         </a>
       </div>
-      <div class="col-md-4 text-center">
+
+      <!-- SHUNPIKE -->
+      <div class="flex flex-col items-center">
         <a href="{ sponsors.shunpike.link }" target="_blank">
           <img
             src="{ sponsors.shunpike.image }"
             alt="{ sponsors.shunpike.name }"
-            class="rounded mx-auto d-block"
-            style="padding: 10px; height: 80px; background-color: #f4efdf"
+            class="rounded mx-auto block p-2 h-20 bg-[#f4efdf]"
           />
         </a>
-        <p>
+        <p class="text-center text-sm text-main-color-800 mt-2">
           HONK! Fest West is fiscally sponsored by Shunpike.<br />
           <b>About Shunpike</b><br />
           Shunpike is the 501(c)(3) non-profit agency that provides independent
@@ -38,62 +42,48 @@ const golden_dino = true;
           success.
         </p>
       </div>
-      <div class="col-md-4 text-center">
-        <h3 class="ft-fml-2 ft-clr-3">Sponsors</h3>
-        <div class="d-flex justify-content-around">
-          <a href="{ sponsors.neighborhoods.link }" target="_blank">
-            <img
-              src="{ sponsors.neighborhoods.image }"
-              alt="{ sponsors.neighborhoods.name }"
-              class="mx-auto d-block rounded"
-              style="
-                padding: 2px;
-                margin: 5px;
-                height: 90px;
-                background-color: white;
-              "
-            />
-          </a>
-        </div>
-        <div class="sponsors d-flex flex-wrap justify-content-around">
-			{sponsors.arts.map((sponsor) => (
-          <a href="{ sponsor.link }" target="_blank" class="rounded">
-            <img
-              src="{ sponsor.image }"
-              alt="{ sponsor.name }"
-              class="rounded"
-            />
-          </a>
 
-			))}
+      <!-- SPONSORS -->
+      <div class="flex flex-col items-center">
+        <h3 class="font-emphasis text-main-color-800 text-3xl">SPONSORS</h3>
+        <a class="block mt-2 mb-3" href="{ sponsors.neighborhoods.link }" target="_blank">
+          <img
+            src="{ sponsors.neighborhoods.image }"
+            alt="{ sponsors.neighborhoods.name }"
+            class="mx-auto block rounded p-2 h-24 bg-white"
+          />
+        </a>
+        <div class="flex flex-wrap justify-around">
+          {sponsors.arts.map((sponsor) => (
+            <div class="mx-2">
+              <a href="{ sponsor.link }" target="_blank" class="rounded bg-white p-1 block">
+                <img
+                  src="{ sponsor.image }"
+                  alt="{ sponsor.name }"
+                  class="rounded w-full h-12"
+                />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="dino-track">
-  <div class="container py-3 bottom-nav">
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <a class="clr-home" href="{ '/' }"
-          >© 2021 HONK! Fest West</a
-        >
-        <a
-          href="https://thegoldendino.com/"
-          id="golden-dino"
-          class={ golden_dino ? 'active' : '' }
-        ></a>
-      </div>
-      <div class="col-md-4 text-center">
-        <ul class="nav justify-content-around">
-          {Object.keys(navigation.social).map((item) => (
-            <li>
-              <SocialLinks link={item}/>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div class="col-md-4 text-center"><a href="#">Back to top</a></div>
-    </div>
+
+  <!-- BOTTOM -->
+  <div class="max-w-screen-xl w-full mx-auto p-4 grid grid-cols-3 gap-4">
+    <a class="w-full text-center text-main-color-700 text-lg font-bold font-base" href="{ '/' }"
+      >© 2021 HONK! Fest West</a
+    >
+    <ul class="flex justify-around items-center h-full flex-1">
+      {Object.keys(navigation.social).map((item) => (
+        <li class="text-main-color-700">
+          <SocialLinks link={item} size="1.25rem"/>
+        </li>
+      ))}
+    </ul>
+    <a class="w-full text-center font-base link text-accent-color font-bold text-lg" href="#">
+      Back to top
+    </a>
   </div>
 </div>
