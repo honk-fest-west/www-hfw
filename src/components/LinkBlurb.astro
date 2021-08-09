@@ -1,12 +1,12 @@
 ---
 import { Markdown } from 'astro/components'
+import Title from '@components/Title'
+
 const {title="", href="#"} = Astro.props
 ---
 
 <div class="flex flex-col justify-between h-full">
-	<h1 class="title text-center text-title-primary-color flex-none">
-		{title}
-	</h1>
+	<Title title={title} classes="text-center"/>
 	<p class="font-base antialiased text-gray-700 leading-7 text-lg flex-1">
 		<slot/>
 	</p>

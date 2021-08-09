@@ -1,5 +1,6 @@
 ---
 import { Markdown } from 'astro/components'
+import Title from '@components/Title.astro'
 
 const {post} = Astro.props;
 ---
@@ -11,14 +12,7 @@ const {post} = Astro.props;
 </style>
 
 <div>
-	<h1 class="title">
-		<span class="text-title-primary-color pr-3">
-			{post.title}
-		</span>
-		<span class="text-gray-500">
-			{post.subtitle}
-		</span>
-	</h1>
+	<Title title={post.title} subtitle={post.subtitle} />
 
 	<div class="flex">
 		<a class="block w-1/4 flex-none mr-5" href={post.external_url || post.astro.url}>

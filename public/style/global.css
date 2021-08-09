@@ -9,3 +9,7 @@
 .title {
   @apply text-3xl font-title border-b-4 border-opacity-60 border-accent-color border-dotted mb-3;
 }
+
+.content {
+  @apply font-base antialiased text-gray-700 leading-7 text-lg flex-1;
+}

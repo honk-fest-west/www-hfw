@@ -2,23 +2,23 @@
   "main": [
     {
       "name": "About",
-      "link": "/about.html"
+      "link": "/about"
     },
     {
       "name": "Volunteer",
-      "link": "/volunteer.html"
+      "link": "/volunteer"
     },
     {
       "name": "Donate",
-      "link": "/donate.html"
+      "link": "/donate"
     },
     {
       "name": "Sponsors",
-      "link": "/sponsors.html"
+      "link": "/sponsors"
     },
     {
       "name": "Contact",
-      "link": "/contact.html"
+      "link": "/contact"
     }
   ],
   "social": {
