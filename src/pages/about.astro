@@ -6,13 +6,9 @@ import Footer from '@components/Footer.astro'
 import Title from '@components/Title'
 
 import family from '@data/honk-family.json'
-
-const title = 'About'
 ---
 
-<BaseLayout>
-  <Head slot="head" title={title} />
-  <Header slot="header" />
+<BaseLayout title="About">
 
 	<!-- WHO -->
 	<article class="content-container mb-5">
@@ -84,6 +80,4 @@ const title = 'About'
 		</article>
 	))}
 
-
-	<Footer slot="footer" />
 </BaseLayout>

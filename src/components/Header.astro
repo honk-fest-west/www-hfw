@@ -2,6 +2,10 @@
 import SocialLinks from '@components/SocialLinks'
 
 import navigation from '@data/navigation.json';
+
+const activeLink = (link) => {
+	return Astro.request.url.pathname === link ? 'text-accent-color' : ''	
+}
 ---
 
 <!-- H!FW LOGO -->
@@ -21,8 +25,9 @@ import navigation from '@data/navigation.json';
 		<!-- MAIN NAV -->
 		{navigation.main.map((item) => (
 			<li class="text-3xl text-main-color-700 font-title flex items-center">
+				{console.log(item.name, item.link, Astro.request.url.pathname)}
 				<a
-					class="mx-2 block  {Astro.request.url == item.link ? 'active' : ''}"
+					class={`mx-2 block ${activeLink(item.link)}`}
 					href={ item.link }
 				>{ item.name }</a>
 				<span class="mx-2 block h-9">&#8226;</span>
