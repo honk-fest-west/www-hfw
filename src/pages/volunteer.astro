@@ -3,12 +3,10 @@ import {Markdown} from 'astro/components'
 import YAML from 'yaml'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import Title from '@components/Title.astro'
+import YamlParser from '@lib/utils/yaml-parser.js'
 
 import positionsPathname from '@data/volunteer-positions.yml'
-const positionsUrl = `${Astro.request.url.origin}${positionsPathname}`
-const positionsResponse = await fetch(positionsUrl)
-const positionsText = await positionsResponse.text()
-const positions = YAML.parse(positionsText)
+const positions = await YamlParser(`${Astro.request.url.origin}${positionsPathname}`)
 ---
 
 <BaseLayout title="Volunteer">

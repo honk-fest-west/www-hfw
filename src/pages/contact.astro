@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import YamlParser from '@lib/utils/yaml-parser.js'
+
+import emailsPathname from '@data/email-addresses.yml'
+const emails = await YamlParser(`${Astro.request.url.origin}${emailsPathname}`)
+
+import committeePathname from '@data/committee.yml'
+const committee = await YamlParser(`${Astro.request.url.origin}${committeePathname}`)
+---
+
+<BaseLayout title="Contact">
+
+	<!-- EMAIL ADDRESSES -->
+	<div class="content-container mb-12">
+		<table class="table-fixed mx-auto w-1/2">
+			{Object.keys(emails).map((email) => (
+				<tr>
+					<td class="content p-2">{emails[email].name}:</td>
+					<td class="content p-2">
+						<a href={`mailto:${emails[email].email}`}>
+							{emails[email].email}
+						</a>
+					</td>
+				</tr>
+			))}
+		</table>
+	</div>
+
+	<!-- COMMITTEE -->
+	<h2 class="font-emphasis text-5xl text-main-color-800 text-center tracking-wider mb-6">
+		YOUR
+		<span class="text-accent-color">HONK! FEST WEST</span>
+		COMMITTEE
+	</h2>
+	<div class="flex flex-wrap justify-between -mx-3">
+		{Object.keys(committee).map((position) => (
+			<div class="content-container mx-3 mb-6 flex flex-col items-center">
+				<img class="rounded-full h-40 mb-2" src={committee[position].image_url} alt={committee[position].name}/>
+				<h3 class="font-emphasis text-3xl uppercase text-accent-color">{committee[position].name}</h3>
+				<p class="content">{position}</p>
+			</div>
+		))}
+	</div>
+
+</BaseLayout>

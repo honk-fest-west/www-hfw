@@ -4,5 +4,6 @@ export default {
     '@layouts': './src/layouts',
     '@data': './src/data',
     '@pages': './src/pages',
+    '@lib': './src/lib',
   },
 };

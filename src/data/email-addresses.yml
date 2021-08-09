@@ -1,0 +1,9 @@
+info:
+  name: General Info
+  email: info@honkfestwest.org
+booking:
+  name: Booking
+  email: booking@honkfestwest.org
+volunteers:
+  name: Volunteer
+  email: volunteers@honkfestwest.org
