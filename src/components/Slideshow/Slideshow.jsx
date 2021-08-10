@@ -4,10 +4,13 @@ import styles from './Slideshow.module.css';
 
 export default function Slideshow({ slides }) {
   const lg_screen = useMediaQuery({ query: '(min-width: 640px)' });
+  const sizes = {
+    sm: { w: '535', h: '214' },
+    lg: { w: '984', h: '430' },
+  };
+  const image_size = lg_screen ? sizes.lg : sizes.sm;
   const image_urls = slides.map((slide) => {
-    return lg_screen
-      ? `${slide}&tr=w-984,h-430,f-jpg,pr-true`
-      : `${slide}&tr=w-535,h-214,f-jpg,pr-true`;
+    return `${slide}&tr=w-${image_size.w},h-${image_size.h},f-jpg,pr-true`;
   });
 
   return (
@@ -19,7 +22,9 @@ export default function Slideshow({ slides }) {
           {image_urls.map((image_url) => (
             <li tabindex="0" className={styles.slide}>
               <img
-                className="xobject-cover object-center w-full"
+                width={image_size.w}
+                height={image_size.h}
+                className="xobject-cover object-center w-full h-full"
                 src={image_url}
               />
               <div className={styles.snapper}></div>
