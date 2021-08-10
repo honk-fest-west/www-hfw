@@ -1,5 +1,5 @@
 {
-  "name": "@example/starter",
+  "name": "@honk-fest-west/www-hfw",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,8 +8,7 @@
   },
   "devDependencies": {
     "astro": "^0.18.9",
-    "tailwindcss": "^2.2.7",
-    "path-to-regexp": "^2.4.0"
+    "tailwindcss": "^2.2.7"
   },
   "snowpack": {
     "workspaceRoot": "../.."
