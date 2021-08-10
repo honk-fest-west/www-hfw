@@ -1,8 +1,3 @@
----
-import slideshow from '@data/slideshow.json';
----
-
-<style>
 @keyframes tonext {
   75% {
     left: 0;
@@ -48,7 +43,7 @@ import slideshow from '@data/slideshow.json';
   }
 }
 
-.carousel__viewport {
+.viewport {
   position: absolute;
   top: 0;
   right: 0;
@@ -61,13 +56,13 @@ import slideshow from '@data/slideshow.json';
   overflow: hidden;
 }
 
-.carousel__slide {
+.slide {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
 }
 
-.carousel__snapper {
+.snapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -77,39 +72,25 @@ import slideshow from '@data/slideshow.json';
 }
 
 @media (hover: hover) {
-  .carousel__snapper {
+  .snapper {
     animation-name: tonext, snap;
     animation-timing-function: ease;
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }
 
-  .carousel__slide:last-child .carousel__snapper {
+  .slide:last-child .snapper {
     animation-name: tostart, snap;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
+  .snapper {
     animation-name: none;
   }
 }
 
-.carousel:hover .carousel__snapper,
-.carousel:focus-within .carousel__snapper {
+.carousel:hover .snapper,
+.carousel:focus-within .snapper {
   animation-name: none;
 }
-</style>
-
-<section class="relative pt-[40%]" aria-label="Gallery">
-  <ol class="carousel__viewport">
-    {slideshow.map((image_url) => (
-      <li 
-          tabindex="0"
-          class="carousel__slide w-full">
-        <img class="object-cover object-center w-full" src={`${image_url}&tr=w-984,h-430`} />
-        <div class="carousel__snapper"></div>
-      </li>
-    ))}
-  </ol>
-</section>

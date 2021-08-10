@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
-import PostBlurb from '@components/PostBlurb.astro'
-import LinkBlurb from '@components/LinkBlurb.astro'
-import Slideshow from '@components/Slideshow.astro'
+import PostBlurb from '$components/PostBlurb.astro'
+import LinkBlurb from '$components/LinkBlurb.astro'
+import Slideshow from '../components/Slideshow/Slideshow.jsx'
 
 const posts = Astro.fetchContent('@pages/post/*.md');
+import slides from '@data/slideshow.json';
 ---
 
 <BaseLayout title="Home">
@@ -98,6 +99,11 @@ const posts = Astro.fetchContent('@pages/post/*.md');
       </LinkBlurb>
     </div>
 
+    <!-- SLIDESHOW -->
+    <div class="sm:col-span-6 content-container">
+      <Slideshow slides={slides} client:visible  />
+    </div>
+
     <!-- SUPPORT DUAMISH  -->
     <div class="sm:col-span-6 content-container">
       <p class="content font-base text-gray-700 italic">
@@ -109,11 +115,6 @@ const posts = Astro.fetchContent('@pages/post/*.md');
       <a class="font-base link text-accent-color font-bold text-base sm:text-lg" href="https://www.duwamishtribe.org/donate">
         » Please support the Duwamish Tribe
       </a>
-    </div>
-
-    <!-- SLIDESHOW -->
-    <div class="sm:col-span-6 content-container">
-      <Slideshow client:visible />
     </div>
 
   </div>
