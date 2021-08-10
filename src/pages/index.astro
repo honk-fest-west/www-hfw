@@ -12,14 +12,14 @@ const posts = Astro.fetchContent('@pages/post/*.md');
 
     <!-- INFO BLOCK -->
     <div class="sm:col-span-3 content-container">
-      <div class="flex flex-col items-center text-3xl sm:text-4xl font-emphasis font-medium tracking-wide">
-        <span class="block text-title-primary-color mb-1 text-center">
+      <div class="flex flex-col justify-center items-center h-full text-3xl sm:text-4xl font-emphasis font-medium tracking-wide">
+        <span class="block text-title-primary-color mb-1 text-center hidden md:block">
           HONK! FEST WEST
         </span>
-        <span class="block text-accent-color mb-2 tracking-normal text-center">
+        <span class="block text-accent-color sm:mb-2 tracking-normal text-center">
           SAVE THE DATE » <u>SEPTEMBER 18TH, 2021</u>
         </span>
-        <span class="block text-title-primary-color text-center">
+        <span class="block text-title-primary-color text-center hidden md:block">
           SEATTLE, WASHINGTON
         </span>
       </div>
@@ -27,7 +27,7 @@ const posts = Astro.fetchContent('@pages/post/*.md');
 
     <!-- NEWSLETTER BLOCK -->
     <div class="sm:col-span-3 content-container">
-      <div class="flex flex-col items-center text-3xl sm:text-4xl font-emphasis font-medium">
+      <div class="flex flex-col items-center h-full justify-center text-3xl sm:text-4xl font-emphasis font-medium">
         <span class="block text-title-primary-color mb-1 tracking-wide">
           NEWSLETTER
         </span>
