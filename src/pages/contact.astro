@@ -12,12 +12,12 @@ const committee = await YamlParser(`${Astro.request.url.origin}${committeePathna
 <BaseLayout title="Contact">
 
 	<!-- EMAIL ADDRESSES -->
-	<div class="content-container mb-12">
-		<dl class="mx-auto w-1/2 grid grid-cols-2">
+	<div class="content-container mb-6 sm:mb-12">
+		<dl class="mx-auto w-full sm:w-1/2 grid grid-cols-1 sm:grid-cols-2">
 			{Object.keys(emails).map((email) => (
 				<>
-					<dt class="content p-2">{emails[email].name}:</dt>
-					<dd class="content p-2">
+					<dt class="content sm:p-2">{emails[email].name}:</dt>
+					<dd class="content pb-2 sm:p-2">
 						<a href={`mailto:${emails[email].email}`}>
 							{emails[email].email}
 						</a>
@@ -28,16 +28,16 @@ const committee = await YamlParser(`${Astro.request.url.origin}${committeePathna
 	</div>
 
 	<!-- COMMITTEE -->
-	<h2 class="content-container font-emphasis text-5xl text-main-color-700 text-center tracking-wide mb-6">
+	<h2 class="content-container font-emphasis text-5xl text-main-color-700 text-center tracking-wide mb-6 hidden sm:block">
 		YOUR
 		<span class="text-accent-color">HONK! FEST WEST</span>
 		COMMITTEE
 	</h2>
-	<div class="flex flex-wrap justify-between -mx-3">
+	<div class="flex flex-wrap justify-around mx-1 sm:-mx-3">
 		{Object.keys(committee).map((position) => (
-			<div class="content-container max-w-[184px] mx-3 mb-6 flex flex-col items-center">
+			<div class="content-container w-[184px] mx-1 sm:mx-3 mb-3 sm:mb-6 flex flex-col items-center">
 				<img class="rounded-full h-36 mb-2" src={committee[position].image_url} alt={committee[position].name}/>
-				<h3 class="font-emphasis text-3xl uppercase text-accent-color">{committee[position].name}</h3>
+				<h3 class="font-emphasis text-2xl sm:text-3xl uppercase text-accent-color">{committee[position].name}</h3>
 				<p class="content text-center">{position}</p>
 			</div>
 		))}

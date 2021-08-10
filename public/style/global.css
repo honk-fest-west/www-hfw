@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .content-container {
-  @apply bg-white bg-opacity-50 p-3 sm:p-5 rounded shadow-md;
+  @apply bg-white bg-opacity-50 p-3 sm:p-5 rounded shadow-md overflow-x-auto;
 }
 
 .title {
