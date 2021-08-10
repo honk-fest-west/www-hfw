@@ -48,7 +48,7 @@ import sponsors from '@data/sponsors.json'
 					</Markdown>
 					<a class="block" href={sponsors.shunpike.link} >
 						<Image 
-							className="rounded p-2 bg-[#f4efdf] h-20 sm:h-24 mx-auto my-5" 
+							className="rounded p-2 bg-[#f4efdf] w-auto h-20 sm:h-24 mx-auto my-5" 
 							src={sponsors.shunpike.image} alt={sponsors.shunpike.name}
 							width="222"
 							height="96"
@@ -62,7 +62,7 @@ import sponsors from '@data/sponsors.json'
 						{sponsors.arts.map((sponsor) => (
 							<a class="block" href={sponsor.link} >
 								<Image 
-									className="rounded p-1 bg-white h-16 lg:h-20 mb-3 sm:mb-0" 
+									className="rounded p-1 bg-white w-auto h-16 lg:h-20 mb-3 sm:mb-0" 
 									src={sponsor.image} alt={sponsor.name}
 									height="80"/>
 							</a>	
@@ -74,7 +74,7 @@ import sponsors from '@data/sponsors.json'
 					</Markdown>
 					<a class="block mb-5" href={sponsors.neighborhoods.link} >
 						<Image 
-							className="rounded h-20 sm:h-24 mx-auto mt-2" 
+							className="rounded w-auto h-20 sm:h-24 mx-auto mt-2" 
 							src={sponsors.neighborhoods.image} alt={sponsors.neighborhoods.name}
 							width="227"
 							height="96"
