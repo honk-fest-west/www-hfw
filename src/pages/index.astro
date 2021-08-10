@@ -4,7 +4,7 @@ import PostBlurb from '$components/PostBlurb.astro'
 import LinkBlurb from '$components/LinkBlurb.astro'
 import Slideshow from '../components/Slideshow/Slideshow.jsx'
 
-const posts = Astro.fetchContent('@pages/post/*.md').sort((b,a) => ((a.order || 999) - (b.order || 999)));
+const posts = Astro.fetchContent('@pages/post/*.md').sort((a,b) => (a.order - b.order));
 import slides from '@data/slideshow.json';
 ---
 
