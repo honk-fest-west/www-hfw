@@ -48,10 +48,11 @@ import sponsors from '@data/sponsors.json'
 					</Markdown>
 					<a class="block" href={sponsors.shunpike.link} >
 						<Image 
-							className="rounded p-2 bg-[#f4efdf] w-auto h-20 sm:h-24 mx-auto my-5" 
+							className="w-auto h-14 mx-auto my-5" 
 							src={sponsors.shunpike.image} alt={sponsors.shunpike.name}
-							width="222"
-							height="96"
+							width="180"
+							height="34"
+							raw={true}
 						/>
 					</a>
 					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-3"/>
@@ -62,24 +63,14 @@ import sponsors from '@data/sponsors.json'
 						{sponsors.arts.map((sponsor) => (
 							<a class="block" href={sponsor.link} >
 								<Image 
-									className="rounded p-1 bg-white w-auto h-16 lg:h-20 mb-3 sm:mb-0" 
+									className="rounded w-auto h-16 lg:h-20 mb-3 sm:mb-0" 
 									src={sponsor.image} alt={sponsor.name}
-									height="80"/>
+									height="80"
+									tr={sponsor.tr}
+								/>
 							</a>	
 						))}
 					</span>
-					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-3"/> 
-					<Markdown>	
-						This project is funded in part by a Neighborhood Matching Fund award from [Seattle Department of Neighborhoods](https://www.seattle.gov/neighborhood).
-					</Markdown>
-					<a class="block mb-5" href={sponsors.neighborhoods.link} >
-						<Image 
-							className="rounded w-auto h-20 sm:h-24 mx-auto mt-2" 
-							src={sponsors.neighborhoods.image} alt={sponsors.neighborhoods.name}
-							width="227"
-							height="96"
-						/>
-					</a>
 					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-3"/>
 					<Markdown>
 						We thank the original [HONK! festival](http://honkfest.org/)—the mothership—which inspired our festival and has since seen other offspring arise in Austin, Detroit, Australia, Brazil and beyond!

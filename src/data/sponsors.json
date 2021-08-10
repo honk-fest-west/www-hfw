@@ -2,17 +2,12 @@
   "shunpike": {
     "name": "Shunpike",
     "link": "http://shunpike.org",
-    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/shunpike_IPvJZWnb8w.gif?updatedAt=1628178274416"
+    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/Shunpike_logo-4_MJaxscKSkbN.png?updatedAt=1628631360340"
   },
   "kuow": {
     "name": "KUOW",
     "link": "http://kuow.org",
     "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/kuow_ZcbdUxa5OuFV.png?updatedAt=1628178274430"
-  },
-  "neighborhoods": {
-    "name": "Seattle Department of Neighborhoods",
-    "link": "https://www.seattle.gov/neighborhoods",
-    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/dept_of_neighborhoods_JG5xzNrmmG.png?updatedAt=1628178274439"
   },
   "arts": [
     {
@@ -23,12 +18,19 @@
     {
       "name": "4 Culture",
       "link": "http://www.4culture.org",
-      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/4culture_IW6D7aOFH.png?updatedAt=1628178274430"
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/4culture_IW6D7aOFH.png?updatedAt=1628178274430",
+      "tr": "b-2_FFFFFF"
     },
     {
-      "name": "King County",
-      "link": "https://www.kingcounty.gov",
-      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/king_county_JDT5vipxhD.png?updatedAt=1628178274419"
+      "name": "Arts Fund",
+      "link": "https://www.artsfund.org/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/ScreenArtsFund_Logo_Stacked_RGB_SM_BHsCBeExa.jpg?updatedAt=1628630949084",
+      "tr": "b-14_FFFFFF"
+    },
+    {
+      "name": "Washington State Arts Commision",
+      "link": "https://www.arts.wa.gov/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/Transparent-background-ArtsWA-logo_State-with-full-name_2019_2HKh-O2il0I.png?updatedAt=1628630949914"
     }
   ],
   "food": [

@@ -16,34 +16,28 @@ const golden_dino = true;
       <!-- SPONSORS -->
       <div class="flex flex-col items-center w-full sm:w-1/2 mb-2 sm:mb-0">
         <h3 class="font-emphasis text-main-color-800 text-2xl sm:text-3xl">SPONSORS</h3>
-        <div class="flex flex-wrap justify-center sm:w-3/4 items-center">
-          <a class="block mb-3 mx-2" href="{ sponsors.neighborhoods.link }" rel="noopener">
-            <Image
-              src={ sponsors.neighborhoods.image }
-              alt={ sponsors.neighborhoods.name }
-              width="113.375"
-              height="48"
-              className="mx-auto block rounded p-2 h-16 bg-white"
-            />
-          </a>
-          <a class="block mb-3 mx-2" href="{ sponsors.kuow.link }" rel="noopener">
-            <Image
-              src={ sponsors.kuow.image }
-              alt={ sponsors.kuow.name }
-              className="h-16"
-              width="191.422"
-              height="64"
-              raw={true}
-            />
-          </a>
+        <div class="flex flex-wrap justify-around align-center sm:w-3/4 items-center">
+          <div class="mx-2 mb-3">
+            <a class="rounded block" href="{ sponsors.kuow.link }" rel="noopener">
+              <Image
+                src={ sponsors.kuow.image }
+                alt={ sponsors.kuow.name }
+                className="rounded w-auto h-14"
+                width="191.422"
+                height="64"
+                raw={true}
+              />
+            </a>
+          </div>
           {sponsors.arts.map((sponsor) => (
             <div class="mx-2 mb-3">
-              <a href="{ sponsor.link }" class="rounded bg-white p-1 block">
+              <a href="{ sponsor.link }" class="rounded block">
                 <Image
-                  src="{ sponsor.image }"
-                  alt="{ sponsor.name }"
-                  className="rounded w-full h-12"
+                  src={ sponsor.image }
+                  alt={ sponsor.name }
+                  className="rounded w-auto h-14"
                   height="48"
+                  tr={ sponsor.tr }
                 />
               </a>
             </div>
@@ -57,9 +51,10 @@ const golden_dino = true;
           <Image
             src={ sponsors.shunpike.image }
             alt={ sponsors.shunpike.name }
-            width="164"
-            height="48"
-            className="rounded mx-auto block p-2 w-auto h-16 sm:h-20 bg-[#f4efdf]"
+            width="180"
+            height="34"
+            className="mx-auto block w-auto h-11"
+            raw={true}
           />
         </a>
         <p class="text-center text-xs sm:text-sm text-main-color-800 mt-2 w-3/4">
