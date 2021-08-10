@@ -1,0 +1,66 @@
+{
+  "Chair": {
+    "name": "Jeanette",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Jeanette_9CB7W6rMm2A.jpg?updatedAt=1628536067122"
+  },
+  "Treasurer": {
+    "name": "Dev",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Dev_mwjYf21b9jB.jpg?updatedAt=1628536068504"
+  },
+  "Secretary": {
+    "name": "M*A",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/MA_mivX0B532PE.jpg?updatedAt=1628536067327"
+  },
+  "Band Liaison": {
+    "name": "Dee",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/dee_B34htmGd_Jf?updatedAt=1628552822116"
+  },
+  "Band Booker": {
+    "name": "Rebecca",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/rebecca_EBeuSUAHiaa.JPG?updatedAt=1628551911865"
+  },
+  "Food Lead": {
+    "name": "Leslie",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/leslie_MWr9hx-dAFr.png?updatedAt=1628552525114"
+  },
+  "Creative Lead": {
+    "name": "Adrienne",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Adrienne2_OKmkWDH_4yOH.jpg?updatedAt=1628536068125"
+  },
+  "Operations Lead": {
+    "name": "Lizzie",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Lizzie_wzAulOj1l.jpg?updatedAt=1628536067160"
+  },
+  "Volunteer Coordinator": {
+    "name": "Katie",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/katie_OjdCeHQls.jpeg?updatedAt=1628536067049"
+  },
+  "VC's Left Hand": {
+    "name": "Elsbeth",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Elsbeth_G-ymnIE5av.jpg?updatedAt=1628536068712"
+  },
+  "Videographer": {
+    "name": "Charlie",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Charlie_4QG4u-lco.jpg?updatedAt=1628536068329"
+  },
+  "Merch & Mother of the Golden Dino": {
+    "name": "Susan",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Susan2_fuCLcqhwc.jpg?updatedAt=1628536067887"
+  },
+  "Astral Ethaning Coordinator": {
+    "name": "Ethan",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Ethan_dCbGVPBGtK.jpg?updatedAt=1628536068852"
+  },
+  "Festival Artwork": {
+    "name": "Beth",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/beth_ngvFIYfoiFq.png?updatedAt=1628551649354"
+  },
+  "Graphic Designer": {
+    "name": "Katie",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/katie_9x6iEmAcXIM.jpg?updatedAt=1628552102225"
+  },
+  "Website": {
+    "name": "Dwight",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/lazer-dwight_qDmJ89KI9.png?updatedAt=1628555952814"
+  }
+}

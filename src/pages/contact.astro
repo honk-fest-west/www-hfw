@@ -1,12 +1,8 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
-import YamlParser from '@lib/utils/yaml-parser.js'
 
-import emailsPathname from '@data/email-addresses.yml'
-const emails = await YamlParser(`${Astro.request.url.origin}${emailsPathname}`)
-
-import committeePathname from '@data/committee.yml'
-const committee = await YamlParser(`${Astro.request.url.origin}${committeePathname}`)
+import emails from '@data/email-addresses.json' 
+import committee from '@data/committee.json'
 ---
 
 <BaseLayout title="Contact">

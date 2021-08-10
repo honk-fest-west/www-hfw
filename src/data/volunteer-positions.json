@@ -1,0 +1,38 @@
+{
+  "Volunteer Coordinator": {
+    "type": "Committee",
+    "description": "The Volunteer Coordinator is our chief cat wrangler and fun instigator, and the source of sunshine for all our eager volunteers. Responsible for the recruitment, retention, rostering and wrangling of both year-round and event-based volunteers, the VC is the most vital link in the entire festival's chain of awesomeness."
+  },
+  "Marketing Coordinator": {
+    "type": "Committee",
+    "description": "This person will align the media strategy with the overall H!FW mission and vision for the year and between the different roles (ie social media platforms, website, print/digital ad timing). You will also respond to media and publicity requests, create the copy that goes into our website, social media, press releases, radio ads, and other outfacing materials. They will also cultivate relationships with reporters and pitch stories."
+  },
+  "Outreach Coordinator": {
+    "type": "Committee",
+    "description": "This amazing person will come up with an overall outreach strategy for HONK! Fest West. They will also play a role in partnerships and sponsorships, create the community newsletter and build strong connections between the Committee, the bands, and the HONK! Fest West family."
+  },
+  "Community Engagement": {
+    "type": "Committee",
+    "description": "This role will build strong connections with neighborhoods, community groups, business organizations, etc. They will have a beat on all the communities we are a part of and should be our key point of contact on the committee for our neighborhoods."
+  },
+  "Fundraising Campaign Lead": {
+    "type": "Long-term Volunteer",
+    "description": "This is part of the FUNdraising sub-committee. The Campaign Lead will be in charge of managing campaigns and programs such as year-end giving, corporate giving, GiveBIG, and other giving campaigns as needed."
+  },
+  "HONK! Planner": {
+    "type": "Committee",
+    "description": "As the planner of HONK! locations, you will scout out potential new locations for the festival, plan out festival site for day-of activities, and wrangle the permitting and operations team into a cohesive unit."
+  },
+  "Social Media": {
+    "type": "Long-term Volunteer",
+    "description": "Do you like Facebook, Twitter, and Instagram? So do we! But we need some nimble hands to power the ship as we are a ship paddling with oars."
+  },
+  "Set Designer": {
+    "type": "Long-term Volunteer",
+    "description": "This person will be in charge of creating signage, stage settings, and other decor and determining placement of all physical art at the festival and special events."
+  },
+  "Miscellaneous": {
+    "type": "",
+    "description": "Not sure where you best fit in? Don’t let that stop you from participating in what is sure to be a grandly rewarding experience! Just email [volunteers@honkfestwest.org](mailto:volunteers@honkfestwest.org). We’ll get back to you quickly and discuss the possibilities. In the meantime, check the website, our facebook page, and our Twitter feed often to keep up to snuff on what’s happening!"
+  }
+}
