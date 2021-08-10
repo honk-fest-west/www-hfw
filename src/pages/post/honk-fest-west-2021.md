@@ -10,4 +10,12 @@ The rumors are all true. Warm up those instruments, get those dancing shoes shin
 
 <br/>
 
+**September 18, 2021**
+
+**12am-7:30pm**
+
+**Location:** [Columbia Park, Seattle, WA](https://goo.gl/maps/9jiqHARPQrXxua8R6)
+
+<br/>
+
 [» Save The Date](/assets/ical/hfw2021.ics)
