@@ -8,25 +8,25 @@ const posts = Astro.fetchContent('@pages/post/*.md');
 ---
 
 <BaseLayout title="Home">
-  <div class="grid grid-cols-6 gap-6 w-full">
+  <div class="grid grid-cols-1 sm:grid-cols-6 gap-3 sm:gap-6 w-full">
 
     <!-- INFO BLOCK -->
-    <div class="col-span-3 content-container">
+    <div class="sm:col-span-3 content-container">
       <div class="flex flex-col items-center text-4xl font-emphasis font-medium tracking-wide">
-        <span class="block text-title-primary-color mb-1">
+        <span class="block text-title-primary-color mb-1 text-center">
           HONK! FEST WEST
         </span>
-        <span class="block text-accent-color mb-2 tracking-normal">
+        <span class="block text-accent-color mb-2 tracking-normal text-center">
           SAVE THE DATE » <u>SEPTEMBER 18TH, 2021</u>
         </span>
-        <span class="block text-title-primary-color">
+        <span class="block text-title-primary-color text-center">
           SEATTLE, WASHINGTON
         </span>
       </div>
     </div>
 
     <!-- NEWSLETTER BLOCK -->
-    <div class="col-span-3 content-container">
+    <div class="sm:col-span-3 content-container">
       <div class="flex flex-col items-center text-4xl font-emphasis font-medium">
         <span class="block text-title-primary-color mb-1 tracking-wide">
           NEWSLETTER
@@ -69,19 +69,19 @@ const posts = Astro.fetchContent('@pages/post/*.md');
 
     <!-- POST BLURBS -->
     {posts.map((post) => (
-      <article class="col-span-6 content-container">
+      <article class="sm:col-span-6 content-container">
         <PostBlurb post={post}/>
       </article>
     ))}
 
     <!-- LINK BLURBS -->
-    <div class="col-span-2 content-container">
+    <div class="sm:col-span-2 content-container">
       <LinkBlurb title="About" href="/about">
         HONK! Fest West is an accessible community music festival 
         driven by the energetic performances of street bands in public spaces.
       </LinkBlurb>
     </div>
-    <div class="col-span-2 content-container">
+    <div class="sm:col-span-2 content-container">
       <LinkBlurb title="Volunteer" href="/volunteer">
         If you want to volunteer, and help make HONK! Fest West magic, please 
         <a class="text-accent-color font-bold" href="https://docs.google.com/forms/d/e/1FAIpQLSe78LKnwYFWr8yw2faj7vuslfeUfC9kgvy9ssm_DT_30i4zFA/viewform">
@@ -90,7 +90,7 @@ const posts = Astro.fetchContent('@pages/post/*.md');
         and Thank You!!
       </LinkBlurb>
     </div>
-    <div class="col-span-2 content-container">
+    <div class="sm:col-span-2 content-container">
       <LinkBlurb title="Donate" href="/donate">
         Your contributions help make this event possible. 
         Through the generous efforts of our shared community, 
@@ -99,7 +99,7 @@ const posts = Astro.fetchContent('@pages/post/*.md');
     </div>
 
     <!-- SUPPORT DUAMISH  -->
-    <div class="col-span-6 content-container">
+    <div class="sm:col-span-6 content-container">
       <p class="font-base text-gray-700 italic">
         H!FW acknowledges that we are on the traditional land of the first people of Seattle
         — the Duwamish People past and present — and honor with gratitude the land itself,
@@ -112,7 +112,7 @@ const posts = Astro.fetchContent('@pages/post/*.md');
     </div>
 
     <!-- SLIDESHOW -->
-    <div class="col-span-6 content-container">
+    <div class="sm:col-span-6 content-container">
       <Slideshow client:visible />
     </div>
 
