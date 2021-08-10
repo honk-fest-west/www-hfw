@@ -12,16 +12,16 @@ import slides from '@data/slideshow.json';
   <div class="grid grid-cols-1 sm:grid-cols-6 gap-3 sm:gap-6 w-full">
 
     <!-- INFO BLOCK -->
-    <div class="sm:col-span-3 content-container">
+    <div itemscope itemtype="https://schema.org/Event" class="sm:col-span-3 content-container" >
       <div class="flex flex-col justify-center items-center h-full text-3xl sm:text-4xl font-emphasis font-medium tracking-wide">
-        <span class="block text-title-primary-color mb-1 text-center hidden md:block">
+        <span class="block text-title-primary-color mb-1 text-center hidden md:block" itemprop="name">
           HONK! FEST WEST
         </span>
         <span class="block text-accent-color sm:mb-2 tracking-normal text-center">
-          SAVE THE DATE » <u>SEPTEMBER 18TH, 2021</u>
+          SAVE THE DATE » <time itemprop="startDate" class="underline" content="2021-09-18">SEPTEMBER 18TH, 2021</time>
         </span>
-        <span class="block text-title-primary-color text-center hidden md:block">
-          SEATTLE, WASHINGTON
+        <span class="block text-title-primary-color text-center hidden md:block" itemprop="location">
+          COLUMBIA CITY, SEATTLE, WA
         </span>
       </div>
     </div>
