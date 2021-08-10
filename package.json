@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "astro": "^0.18.9",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "path-to-regexp": "^2.4.0"
   },
   "snowpack": {
     "workspaceRoot": "../.."
