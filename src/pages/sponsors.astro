@@ -2,6 +2,7 @@
 import {Markdown} from 'astro/components'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import Title from '$components/Title.astro'
+import Image from '$components/Image.astro'
 
 import sponsors from '@data/sponsors.json'
 ---
@@ -46,7 +47,12 @@ import sponsors from '@data/sponsors.json'
 						We thank [Shunpike](http://shunpike.org/), a 501(c)(3) non-profit agency that provides independent arts groups in Washington State with the services, resources, and opportunities they need to forge their own paths to sustainable success.
 					</Markdown>
 					<a class="block" href={sponsors.shunpike.link} >
-						<img class="rounded p-2 bg-[#f4efdf] h-20 sm:h-24 mx-auto my-5" src={sponsors.shunpike.image} alt={sponsors.shunpike.name}/>
+						<Image 
+							className="rounded p-2 bg-[#f4efdf] h-20 sm:h-24 mx-auto my-5" 
+							src={sponsors.shunpike.image} alt={sponsors.shunpike.name}
+							width="222"
+							height="96"
+						/>
 					</a>
 					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-3"/>
 					<Markdown>
@@ -55,7 +61,10 @@ import sponsors from '@data/sponsors.json'
 					<span class="block flex flex-wrap sm:flex-nowrap justify-around mt-2 sm:mb-5">
 						{sponsors.arts.map((sponsor) => (
 							<a class="block" href={sponsor.link} >
-								<img class="rounded p-1 bg-white h-16 lg:h-20 mb-3 sm:mb-0" src={sponsor.image} alt={sponsor.name}/>
+								<Image 
+									className="rounded p-1 bg-white h-16 lg:h-20 mb-3 sm:mb-0" 
+									src={sponsor.image} alt={sponsor.name}
+									height="80"/>
 							</a>	
 						))}
 					</span>
@@ -64,7 +73,12 @@ import sponsors from '@data/sponsors.json'
 						This project is funded in part by a Neighborhood Matching Fund award from [Seattle Department of Neighborhoods](https://www.seattle.gov/neighborhood).
 					</Markdown>
 					<a class="block mb-5" href={sponsors.neighborhoods.link} >
-						<img class="rounded h-20 sm:h-24 mx-auto mt-2" src={sponsors.neighborhoods.image} alt={sponsors.neighborhoods.name}/>
+						<Image 
+							className="rounded h-20 sm:h-24 mx-auto mt-2" 
+							src={sponsors.neighborhoods.image} alt={sponsors.neighborhoods.name}
+							width="227"
+							height="96"
+						/>
 					</a>
 					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-3"/>
 					<Markdown>

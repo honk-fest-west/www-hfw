@@ -1,6 +1,6 @@
 ---
-import SocialLinks from '$components/SocialLinks'
-
+import SocialLinks from '$components/SocialLinks.astro'
+import Image from '$components/Image.astro'
 import navigation from '@data/navigation.json'
 
 const activeLink = (link) => {
@@ -11,10 +11,13 @@ const activeLink = (link) => {
 <!-- H!FW LOGO -->
 <div class="flex justify-center mt-6 sm:mt-12 mb-4 sm:mb-8 w-full">
 	<a class="block mx-auto w-4/5 sm:w-2/3 lg:w-2/5" href="/">
-		<img
-			class="w-full h-full"
+		<Image
+			className="w-full h-full"
 			src="https://ik.imagekit.io/thegoldendino/hfw/festival/2021/logo-2021_nVNOHonr9.svg?updatedAt=1628273241588"
 			alt="HONK! Fest West"
+			width="557"
+			height="264"
+			raw={true}
 		/>
 	</a>
 </div>

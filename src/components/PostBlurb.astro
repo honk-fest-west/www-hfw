@@ -1,6 +1,7 @@
 ---
 import { Markdown } from 'astro/components'
 import Title from '$components/Title.astro'
+import Image from '$components/Image.astro'
 
 const {post} = Astro.props;
 ---
@@ -16,7 +17,12 @@ const {post} = Astro.props;
 
 	<div class="flex flex-wrap sm:flex-nowrap">
 		<a class="block w-full sm:w-1/4 flex-none mr-5 mb-3 sm:mb-0" href={post.external_url || post.astro.url}>
-			<img class="w-full border-2 border-accent-color" src={post.image_url} alt={`${post.title} ${post.subtitle}`}/>
+			<Image 
+				className="w-full border-2 border-accent-color" 
+				src={post.image_url} 
+				alt={`${post.title} ${post.subtitle}`}
+				width="300"
+				/>
 		</a>
 		<div class="hidden sm:block font-base antialiased text-gray-700 leading-7 text-base sm:text-lg w-full sm:w-3/4">
 			<Markdown content={post.astro.source} />

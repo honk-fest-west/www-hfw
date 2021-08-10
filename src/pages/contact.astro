@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
+import Image from '$components/Image.astro'
 
 import emails from '@data/email-addresses.json' 
 import committee from '@data/committee.json'
@@ -32,7 +33,12 @@ import committee from '@data/committee.json'
 	<div class="flex flex-wrap justify-around mx-1 sm:-mx-3">
 		{Object.keys(committee).map((position) => (
 			<div class="content-container w-[184px] mx-1 sm:mx-3 mb-3 sm:mb-6 flex flex-col items-center">
-				<img class="rounded-full h-36 mb-2" src={committee[position].image_url} alt={committee[position].name}/>
+				<Image 
+					className="rounded-full h-36 mb-2" 
+					src={committee[position].image_url} alt={committee[position].name}
+					width="150"
+					height="150"
+				/>
 				<h3 class="font-emphasis text-2xl sm:text-3xl uppercase text-accent-color">{committee[position].name}</h3>
 				<p class="content text-center">{position}</p>
 			</div>

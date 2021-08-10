@@ -1,0 +1,31 @@
+---
+const { src, width="auto", height="auto", alt="", className="", raw=false } = Astro.props
+
+const transforms = (raw ? [`w-${width}`, `h-${height}`] : [`w-${width}`, `h-${height}`, 'f-jpg,pr-true']).join(',')
+
+const imagekit_url = `${src}&tr=${transforms}`
+
+const width_img = (<img src={imagekit_url} width={width} class={className} alt={alt}/>)
+const height_img = (<img src={imagekit_url} height={height} class={className} alt={alt}/>)
+const width_height_img = (<img src={imagekit_url} width={width} height={height} class={className} alt={alt}/>)
+const img = (<img src={imagekit_url} class={className} alt={alt}/>)
+const has_width = !!width && width.length && width !== 'auto'
+const has_height = !!height && height.length && height !== 'auto'
+
+const img_tag = () => {
+	if (has_width && has_height) {
+		return width_height_img
+	} else if (has_width) {
+		return width_img
+	} else if (has_height) {
+		return height_img
+	} else {
+		return img
+	}
+}
+---
+
+{img_tag()}
+
+
+

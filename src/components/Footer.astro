@@ -1,5 +1,6 @@
 ---
 import SocialLinks from '$components/SocialLinks'
+import Image from '$components/Image'
 
 import sponsors from '@data/sponsors.json'
 import navigation from '@data/navigation.json';
@@ -16,27 +17,33 @@ const golden_dino = true;
       <div class="flex flex-col items-center w-full sm:w-1/2 mb-2 sm:mb-0">
         <h3 class="font-emphasis text-main-color-800 text-2xl sm:text-3xl">SPONSORS</h3>
         <div class="flex flex-wrap justify-center sm:w-3/4 items-center">
-          <a class="block mb-3 mx-2" href="{ sponsors.neighborhoods.link }" target="_blank">
-            <img
-              src="{ sponsors.neighborhoods.image }"
-              alt="{ sponsors.neighborhoods.name }"
-              class="mx-auto block rounded p-2 h-12 sm:h-16 bg-white"
+          <a class="block mb-3 mx-2" href="{ sponsors.neighborhoods.link }" rel="noopener">
+            <Image
+              src={ sponsors.neighborhoods.image }
+              alt={ sponsors.neighborhoods.name }
+              width="113.375"
+              height="48"
+              className="mx-auto block rounded p-2 h-12 sm:h-16 bg-white"
             />
           </a>
-          <a class="block mb-3 mx-2" href="{ sponsors.kuow.link }" target="_blank">
-            <img
-              src="{ sponsors.kuow.image }"
-              alt="{ sponsors.kuow.name }"
-              class="h-12 sm:h-16"
+          <a class="block mb-3 mx-2" href="{ sponsors.kuow.link }" rel="noopener">
+            <Image
+              src={ sponsors.kuow.image }
+              alt={ sponsors.kuow.name }
+              className="h-12 sm:h-16"
+              width="191.422"
+              height="64"
+              raw={true}
             />
           </a>
           {sponsors.arts.map((sponsor) => (
             <div class="mx-2 mb-3">
-              <a href="{ sponsor.link }" target="_blank" class="rounded bg-white p-1 block">
-                <img
+              <a href="{ sponsor.link }" class="rounded bg-white p-1 block">
+                <Image
                   src="{ sponsor.image }"
                   alt="{ sponsor.name }"
-                  class="rounded w-full h-12"
+                  className="rounded w-full h-12"
+                  height="48"
                 />
               </a>
             </div>
@@ -46,11 +53,13 @@ const golden_dino = true;
 
       <!-- SHUNPIKE -->
       <div class="flex flex-col items-center w-full sm:w-1/2 mb-5">
-        <a href="{ sponsors.shunpike.link }" target="_blank">
-          <img
-            src="{ sponsors.shunpike.image }"
-            alt="{ sponsors.shunpike.name }"
-            class="rounded mx-auto block p-2 h-16 sm:h-20 bg-[#f4efdf]"
+        <a href="{ sponsors.shunpike.link }">
+          <Image
+            src={ sponsors.shunpike.image }
+            alt={ sponsors.shunpike.name }
+            width="164"
+            height="48"
+            className="rounded mx-auto block p-2 h-16 sm:h-20 bg-[#f4efdf]"
           />
         </a>
         <p class="text-center text-xs sm:text-sm text-main-color-800 mt-2 w-3/4">

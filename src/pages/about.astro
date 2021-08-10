@@ -4,6 +4,7 @@ import Head from '$components/BaseHead.astro'
 import Header from '$components/Header.astro'
 import Footer from '$components/Footer.astro'
 import Title from '$components/Title'
+import Image from '$components/Image'
 
 import family from '@data/honk-family.json'
 ---
@@ -14,7 +15,13 @@ import family from '@data/honk-family.json'
 	<article class="content-container mb-3 sm:mb-6">
 		<Title title="Who" subtitle="is HONK! Fest West?"/>
 		<div class="flex w-full flex-wrap md:flex-nowrap">
-			<img class="block w-full md:w-auto md:mr-5 mb-3 sm:mb-0" src="https://ik.imagekit.io/thegoldendino/hfw/henryart_0A59z8KGn.png?updatedAt=1628230159141" alt="Henry Art for H!FW" />
+			<Image 
+				className="block w-full md:w-auto md:mr-5 mb-3 sm:mb-0" 
+				src="https://ik.imagekit.io/thegoldendino/hfw/henryart_0A59z8KGn.png?updatedAt=1628230159141" 
+				alt="Henry Art for H!FW"
+				width="233"
+				height="300"
+			/>
 			<p class="content">
 				HONK! Fest West is a non-profit organization dedicated to the activation of public space through energetic musical performance; we are part of a global renaissance of street band culture. HONK! Fest West works to break down systemic barriers to inclusion for those underrepresented within our community and underserved by arts in our region.
 				<br/><br/>
