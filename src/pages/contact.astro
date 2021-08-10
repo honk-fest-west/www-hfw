@@ -13,32 +13,32 @@ const committee = await YamlParser(`${Astro.request.url.origin}${committeePathna
 
 	<!-- EMAIL ADDRESSES -->
 	<div class="content-container mb-12">
-		<table class="table-fixed mx-auto w-1/2">
+		<dl class="mx-auto w-1/2 grid grid-cols-2">
 			{Object.keys(emails).map((email) => (
-				<tr>
-					<td class="content p-2">{emails[email].name}:</td>
-					<td class="content p-2">
+				<>
+					<dt class="content p-2">{emails[email].name}:</dt>
+					<dd class="content p-2">
 						<a href={`mailto:${emails[email].email}`}>
 							{emails[email].email}
 						</a>
-					</td>
-				</tr>
+					</dd>
+				</>
 			))}
-		</table>
+		</dl>
 	</div>
 
 	<!-- COMMITTEE -->
-	<h2 class="font-emphasis text-5xl text-main-color-800 text-center tracking-wider mb-6">
+	<h2 class="content-container font-emphasis text-5xl text-main-color-700 text-center tracking-wide mb-6">
 		YOUR
 		<span class="text-accent-color">HONK! FEST WEST</span>
 		COMMITTEE
 	</h2>
 	<div class="flex flex-wrap justify-between -mx-3">
 		{Object.keys(committee).map((position) => (
-			<div class="content-container mx-3 mb-6 flex flex-col items-center">
-				<img class="rounded-full h-40 mb-2" src={committee[position].image_url} alt={committee[position].name}/>
+			<div class="content-container max-w-[184px] mx-3 mb-6 flex flex-col items-center">
+				<img class="rounded-full h-36 mb-2" src={committee[position].image_url} alt={committee[position].name}/>
 				<h3 class="font-emphasis text-3xl uppercase text-accent-color">{committee[position].name}</h3>
-				<p class="content">{position}</p>
+				<p class="content text-center">{position}</p>
 			</div>
 		))}
 	</div>
