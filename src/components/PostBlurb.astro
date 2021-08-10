@@ -14,11 +14,11 @@ const {post} = Astro.props;
 <div>
 	<Title title={post.title} subtitle={post.subtitle} />
 
-	<div class="flex">
-		<a class="block w-1/4 flex-none mr-5" href={post.external_url || post.astro.url}>
+	<div class="flex flex-wrap sm:flex-nowrap">
+		<a class="block w-full sm:w-1/4 flex-none mr-5 mb-3 sm:mb-0" href={post.external_url || post.astro.url}>
 			<img class="w-full border-2 border-accent-color" src={post.image_url} alt={`${post.title} ${post.subtitle}`}/>
 		</a>
-		<div class="font-base antialiased text-gray-700 leading-7 text-lg">
+		<div class="hidden sm:block font-base antialiased text-gray-700 leading-7 text-base sm:text-lg w-full sm:w-3/4">
 			<Markdown content={post.astro.source} />
 		</div>
 	</div>
