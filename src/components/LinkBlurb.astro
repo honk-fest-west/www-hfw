@@ -6,7 +6,7 @@ const {title="", href="#"} = Astro.props
 ---
 
 <div class="flex flex-col justify-between h-full">
-	<Title title={title} classes="text-center"/>
+	<Title title={title} center={true}/>
 	<p class="content flex-1">
 		<slot/>
 	</p>

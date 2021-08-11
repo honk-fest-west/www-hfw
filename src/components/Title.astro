@@ -1,12 +1,12 @@
 ---
-const {title="", subtitle="", classes=""} = Astro.props;
+const {title="", subtitle="", center=false} = Astro.props;
 ---
 
-<h2 class={`title ${classes}`}>
-	<span class="text-title-primary-color pr-3">
+<h2 class={`title ${center ? 'justify-center': ''}`}>
+	<span class={`text-title-primary-color pr-3 block ${center ? 'text-center' : ''}`}>
 		{title}
 	</span>
-	<span class="text-gray-500">
+	<span class={`text-gray-500 block pr-3 ${center ? 'text-center' : ''}`}>
 		{subtitle}
 	</span>
 </h2>

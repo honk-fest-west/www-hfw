@@ -6,26 +6,32 @@ import Image from '$components/Image.astro'
 const {post} = Astro.props;
 ---
 
-<style>
-	a {
-		@apply text-accent-color font-bold
-	}
-</style>
 
-<div>
-	<Title title={post.title} subtitle={post.subtitle} />
+<div class="flex flex-col justify-between h-full">
+	<Title title={post.title} subtitle={post.subtitle} center={true} />
 
-	<div class="flex flex-wrap sm:flex-nowrap">
-		<a class="block w-full sm:w-1/4 flex-none mr-5 mb-3 sm:mb-0" href={post.external_url || post.astro.url}>
+	<div class="flex-1">
+		<a class="block w-full flex-none mr-5 mb-3" href={post.external_url || post.astro.url}>
 			<Image 
-				className="w-full border-2 border-accent-color" 
+				className="max-h-[245px] w-auto border-2 border-accent-color mx-auto" 
 				src={post.image_url}
 				alt={`${post.title} ${post.subtitle}`}
-				width="300"
+				height="245"
 				/>
 		</a>
-		<div class="hidden sm:block font-base antialiased text-gray-700 leading-7 text-base sm:text-lg w-full sm:w-3/4">
-			<Markdown content={post.astro.source} />
+		<div class="flex flex-wrap justify-around md:block content font-bold w-full">
+			<span class="block">{post.date}</span>
+			<span class="block">{post.time}</span>
+			<a class="block mb-3" href={post.location_url}>
+				{post.location_display}
+			</a>
 		</div>
+		<p class="hidden sm:block content font-base antialiased text-gray-700 leading-7 text-base sm:text-lg w-full">
+			<Markdown content={post.astro.source} />
+		</p>
 	</div>
+
+	<a class="block font-base rounded antialiased text-white font-bold flex-none mt-3 bg-accent-color w-full text-lg bg-opacity-90 px-2 hover:bg-opacity-100" href={post.external_url}>
+		» {post.more_display}	
+	</a>
 </div>

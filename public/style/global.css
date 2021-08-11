@@ -7,7 +7,7 @@
 }
 
 .title {
-  @apply text-2xl sm:text-3xl font-title border-b-4 border-opacity-60 border-accent-color border-dotted mb-3;
+  @apply flex flex-wrap text-2xl sm:text-3xl font-title border-b-4 border-opacity-60 border-accent-color border-dotted mb-3;
 }
 
 .content,
