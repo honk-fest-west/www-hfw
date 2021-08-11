@@ -7,7 +7,6 @@ import Fonts from '$components/BaseHead/Fonts.astro'
 const { title = '' } = Astro.props;
 ---
 
-<Google />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta
@@ -15,13 +14,15 @@ const { title = '' } = Astro.props;
 	content="HONK! Fest West is an accessible community music festival driven by the energetic performances of street bands in public spaces."
 />
 
+<Analytics />
+<Google />
+<Fonts />
+<MailChimp />
+<OpenGraph />
+
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" href="/style/global.css">
 
 <title>{ title }</title>
-
-<Fonts />
-<MailChimp />
-<OpenGraph />
 
 <slot />
