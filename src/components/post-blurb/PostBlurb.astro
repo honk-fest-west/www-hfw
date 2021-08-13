@@ -1,0 +1,15 @@
+---
+import { Markdown } from 'astro/components'
+import Title from '$components/Title.astro'
+import Image from '$components/Image.astro'
+import OneColTemplate from './OneColTemplate.astro'
+import TwoColTemplate from './TwoColTemplate.astro'
+import ThreeColTemplate from './ThreeColTemplate.astro'
+
+const {post, cols=1} = Astro.props;
+---
+
+{cols === 1 && <OneColTemplate post={post}/>}
+{cols === 2 && <TwoColTemplate post={post}/>}
+{cols === 3 && <ThreeColTemplate post={post}/>}
+

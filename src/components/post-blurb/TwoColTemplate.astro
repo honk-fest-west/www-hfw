@@ -1,0 +1,37 @@
+---
+import { Markdown } from 'astro/components'
+import Title from '$components/Title.astro'
+import Image from '$components/Image.astro'
+
+const {post} = Astro.props;
+---
+
+<div class="flex flex-col justify-between h-full">
+	<Title title={post.title} subtitle={post.subtitle} />
+
+	<div class="flex-1 grid grid-cols-2 gap-3 lg:gap-6 mb-3">
+		<a class="block h-full" href={post.external_url || post.astro.url}>
+			<Image 
+				className="max-h-[245px] w-auto border-2 border-accent-color" 
+				src={post.image_url}
+				alt={`${post.title} ${post.subtitle}`}
+				height="245"
+				/>
+		</a>
+		<div class="flex flex-col justify-center lg:justify-start content font-bold w-full h-full">
+			<span class="block text-center lg:text-left w-full">{post.date}</span>
+			<span class="block text-center lg:text-left w-full">{post.time}</span>
+			<a class="block text-center lg:text-left w-full" href={post.location_url}>
+				{post.location_display}
+			</a>
+		</div>
+	</div>
+	<div class="flex flex-col justify-end lg:justify-between h-full">
+		<div class="hidden lg:block content font-base antialiased text-gray-700 leading-7 text-base sm:text-lg w-full">
+			<Markdown content={post.astro.source} />
+		</div>
+		<a class="block font-base rounded antialiased text-white font-bold flex-none mt-3 bg-accent-color w-full text-lg bg-opacity-90 px-2 hover:bg-opacity-100" href={post.external_url}>
+			» {post.more_display}	
+		</a>
+	</div>
+</div>

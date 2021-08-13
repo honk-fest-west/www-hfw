@@ -1,18 +1,28 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
-import PostBlurb from '$components/PostBlurb.astro'
+import PostBlurb from '$components/post-blurb/PostBlurb.astro'
 import LinkBlurb from '$components/LinkBlurb.astro'
 import Slideshow from '../components/Slideshow/Slideshow.jsx'
+import slides from '@data/slideshow.json';
 
 const posts = Astro.fetchContent('@pages/post/*.md').sort((a,b) => (a.order - b.order));
-import slides from '@data/slideshow.json';
+const posts_length = posts.length;
+const postColumns = (index) => {
+  if (posts_length % 3 === 1 && index > posts_length - 2) {
+    return {span: 'md:col-span-6', cols: 3}
+  } else if (posts_length % 3 === 2 && index > posts_length - 3) {
+    return {span: 'md:col-span-3', cols: 2}
+  } else {
+    return {span: 'md:col-span-2', cols: 1}
+  }
+}
 ---
 
 <BaseLayout title="Home">
   <div class="grid grid-cols-1 sm:grid-cols-6 gap-3 sm:gap-6 w-full">
 
     <!-- INFO BLOCK -->
-    <div itemscope itemtype="https://schema.org/Event" class="sm:col-span-3 content-container" >
+    <section itemscope itemtype="https://schema.org/Event" class="sm:col-span-3 content-container" >
       <div class="flex flex-col justify-center items-center h-full text-3xl sm:text-4xl font-emphasis font-medium tracking-wide">
         <span class="block text-title-primary-color mb-1 text-center hidden md:block" itemprop="name">
           HONK! FEST WEST
@@ -24,10 +34,10 @@ import slides from '@data/slideshow.json';
           COLUMBIA CITY, SEATTLE, WA
         </span>
       </div>
-    </div>
+    </section>
 
     <!-- NEWSLETTER BLOCK -->
-    <div class="sm:col-span-3 content-container">
+    <section class="sm:col-span-3 content-container">
       <div class="flex flex-col items-center h-full justify-center text-3xl sm:text-4xl font-emphasis font-medium">
         <span class="block text-title-primary-color mb-1 tracking-wide">
           NEWSLETTER
@@ -66,23 +76,23 @@ import slides from '@data/slideshow.json';
           </div>
         </form>
       </div>
-    </div>
+    </section>
 
     <!-- POST BLURBS -->
-    {posts.map((post) => (
-      <article class="col-span-1 sm:col-span-6 lg:col-span-2 content-container">
-        <PostBlurb post={post}/>
+    {posts.map((post, index) => (
+      <article class={`w-full content-container sm:col-span-6 ${postColumns(index).span}`}>
+        <PostBlurb post={post} cols={postColumns(index).cols}/>
       </article>
     ))}
 
     <!-- LINK BLURBS -->
-    <div class="sm:col-span-6 md:col-span-2 content-container">
+    <section class="sm:col-span-6 md:col-span-2 content-container">
       <LinkBlurb title="About" href="/about">
         HONK! Fest West is an accessible community music festival 
         driven by the energetic performances of street bands in public spaces.
       </LinkBlurb>
-    </div>
-    <div class="sm:col-span-6 md:col-span-2 content-container">
+    </section>
+    <section class="sm:col-span-6 md:col-span-2 content-container">
       <LinkBlurb title="Volunteer" href="/volunteer">
         If you want to volunteer, and help make HONK! Fest West magic, please 
         <a class="text-accent-color font-bold" href="https://docs.google.com/forms/d/e/1FAIpQLSe78LKnwYFWr8yw2faj7vuslfeUfC9kgvy9ssm_DT_30i4zFA/viewform">
@@ -90,14 +100,14 @@ import slides from '@data/slideshow.json';
         </a>
         and Thank You!!
       </LinkBlurb>
-    </div>
-    <div class="sm:col-span-6 md:col-span-2 content-container">
+    </section>
+    <section class="sm:col-span-6 md:col-span-2 content-container">
       <LinkBlurb title="Donate" href="/donate">
         Your contributions help make this event possible. 
         Through the generous efforts of our shared community, 
         we’ll keep bringing music to the streets and parks of Seattle’s neighborhoods.
       </LinkBlurb>
-    </div>
+    </section>
 
     <!-- SLIDESHOW -->
     <div class="sm:col-span-6 content-container">
