@@ -4,13 +4,13 @@ const {title="", subtitle=false, center=false} = Astro.props;
 
 <style>
 	.title {
-		@apply flex flex-wrap text-2xl sm:text-3xl font-title border-b-4 border-opacity-70 border-accent-color border-dotted mb-4 pb-1;
+		@apply flex flex-wrap text-2xl sm:text-3xl font-title border-b-4 border-opacity-60 border-accent-color border-dotted mb-4 pb-1;
 	}
 </style>
 
 
 <h2 class={`title ${center ? 'justify-center': ''}`}>
-	<span class={`text-white ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} block ${center ? 'text-center' : ''}`}>
+	<span class={`text-gray-300 ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} block ${center ? 'text-center' : ''}`}>
 		{title}
 	</span>
 	<span class={`text-main-color-50 block ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} ${center ? 'text-center' : ''}`}>
