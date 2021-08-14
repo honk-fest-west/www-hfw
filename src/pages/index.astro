@@ -2,7 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro'
 import PostBlurb from '$components/post-blurb/PostBlurb.astro'
 import LinkBlurb from '$components/LinkBlurb.astro'
-import Slideshow from '../components/Slideshow/Slideshow.jsx'
+import Slideshow from '../components/slideshow/Slideshow.jsx'
 import slides from '@data/slideshow.json';
 
 const posts = Astro.fetchContent('@pages/post/*.md').sort((a,b) => (a.order - b.order));
