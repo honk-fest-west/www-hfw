@@ -11,7 +11,7 @@ import committee from '@data/committee.json'
 	<!-- EMAIL ADDRESSES -->
 	<div class="content-container mb-6 sm:mb-10 flex">
 		<img class="hidden md:block w-28 ml-auto" src='https://ik.imagekit.io/thegoldendino/hfw/festival/2021/goose_4tJV6uU5mRQ.png?updatedAt=1628928771447' alt="Goose with drum"/>
-		<dl class="ml-16 md:ml-20 lg:ml-28 mr-auto w-2/3  grid grid-cols-1 sm:grid-cols-2">
+		<dl class="mx-auto lg:ml-28 sm:w-2/3 lg:w-1/2  grid grid-cols-1 sm:grid-cols-2">
 			{Object.keys(emails).map((email) => (
 				<>
 					<dt class="sm:p-2 font-base antialiased text-gray-300 leading-7 text-lg sm:text-xl flex-1">{emails[email].name}:</dt>
@@ -26,14 +26,14 @@ import committee from '@data/committee.json'
 	</div>
 
 	<!-- COMMITTEE -->
-	<h2 class="font-emphasis text-4xl text-main-color-100 text-center tracking-wide mb-8 hidden sm:block">
+	<h2 class="font-emphasis text-3xl sm:text-4xl text-main-color-100 text-center tracking-wide mb-8">
 		YOUR
 		<span class="text-accent-color">HONK! FEST WEST</span>
 		COMMITTEE
 	</h2>
-	<div class="flex flex-wrap justify-around sm:-mx-3 -mb-3 sm:-mb-6">
+	<div class="flex flex-wrap justify-around gap-6 sm:gap-12">
 		{Object.keys(committee).map((position) => (
-			<div class="w-[184px] sm:mx-3 mb-6 sm:mb-12 flex flex-col items-center">
+			<div class="w-[184px] flex flex-col items-center">
 				<Image 
 					className="rounded-full h-36 mb-2" 
 					src={committee[position].image_url} alt={committee[position].name}

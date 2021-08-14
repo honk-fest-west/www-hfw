@@ -8,7 +8,7 @@
 
 .content,
 p {
-  @apply font-base antialiased text-gray-300 leading-7 text-base sm:text-lg flex-1;
+  @apply font-base antialiased text-gray-300 leading-7 text-base text-lg flex-1;
 }
 .content ul {
   @apply pl-5 sm:pl-10 list-disc;
