@@ -22,11 +22,11 @@ module.exports = {
       'accent-color': '#F57F45',
       gray: colors.coolGray,
       white: colors.white,
+      'content-container': '#4D546A',
     },
     extend: {
       backgroundImage: (theme) => ({
-        rainier:
-          'url(https://ik.imagekit.io/thegoldendino/hfw/rainer_hCqk27mKKXa.jpg?updatedAt=1628230166905)',
+        site: 'url(/assets/images/birds-background.png)',
       }),
       fontFamily: {
         title: ['Josefin Sans', 'sans-serif'],

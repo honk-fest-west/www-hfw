@@ -7,10 +7,10 @@ import navigation from '@data/navigation.json';
 
 const golden_dino = true;
 ---
-<div class="bg-white bg-opacity-40">
+<div class="bg-content-container bg-opacity-90">
 
   <!-- SPONSORS -->
-  <div class="border-t-4 border-b-4 border-main-color-400 bg-main-color bg-opacity-40">
+  <div class="border-t-4 border-b-4 border-main-color-400 ">
     <div class="max-w-screen-xl w-full mx-auto pt-3 px-3 sm:py-4 sm:px-6 flex flex-wrap sm:flex-nowrap">
 
       <!-- SPONSORS -->
@@ -68,21 +68,21 @@ const golden_dino = true;
       </div>
     </div>
   </div>
+</div>
 
-  <!-- BOTTOM -->
-  <div class="max-w-screen-xl w-full mx-auto p-1 sm:p-0 flex flex-wrap sm:flex-nowrap items-center">
-    <a class="w-full text-center text-main-color text-lg font-bold font-base block w-full sm:w-1/3 m-1 sm:m-4" href="/"
-      >© 2021 HONK! Fest West</a
-    >
-    <ul class="items-center h-full flex-1 w-full sm:w-1/3 m-1 sm:m-4 hidden sm:flex justify-around ">
-      {Object.keys(navigation.social).map((item) => (
-        <li class="text-main-color">
-          <SocialLinks link={item} size="1.25rem"/>
-        </li>
-      ))}
-    </ul>
-    <a class="w-full text-center font-base link text-gray-700 font-bold text-lg block w-full sm:w-1/3 m-1 sm:m-4" href="#">
-      Back to top
-    </a>
-  </div>
+<!-- BOTTOM -->
+<div class="max-w-screen-xl w-full mx-auto p-1 sm:p-0 flex flex-wrap sm:flex-nowrap items-center bg-main-color bg-opacity-40">
+  <a class="w-full text-center text-main-color-50 text-lg font-bold font-base block w-full sm:w-1/3 m-1 sm:m-4" href="/"
+    >© 2021 HONK! Fest West</a
+  >
+  <ul class="items-center h-full flex-1 w-full sm:w-1/3 m-1 sm:m-4 hidden sm:flex justify-around ">
+    {Object.keys(navigation.social).map((item) => (
+      <li class="text-main-color-50">
+        <SocialLinks link={item} size="1.25rem"/>
+      </li>
+    ))}
+  </ul>
+  <a class="w-full text-center font-base link text-accent-color font-bold text-lg block w-full sm:w-1/3 m-1 sm:m-4" href="#">
+    Back to top
+  </a>
 </div>
