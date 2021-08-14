@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .content-container {
-  @apply bg-gray-100 p-3 sm:p-5 rounded shadow-md overflow-hidden bg-opacity-20;
+  @apply bg-gray-100 p-3 sm:p-5 rounded overflow-hidden bg-opacity-20 border-4 border-main-color-400 border-opacity-50;
 }
 
 .content,
