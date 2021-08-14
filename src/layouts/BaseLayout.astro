@@ -26,12 +26,12 @@ const { title } = Astro.props;
 
     <div class="w-full h-full absolute top-0 left-0 flex flex-col justify-between">
       <!-- HEADER -->
-      <header class="w-full px-6 max-w-screen-xl w-full mx-auto px-3 sm:px-6 bg-gradient-to-b from-transparent to-main-color">
+      <header class="gradient-edge-background w-full px-6 max-w-screen-xl w-full mx-auto px-3 sm:px-6">
         <Header />
       </header>
 
       <!-- MAIN -->
-      <main class="max-w-screen-xl pb-6 sm:pb-10 px-3 sm:px-6 w-full mx-auto bg-main-color bg-opacity-80">
+      <main class="gradient-edge-background max-w-screen-xl pb-6 sm:pb-10 px-3 sm:px-6 w-full mx-auto">
         <slot />
       </main>
 

@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-color: rgba(32, 41, 69, 1);
+  --main-color-transparent: rgb(32, 41, 69, 0.7);
+}
+
 .content-container {
-  @apply bg-main-color-200 p-3 sm:p-5 rounded overflow-hidden bg-opacity-30 border-4 border-main-color-300 border-opacity-50;
+  @apply bg-main-color-300 p-3 sm:p-5 rounded overflow-hidden bg-opacity-50 border-4 border-main-color-300 border-opacity-50;
 }
 
 .content,
@@ -16,4 +21,14 @@ p {
 .content a,
 p a {
   @apply text-accent-color font-bold;
+}
+
+.gradient-edge-background {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    var(--main-color-transparent) 10%,
+    var(--main-color-transparent) 90%,
+    rgba(255, 255, 255, 0)
+  );
 }

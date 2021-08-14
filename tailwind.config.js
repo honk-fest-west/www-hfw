@@ -6,13 +6,13 @@ module.exports = {
   theme: {
     colors: {
       'main-color': {
-        DEFAULT: '#202945',
+        DEFAULT: 'var(--main-color)',
         50: '#8494C6',
         100: '#7385BE',
         200: '#5067AE',
         300: '#40528B',
         400: '#303E68',
-        500: '#202945',
+        500: 'var(--main-color)',
         600: '#101422',
         700: '#000000',
         800: '#000000',
