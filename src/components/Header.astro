@@ -13,10 +13,9 @@ const activeLink = (link) => {
 	<a class="block mx-auto w-4/5 sm:w-2/3 lg:w-2/5" href="/">
 		<Image
 			className="w-full h-full"
-			src="https://ik.imagekit.io/thegoldendino/hfw/festival/2021/logo-2021_nVNOHonr9.svg?updatedAt=1628273241588"
+			src="https://ik.imagekit.io/thegoldendino/hfw/festival/2021/hfw-logo-2021_hNpZhGf683y.png?updatedAt=1628895819192"
 			alt="HONK! Fest West"
 			width="557"
-			height="264"
 			raw={true}
 		/>
 	</a>
@@ -27,7 +26,7 @@ const activeLink = (link) => {
 
 		<!-- MAIN NAV -->
 		{navigation.main.map((item) => (
-			<li class="text-2xl sm:text-3xl text-main-color-700 font-title flex items-center my-2">
+			<li class="text-2xl sm:text-3xl text-main-color-100 font-title flex items-center my-2">
 				<a
 					class={`mx-4 sm:mx-2 block ${activeLink(item.link)}`}
 					href={ item.link }
@@ -39,7 +38,7 @@ const activeLink = (link) => {
 		))}
 
 		<!-- SOCIAL NAV -->
-		<li class="text-2xl text-main-color-700 ml-2 my-2 flex">
+		<li class="text-2xl text-main-color-100 ml-2 my-2 flex">
 			{Object.keys(navigation.social).map((item) => (
 				<div>
 					<div class="hidden sm:block px-1 h-9">

@@ -3,10 +3,10 @@ const {title="", subtitle=false, center=false} = Astro.props;
 ---
 
 <h2 class={`title ${center ? 'justify-center': ''}`}>
-	<span class={`text-title-primary-color ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} block ${center ? 'text-center' : ''}`}>
+	<span class={`text-white ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} block ${center ? 'text-center' : ''}`}>
 		{title}
 	</span>
-	<span class={`text-gray-500 block ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} ${center ? 'text-center' : ''}`}>
+	<span class={`text-main-color-50 block ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} ${center ? 'text-center' : ''}`}>
 		{subtitle}
 	</span>
 </h2>

@@ -7,15 +7,15 @@ import navigation from '@data/navigation.json';
 
 const golden_dino = true;
 ---
-<div class="border-t-4 border-t-main-color-700 bg-white bg-opacity-40">
+<div class="bg-white bg-opacity-40">
 
   <!-- SPONSORS -->
-  <div class="border-t-4 border-b-4 border-main-color-600 bg-main-color-500 bg-opacity-40">
+  <div class="border-t-4 border-b-4 border-main-color-400 bg-main-color bg-opacity-40">
     <div class="max-w-screen-xl w-full mx-auto pt-3 px-3 sm:py-4 sm:px-6 flex flex-wrap sm:flex-nowrap">
 
       <!-- SPONSORS -->
       <div class="flex flex-col items-center w-full sm:w-1/2 mb-2 sm:mb-0">
-        <h3 class="font-emphasis text-main-color-800 text-2xl sm:text-3xl">SPONSORS</h3>
+        <h3 class="font-emphasis text-gray-400 text-3xl sm:text-4xl sm:mb-2">SPONSORS</h3>
         <div class="flex flex-wrap justify-around align-center sm:w-3/4 items-center">
           <div class="mx-2 mb-3">
             <a class="rounded block" href="{ sponsors.kuow.link }" rel="noopener">
@@ -57,7 +57,7 @@ const golden_dino = true;
             raw={true}
           />
         </a>
-        <p class="text-center text-xs sm:text-sm text-main-color-800 mt-2 w-3/4">
+        <p class="text-center text-xs sm:text-sm text-gray-400 mt-2 w-3/4">
           HONK! Fest West is fiscally sponsored by Shunpike.<br />
           <b>About Shunpike</b><br />
           Shunpike is the 501(c)(3) non-profit agency that provides independent
@@ -71,17 +71,17 @@ const golden_dino = true;
 
   <!-- BOTTOM -->
   <div class="max-w-screen-xl w-full mx-auto p-1 sm:p-0 flex flex-wrap sm:flex-nowrap items-center">
-    <a class="w-full text-center text-main-color-700 text-lg font-bold font-base block w-full sm:w-1/3 m-1 sm:m-4" href="/"
+    <a class="w-full text-center text-main-color text-lg font-bold font-base block w-full sm:w-1/3 m-1 sm:m-4" href="/"
       >© 2021 HONK! Fest West</a
     >
     <ul class="items-center h-full flex-1 w-full sm:w-1/3 m-1 sm:m-4 hidden sm:flex justify-around ">
       {Object.keys(navigation.social).map((item) => (
-        <li class="text-main-color-700">
+        <li class="text-main-color">
           <SocialLinks link={item} size="1.25rem"/>
         </li>
       ))}
     </ul>
-    <a class="w-full text-center font-base link text-accent-color font-bold text-lg block w-full sm:w-1/3 m-1 sm:m-4" href="#">
+    <a class="w-full text-center font-base link text-gray-700 font-bold text-lg block w-full sm:w-1/3 m-1 sm:m-4" href="#">
       Back to top
     </a>
   </div>

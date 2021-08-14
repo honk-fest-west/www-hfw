@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .content-container {
-  @apply bg-white bg-opacity-50 p-3 sm:p-5 rounded shadow-md overflow-hidden;
+  @apply bg-white bg-opacity-20 p-3 sm:p-5 rounded shadow-md overflow-hidden;
 }
 
 .title {
@@ -12,7 +12,7 @@
 
 .content,
 p {
-  @apply font-base antialiased text-gray-700 leading-7 text-base sm:text-lg flex-1;
+  @apply font-base antialiased text-gray-300 leading-7 text-base sm:text-lg flex-1;
 }
 .content ul {
   @apply pl-5 sm:pl-10 list-disc;
