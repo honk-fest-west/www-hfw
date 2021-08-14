@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 .content-container {
-  @apply bg-content-container p-3 sm:p-5 rounded shadow-md overflow-hidden bg-opacity-70;
-}
-
-.title {
-  @apply flex flex-wrap text-2xl sm:text-3xl font-title border-b-4 border-opacity-60 border-accent-color border-dotted mb-3;
+  @apply bg-gray-100 p-3 sm:p-5 rounded shadow-md overflow-hidden bg-opacity-20;
 }
 
 .content,

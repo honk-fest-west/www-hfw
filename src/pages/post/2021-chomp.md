@@ -1,5 +1,6 @@
 ---
 title: CHOMP!
+subtitle: Eat Well Live Well
 external_url: https://www.chomplocal.org/
 image_url: https://www.chomplocal.org/wp-content/uploads/2021/06/CHOMP-Site-1200x628-1.png?uupdatedAt=1628230081389
 order: 1

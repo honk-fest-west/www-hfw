@@ -16,11 +16,12 @@ import family from '@data/honk-family.json'
 		<Title title="Who" subtitle="is HONK! Fest West?"/>
 		<div class="flex w-full flex-wrap md:flex-nowrap">
 			<Image 
-				className="block w-full md:w-auto md:mr-5 mb-3 sm:mb-0" 
+				className="block w-full md:w-auto md:mr-5 mb-3 sm:mb-0 rounded" 
 				src="https://ik.imagekit.io/thegoldendino/hfw/henryart_0A59z8KGn.png?updatedAt=1628230159141" 
 				alt="Henry Art for H!FW"
 				width="233"
 				height="300"
+				tr="b-5_FFFFFF"
 			/>
 			<p class="content">
 				HONK! Fest West is a non-profit organization dedicated to the activation of public space through energetic musical performance; we are part of a global renaissance of street band culture. HONK! Fest West works to break down systemic barriers to inclusion for those underrepresented within our community and underserved by arts in our region.
@@ -80,7 +81,7 @@ import family from '@data/honk-family.json'
 					<a class="font-bold block w-full text-center" href={honk.url}>
 						<span>{honk.name}</span>	
 						<br/>
-						<span>({honk.location})</span>
+						<span>{honk.location}</span>
 					</a>
 				))}
 			</div>

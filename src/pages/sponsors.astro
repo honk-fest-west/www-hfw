@@ -7,6 +7,12 @@ import Image from '$components/Image.astro'
 import sponsors from '@data/sponsors.json'
 ---
 
+<style>
+	.sponsor-level-title {
+		@apply font-emphasis text-accent-color text-xl sm:text-2xl 
+	}
+</style>
+
 <BaseLayout title="Sponsors">
 	<!-- INTRO -->
 	<article class="content-container mb-3 sm:mb-6">
@@ -55,7 +61,7 @@ import sponsors from '@data/sponsors.json'
 							raw={true}
 						/>
 					</a>
-					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-3"/>
+					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-4"/>
 					<Markdown>
 						HONK! Fest West is supported, in part, by grants from the Community Investments Fund of [Tides Foundation](http://www.tides.org/), [4Culture](http://www.4culture.org/), 
 						 [Arts Fund](https://www.artsfund.org/), the [Washington State Arts Commission](https://www.arts.wa.gov/), and the [National Endowment for the Arts](https://www.arts.gov/).
@@ -72,7 +78,7 @@ import sponsors from '@data/sponsors.json'
 							</a>	
 						))}
 					</span>
-					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-3"/>
+					<span class="border-b-4 border-opacity-30 border-accent-color border-dotted w-full block mb-4"/>
 					<Markdown>
 						We thank the original [HONK! festival](http://honkfest.org/)—the mothership—which inspired our festival and has since seen other offspring arise in Austin, Detroit, Australia, Brazil and beyond!
 					</Markdown>
@@ -86,11 +92,11 @@ import sponsors from '@data/sponsors.json'
 				<Title title="Sponsorship Levels" center={true} />
 
 				<!-- GRAND MARSHALL -->
-				<h3 class="font-emphasis text-accent-color text-2xl sm:text-3xl text-center mt-4 sm:mt-6">
+				<h3 class="sponsor-level-title mt-4">
 					<a href="https://poweredbyshunpike.org/c/PBS/a/honkfestwest/Donate?t=5000">GRAND MARSHALL</a>
 					<span class="text-main-color-50"> $5,000+</span>
 				</h3>
-				<div class="content">
+				<div class="content mb-5">
 					<Markdown>
 						* Top billing as a “Title Sponsor” of our event
 						* Large color logo on sponsors web page, promotional material, email newsletters
@@ -105,11 +111,11 @@ import sponsors from '@data/sponsors.json'
 				</div>
 
 				<!-- TOP BRASS -->
-				<h3 class="font-emphasis text-accent-color text-2xl sm:text-3xl text-center mt-4 sm:mt-6">
+				<h3 class="sponsor-level-title">
 					<a href="https://poweredbyshunpike.org/c/PBS/a/honkfestwest/Donate?t=2500">TOP BRASS</a>
 					<span class="text-main-color-50"> $2,500</span>
 				</h3>
-				<div class="content">
+				<div class="content mb-5">
 					<Markdown>				
 						* Featured billing as an sponsor of our event
 						* Color logo on sponsors web page, promotional material, email newsletters
@@ -123,11 +129,11 @@ import sponsors from '@data/sponsors.json'
 				</div>
 
 				<!-- HORN STAR -->
-				<h3 class="font-emphasis text-accent-color text-2xl sm:text-3xl text-center mt-4 sm:mt-6">
+				<h3 class="sponsor-level-title">
 					<a href="https://poweredbyshunpike.org/c/PBS/a/honkfestwest/Donate?t=2500">HORN STAR</a>
 					<span class="text-main-color-50"> $1,000</span>
 				</h3>
-				<div class="content">
+				<div class="content mb-5">
 					<Markdown>				
 						* Color logo on sponsors web page
 						* Shared booth placement available
@@ -137,11 +143,11 @@ import sponsors from '@data/sponsors.json'
 				</div>
 
 				<!-- BAND BOOSTER -->
-				<h3 class="font-emphasis text-accent-color text-2xl sm:text-3xl text-center mt-4 sm:mt-6">
+				<h3 class="sponsor-level-title">
 					<a href="https://poweredbyshunpike.org/c/PBS/a/honkfestwest/Donate?t=500">HORN STAR</a>
 					<span class="text-main-color-50"> $500</span>
 				</h3>
-				<div class="content">
+				<div class="content mb-5">
 					<Markdown>				
 						* Logo on sponsors web page
 						* Sponsor listing where appropriate
@@ -149,7 +155,7 @@ import sponsors from '@data/sponsors.json'
 				</div>
 
 				<!-- IN-KIND CONTRIBUTION -->
-				<h3 class="font-emphasis text-accent-color text-2xl sm:text-3xl text-center mt-4 sm:mt-6">
+				<h3 class="sponsor-level-title">
 					<a href="https://poweredbyshunpike.org/c/PBS/a/honkfestwest/Donate?t=500">IN-KIND CONTRIBUTION</a>
 				</h3>
 				<div class="content">

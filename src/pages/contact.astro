@@ -9,8 +9,9 @@ import committee from '@data/committee.json'
 <BaseLayout title="Contact">
 
 	<!-- EMAIL ADDRESSES -->
-	<div class="content-container mb-6 sm:mb-12">
-		<dl class="mx-auto w-full sm:w-1/2 grid grid-cols-1 sm:grid-cols-2">
+	<div class="content-container mb-6 sm:mb-10 flex">
+		<img class="hidden md:block w-28 ml-auto" src='https://ik.imagekit.io/thegoldendino/hfw/festival/2021/goose_4tJV6uU5mRQ.png?updatedAt=1628928771447' alt="Goose with drum"/>
+		<dl class="mx-auto w-2/3 lg:w-1/2 grid grid-cols-1 sm:grid-cols-2">
 			{Object.keys(emails).map((email) => (
 				<>
 					<dt class="content sm:p-2">{emails[email].name}:</dt>
@@ -30,7 +31,7 @@ import committee from '@data/committee.json'
 		<span class="text-accent-color">HONK! FEST WEST</span>
 		COMMITTEE
 	</h2>
-	<div class="flex flex-wrap justify-around mx-1 sm:-mx-3">
+	<div class="flex flex-wrap justify-around mx-1 sm:-mx-3 -mb-3 sm:-mb-6">
 		{Object.keys(committee).map((position) => (
 			<div class="content-container w-full sm:w-[184px] mx-1 sm:mx-3 mb-3 sm:mb-6 flex flex-col items-center">
 				<Image 

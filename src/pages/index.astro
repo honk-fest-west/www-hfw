@@ -23,11 +23,11 @@ const postColumns = (index) => {
 
     <!-- INFO BLOCK -->
     <section itemscope itemtype="https://schema.org/Event" class="sm:col-span-3 content-container" >
-      <div class="flex flex-col justify-center items-center h-full text-3xl sm:text-4xl font-emphasis font-medium tracking-wide">
-        <span class="block text-title-primary-color mb-1 text-center hidden md:block" itemprop="name">
+      <div class="flex flex-col justify-between items-center h-full text-2xl sm:text-3xl font-emphasis font-medium tracking-wide">
+        <span class="block text-title-primary-color text-center mb-2 hidden md:block" itemprop="name">
           HONK! FEST WEST
         </span>
-        <span class="block text-accent-color sm:mb-2 tracking-normal text-center">
+        <span class="block text-accent-color tracking-normal sm:mb-2 text-center">
           SAVE THE DATE » <time itemprop="startDate" class="underline" content="2021-09-18">SEPTEMBER 18TH, 2021</time>
         </span>
         <span class="block text-title-primary-color text-center hidden md:block" itemprop="location">
@@ -38,8 +38,8 @@ const postColumns = (index) => {
 
     <!-- NEWSLETTER BLOCK -->
     <section class="sm:col-span-3 content-container">
-      <div class="flex flex-col items-center h-full justify-center text-3xl sm:text-4xl font-emphasis font-medium">
-        <span class="block text-title-primary-color mb-1 tracking-wide">
+      <div class="flex flex-col items-center h-full justify-center text-2xl sm:text-3xl font-emphasis font-medium">
+        <span class="block text-title-primary-color md:mb-2 tracking-wide">
           NEWSLETTER
         </span>
         <form 
@@ -52,9 +52,9 @@ const postColumns = (index) => {
           novalidate="">
 
           <div id="mc_embed_signup_scroll" class="flex flex-col justify-center items-center w-full">
-            <div class="hidden md:flex w-full mb-2 justify-center items-center">
+            <div class="hidden md:flex w-full md:mb-4 justify-center items-center">
               <label class="text-gray-400 mr-2 mb-0 block text-center" for="mce-EMAIL">
-                EMAIL
+                EMAIL:
               </label>
               <input type="email" value="" name="EMAIL" class="bg-white bg-opacity-70 block w-full font-base text-lg px-2 py-1" id="mce-EMAIL">
             </div>
@@ -72,7 +72,7 @@ const postColumns = (index) => {
               value="Subscribe" 
               name="subscribe" 
               id="mc-embedded-subscribe" 
-              class="border-2 border-gray-400 text-gray-600 rounded font-base text-base sm:text-lg px-2 py-1">
+              class="border-2 border-gray-400 text-gray-100 bg-gray-500 rounded font-base text-base sm:text-lg px-2 py-1">
           </div>
         </form>
       </div>

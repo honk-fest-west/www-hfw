@@ -20,9 +20,10 @@ module.exports = {
       },
       'title-primary-color': '#8494C6',
       'accent-color': '#F57F45',
+      'content-container': '#4D546A',
       gray: colors.coolGray,
       white: colors.white,
-      'content-container': '#4D546A',
+      transparent: 'transparent',
     },
     extend: {
       backgroundImage: (theme) => ({
@@ -30,7 +31,7 @@ module.exports = {
       }),
       fontFamily: {
         title: ['Josefin Sans', 'sans-serif'],
-        emphasis: ['Teko', 'sans-serif'],
+        emphasis: ['Alatsi', 'sans-serif'],
         base: ['Poppins', 'sans-serif'],
       },
     },

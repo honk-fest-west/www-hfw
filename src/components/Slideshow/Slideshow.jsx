@@ -13,8 +13,13 @@ export default function Slideshow({ slides }) {
     return `${slide}&tr=w-${image_size.w},h-${image_size.h},f-jpg,pr-true`;
   });
 
+  console.log('SSR', import.meta.env.SSR);
+
   return (
-    <section className="relative pt-[40%]" aria-label="Gallery">
+    <section
+      className={`relative pt-[40%] ${styles.carousel}`}
+      aria-label="Gallery"
+    >
       {import.meta.env.SSR ? (
         <></>
       ) : (
