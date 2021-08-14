@@ -26,9 +26,9 @@ p a {
 .gradient-edge-background {
   background: linear-gradient(
     to left,
-    rgba(255, 255, 255, 0),
+    rgba(32, 41, 69, 0),
     var(--main-color-transparent) 10%,
     var(--main-color-transparent) 90%,
-    rgba(255, 255, 255, 0)
+    rgba(32, 41, 69, 0)
   );
 }
