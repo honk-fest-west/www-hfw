@@ -8,16 +8,28 @@ media_folder: 'public/assets/images/uploads'
 public_folder: '/assets/images/uploads'
 
 collections:
-  - name: 'posts' # Used in routes, e.g., /admin/collections/blog
+  - name: 'posts' # Used in routes, e.g., /admin/collections/posts
     label: 'Posts' # Used in the UI
+    label_singular: 'Post'
     folder: 'src/pages/posts' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{fields.title}}_{{fields.subtitle}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: 'posts/{{filename}}'
+    sortable_fields: ['order', 'start_datetime']
+    view_filters:
+      - label: 'Home Page'
+        field: order
+        pattern: \d+
+      - label: 'Events'
+        field: type
+        pattern: 'Event'
     fields: # The fields for each document, usually in front matter
       - {
-          label: 'Home Page Order (blank to leave off home page)',
+          label: 'Home Page Order',
           name: 'order',
           widget: 'number',
+          required: false,
+          hint: 'blank to leave off home page',
         }
       - {
           label: 'Type',
@@ -25,6 +37,13 @@ collections:
           widget: 'select',
           options: ['Event'],
           default: ['Event'],
+        }
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'select',
+          options: ['@layouts/PostLayout.astro'],
+          default: ['@layouts/PostLayout.astro'],
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
@@ -36,10 +55,12 @@ collections:
           format: 'MMMM DD, YYYY hh:mm',
         }
       - {
-          label: 'End Date/Time (>= 23 hrs from start to make time blank)',
+          label: 'End Date/Time',
           name: 'end_datetime',
           widget: 'datetime',
           format: 'MMMM DD, YYYY hh:mm',
+          required: false,
+          hint: '>= 23 hrs from start to make time blank',
         }
       - {
           label: 'Location Display',
