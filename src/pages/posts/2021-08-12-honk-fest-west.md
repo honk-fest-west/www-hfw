@@ -1,5 +1,7 @@
 ---
 order: 4
+type: Event
+layout: '@layouts/PostLayout.astro'
 title: HONK! Fest West
 subtitle: 2021
 image_url: https://ik.imagekit.io/thegoldendino/hfw/posts/2021/2021-we-are-coming-for-you_p3u2wvRHk.png?updatedAt=1628230081389
