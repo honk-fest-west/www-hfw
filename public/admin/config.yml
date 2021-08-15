@@ -25,9 +25,11 @@ collections:
         pattern: 'Event'
     fields: # The fields for each document, usually in front matter
       - {
-          label: 'Home Page Order (blank to leave off home page)',
+          label: 'Home Page Order',
           name: 'order',
           widget: 'number',
+          required: false,
+          hint: 'blank to leave off home page',
         }
       - {
           label: 'Type',
@@ -53,10 +55,12 @@ collections:
           format: 'MMMM DD, YYYY hh:mm',
         }
       - {
-          label: 'End Date/Time (>= 23 hrs from start to make time blank)',
+          label: 'End Date/Time',
           name: 'end_datetime',
           widget: 'datetime',
           format: 'MMMM DD, YYYY hh:mm',
+          required: false,
+          hint: '>= 23 hrs from start to make time blank',
         }
       - {
           label: 'Location Display',
