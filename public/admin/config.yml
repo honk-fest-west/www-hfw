@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: admin-pending
+
+publish_mode: editorial_workflow
+
+media_folder: 'public/assets/images/uploads'
+public_folder: '/assets/images/uploads'
+
+collections:
+  - name: 'posts' # Used in routes, e.g., /admin/collections/blog
+    label: 'Posts' # Used in the UI
+    folder: 'src/pages/posts' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Order', name: 'order', widget: 'number' }
+      - {
+          label: 'Type',
+          name: 'type',
+          widget: 'select',
+          options: ['event'],
+          default: 'event',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+      - { label: 'Image URL', name: 'image_url', widget: 'string' }
+      - { label: 'Start Time', name: 'start_time', widget: 'datetime' }
+      - { label: 'End Time', name: 'end_time', widget: 'datetime' }
+      - {
+          label: 'Location Display',
+          name: 'location_display',
+          widget: 'string',
+        }
+      - { label: 'Location URL', name: 'location_url', widget: 'string' }
+      - {
+          label: 'More Display',
+          name: 'more_display',
+          widget: 'string',
+          default: '',
+        }
+      - { label: 'External URL', name: 'external_url', widget: 'string' }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
