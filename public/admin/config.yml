@@ -36,14 +36,14 @@ collections:
           name: 'type',
           widget: 'select',
           options: ['Event'],
-          default: ['Event'],
+          default: 'Event',
         }
       - {
           label: 'Layout',
           name: 'layout',
           widget: 'select',
           options: ['@layouts/PostLayout.astro'],
-          default: ['@layouts/PostLayout.astro'],
+          default: '@layouts/PostLayout.astro',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
