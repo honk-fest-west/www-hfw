@@ -3,9 +3,9 @@ backend:
   branch: main
 
 publish_mode: editorial_workflow
-
 media_folder: 'public/assets/images/uploads'
 public_folder: '/assets/images/uploads'
+site_url: https://honkfestwest.org
 
 collections:
   - name: 'posts' # Used in routes, e.g., /admin/collections/posts
@@ -14,7 +14,7 @@ collections:
     folder: 'src/pages/posts' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{fields.title}}_{{fields.subtitle}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    preview_path: 'posts/{{filename}}'
+    preview_path: 'posts/{{slug}}'
     sortable_fields: ['order', 'start_datetime']
     view_filters:
       - label: 'Home Page'
