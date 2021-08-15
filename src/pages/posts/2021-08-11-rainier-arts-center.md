@@ -1,14 +1,14 @@
 ---
+order: 2
 title: Rainier Arts Center
 subtitle: Porch Festival
-external_url: https://rainierartscenter.org/events/rainier-arts-center-porch-festival-397/
 image_url: https://rainierartscenter.org/wp-content/uploads/2021/07/Asset-32.png?updatedAt=1628230081389
-order: 3
-date: August 25, 2021
-time: 5:30-7:30pm
+start_datetime: August 25, 2021 17:30
+end_datetime: August 25, 2021 19:30
 location_display: Rainier Arts Center
 location_url: https://goo.gl/maps/jK1HgqqLc8rvQ7ZaA
 more_display: Event Website
+external_url: https://rainierartscenter.org/events/rainier-arts-center-porch-festival-397/
 ---
 
 Southend musicians, poets, drummers and dancers perform on the Rainier Arts Center porch!

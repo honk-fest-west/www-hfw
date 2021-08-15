@@ -5,7 +5,9 @@ import LinkBlurb from '$components/LinkBlurb.astro'
 import Slideshow from '../components/slideshow/Slideshow.jsx'
 import slides from '@data/slideshow.json';
 
-const posts = Astro.fetchContent('@pages/posts/*.md').sort((a,b) => (b.order - a.order));
+const posts = Astro.fetchContent('@pages/posts/*.md')
+  .filter((post) => !!post.order)
+  .sort((a,b) => (a.order - b.order));
 const posts_length = posts.length;
 const postColumns = (index) => {
   if (posts_length % 3 === 1 && index > posts_length - 2) {
