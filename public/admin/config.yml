@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: admin-pending
+  branch: main
 
 publish_mode: editorial_workflow
 
