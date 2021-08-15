@@ -32,3 +32,11 @@ p a {
     rgba(32, 41, 69, 0)
   );
 }
+
+.gradient-radial-background {
+  background-image: radial-gradient(
+    circle at bottom,
+    rgba(32, 41, 69, 0.8),
+    rgba(32, 41, 69, 0) 90%
+  );
+}
