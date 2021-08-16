@@ -3,7 +3,9 @@ import BaseLayout from '@layouts/BaseLayout.astro'
 import PostBlurb from '$components/post-blurb/PostBlurb.astro'
 import LinkBlurb from '$components/LinkBlurb.astro'
 import Slideshow from '../components/slideshow/Slideshow.jsx'
-import slides from '@data/slideshow.json';
+import slides from '@data/slideshow.json'
+
+import volunteer_data from '@data/volunteer.json'
 
 const posts = Astro.fetchContent('@pages/posts/*.md')
   .filter((post) => !!post.order)
@@ -97,7 +99,7 @@ const postColumns = (index) => {
     <section class="sm:col-span-6 md:col-span-2 content-container">
       <LinkBlurb title="Volunteer" href="/volunteer">
         If you want to volunteer, and help make HONK! Fest West magic, please 
-        <a class="text-accent-color font-bold" href="https://docs.google.com/forms/d/e/1FAIpQLSe78LKnwYFWr8yw2faj7vuslfeUfC9kgvy9ssm_DT_30i4zFA/viewform">
+        <a class="text-accent-color font-bold" href={volunteer_data.form_url}>
           APPLY HERE
         </a>
         and Thank You!!
