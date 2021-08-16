@@ -4,7 +4,7 @@ type: Event
 layout: "@layouts/PostLayout.astro"
 title: Downtown Summer Sounds
 subtitle: H!FW Showcase
-image_url: https://downtownseattle.org/app/uploads/2021/07/homepages-slider-events-downtown-summer-sounds-audience-20210714-4x3-v1-800x600-c-default.jpg
+image_url: https://downtownseattle.org/app/uploads/2021/07/homepages-slider-events-downtown-summer-sounds-audience-20210714-4x3-v1-800x600-c-default.jpg?uploadedAt=11111111111
 start_datetime: August 27, 2021 12:00
 end_datetime: null
 location_display: Harbor Steps
