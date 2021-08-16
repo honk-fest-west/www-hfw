@@ -13,7 +13,11 @@ more_display: Event Website
 external_url: https://downtownseattle.org/events/post/dss-honk-fest-west-showcase/
 ---
 Downtown Seattle Association is showcasing local HONK! bands at one of their [Downtown Summer Sounds](https://downtownseattle.org/events/downtown-summer-sounds/) events.
+
 <br/>
+
 DSA is proud to present Downtown Summer Sounds, returning bigger and better than ever before this summer. From July 1 to Sept. 30, DSS will bring free, local music to downtown Seattle via 100-plus live performances. That’s right — three months of in-person concerts featuring some of the best local talent our city has to offer. From the waterfront to the Harbor Steps to Westlake Park, downtown Seattle will once again be alive with the sound of music.
+
 <br/>
+
 **Free** for all ages
