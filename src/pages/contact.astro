@@ -4,6 +4,9 @@ import Image from '$components/Image.astro'
 
 import emails from '@data/email-addresses.json' 
 import committee from '@data/committee.json'
+
+const committee_with_images = Object.keys(committee).filter(position => !!committee[position].image_url)
+const committee_without_images = Object.keys(committee).filter(position => !committee[position].image_url)
 ---
 
 <BaseLayout title="Contact">
@@ -32,7 +35,7 @@ import committee from '@data/committee.json'
 		COMMITTEE
 	</h2>
 	<div class="flex flex-wrap justify-around gap-6 sm:gap-12">
-		{Object.keys(committee).map((position) => (
+		{committee_with_images.map((position) => (
 			<div class="w-[184px] flex flex-col items-center">
 				<Image 
 					className="rounded-full h-36 mb-2" 
@@ -43,6 +46,14 @@ import committee from '@data/committee.json'
 				<h3 class="font-emphasis text-2xl uppercase text-main-color-50 text-center">{position}</h3>
 				<p class="content text-center">{committee[position].name}</p>
 			</div>
+		))}
+	</div>
+	<div class="flex flex-wrap justify-around gap-6 sm:gap-12 mt-6 sm:mt-12">
+		{committee_without_images.map((position) => (
+			<div class="w-[184px] flex flex-col items-center">
+				<h3 class="font-emphasis text-2xl uppercase text-main-color-50 text-center">{position}</h3>
+				<p class="content text-center">{committee[position].name}</p>	
+			</div>	
 		))}
 	</div>
 

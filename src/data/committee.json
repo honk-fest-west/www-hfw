@@ -35,7 +35,7 @@
     "name": "Katie",
     "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/katie_OjdCeHQls.jpeg?updatedAt=1628536067049"
   },
-  "VC's Left Hand": {
+  "Volunteer Team (LH)": {
     "name": "Elsbeth",
     "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Elsbeth_G-ymnIE5av.jpg?updatedAt=1628536068712"
   },
@@ -47,7 +47,7 @@
     "name": "Susan",
     "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Susan2_fuCLcqhwc.jpg?updatedAt=1628536067887"
   },
-  "Astral Ethaning Coordinator": {
+  "Band Outreach": {
     "name": "Ethan",
     "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Ethan_dCbGVPBGtK.jpg?updatedAt=1628536068852"
   },
@@ -59,8 +59,24 @@
     "name": "Katie",
     "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/katie_9x6iEmAcXIM.jpg?updatedAt=1628552102225"
   },
-  "Website": {
-    "name": "Dwight",
-    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/lazer-dwight_qDmJ89KI9.png?updatedAt=1628555952814"
+  "Volunteer Team (RH)": {
+    "name": "Mogwai",
+    "image_url": null
+  },
+  "Community Engagement": {
+    "name": "Lu Badu",
+    "image_url": null
+  },
+  "Social Media": {
+    "name": "Cassidy",
+    "image_url": null
+  },
+  "Grants": {
+    "name": "Nick",
+    "image_url": null
+  },
+  "Permitting": {
+    "name": "Jamie",
+    "image_url": null
   }
 }
