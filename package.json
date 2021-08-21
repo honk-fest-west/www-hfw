@@ -7,9 +7,9 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^0.18.9",
-    "tailwindcss": "^2.2.7",
-    "react-responsive": "^9.0.0-beta.3"
+    "astro": "^0.19.1",
+    "react-responsive": "^9.0.0-beta.3",
+    "tailwindcss": "^2.2.7"
   },
   "snowpack": {
     "workspaceRoot": "../.."
