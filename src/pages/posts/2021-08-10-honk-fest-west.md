@@ -9,7 +9,7 @@ start_datetime: August 27, 2021 12:00
 end_datetime: null
 location_display: Harbor Steps
 location_url: https://downtownseattle.org/events/?location[]=harbor-steps
-more_display: Event Website
+more_display: Event Page
 external_url: https://downtownseattle.org/events/post/dss-honk-fest-west-showcase/
 ---
 Downtown Seattle Association is showcasing local HONK! bands at one of their [Downtown Summer Sounds](https://downtownseattle.org/events/downtown-summer-sounds/) events.
