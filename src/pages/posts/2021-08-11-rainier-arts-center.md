@@ -1,7 +1,7 @@
 ---
 order: 2
 type: Event
-layout: '@layouts/PostLayout.astro'
+layout: "@layouts/PostLayout.astro"
 title: Rainier Arts Center
 subtitle: Porch Festival
 image_url: https://rainierartscenter.org/wp-content/uploads/2021/07/Asset-32.png?updatedAt=1628230081389
@@ -9,7 +9,7 @@ start_datetime: August 25, 2021 17:30
 end_datetime: August 25, 2021 19:30
 location_display: Rainier Arts Center
 location_url: https://goo.gl/maps/jK1HgqqLc8rvQ7ZaA
-more_display: Event Website
+more_display: Event Page
 external_url: https://rainierartscenter.org/events/rainier-arts-center-porch-festival-397/
 ---
 
