@@ -1,7 +1,7 @@
 ---
-order: 2
+order:
 type: Event
-layout: "@layouts/PostLayout.astro"
+layout: '@layouts/PostLayout.astro'
 title: Rainier Arts Center
 subtitle: Porch Festival
 image_url: https://rainierartscenter.org/wp-content/uploads/2021/07/Asset-32.png?updatedAt=1628230081389
