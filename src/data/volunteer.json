@@ -1,6 +1,14 @@
 {
-  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLSfXMxrnC-XbnxFhxPI-zZOaB2IlqocYNfdjlsE4m1FVdNSSUQ/viewform",
+  "form_url": "https://www.signupgenius.com/go/30E044EAAA82FA1FD0-honk1",
   "positions": {
+    "Graphic Designer": {
+      "type": "Long-term Volunteer",
+      "description": "This person will take the festival artwork and incorporate it into all our marketing materials (posters, handbills), design our merchandise (t-shirts!), and create designs for our social and marketing team."
+    },
+    "Festival Art": {
+      "type": "Short-term Volunteer",
+      "description": "This talented individual will create the festival art piece that will be on all merchandise (t-shirts, stickers, etc), posters, handbills, marketing and other advertising for the year. "
+    },
     "Volunteer Coordinator": {
       "type": "Committee",
       "description": "The Volunteer Coordinator is our chief cat wrangler and fun instigator, and the source of sunshine for all our eager volunteers. Responsible for the recruitment, retention, rostering and wrangling of both year-round and event-based volunteers, the VC is the most vital link in the entire festival's chain of awesomeness."
@@ -13,10 +21,6 @@
       "type": "Committee",
       "description": "This amazing person will come up with an overall outreach strategy for HONK! Fest West. They will also play a role in partnerships and sponsorships, create the community newsletter and build strong connections between the Committee, the bands, and the HONK! Fest West family."
     },
-    "Community Engagement": {
-      "type": "Committee",
-      "description": "This role will build strong connections with neighborhoods, community groups, business organizations, etc. They will have a beat on all the communities we are a part of and should be our key point of contact on the committee for our neighborhoods."
-    },
     "Fundraising Campaign Lead": {
       "type": "Long-term Volunteer",
       "description": "This is part of the FUNdraising sub-committee. The Campaign Lead will be in charge of managing campaigns and programs such as year-end giving, corporate giving, GiveBIG, and other giving campaigns as needed."
@@ -24,14 +28,6 @@
     "HONK! Planner": {
       "type": "Committee",
       "description": "As the planner of HONK! locations, you will scout out potential new locations for the festival, plan out festival site for day-of activities, and wrangle the permitting and operations team into a cohesive unit."
-    },
-    "Social Media": {
-      "type": "Long-term Volunteer",
-      "description": "Do you like Facebook, Twitter, and Instagram? So do we! But we need some nimble hands to power the ship as we are a ship paddling with oars."
-    },
-    "Set Designer": {
-      "type": "Long-term Volunteer",
-      "description": "This person will be in charge of creating signage, stage settings, and other decor and determining placement of all physical art at the festival and special events."
     },
     "Miscellaneous": {
       "type": "",
