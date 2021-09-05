@@ -1,0 +1,19 @@
+---
+import {Markdown} from 'astro/components'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import Title from '$components/Title'
+import Image from '$components/Image'
+
+import sponsors from '@data/sponsors.json'
+---
+
+<BaseLayout title="Thank You!">
+	<div class="content-container">
+		<div class="content">
+			<div class="text-6xl font-emphasis text-accent-color text-center mb-5">THANK YOU!</div>
+			<Markdown>
+				Your contributions help make this event possible. Through the generous efforts of our shared community, we’ll keep bringing music to the streets and parks of Seattle’s neighborhoods.
+			</Markdown>
+		</div>
+	</div>
+</BaseLayout>
