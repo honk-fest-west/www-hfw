@@ -1,5 +1,7 @@
 ---
-const {title="", subtitle=false, center=false} = Astro.props;
+const {title="", subtitle=false, center=false, id=""} = Astro.props;
+
+const _id = id.length ? id : title
 ---
 
 <style>
@@ -9,7 +11,7 @@ const {title="", subtitle=false, center=false} = Astro.props;
 </style>
 
 
-<h2 class={`title ${center ? 'justify-center': ''}`}>
+<h2 id={_id} class={`title ${center ? 'justify-center': ''}`}>
 	<span class={`text-gray-300 ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} block ${center ? 'text-center' : ''}`}>
 		{title}
 	</span>

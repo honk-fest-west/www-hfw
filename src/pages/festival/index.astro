@@ -1,0 +1,15 @@
+---
+	import { Markdown } from 'astro/components'
+	import FestivalLayout from '@layouts/FestivalLayout.astro'
+	import Title from '$components/Title.astro'
+---
+
+<FestivalLayout title="Schedule" active="schedule">
+	<Title title="September 18th, 2021 in Columbia Park!" id="schedule" />
+	<div class="content">
+		<Markdown>
+			- **12pm:** Music starts in Columbia Park in the Columbia City neighborhood of Seattle (4271 Rainier Ave S, Seattle, WA 98118). Two "stages" of music until 7pm!
+			- **7pm:** Community jam in Columbia Park!!! Bring your instrument and get down with your community!
+		</Markdown>
+	</div>
+</FestivalLayout>

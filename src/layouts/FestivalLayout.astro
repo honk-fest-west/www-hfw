@@ -1,0 +1,38 @@
+---
+import {Markdown} from 'astro/components'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import Title from '$components/Title'
+import Image from '$components/Image'
+
+const {title, active} = Astro.props
+
+const isActive = (key) => key === active ? 'active' : ''
+---
+
+<style>
+	.menu a {
+		@apply block bg-accent-color rounded text-xl text-gray-200 mb-5 last:mb-0 font-base font-bold py-2 bg-opacity-70 px-4
+	}
+	.menu a.active {
+		@apply bg-opacity-100
+	}
+</style>
+
+<BaseLayout title={title}>
+	<div class="flex flex-wrap md:flex-nowrap gap-4 sm:gap-6">
+		<div class="w-full md:w-1/3">
+			<div class="content-container">
+				<div class="menu">
+					<a class={isActive('schedule')} href="/festival#schedule">» Schedule</a>
+					<a class={isActive('map')} href="/festival/map#map">» Map</a>
+					<a class={isActive('covid')} href="/festival/covid#covid">» Covid Plan</a>
+				</div>
+			</div>
+		</div>
+		<div class="w-full md:w-2/3">
+			<div class="content-container">
+				<slot/>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
