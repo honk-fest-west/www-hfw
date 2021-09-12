@@ -9,7 +9,7 @@ start_datetime: September 18, 2021 12:00
 end_datetime: September 18, 2021 19:30
 location_display: Columbia Park, Seattle, WA
 location_url: https://goo.gl/maps/9jiqHARPQrXxua8R6
-more_display: Event Info
+more_display: Festival Info
 external_url: /festival
 ---
 
