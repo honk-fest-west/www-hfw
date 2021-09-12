@@ -4,7 +4,8 @@ import Image from '$components/Image.astro'
 import navigation from '@data/navigation.json'
 
 const activeLink = (link) => {
-	return Astro.request.url.pathname === link ? 'text-accent-color' : ''	
+	console.log(Astro.request.url.pathname, link)
+	return Astro.request.url.pathname.includes(link) ? 'text-accent-color' : ''	
 }
 ---
 
