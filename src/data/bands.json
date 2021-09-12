@@ -1,0 +1,52 @@
+{
+  "burnout": {
+    "name": "Burn Out Brass Band",
+    "url": "https://www.burnoutbrassband.com/"
+  },
+  "vamola": {
+    "name": "VamoLá",
+    "url": "https://www.facebook.com/vamolaseattle/"
+  },
+  "filthy": {
+    "name": "Filthy FemCorps",
+    "url": "https://www.facebook.com/FilthyFemcorps"
+  },
+  "shpilkis": {
+    "name": "Shpilkis!",
+    "url": "https://www.shpilkisseattle.com/"
+  },
+  "tenman": {
+    "name": "Ten Man Brass Band",
+    "url": "https://www.gigsalad.com/ten_man_brass_band_seattle"
+  },
+  "onelove": {
+    "name": "One Love Brass Band",
+    "url": "https://www.facebook.com/onelovebrassband/"
+  },
+  "riseup": {
+    "name": "Rise Up! Action Band",
+    "url": "https://riseupactionband.com/"
+  },
+  "8bit": { "name": "8-Bit Brass Band", "url": "http://8bitbrassband.com/" },
+  "m9": { "name": "The m9", "url": "http://them9.com/" },
+  "neon": {
+    "name": "Neon Brass Party",
+    "url": "https://www.facebook.com/NeonBrassParty/"
+  },
+  "brasscadia": {
+    "name": "Brasscadia",
+    "url": "https://www.facebook.com/Brasscadia/"
+  },
+  "chaotic": {
+    "name": "Chaotic Noise",
+    "url": "http://chaoticnoise.com/"
+  },
+  "kouyate": {
+    "name": "Kouyate Arts",
+    "url": "https://www.kouyatearts.com/performance-company"
+  },
+  "reign": {
+    "name": "Reign City Riot",
+    "url": "http://www.rainbowcityband.com/riot/"
+  }
+}
