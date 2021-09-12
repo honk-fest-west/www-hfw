@@ -1,6 +1,10 @@
 {
   "main": [
     {
+      "name": "Festival",
+      "link": "/festival"
+    },
+    {
       "name": "About",
       "link": "/about"
     },
