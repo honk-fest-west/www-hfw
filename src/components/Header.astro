@@ -5,7 +5,7 @@ import navigation from '@data/navigation.json'
 
 const activeLink = (link) => {
 	console.log(Astro.request.url.pathname, link)
-	return Astro.request.url.pathname.includes(link) ? 'text-accent-color' : 'opacity-70'	
+	return Astro.request.url.pathname.includes(link) ? 'text-accent-color' : 'text-gray-300'	
 }
 ---
 
@@ -27,14 +27,14 @@ const activeLink = (link) => {
 
 		<!-- MAIN NAV -->
 		{navigation.main.map((item) => (
-			<li class="text-2xl sm:text-3xl text-white font-title flex items-center my-2">
+			<li class="text-2xl sm:text-3xl font-title flex items-center my-2">
 				<a
-					class={`mx-4 sm:mx-2 block hover:text-accent-color hover:opacity-100 ${activeLink(item.link)}`}
+					class={` mx-4 sm:mx-2 block hover:accent-color ${activeLink(item.link)}`}
 					href={ item.link }
 
 				>{ item.name }</a>
 
-				<span class="mx-2 hidden sm:block h-9 opacity-80">&#8226;</span>
+				<span class="text-accent-color mx-2 hidden sm:block h-9 opacity-80">&#8226;</span>
 			</li>
 		))}
 
