@@ -76,10 +76,9 @@ import family from '@data/honk-family.json'
 				<Title title={`HONK! Family - ${continent}`} center={true} />
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-7 w-full content my-4 sm:my-5">
 					{family[continent].map((honk) => (
-						<a class="font-bold block w-full text-center" href={honk.url}>
-							<span>{honk.name}</span>	
-							<br/>
-							<span>{honk.location}</span>
+						<a class="font-bold block w-full flex flex-col text-center items-center" href={honk.url}>
+							<span class="block border-accent-color border-2 rounded border-opacity-80 w-80 p-5 relative top-4 text-2xl">{honk.name}</span>
+							<span class="block bg-main-color-400 px-2 z-10">{honk.location}</span>	
 						</a>
 					))}
 				</div>
