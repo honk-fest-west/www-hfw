@@ -5,6 +5,7 @@
 :root {
   --main-color: rgba(32, 41, 69, 1);
   --main-color-transparent: rgba(32, 41, 69, 0.8);
+  --accent-color: #f57f45;
 }
 
 .content-container {
