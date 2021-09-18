@@ -5,12 +5,12 @@
       "link": "/festival"
     },
     {
-      "name": "Volunteer",
-      "link": "/volunteer"
-    },
-    {
       "name": "Donate",
       "link": "/donate"
+    },
+    {
+      "name": "Volunteer",
+      "link": "/volunteer"
     },
     {
       "name": "Sponsors",
