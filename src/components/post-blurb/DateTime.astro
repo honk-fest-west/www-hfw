@@ -4,7 +4,7 @@ const {start, end, className} = Astro.props
 const start_date = start && new Date(start)
 const end_date = end && new Date(end)
 
-const format = (date, options = {dateStyle: 'long'}) => {
+const format = (date, options: Intl.DateTimeFormatOptions = {dateStyle: 'long'}) => {
 	return new Intl.DateTimeFormat('en-US', options).format(date)
 }
 
