@@ -1,14 +1,6 @@
 {
   "main": [
     {
-      "name": "Festival",
-      "link": "/festival"
-    },
-    {
-      "name": "Donate",
-      "link": "/donate"
-    },
-    {
       "name": "Volunteer",
       "link": "/volunteer"
     },
@@ -23,6 +15,10 @@
     {
       "name": "Contact",
       "link": "/contact"
+    },
+    {
+      "name": "Donate",
+      "link": "/donate"
     }
   ],
   "social": {
