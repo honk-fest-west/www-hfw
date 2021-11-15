@@ -2,6 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro'
 import PostBlurb from '$components/post-blurb/PostBlurb.astro'
 import LinkBlurb from '$components/LinkBlurb.astro'
+import Image from '$components/Image.astro'
 import Slideshow from '../components/slideshow/Slideshow.jsx'
 import slides from '@data/slideshow.json'
 
@@ -85,29 +86,54 @@ const postColumns = (index) => {
       </div>
     </section>
 
-    <article class="w-full content-container col-span-6">
-      <p>
-        We had an amazing HONK! Fest West 2021, despite COVID restrictions, thanks to all of our volunteers, performers, and everyone who came out to brave the beautiful fall weather! The rain nor the pandemic could not keep the HONK! from the people. We were blown away by how amazing the bands were and how positive the entire day was. Thanks again to all of you for making it a huge success. 
-      </p>
-      <br/>
-      <p>
-        Mark your calendars for the first weekend of June, when we return for HONK! Fest West 2022! Locations to be announced in January!!! We are looking forward to HONKing again with you in 2022! 
-      </p>
-      <br/>
-      <p>
-        Want to see what our photographer, Tobin Holliday, captured for the day?
-        <a class="block" href="http://www.tobinholliday.com/honkfest-west">http://www.tobinholliday.com/honkfest-west</a>
-      </p>
-      <br/>
-      <p>
-        What about the enthusiastically dapper photographer, Espresso Buzz? 
-        <a class="block" href="https://www.espressobuzz.net/Events/2021/09-18-Honk/">https://www.espressobuzz.net/Events/2021/09-18-Honk/</a>
-      </p>
-      <br/>
-      <p>
-        And, as always, our very own Charlie Daniels has his immersive videos on YouTube for your viewing pleasure: 
-        <a class="block" href="https://www.youtube.com/c/MalixePhoto">https://www.youtube.com/c/MalixePhoto</a>
-      </p>
+    <article class="w-full content-container col-span-6 flex flex-col md:flex-row">
+      <div class="w-1/4 flex-none pr-6 flex mb-3 md:mb-0 md:flex-col">
+        <Image 
+          src="https://ik.imagekit.io/thegoldendino/hfw/carousel/2021/honkfestwest_2021_th-52_ieqmszPrw.jpg?updatedAt=1636925468749"
+          alt="Neon Brass Party - H!FW - 2021"
+          width="273"
+          height="182"
+				  className="w-full h-auto mb-0 mr-2 md:mb-2 md:mr-0"
+        />
+        <Image 
+          src="https://ik.imagekit.io/thegoldendino/hfw/carousel/2021/honkfestwest_2021_th-72_ptDY6mK_M.jpg?updatedAt=1636925469114"
+          alt="Kouyaté Arts - H!FW - 2021"
+          width="273"
+          height="182"
+				  className="w-full h-auto mb-0 mr-2 md:mb-2 md:mr-0"
+        /> 
+        <Image 
+          src="https://ik.imagekit.io/thegoldendino/hfw/carousel/2021/honkfestwest_2021_th-15_fgEAIXS2pi.jpg?updatedAt=1636925468773"
+          alt="Filthy Fem Corps - H!FW - 2021"
+          width="273"
+          height="182"
+				  className="w-full h-auto"
+        /> 
+      </div>
+      <div>
+        <p>
+          We had an amazing HONK! Fest West 2021, despite COVID restrictions, thanks to all of our volunteers, performers, and everyone who came out to brave the beautiful fall weather! The rain nor the pandemic could not keep the HONK! from the people. We were blown away by how amazing the bands were and how positive the entire day was. Thanks again to all of you for making it a huge success. 
+        </p>
+        <br/>
+        <p>
+          Mark your calendars for the first weekend of June, when we return for HONK! Fest West 2022! Locations to be announced in January!!! We are looking forward to HONKing again with you in 2022! 
+        </p>
+        <br/>
+        <p>
+          Want to see what our photographer, Tobin Holliday, captured for the day?
+          <a class="block" href="http://www.tobinholliday.com/honkfest-west">http://www.tobinholliday.com/honkfest-west</a>
+        </p>
+        <br/>
+        <p>
+          What about the enthusiastically dapper photographer, Espresso Buzz? 
+          <a class="block" href="https://www.espressobuzz.net/Events/2021/09-18-Honk/">https://www.espressobuzz.net/Events/2021/09-18-Honk/</a>
+        </p>
+        <br/>
+        <p>
+          And, as always, our very own Charlie Daniels has his immersive videos on YouTube for your viewing pleasure: 
+          <a class="block" href="https://www.youtube.com/c/MalixePhoto">https://www.youtube.com/c/MalixePhoto</a>
+        </p>
+      </div>
     </article>
 
     <!-- POST BLURBS -->
