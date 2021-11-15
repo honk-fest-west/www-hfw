@@ -17,7 +17,7 @@ const positions = volunteer_data.positions
 			<div class="content-container">
 				<Title title="Sign Up" center={true} />
 				<p class="content">
-					Our HONK! Fest West Volunteer Coordinator would ♥ LOVE ♥ to hear from you!
+					Help us produce an amazing HONK! Fest West 2022 Festival!
 				</p>
 				<a 
 					href={volunteer_data.form_url}
@@ -31,17 +31,14 @@ const positions = volunteer_data.positions
 				<Title title="HONK! Fest West" subtitle="NEEDS YOU!!!"/>
 				<div class="content">
 					<Markdown>
-						Below is a list of currently open roles within the Organizing Committee. These positions are distinguished between Committee-level roles and Long-term Volunteer roles. What’s the difference?
-						<br/>
-						* **Committee Roles** usually have an increase in responsibility and commitment. They are also expected to attend all regular committee meetings.
-						* **Long-term Volunteer Roles**, aka Super-Volunteers, are usually roles that fit into a planning committee. They are not expected to attend regular meetings of the Organizing Committee and report to a committee level lead. These roles tend to have less responsibility and commitment throughout the year.
+						Below is a list of currently open roles within the Organizing Committee. There are positions of varying commitment to suit every level!
 					</Markdown>
 				</div>
 			</div>
 
 			{Object.keys(positions).map((position) => (
 				<div class="content-container">
-					<Title title={position} subtitle={positions[position].type.length ? `| ${positions[position].type}` : ''} />
+					<Title title={position}  />
 					<p>
 						<Markdown content={positions[position].description}/>
 					</p>
