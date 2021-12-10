@@ -1,31 +1,28 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}'],
+  content: [
+    './public/**/*.html',
+    './src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}',
+  ],
   theme: {
-    colors: {
-      'main-color': {
-        DEFAULT: 'var(--main-color)',
-        50: '#8494C6',
-        100: '#7385BE',
-        200: '#5067AE',
-        300: '#40528B',
-        400: '#303E68',
-        500: 'var(--main-color)',
-        600: '#101422',
-        700: '#000000',
-        800: '#000000',
-        900: '#000000',
-      },
-      'title-primary-color': '#8494C6',
-      'accent-color': '#F57F45',
-      'content-container': '#4D546A',
-      gray: colors.coolGray,
-      white: colors.white,
-      transparent: 'transparent',
-    },
     extend: {
+      colors: {
+        'main-color': {
+          DEFAULT: 'var(--main-color)',
+          50: '#8494C6',
+          100: '#7385BE',
+          200: '#5067AE',
+          300: '#40528B',
+          400: '#303E68',
+          500: 'var(--main-color)',
+          600: '#101422',
+          700: '#000000',
+          800: '#000000',
+          900: '#000000',
+        },
+        'title-primary-color': '#8494C6',
+        'accent-color': '#F57F45',
+        'content-container': '#4D546A',
+      },
       backgroundImage: (theme) => ({
         site: 'url(/assets/images/birds-background.png)',
       }),

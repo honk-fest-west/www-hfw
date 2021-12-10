@@ -3,15 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build"
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.19.1",
-    "react-responsive": "^9.0.0-beta.3",
-    "tailwindcss": "^2.2.7"
-  },
-  "snowpack": {
-    "workspaceRoot": "../.."
+    "astro": "^0.21.12",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^3.0.0",
+    "react-responsive": "^9.0.0-beta.3"
   }
 }

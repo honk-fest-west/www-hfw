@@ -5,10 +5,10 @@ const transforms = (raw ? [`w-${width}`, `h-${height}`, tr] : [`w-${width}`, `h-
 
 const image_url = `${src}&tr=${transforms}`
 
-const width_img = (<img src={image_url} width={width} class={className} alt={alt}/>)
-const height_img = (<img src={image_url} height={height} class={className} alt={alt}/>)
-const width_height_img = (<img src={image_url} width={width} height={height} class={className} alt={alt}/>)
-const img = (<img src={image_url} class={className} alt={alt}/>)
+const width_img = `<img src="${image_url}" width="${width}" class="${className}" alt="${alt}" />`
+const height_img = `<img src="${image_url}" height="${height}" class="${className}" alt="${alt}"/>`
+const width_height_img = `<img src="${image_url}" width="${width}" height="${height}" class="${className}" alt="${alt}"/>`
+const img = `<img src="${image_url}" class="${className}" alt="${alt}"/>`
 const has_width = !!width && width.length && width !== 'auto'
 const has_height = !!height && height.length && height !== 'auto'
 

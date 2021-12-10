@@ -23,7 +23,7 @@ export default function Slideshow({ slides }) {
       ) : (
         <ol className={styles.viewport}>
           {image_urls.map((image_url) => (
-            <li tabindex="0" className={styles.slide}>
+            <li tabIndex="0" className={styles.slide} key={image_url}>
               <img
                 width={image_size.w}
                 height={image_size.h}
