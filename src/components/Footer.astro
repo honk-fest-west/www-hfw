@@ -15,7 +15,7 @@ const golden_dino = true;
     <div class="max-w-screen-xl w-full mx-auto pt-3 px-3 sm:py-4 sm:px-6 flex flex-wrap sm:flex-nowrap">
 
       <!-- SPONSORS -->
-      <div class="flex flex-col items-center w-full sm:w-1/2 mb-2 sm:mb-0">
+      <div class="flex flex-col items-center w-full mb-2 sm:mb-0">
         <h3 class="font-emphasis text-main-color-50 text-3xl mb-2 sm:mb-3 md:mb-4 tracking-wide">SPONSORS</h3>
         <div class="flex flex-wrap justify-around align-center sm:w-3/4 items-center">
           {sponsors.arts.map((sponsor) => (
@@ -32,28 +32,6 @@ const golden_dino = true;
             </div>
           ))}
         </div>
-      </div>
-
-      <!-- SHUNPIKE -->
-      <div class="flex flex-col items-center w-full sm:w-1/2 mb-5">
-        <a href="{ sponsors.shunpike.link }">
-          <Image
-            src={ sponsors.shunpike.image }
-            alt={ sponsors.shunpike.name }
-            width="180"
-            height="34"
-            className="mx-auto block w-auto h-11"
-            raw={true}
-          />
-        </a>
-        <p class="text-center text-xs sm:text-sm text-gray-400 mt-2 w-3/4">
-          HONK! Fest West is fiscally sponsored by Shunpike.<br />
-          <b>About Shunpike</b><br />
-          Shunpike is the 501(c)(3) non-profit agency that provides independent
-          arts groups in Washington State with the services, resources, and
-          opportunities they need to forge their own paths to sustainable
-          success.
-        </p>
       </div>
     </div>
   </div>

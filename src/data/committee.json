@@ -39,6 +39,14 @@
     "name": "Ethan",
     "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Ethan_dCbGVPBGtK.jpg?updatedAt=1628536068852"
   },
+  "Sponsorships": {
+    "name": "Nick",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/Nick_hYIhzKKu4.jpg?updatedAt=1628536067550"
+  },
+  "Volunteer Coordinator": {
+    "name": "YOU!",
+    "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/dino-statue_5GylT-2uy.jpg?updatedAt=1640918309723"
+  },
   "Volunteer Team (RH)": {
     "name": "Mogwai",
     "image_url": null
@@ -51,24 +59,16 @@
     "name": "Cassidy",
     "image_url": null
   },
-  "Sponsorships": {
-    "name": "Nick",
-    "image_url": null
-  },
   "Permitting": {
     "name": "Jamie",
     "image_url": null
   },
-  "Graphic Designer": {
-    "name": "YOU!",
-    "image_url": null
-  },
-  "Volunteer Coordinator": {
-    "name": "YOU!",
+  "Graphic Design & Festival Art": {
+    "name": "Sid",
     "image_url": null
   },
   "Housing": {
-    "name": "YOU!",
+    "name": "Jenny",
     "image_url": null
   }
 }

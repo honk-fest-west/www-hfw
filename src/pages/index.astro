@@ -6,6 +6,7 @@ import Image from '@components/Image.astro'
 import Title from '@components/Title.astro'
 import Slideshow from '../components/slideshow/Slideshow.jsx'
 import slides from '@data/slideshow.json'
+import volunteer_data from '@data/volunteer.json'
 
 import volunteer_data from '@data/volunteer.json'
 
@@ -97,26 +98,20 @@ const postColumns = (index) => {
     <article class="w-full content-container col-span-6 flex flex-col md:flex-row">
       <div class="w-1/3 flex-none pr-6 flex mb-3 md:mb-0 md:flex-col">
         <Image
-          src="https://ik.imagekit.io/thegoldendino/hfw/posts/2021/SpoonForce_Tuesday_f-z4gVOPT9.png?updatedAt=1638139644339"
+          src="https://ik.imagekit.io/thegoldendino/hfw/posts/volunteer_eH1tKog7f.jpg?updatedAt=1640916421073"
           alt="Giving Tuesday + HONK! Fest West"
-          width="372"
-          height="326"
+          width="640"
+          height="349"
           className="w-full h-auto"
         />
       </div>
       <div>
-        <Title title="Giving" subtitle="Tuesday" />
+        <Title title="Volunteer Coordinator" subtitle="Needed" />
         <p>
-          HONK! Fest West is kicking off end-of-year giving by participating in Giving Tuesday, a global day of generosity, on Tuesday, November 30. 
-          <a href="https://www.givebigwa.org/honk-fest-west">Please donate now to HONK! Fest West.</a> 
-          As you know, we are an all-volunteer, music program that breaks down barriers to participation and invites people of all ages, races, genders and abilities to come together to make music in the streets - for free to the public. Your support is critical to make this happen.
+          The Volunteer Coordinator is our chief cat wrangler and fun instigator, and the source of sunshine for all our eager volunteers. Responsible for the recruitment, retention, rostering and wrangling of both year-round and event-based volunteers, the VC is the most vital link in the entire festival’s chain of awesomeness.
         </p>
-        <br/>
-        <p>
-          Your gift now will fuel our efforts to host a full, three-day, community festival in June 2022 that will knock your socks off, including local and out of town bands. None of this is possible without your support, so please give generously.
-        </p>
-        <a class="block font-base rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-accent-color w-full text-lg bg-opacity-80 px-2 hover:bg-opacity-90" href="https://www.givebigwa.org/honk-fest-west">
-			    » Donate
+        <a class="block font-base rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-accent-color w-full text-lg bg-opacity-80 px-2 hover:bg-opacity-90" href={volunteer_data.form_url} >
+			    » Apply Here
 		    </a>
       </div>
     </article>
