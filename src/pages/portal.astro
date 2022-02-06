@@ -1,0 +1,127 @@
+---
+import FestivalCountDown from '../components/FestivalCountDown.svelte';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta
+			name="description"
+			content="HONK! Fest West is an accessible community music festival driven by the energetic performances of street bands in public spaces."
+		/>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
+		<title>Portal - HONK! Fest West</title>
+	</head>
+	<body class="min-h-full bg-gray-50">
+		<header class="pb-24 bg-gradient-to-r from-sky-800 to-cyan-600">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 pt-4">
+				<h1 class="text-white font-semibold text-4xl">HONK! FEST WEST - Portal</h1>
+			</div>
+		</header>
+		<main class="-mt-12 pb-8">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+				<div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+					<div class="grid grid-cols-1 gap-4 lg:col-span-2">
+						<section>
+							<div class="rounded-lg bg-white overflow-hidden shadow">
+								<div class="p-6">
+									<h2 class="text-base font-medium text-gray-900 mb-3" id="slack-title">Festival Begins In:</h2>
+									<FestivalCountDown client:load/>
+								</div>
+							</div>							
+						</section>
+						<section>
+							<div class="rounded-lg bg-white overflow-hidden shadow">
+								<div class="p-6 lg:px-0 lg:py-6">
+									<iframe class="hidden lg:block" src="https://calendar.google.com/calendar/u/0/embed?src=c_sjkku2j6pdu59sh84beushj7ss@group.calendar.google.com&ctz=America/Los_Angeles" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+									<h2 class="text-base font-medium text-gray-900 block lg:hidden" id="calendar-title">HONK Fest West Committees Calendar</h2>
+									<a class="block lg:hidden mt-3 font-semibold text-blue-500 hover:text-blue-600" href="https://calendar.google.com/calendar/u/0/embed?src=c_sjkku2j6pdu59sh84beushj7ss@group.calendar.google.com&ctz=America/Los_Angeles">https://calendar.google.com</a>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="grid grid-cols-1 gap-4">
+						<section>
+							<div class="rounded-lg bg-white overflow-hidden shadow">
+								<div class="p-6">
+									<h2 class="text-base font-medium text-gray-900" id="slack-title">Google Workspace</h2>
+									<a class="block mt-3 font-semibold text-blue-500 hover:text-blue-600" href="https://workspace.google.com/dashboard">https://workspace.google.com/dashboard</a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="rounded-lg bg-white overflow-hidden shadow">
+								<div class="p-6">
+									<h2 class="text-base font-medium text-gray-900" id="slack-title">Slack</h2>
+									<a class="block mt-3 font-semibold text-blue-500 hover:text-blue-600" href="https://honkfestwest.slack.com/">https://honkfestwest.slack.com/</a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="rounded-lg bg-white overflow-hidden shadow">
+								<div class="p-6">
+									<h2 class="text-base font-medium text-gray-900" id="slack-title">Asana</h2>
+									<a class="block mt-3 font-semibold text-blue-500 hover:text-blue-600" href="https://app.asana.com">https://app.asana.com</a>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="rounded-lg bg-white overflow-hidden shadow">
+								<div class="p-6">
+									<h2 class="text-base font-medium text-gray-900" id="slack-title">Google Drive</h2>
+									<ul class="mt-2 divide-y divide-gray-200">
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AFUeOpkDH8flUk9PVA">Administration | Organization</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AItllvwHs5CRUk9PVA">Archive</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0ABGPK9Qv-sqLUk9PVA">Bands | Booking</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AJP9cXRSlnowUk9PVA">Committee Minutes | Meeting Surveys</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0APVAQuzIydWgUk9PVA">Creative Committee</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AN8OUSLX8PYNUk9PVA">Equity | Inclusion | Diversity</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AOsaXwyq5LFfUk9PVA">Grants | Fundraising</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0ACpGc0ZRSwnXUk9PVA">Hospitality | Housing | Food | Transpo</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AEyL2GDYHnWVUk9PVA">Marketing | Outreach</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0ALrOFO7j6Fr0Uk9PVA">Planning | Operations</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AAtS10zJXwhpUk9PVA">Post-Festival | After Action | Lessons Learned</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AGGcx9_msT3FUk9PVA">Special Events</a>
+										</li>
+										<li class="py-3">
+											<a class="font-semibold text-blue-500 hover:text-blue-600" href="https://drive.google.com/drive/folders/0AEBRlok3X6ezUk9PVA">Volunteers</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>				
+					</div>
+				</div>
+			</div>
+	
+
+		</main>
+	</body>
+</html>
+
