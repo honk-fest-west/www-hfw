@@ -2,19 +2,10 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
-<script>
-	window.onload = function() {
-		const position = window.location.search.replace(/\?position=/, '').replace(/%20/g, ' ');
-		document.getElementById('position').value = position;
-		document.getElementById('position-title').innerHTML = position;
-	}
-</script>
-
-<BaseLayout title="Volunteer Committee Form">
+<BaseLayout title="New Volunteer Form">
 	<div class="content-container">
-		<form name="Committee Position" action="/volunteer/committee-form-success" method="POST" netlify-honeypot="firsthumanwinkwinkname" data-netlify="true" >
-			<input type="hidden" name="position" id="position" value="" />
-			<h2 class="text-gray-100 text-3xl mb-5">Position of Interest: <span class="underline text-accent-color" id="position-title"></span></h2>
+		<form name="New Volunteer" action="/volunteer/new-volunteer-form-success" method="POST" netlify-honeypot="firsthumanwinkwinkname" data-netlify="true" >
+			<h2 class="text-gray-100 text-3xl mb-5">Volunteer Sign Up</h2>
 			<label class="hidden">
 				First Name <input name="firsthumanwinkwinkname" type="text" />
 			</label>
