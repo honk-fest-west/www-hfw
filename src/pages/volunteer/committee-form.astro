@@ -1,71 +1,65 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import volunteer_data from '@data/volunteer.json';
-
-const positions = Object.keys(volunteer_data.positions);
 ---
 
 <script>
 	window.onload = function() {
-		const setPosition = window.location.search.replace(/\?position=/, '').replace(/%20/g, '');
-		const el = document.getElementById(`position-${setPosition}`);
-		el.checked = true;
+		const position = window.location.search.replace(/\?position=/, '').replace(/%20/g, ' ');
+		document.getElementById('position').value = position;
+		document.getElementById('position-title').innerHTML = position;
 	}
 </script>
 
 <BaseLayout title="Volunteer Committee Form">
 	<div class="content-container">
-		<form name="committee-position" action="/volunteer/committee-form-success" method="POST" data-netlify="true" class="space-y-8 divide-y divide-gray-200">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-				<section class="grid grid-cols-1 gap-3">
-					<div >
-						<p>
-							<label for="name">Name</label>
-						</p>
-						<div class="mt-1">
-							<input type="text" name="name" id="name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2" required>
-						</div>
-					</div>
-					<div >
-						<p>
-							<label for="email">Email</label>
-						</p>
-						<div class="mt-1">
-							<input type="email" name="email" id="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2" required>
-						</div>
-					</div>
-					<div >
-						<p>
-							<label for="phone">Phone</label>
-						</p>
-						<div class="mt-1">
-							<input type="tel" name="phone" id="phone" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2">
-						</div>
-					</div>
-					<p>
-						<label for="comments">
-							Comments
-						</label>
-					</p>
-					<textarea name="comments" id="comments" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md px-3 py-2"></textarea>
-				</section>
-				<section>
-					<p class="mb-2">Position of Interest</p>
-					{positions.map(position => {
-						return (
-							<p class="mt-1">
-								<input type="radio" name="position" id={`position-${position.replace(/\s/g,'')}`} value={position} class="mr-2">
-								<label for={`position-${position.replace(/\s/g,'')}`}>{position}</label>
+		<form name="committee-position" action="/volunteer/committee-form-success" method="POST" data-netlify="true" >
+			<input type="hidden" name="position" id="position" value="" />
+			<h2 class="text-gray-100 text-3xl mb-5">Position of Interest: <span class="underline" id="position-title"></span></h2>
+			<div class="space-y-8 divide-y divide-gray-200">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+					<section class="grid grid-cols-1 gap-3">
+						<div >
+							<p>
+								<label for="name">Name</label>
 							</p>
-						)
-					})}
-				</section>
-			</div>
-			<div>
-				<button
-					type="submit" 
-					class="block font-base text-center rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-accent-color w-fit text-lg bg-opacity-80 px-3 py-2 hover:bg-opacity-90"
-					>Submit</button>
+							<div class="mt-1">
+								<input type="text" name="name" id="name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2" required>
+							</div>
+						</div>
+						<div >
+							<p>
+								<label for="email">Email</label>
+							</p>
+							<div class="mt-1">
+								<input type="email" name="email" id="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2" required>
+							</div>
+						</div>
+						<div >
+							<p>
+								<label for="phone">Phone</label>
+							</p>
+							<div class="mt-1">
+								<input type="tel" name="phone" id="phone" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2">
+							</div>
+						</div>
+						
+					</section>
+					<section>
+						<p>
+							<label for="comments">
+								Comments
+							</label>
+						</p>
+						<textarea name="comments" id="comments" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md px-3 py-2"></textarea>
+					</section>
+				</div>
+				<div>
+					<button
+						type="submit" 
+						class="block font-base text-center rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-accent-color w-fit text-lg bg-opacity-80 px-3 py-2 hover:bg-opacity-90"
+						>Submit</button>
+				</div>
 			</div>
 		</form>
 	</div>
