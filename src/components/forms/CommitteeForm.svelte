@@ -1,5 +1,4 @@
 <script>
-
 	export let positions;
 
 	let setPosition = "";
