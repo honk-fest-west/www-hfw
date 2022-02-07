@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CommitteeForm from '@components/forms/CommitteeForm.svelte';
+import volunteer_data from '@data/volunteer.json';
+---
+
+<BaseLayout title="Volunteer Committee Form">
+	<div class="content-container">
+		<CommitteeForm client:load positions={volunteer_data.positions} />
+	</div>
+</BaseLayout>
