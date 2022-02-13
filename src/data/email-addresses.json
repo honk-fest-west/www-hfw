@@ -7,8 +7,8 @@
     "name": "Booking",
     "email": "booking@honkfestwest.org"
   },
-  "volunteers": {
+  "volunteer": {
     "name": "Volunteer",
-    "email": "volunteers@honkfestwest.org"
+    "email": "volunteer@honkfestwest.org"
   }
 }
