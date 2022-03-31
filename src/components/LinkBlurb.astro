@@ -4,13 +4,15 @@ import Title from '@components/Title.astro'
 
 const {title="", href="#"} = Astro.props
 ---
+<div class="l-jagged-bg bg-[length:100px_25px] opacity-30"/>
+<div class="r-jagged-bg  bg-[length:100px_25px] opacity-30"/>
+<div class="flex flex-col justify-between h-full z-10">
 
-<div class="flex flex-col justify-between h-full">
 	<Title title={title} center={true}/>
 	<p class="content flex-1">
 		<slot/>
 	</p>
-	<a class="block font-base antialiased text-base sm:text-lg text-title-primary-color font-bold flex-none mt-3" href={href}>
+	<a class="block font-base antialiased text-base sm:text-lg text-title-primary-color font-bold flex-none mt-3 z-10" href={href}>
 		» Read More
 	</a>
 </div>

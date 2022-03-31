@@ -11,8 +11,11 @@ const activeLink = (link) => {
 <a class="absolute right-5 top-0 text-white opacity-10" href="/portal">+</a>
 
 <!-- H!FW LOGO -->
-<div class="flex justify-center mt-6 sm:mt-12 mb-4 sm:mb-8 w-full bg-[#962C2B]  border-b-[1.5rem]  border-[#0E4341] shadow-lg">
-	<a class="block mx-auto sm:w-2/3 lg:w-2/5 max-h-full" href="/">
+<div class="border-y-[0.5rem] border-opacity-90 border-[#0E4341] mt-6 sm:mt-12 mb-4 sm:mb-8">
+<div class="flex justify-center  w-full bg-[#962C2B]    shadow-lg relative">
+	<div class="l-jagged-bg bg-[length:100px_25px] sm:bg-[length:300px_50px]"/>
+	<div class="r-jagged-bg  bg-[length:100px_25px] sm:bg-[length:300px_50px]"/>
+	<a class="block mx-auto sm:w-2/3 lg:w-2/5 max-h-full z-0" href="/">
 		<Image
 			className="w-auto h-full mx-auto"
 			src="https://ik.imagekit.io/thegoldendino/hfw/logo-transparent_wyLhQJMof.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648438185463"
@@ -22,13 +25,14 @@ const activeLink = (link) => {
 		/>
 	</a>
 </div>
+</div>
 
 <nav class="w-full pb-4">
 	<ul class="flex flex-wrap justify-center items-center w-full">
 
 		<!-- MAIN NAV -->
 		{navigation.main.map((item) => (
-			<li class={`text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-90 text-main-color-600 hover:bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg  ${activeLink(item.link)}`}>
+			<li class={`text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-90 text-main-color-600 focus:bg-[#962C2B] hover:bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg  ${activeLink(item.link)}`}>
 				<a
 					class={` mx-4 sm:mx-2 block  font-semibold`}
 					href={ item.link }
@@ -54,3 +58,4 @@ const activeLink = (link) => {
 		</li>
 	</ul>
 </nav>
+
