@@ -12,13 +12,12 @@ const committee_without_images = Object.keys(committee).filter(position => !comm
 <BaseLayout title="Contact">
 
 	<!-- EMAIL ADDRESSES -->
-	<div class="content-container mb-6 sm:mb-10 flex">
-		<img class="hidden md:block w-28 ml-auto" src='https://ik.imagekit.io/thegoldendino/hfw/festival/2021/goose_4tJV6uU5mRQ.png?updatedAt=1628928771447' alt="Goose with drum"/>
-		<dl class="mx-auto lg:ml-28 sm:w-2/3 lg:w-1/2  grid grid-cols-1 sm:grid-cols-2">
+	<div class="content-container mb-6 sm:mb-10">
+		<dl class="mx-auto sm:w-2/3 lg:w-1/2  grid grid-cols-1 sm:grid-cols-2">
 			{Object.keys(emails).map((email) => (
 				<>
-					<dt class="sm:p-2 font-base antialiased text-gray-300 leading-7 text-lg sm:text-xl flex-1">{emails[email].name}:</dt>
-					<dd class="content pb-2 sm:p-2 font-base antialiased text-gray-300 leading-7 text-lg sm:text-xl">
+					<dt class="sm:p-2 font-base antialiased text-main-color-300 leading-7 text-lg sm:text-xl flex-1">{emails[email].name}:</dt>
+					<dd class="content pb-2 sm:p-2 font-base antialiased text-main-color-300 leading-7 text-lg sm:text-xl">
 						<a href={`mailto:${emails[email].email}`}>
 							{emails[email].email}
 						</a>
@@ -29,7 +28,7 @@ const committee_without_images = Object.keys(committee).filter(position => !comm
 	</div>
 
 	<!-- COMMITTEE -->
-	<h2 class="font-emphasis text-3xl sm:text-4xl text-main-color-100 text-center tracking-wide mb-8">
+	<h2 class="text-3xl sm:text-4xl text-main-color-900 text-center tracking-wide mb-8 font-bold">
 		YOUR
 		<span class="text-accent-color">HONK! FEST WEST</span>
 		COMMITTEE
@@ -38,21 +37,21 @@ const committee_without_images = Object.keys(committee).filter(position => !comm
 		{committee_with_images.map((position) => (
 			<div class="w-[184px] flex flex-col items-center">
 				<Image 
-					className="rounded-full h-36 mb-2" 
+					className="rounded-full h-36 mb-2 border-[.5rem] border-main-color-900" 
 					src={committee[position].image_url} alt={committee[position].name}
 					width="150"
 					height="150"
 				/>
-				<h3 class="font-emphasis text-2xl uppercase text-main-color-50 text-center">{position}</h3>
-				<p class="content text-center">{committee[position].name}</p>
+				<h3 class="text-2xl uppercase text-main-color-900 text-center font-bold">{position}</h3>
+				<p class="content text-center "><span class="text-accent-color font-bold">{committee[position].name}</span></p>
 			</div>
 		))}
 	</div>
 	<div class="flex flex-wrap justify-around gap-6 sm:gap-12 mt-6 sm:mt-12">
 		{committee_without_images.map((position) => (
 			<div class="w-[184px] flex flex-col items-center">
-				<h3 class="font-emphasis text-2xl uppercase text-main-color-50 text-center">{position}</h3>
-				<p class="content text-center">{committee[position].name}</p>	
+				<h3 class="font-bold text-2xl uppercase text-main-color-900 text-center">{position}</h3>
+				<p class="content text-center "><span class="text-accent-color font-bold">{committee[position].name}</span></p>	
 			</div>	
 		))}
 	</div>

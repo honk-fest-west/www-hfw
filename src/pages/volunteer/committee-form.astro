@@ -14,7 +14,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 	<div class="content-container">
 		<form name="Committee Position" action="/volunteer/committee-form-success" method="POST" netlify-honeypot="firsthumanwinkwinkname" data-netlify="true" >
 			<input type="hidden" name="position" id="position" value="" />
-			<h2 class="text-gray-100 text-3xl mb-5"><span class="underline text-accent-color" id="position-title"></span></h2>
+			<h2 class="text-gray-100 text-3xl mb-5"><span class="underline text-title-primary-color" id="position-title"></span></h2>
 			<label class="hidden">
 				First Name <input name="firsthumanwinkwinkname" type="text" />
 			</label>
@@ -26,7 +26,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 								<label for="name">Name</label>
 							</p>
 							<div class="mt-1">
-								<input type="text" name="name" id="name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2" required>
+								<input type="text" name="name" id="name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-main-color-200 bg-opacity-80 rounded-md px-3 py-2" required>
 							</div>
 						</div>
 						<div >
@@ -34,7 +34,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 								<label for="email">Email</label>
 							</p>
 							<div class="mt-1">
-								<input type="email" name="email" id="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2" required>
+								<input type="email" name="email" id="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-main-color-200 bg-opacity-80 rounded-md px-3 py-2" required>
 							</div>
 						</div>
 						<div >
@@ -42,7 +42,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 								<label for="phone">Phone</label>
 							</p>
 							<div class="mt-1">
-								<input type="tel" name="phone" id="phone" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md px-3 py-2">
+								<input type="tel" name="phone" id="phone" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-main-color-200 bg-opacity-80 rounded-md px-3 py-2">
 							</div>
 						</div>
 						
@@ -53,7 +53,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 								Comments
 							</label>
 						</p>
-						<textarea name="comments" id="comments" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md px-3 py-2"></textarea>
+						<textarea name="comments" id="comments" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border bg-main-color-200 bg-opacity-80 rounded-md px-3 py-2"></textarea>
 					</section>
 				</div>
 				<div>

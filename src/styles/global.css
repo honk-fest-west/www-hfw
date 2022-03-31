@@ -4,25 +4,25 @@
 @tailwind utilities;
 
 :root {
-  --main-color: rgba(32, 41, 69, 1);
-  --main-color-transparent: rgba(32, 41, 69, 0.8);
-  --accent-color: #f57f45;
+  --main-color: #rgba(228, 203, 119, 1);
+  --main-color-transparent: rgba(228, 203, 119, 0.8);
+  --accent-color: #962c2b;
 }
 
 .content-container {
-  @apply bg-main-color-300 p-3 sm:p-5 rounded overflow-hidden bg-opacity-50 border-2 border-main-color-300 border-opacity-50;
+  @apply bg-[#006662] p-3 sm:p-5 rounded overflow-hidden border-b-[1rem] border-[#0E4341] border-opacity-80;
 }
 
 .content,
 p {
-  @apply font-base antialiased text-gray-300 leading-7 text-base text-lg flex-1;
+  @apply font-base antialiased text-main-color-200 opacity-90 leading-7 text-base text-lg flex-1;
 }
 .content ul {
   @apply pl-5 sm:pl-10 list-disc;
 }
 .content a,
 p a {
-  @apply text-accent-color font-bold;
+  @apply text-title-primary-color font-bold;
 }
 
 .gradient-edge-background {

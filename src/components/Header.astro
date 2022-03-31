@@ -4,18 +4,18 @@ import Image from '@components/Image.astro'
 import navigation from '@data/navigation.json'
 
 const activeLink = (link) => {
-	return Astro.request.url.pathname.includes(link) ? 'text-accent-color' : 'text-gray-300'	
+	return Astro.request.url.pathname.includes(link) ? ' bg-[#962C2B]' : 'bg-main-color-900'	
 }
 ---
 
 <a class="absolute right-5 top-0 text-white opacity-10" href="/portal">+</a>
 
 <!-- H!FW LOGO -->
-<div class="flex justify-center mt-6 sm:mt-12 mb-4 sm:mb-8 w-full">
-	<a class="block mx-auto w-4/5 sm:w-2/3 lg:w-2/5" href="/">
+<div class="flex justify-center mt-6 sm:mt-12 mb-4 sm:mb-8 w-full bg-[#962C2B]  border-b-[1.5rem]  border-[#0E4341] shadow-lg">
+	<a class="block mx-auto sm:w-2/3 lg:w-2/5 max-h-full" href="/">
 		<Image
-			className="w-full h-full"
-			src="https://ik.imagekit.io/thegoldendino/hfw/festival/2021/hfw-logo-2021_hNpZhGf683y.png?updatedAt=1628895819192"
+			className="w-auto h-full mx-auto"
+			src="https://ik.imagekit.io/thegoldendino/hfw/logo-transparent_wyLhQJMof.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648438185463"
 			alt="HONK! Fest West"
 			width="557"
 			raw={true}
@@ -28,19 +28,19 @@ const activeLink = (link) => {
 
 		<!-- MAIN NAV -->
 		{navigation.main.map((item) => (
-			<li class="text-2xl sm:text-3xl font-title flex items-center my-2">
+			<li class={`text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-90 text-main-color-600 hover:bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg  ${activeLink(item.link)}`}>
 				<a
-					class={` mx-4 sm:mx-2 block hover:text-accent-color ${activeLink(item.link)}`}
+					class={` mx-4 sm:mx-2 block  font-semibold`}
 					href={ item.link }
 
 				>{ item.name }</a>
 
-				<span class="text-accent-color mx-2 hidden sm:block h-9 opacity-80">&#8226;</span>
+				
 			</li>
 		))}
 
 		<!-- SOCIAL NAV -->
-		<li class="text-2xl text-main-color-100 ml-2 my-2 flex">
+		<li class="text-2xl text-main-color-900 ml-2 my-2 flex">
 			{Object.keys(navigation.social).map((item) => (
 				<div>
 					<div class="hidden sm:block px-1 h-9">
