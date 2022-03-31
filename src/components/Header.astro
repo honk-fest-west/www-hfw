@@ -4,7 +4,7 @@ import Image from '@components/Image.astro'
 import navigation from '@data/navigation.json'
 
 const activeLink = (link) => {
-	return Astro.request.url.pathname.includes(link) ? ' bg-[#962C2B]' : 'bg-main-color-900'	
+	return Astro.request.url.pathname.includes(link) ? ' bg-[#962C2B]' : 'bg-[#0A4D4B] '	
 }
 ---
 
@@ -44,7 +44,7 @@ const activeLink = (link) => {
 		))}
 
 		<!-- SOCIAL NAV -->
-		<li class="text-2xl text-main-color-900 ml-2 my-2 flex z-10">
+		<li class="text-2xl text-[#0E4341] opacity-90 ml-2 my-2 flex z-10">
 			{Object.keys(navigation.social).map((item) => (
 				<div>
 					<div class="hidden sm:block px-1 h-9">
