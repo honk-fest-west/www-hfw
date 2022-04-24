@@ -6,6 +6,7 @@ import Image from '@components/Image.astro'
 import Title from '@components/Title.astro'
 import NewsletterForm from '@components/NewsletterForm.astro'
 import Slideshow from '../components/slideshow/Slideshow.jsx'
+import GiveBig from '@components/home/GiveBig.astro'
 import slides from '@data/slideshow.json'
 import volunteer_data from '@data/volunteer.json'
 
@@ -32,7 +33,7 @@ const postColumns = (index) => {
 ---
 
 <BaseLayout title="Home">
-  <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-6 w-full lg:mt-16">
+  <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-6 w-full lg:mt-14">
 
     <!-- INFO BLOCK -->
     <section itemscope itemtype="https://schema.org/Event" class="w-full col-span-6 lg:col-span-2 content-container z-10" >
@@ -72,7 +73,7 @@ const postColumns = (index) => {
 
 
     <article class="w-full content-container col-span-6 flex flex-col md:flex-row">
-
+      <GiveBig />
     </article>
 
     <!-- POST BLURBS -->
