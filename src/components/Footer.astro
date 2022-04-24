@@ -6,6 +6,7 @@ import GoldenDino from './GoldenDino.svelte'
 import sponsors from '@data/sponsors.json'
 import navigation from '@data/navigation.json';
 
+const displaySponsors = [sponsors.nea, sponsors.artswa, ...sponsors.arts]
 const golden_dino = true;
 ---
 <div class="bg-[#962C2B] ">
@@ -20,13 +21,13 @@ const golden_dino = true;
           <span class="text-xs leading-tight w-1/5 text-main-color-300 mr-6 text-justify text-opacity-80 pr-3">
             This project is supported in part by the National Endowment for the Arts and the WA State Arts Commission.
           </span>
-          {sponsors.arts.map((sponsor) => (
+          {displaySponsors.map((sponsor) => (
             <div class="mx-2 mb-3">
               <a href="{ sponsor.link }" class="rounded block bg-white w-fit p-1 h-fit">
                 <Image
                   src={ sponsor.image }
                   alt={ sponsor.name }
-                  className="rounded h-[80px]"
+                  className="rounded h-[60px]"
                   tr={ sponsor.tr }
                 />
               </a>

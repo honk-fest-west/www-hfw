@@ -4,6 +4,17 @@
     "link": "https://poweredbyshunpike.org/c/PBS/a/honkfestwest",
     "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/Shunpike_logo-4_MJaxscKSkbN.png?updatedAt=1628631360340"
   },
+  "nea": {
+    "name": "National Endowment for the Arts",
+    "link": "https://www.arts.gov/",
+    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/nea_logo_xqSse_Pbb.jpg?updatedAt=1628843291841"
+  },
+  "artswa": {
+    "name": "Washington State Arts Commission",
+    "link": "https://www.arts.wa.gov/",
+    "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/Transparent-background-ArtsWA-logo_State-with-full-name_2019_2HKh-O2il0I.png?updatedAt=1628630949914"
+  },
+
   "arts": [
     {
       "name": "4 Culture",
@@ -18,14 +29,9 @@
       "tr": "b-18_FFFFFF"
     },
     {
-      "name": "Washington State Arts Commission",
-      "link": "https://www.arts.wa.gov/",
-      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/Transparent-background-ArtsWA-logo_State-with-full-name_2019_2HKh-O2il0I.png?updatedAt=1628630949914"
-    },
-    {
-      "name": "National Endowment for the Arts",
-      "link": "https://www.arts.gov/",
-      "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/nea_logo_xqSse_Pbb.jpg?updatedAt=1628843291841"
+      "name": "King County CREATIVE",
+      "link": "https://kingcountycreative.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/king-county-creative_jHEHtTLOA.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1650834529150"
     }
   ],
   "food": [

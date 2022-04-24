@@ -58,10 +58,32 @@ import sponsors from '@data/sponsors.json'
 				<Title title="Supporters"/>
 				<p class="content">
 					<Markdown>
-						HONK! Festival West is supported by grants from the Community Investments Fund of [4Culture](http://www.4culture.org/), 
-						 [Arts Fund](https://www.artsfund.org/), the [Washington State Arts Commission](https://www.arts.wa.gov/), and the [National Endowment for the Arts](https://www.arts.gov/).
+						This project is supported in part by the [National Endowment for the Arts](https://www.arts.gov/) and the [WA State Arts Commission](https://www.arts.wa.gov/).
 					</Markdown>
-					<span class="block grid grid-cols-4 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
+					<span class="block grid grid-cols-2 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
+
+						<a class="block mb-3 sm:mb-0" href={sponsors.nea.link} >
+							<Image 
+								className="w-auto rounded bg-white p-2" 
+								src={sponsors.nea.image} alt={sponsors.nea.name}
+								tr={sponsors.nea.tr}
+							/>
+						</a>	
+						<a class="block mb-3 sm:mb-0" href={sponsors.artswa.link} >
+							<Image 
+								className="w-auto rounded bg-white p-2" 
+								src={sponsors.artswa.image} alt={sponsors.artswa.name}
+								tr={sponsors.artswa.tr}
+							/>
+						</a>
+					</span>
+					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
+
+					<Markdown>
+						HONK! Festival West is supported by grants from the Community Investments Fund of [4Culture](http://www.4culture.org/), 
+						 [Arts Fund](https://www.artsfund.org/), and [King County CREATIVE](https://kingcountycreative.com/).
+					</Markdown>
+					<span class="block grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
 						{sponsors.arts.map((sponsor) => (
 							<a class="block mb-3 sm:mb-0" href={sponsor.link} >
 								<Image 
@@ -72,9 +94,11 @@ import sponsors from '@data/sponsors.json'
 							</a>	
 						))}
 					</span>
+
 					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
+
 					<Markdown>
-						Thank you to our partner organizations for their help growing a thriving creative community in Seattle:
+						Thank you to our partner organizations for their support in building a thriving creative community in Seattle:
 					</Markdown>
 					<span class="block grid grid-cols-6 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
 						{sponsors.shoutouts.map((sponsor) => (
@@ -87,7 +111,9 @@ import sponsors from '@data/sponsors.json'
 							</a>	
 						))}
 					</span>
+
 					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
+
 					<Markdown>
 						We thank the original [HONK! festival](http://honkfest.org/)—the mothership—which inspired our festival and has since seen other offspring arise in Austin, Detroit, Australia, Brazil and beyond!
 					</Markdown>
