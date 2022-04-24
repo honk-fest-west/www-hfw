@@ -21,13 +21,12 @@ const golden_dino = true;
             This project is supported in part by the National Endowment for the Arts and the WA State Arts Commission.
           </span>
           {sponsors.arts.map((sponsor) => (
-            <div class="mx-2 mb-3 flex-1">
-              <a href="{ sponsor.link }" class="rounded block">
+            <div class="mx-2 mb-3">
+              <a href="{ sponsor.link }" class="rounded block bg-white w-fit p-1 h-fit">
                 <Image
                   src={ sponsor.image }
                   alt={ sponsor.name }
-                  className="rounded h-14"
-                  height="48"
+                  className="rounded h-[80px]"
                   tr={ sponsor.tr }
                 />
               </a>

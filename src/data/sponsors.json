@@ -68,5 +68,17 @@
       "link": "https://www.li.me/",
       "image": "https://ik.imagekit.io/thegoldendino/hfw/sponsors/lime_AMueV5FcF7.png?updatedAt=1628178274442"
     }
+  ],
+  "shoutouts": [
+    {
+      "name": "Columbia City Beatwalk",
+      "link": "https://www.facebook.com/ColumbiaCityBeatwalk/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/beat-walk_MUi7d5Qge.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1650783250441"
+    },
+    {
+      "name": "Rainier Valley Creative District",
+      "link": "https://rainiervalleycreativedistrict.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/rvcd/brand/logo-lg_uqHNphXcj.png?ik-sdk-version=javascript-1.4.3&updatedAt=1636003240128"
+    }
   ]
 }

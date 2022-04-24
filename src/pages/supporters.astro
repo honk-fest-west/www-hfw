@@ -54,7 +54,6 @@ import sponsors from '@data/sponsors.json'
 			</article>
 		</div>
 		<div class="w-full lg:w-2/3 flex flex-col gap-4 sm:gap-6">
-
 			<article class="content-container">
 				<Title title="Supporters"/>
 				<p class="content">
@@ -62,19 +61,33 @@ import sponsors from '@data/sponsors.json'
 						HONK! Festival West is supported by grants from the Community Investments Fund of [4Culture](http://www.4culture.org/), 
 						 [Arts Fund](https://www.artsfund.org/), the [Washington State Arts Commission](https://www.arts.wa.gov/), and the [National Endowment for the Arts](https://www.arts.gov/).
 					</Markdown>
-					<span class="block flex flex-wrap sm:flex-nowrap justify-around mt-2 sm:mb-5">
+					<span class="block grid grid-cols-4 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
 						{sponsors.arts.map((sponsor) => (
-							<a class="block" href={sponsor.link} >
+							<a class="block mb-3 sm:mb-0" href={sponsor.link} >
 								<Image 
-									className="rounded w-auto h-16 lg:h-20 mb-3 sm:mb-0" 
+									className="w-auto rounded bg-white p-2" 
 									src={sponsor.image} alt={sponsor.name}
-									height="80"
 									tr={sponsor.tr}
 								/>
 							</a>	
 						))}
 					</span>
-					<span class="border-b-4 border-opacity-40 border-title-primary-color border-dotted w-full block mb-4"/>
+					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
+					<Markdown>
+						Thank you to our partner organizations for their help growing a thriving creative community in Seattle:
+					</Markdown>
+					<span class="block grid grid-cols-6 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
+						{sponsors.shoutouts.map((sponsor) => (
+							<a class="block  h-16 lg:h-32 mb-3 sm:mb-0" href={sponsor.link} >
+								<Image 
+									className="w-auto rounded bg-white p-1" 
+									src={sponsor.image} alt={sponsor.name}
+									tr={sponsor.tr}
+								/>
+							</a>	
+						))}
+					</span>
+					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
 					<Markdown>
 						We thank the original [HONK! festival](http://honkfest.org/)—the mothership—which inspired our festival and has since seen other offspring arise in Austin, Detroit, Australia, Brazil and beyond!
 					</Markdown>
