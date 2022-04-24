@@ -4,6 +4,7 @@ import PostBlurb from '@components/post-blurb/PostBlurb.astro'
 import LinkBlurb from '@components/LinkBlurb.astro'
 import Image from '@components/Image.astro'
 import Title from '@components/Title.astro'
+import NewsletterForm from '@components/NewsletterForm.astro'
 import Slideshow from '../components/slideshow/Slideshow.jsx'
 import slides from '@data/slideshow.json'
 import volunteer_data from '@data/volunteer.json'
@@ -34,144 +35,44 @@ const postColumns = (index) => {
   <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-6 w-full lg:mt-16">
 
     <!-- INFO BLOCK -->
-    <section itemscope itemtype="https://schema.org/Event" class="w-full col-span-6 lg:col-span-3 content-container z-10" >
-
-      <div class="flex flex-col justify-around items-center h-full text-2xl sm:text-5xl  font-medium tracking-wide z-10">
+    <section itemscope itemtype="https://schema.org/Event" class="w-full col-span-6 lg:col-span-2 content-container z-10" >
+      <Title title="Upcoming Festival" center={true} />
+      <div class="flex flex-col items-center h-full text-2xl sm:text-4xl  font-medium tracking-wide z-10">
         <span class=" text-title-primary-color text-center mb-2 hidden  font-emphasis" itemprop="name">
           <span class="text-main-color-300 ">HONK!</span> FEST WEST
         </span>
         <div class="flex flex-col lg:flex-row justify-center items-center  w-full">
-          <span class="block mb-2 lg:mb-0 text-title-primary-color  tracking-normal md:mr-2 font-emphasis text-center">
+          <span class="block lg:mb-0 text-title-primary-color  tracking-normal md:mr-2 font-emphasis text-center">
             <time itemprop="startDate" content="2022-06-03">JUNE 3 - 5, 2022</time>
           </span>
         </div>
         <span class="text-main-color-300 text-center block font-emphasis" itemprop="location">
           SEATTLE, WA
         </span>
+        <a class="block font-base antialiased text-base sm:text-lg text-title-primary-color font-bold flex-none z-10 mt-5" href="/festival-2022">
+          » More Info
+        </a>
       </div>
     </section>
 
-    <section class="col-span-6 lg:col-span-3 row-span-2 flex justify-center  rounded-full w-full">
+    <section class="col-span-6 lg:col-span-4 row-span-2 flex justify-center  rounded-full w-full relative">
       <Image 
         src="https://ik.imagekit.io/thegoldendino/hfw/festival/2022/dino-dates_nMvqTkwT5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648738004275&tr=w-600" 
         alt="When Marching Bands Ruled the Earth" 
-        className="w-[400px] scale-[1.2] lg:scale-[1.6]  lg:-translate-y-2 lg:translate-x-4 " />
+        className="scale-[1.1]  lg:absolute lg:-bottom-10 " />
     </section>
+
 
     <!-- NEWSLETTER BLOCK -->
-    <section class="w-full col-span-6 lg:col-span-3 content-container">
-
-      <div class="flex flex-col items-center h-full justify-center font-emphasis font-medium">
-        <span class="block text-title-primary-color mb-2 tracking-wide text-2xl md:text-3xl">
-          NEWSLETTER
-        </span>
-        <form 
-          action="https://honkfestwest.us4.list-manage.com/subscribe?u=ef3f62323075a304e4a1428e3&id=b6e69bd855" 
-          method="post" 
-          id="mc-embedded-subscribe-form" 
-          name="mc-embedded-subscribe-form" 
-          class="w-full p-0 m-0" 
-          target="_blank" 
-          novalidate="">
-
-          <div id="mc_embed_signup_scroll" class="flex flex-col justify-center items-center w-full">
-            <div class="hidden md:flex w-full md:mb-4 justify-center items-center">
-              <label class="text-main-color-300 mr-2 mb-0 block text-center text-2xl md:text-3xl z-10" for="mce-EMAIL">
-                EMAIL:
-              </label>
-              <input type="email" value="" name="EMAIL" class="bg-main-color-200 bg-opacity-80 block w-full font-base text-lg px-2 py-1" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-              <div class="hidden" id="mce-error-response"></div>
-              <div class="hidden" id="mce-success-response"></div>
-            </div>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div  style="position: absolute; left: -5000px" aria-hidden="true">
-              <input  type="text" name="b_ef3f62323075a304e4a1428e3_b6e69bd855" tabindex="-1" value="">
-            </div>
-
-            <input 
-              type="submit" 
-              value="Subscribe" 
-              name="subscribe" 
-              id="mc-embedded-subscribe" 
-              class="z-20 text-main-color-200 bg-accent-color bg-opacity-80 hover:bg-opacity-90 rounded font-base text-base sm:text-lg px-2 py-1">
-          </div>
-        </form>
-      </div>
+    <section class="w-full col-span-6 lg:col-span-2 content-container">
+      <NewsletterForm />
     </section>
 
 
 
-    <article class="w-full content-container col-span-6 lg:col-span-6 flex flex-col md:flex-row lg:mt-20  ">
-      <div class="md:w-1/3 flex-none md:pr-6 flex mb-3 md:mb-0 flex-col z-10">
-        <Image
-          src="https://ik.imagekit.io/thegoldendino/hfw/posts/volunteer_eH1tKog7f.jpg?updatedAt=1640916421073"
-          alt="Volunteer!"
-          width="640"
-          height="349"
-          className="h-auto max-h-60 w-auto mx-auto"
-        />
-      </div>
-      <div class="z-10">
-        <Title title="Volunteer Coordinator" subtitle="Needed" />
-        <p>
-          The Volunteer Coordinator is our chief cat wrangler and fun instigator, and the source of sunshine for all our eager volunteers. Responsible for the recruitment, retention, rostering and wrangling of both year-round and event-based volunteers, the VC is the most vital link in the entire festival’s chain of awesomeness.
-        </p>
-        <a class="block font-base rounded antialiased text-main-color-200 font-bold flex-none mt-3 bg-accent-color w-full text-lg bg-opacity-80 px-2 hover:bg-opacity-90" href="/volunteer/committee-form?position=Volunteer%20Coordinator" >
-			    » Apply Here
-		    </a>
-      </div>
-    </article>
 
     <article class="w-full content-container col-span-6 flex flex-col md:flex-row">
-      <div class="md:w-1/4 flex-none pr-6 flex mb-3 md:mb-0 md:flex-col z-10">
-        <Image 
-          src="https://ik.imagekit.io/thegoldendino/hfw/carousel/2021/honkfestwest_2021_th-52_ieqmszPrw.jpg?updatedAt=1636925468749"
-          alt="Neon Brass Party - H!FW - 2021"
-          width="273"
-          height="182"
-				  className="w-1/3 md:w-full mb-0 mr-2 md:mb-2 md:mr-0"
-        />
-        <Image 
-          src="https://ik.imagekit.io/thegoldendino/hfw/carousel/2021/honkfestwest_2021_th-72_ptDY6mK_M.jpg?updatedAt=1636925469114"
-          alt="Kouyaté Arts - H!FW - 2021"
-          width="273"
-          height="182"
-				  className="w-1/3 md:w-full h-auto mb-0 mr-2 md:mb-2 md:mr-0"
-        /> 
-        <Image 
-          src="https://ik.imagekit.io/thegoldendino/hfw/carousel/2021/honkfestwest_2021_th-15_fgEAIXS2pi.jpg?updatedAt=1636925468773"
-          alt="Filthy Fem Corps - H!FW - 2021"
-          width="273"
-          height="182"
-				  className="w-1/3 md:w-full h-auto"
-        /> 
-      </div>
-      <div>
-        <p>
-          We had an amazing HONK! Fest West 2021. Thank you to all of our volunteers, performers, and everyone who came out to brave the beautiful fall weather! The pandemic nor the rain could keep HONK! from shaking our horns, drums and butts at it. We were blown away by the amazing energy of this year's bands and the pandemic of positivity everyone shared throughout the day.  Much love and thanks to all of you for joining us for a joyous cacophony in Columbia Park, Seattle!
-        </p>
-        <br/>
-        <p>
-          Mark your calendars for June 3-5, when we return for HONK! Fest West 2022! We will be kicking off the event in Georgetown on Friday night at 6pm, June 3rd, heading on to Columbia City on Saturday (June 4th, where rumor has it, there will be a parade!) and then on Sunday, June 5th, we will complete the HONK! weekend at Yesler Terrace Park in central Seattle.
-        </p>
-        <br/>
-        <p>
-          Want to see what our photographer, Tobin Holliday, captured for the day?
-          <a class="block break-all" href="http://www.tobinholliday.com/honkfest-west">http://www.tobinholliday.com/honkfest-west</a>
-        </p>
-        <br/>
-        <p>
-          What about the enthusiastically dapper photographer, Espresso Buzz? 
-          <a class="block break-all" href="https://www.espressobuzz.net/Events/2021/09-18-Honk/">https://www.espressobuzz.net/Events/2021/09-18-Honk/</a>
-        </p>
-        <br/>
-        <p>
-          And, as always, our very own Charlie Daniels has his immersive videos on YouTube for your viewing pleasure: 
-          <a class="block break-all" href="https://www.youtube.com/playlist?list=PLL7ppauF4ZjoMkECEbEGaEUJqnUm36ovn">https://www.youtube.com/playlist?list=PLL7ppauF4ZjoMkECEbEGaEUJqnUm36ovn</a>
-        </p>
-      </div>
+
     </article>
 
     <!-- POST BLURBS -->
