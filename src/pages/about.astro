@@ -13,13 +13,13 @@ import committee from '@data/committee.json'
 
 		<nav class="content-container md:row-span-2">
 			<div class="menu sticky">
-				<a href="#mission">» Our Mission</a>
-				<a href="#contact">» Contact Us</a>
-				<a href="#story">» Our Story</a>
-				<a href="#diversity">» Diversity & Inclusion</a>
-				<a href="#join">» Join Us!</a>
-				<a href="#committee">» Committee</a>
-				<a href="#family">» HONK! Family</a>
+				<a class="button" href="#mission">» Our Mission</a>
+				<a class="button" href="#contact">» Contact Us</a>
+				<a class="button" href="#story">» Our Story</a>
+				<a class="button" href="#diversity">» Diversity & Inclusion</a>
+				<a class="button" href="#join">» Join Us!</a>
+				<a class="button" href="#committee">» Committee</a>
+				<a class="button" href="#family">» HONK! Family</a>
 			</div>
 		</nav>
 
@@ -166,6 +166,12 @@ import committee from '@data/committee.json'
 						))}
 					</ul>
 				</div>
+				<div class="md:col-span-4 flex justify-end items-center mt-4">
+					<span class="content mr-4 text-right">. . . and</span>
+					<div class="rounded-full overflow-hidden">
+						<a href="/volunteer" class="button text-center"> YOU!</a>
+					</div>
+				</div>
 			</section>
 
 
@@ -193,10 +199,10 @@ import committee from '@data/committee.json'
 </BaseLayout>
 
 <style>
-	.menu a {
-		@apply block bg-accent-color rounded text-xl text-main-color-300 mb-5 last:mb-0 font-base font-bold py-2 bg-opacity-70 px-4
+	a.button {
+		@apply block bg-accent-color rounded text-xl text-main-color-300 mb-5 last:mb-0 font-base font-bold py-2 bg-opacity-70 px-4 cursor-pointer
 	}
-	.menu a:hover {
+	a.button:hover {
 		@apply bg-opacity-100
 	}
 </style>
