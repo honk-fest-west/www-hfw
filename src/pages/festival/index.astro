@@ -2,6 +2,7 @@
 	import { Markdown } from 'astro/components'
 	import FestivalLayout from '@layouts/FestivalLayout.astro'
 	import Title from '@components/Title.astro'
+	import BackToTop from '@components/BackToTop.astro'
 	import schedule from '@data/schedule.json'
 	import bands from '@data/bands.json'
 
@@ -12,6 +13,7 @@
 
 <FestivalLayout title="Schedule" active="schedule">
 	<div id="locations" class="content-container mb-4 sm:mb-6">
+		<BackToTop />
 		<Title title="Locations" />
 		<div class="content divide-y-4 divide-main-color-600 divide-dotted grid grid-cols-1">
 			<p class="py-3">
@@ -33,6 +35,7 @@
 		</div>
 	</div>
 	<div id="bands" class="content-container mb-4 sm:mb-6">
+		<BackToTop />
 		<Title title="Bands" />
 		<div class="content grid grid-cols-3 gap-4">
 			{playingBands.map((band) => (

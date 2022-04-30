@@ -2,6 +2,7 @@
 import {Markdown} from 'astro/components'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import Title from '@components/Title.astro'
+import BackToTop from '@components/BackToTop.astro'
 
 
 import volunteer_data from '@data/volunteer.json'
@@ -28,6 +29,7 @@ const positions = volunteer_data.positions
 		</div>
 		<div class="w-full md:w-2/3 flex flex-col gap-4 sm:gap-6">
 			<div class="content-container">
+				<BackToTop />
 				<Title title="HONK! Fest West" subtitle="NEEDS YOU!!!"/>
 				<div class="content">
 					<Markdown>
@@ -38,6 +40,7 @@ const positions = volunteer_data.positions
 
 			{Object.keys(positions).map((position) => (
 				<div class="content-container">
+					<BackToTop />
 					<Title title={position}  />
 					<p>
 						<Markdown content={positions[position].description}/>
