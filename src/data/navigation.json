@@ -13,16 +13,12 @@
       "link": "/supporters"
     },
     {
-      "name": "About",
-      "link": "/about"
-    },
-    {
-      "name": "Contact",
-      "link": "/contact"
-    },
-    {
       "name": "Donate",
       "link": "/donate"
+    },
+    {
+      "name": "About",
+      "link": "/about"
     }
   ],
   "social": {
