@@ -7,13 +7,13 @@ module.exports = {
       colors: {
         gray: colors.stone,
         'main-color': {
-          DEFAULT: '#ff7333',
+          DEFAULT: 'var(--main-color)',
           50: '#FFFFFF',
           100: '#FFFFFF',
           200: '#F8F2DD',
           300: '#F2E5BB',
           400: '#EBD899',
-          500: '#ff7333',
+          500: 'var(--main-color)',
           600: '#DBB948',
           700: '#C4A027',
           800: '#957A1E',
