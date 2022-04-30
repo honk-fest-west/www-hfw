@@ -1,0 +1,51 @@
+---
+	import { Markdown } from 'astro/components'
+	import FestivalLayout from '@layouts/FestivalLayout.astro'
+	import Title from '@components/Title.astro'
+	import schedule from '@data/schedule.json'
+	import bands from '@data/bands.json'
+
+	const playingBands = Object.values(bands)
+		.filter(band => band.playing)
+		.sort((a, b) => a.name.localeCompare(b.name))
+---
+
+<FestivalLayout title="Schedule" active="schedule">
+	<div id="locations" class="content-container mb-4 sm:mb-6">
+		<Title title="2022 Festival Locations" />
+		<div class="content divide-y-4 divide-main-color-600 divide-dotted grid grid-cols-1">
+				<p class="py-3">
+					<span class="font-bold text-lg block">Thursday, June 2nd, 8pm</span>
+					<span>Opening night at <a href="https://goo.gl/maps/KfYuxjmM6zDBRXoo9">Ballard Odd Fellows</a></span>				
+				</p>
+				<p class="py-3">
+					<span class="font-bold text-lg block">Friday, June 3rd, 6pm-10pm</span>
+					<a href="https://goo.gl/maps/Fe2k87KPDpzyEapG7">Georgetown neighborhood</a>			
+				</p>
+				<p class="py-3">
+					<span class="font-bold text-lg block">Saturday, June 4th, 12pm-7pm</span>
+					<a href="https://goo.gl/maps/KfYuxjmM6zDBRXoo9">Columbia Park, Columbia City</a>			
+				</p>
+				<p class="py-3">
+					<span class="font-bold text-lg block">Sunday, June 5th, 12pm-6pm</span>
+					<a href="https://goo.gl/maps/e57QBXWWsQQ1LnwB6">Yesler Terrace Park</a>				
+				</p>
+
+		</div>
+	</div>
+	<div id="bands" class="content-container mb-4 sm:mb-6">
+		<Title title="Bands" />
+		<div class="content grid grid-cols-3 gap-4">
+			{playingBands.map((band) => (
+				<div>
+					<a href={band.url} class="block">{band.name}</a>
+					<span>{band.loc}</span>
+				</div>
+			))}
+		</div>
+		<div class="content mt-5">
+			<span class="text-xl">+ More being confirmed every day!!!!</span>
+		</div>
+	</div>
+
+</FestivalLayout>

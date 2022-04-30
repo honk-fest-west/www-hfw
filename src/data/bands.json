@@ -1,52 +1,162 @@
 {
   "burnout": {
     "name": "Burn Out Brass Band",
-    "url": "https://www.burnoutbrassband.com/"
+    "loc": "Seattle, WA",
+    "url": "https://www.burnoutbrassband.com/",
+    "playing": true
   },
   "vamola": {
     "name": "VamoLá",
-    "url": "https://www.facebook.com/vamolaseattle/"
+    "loc": "Seattle, WA",
+    "url": "https://vamola.org/",
+    "playing": true
   },
   "filthy": {
     "name": "Filthy FemCorps",
-    "url": "https://www.facebook.com/FilthyFemcorps"
+    "loc": "Seattle, WA",
+    "url": "http://www.filthyfemcorps.com/",
+    "playing": true
   },
   "shpilkis": {
     "name": "Shpilkis!",
-    "url": "https://www.shpilkisseattle.com/"
+    "loc": "Seattle, WA",
+    "url": "https://www.shpilkisseattle.com/",
+    "playing": true
   },
   "tenman": {
     "name": "TMB",
-    "url": "https://www.gigsalad.com/ten_man_brass_band_seattle"
+    "loc": "Seattle, WA",
+    "url": "https://tmbbrass.bandcamp.com/",
+    "playing": true
   },
   "onelove": {
     "name": "One Love",
-    "url": "http://marcsmason.com/ensembles.html"
+    "loc": "Seattle, WA",
+    "url": "http://marcsmason.com/ensembles.html",
+    "playing": true
   },
   "riseup": {
     "name": "Rise Up! Action Band",
-    "url": "https://riseupactionband.com/"
+    "loc": "Seattle, WA",
+    "url": "https://riseupactionband.com/",
+    "playing": false
   },
-  "8bit": { "name": "8-Bit Brass Band", "url": "http://8bitbrassband.com/" },
-  "m9": { "name": "The m9", "url": "http://them9.com/" },
+  "8bit": {
+    "name": "8-Bit Brass Band",
+    "loc": "Seattle, WA",
+    "url": "http://8bitbrassband.com/",
+    "playing": true
+  },
+  "m9": {
+    "name": "The m9",
+    "loc": "Seattle, WA",
+    "url": "http://them9.com/",
+    "playing": true
+  },
   "neon": {
     "name": "Neon Brass Party",
-    "url": "https://www.facebook.com/NeonBrassParty/"
+    "loc": "Seattle, WA",
+    "url": "https://www.neonbrassparty.com/",
+    "playing": true
   },
   "brasscadia": {
     "name": "Brasscadia",
-    "url": "https://www.facebook.com/Brasscadia/"
+    "url": "https://www.facebook.com/Brasscadia/",
+    "playing": false
   },
   "chaotic": {
     "name": "Chaotic Noise",
-    "url": "http://chaoticnoise.com/"
+    "loc": "Seattle, WA",
+    "url": "http://chaoticnoise.com/",
+    "playing": true
   },
   "kouyate": {
     "name": "Kouyate Arts",
-    "url": "https://www.kouyatearts.com/performance-company"
+    "loc": "Seattle, WA",
+    "url": "https://www.kouyatearts.com/performance-company",
+    "playing": true
   },
   "reign": {
     "name": "Reign City Riot",
-    "url": "http://www.rainbowcityband.com/riot/"
+    "url": "http://www.rainbowcityband.com/riot/",
+    "playing": false
+  },
+  "artesian": {
+    "name": "Artesian Rumble Arkestra",
+    "loc": "Olympia, WA",
+    "url": "https://oly-wa.us/artesianrumble/",
+    "playing": true
+  },
+  "baque": {
+    "name": "Baque Mare",
+    "loc": "Seattle, WA",
+    "url": "https://www.facebook.com/baquemareseattle/",
+    "playing": true
+  },
+  "unexpected": {
+    "name": "Unexpected Brass Band",
+    "loc": "Port Townsand, WA",
+    "url": "https://www.facebook.com/The-Unexpected-Brass-Band-957531164311787/",
+    "playing": true
+  },
+  "thunder": {
+    "name": "Blue Thunder",
+    "loc": "Seattle, WA",
+    "url": "https://www.seahawks.com/drumline/blue-thunder",
+    "playing": true
+  },
+  "soundwave": {
+    "name": "Soundwave",
+    "loc": "Seattle, WA",
+    "url": "https://www.soundersfc.com/matchday/sound-wave",
+    "playing": true
+  },
+  "sticks": {
+    "name": "Sticks & Bones",
+    "loc": "Olympia, WA",
+    "url": "https://www.facebook.com/olysnewcommuityactivistband/",
+    "playing": true
+  },
+  "window": {
+    "name": "Window Smashing Job Creators",
+    "loc": "Olympia, WA",
+    "url": "https://thewindowsmashingjobcreators.bandcamp.com/",
+    "playing": true
+  },
+  "blitz": {
+    "name": "Big Blitz",
+    "loc": "Pittsburgh, PA",
+    "url": "https://www.bigblitzband.com/",
+    "playing": true
+  },
+  "sheep": {
+    "name": "Black Sheep Brass Band",
+    "loc": "Santa Rosa, CA",
+    "url": "https://www.blacksheepbrassband.com/",
+    "playing": true
+  },
+  "emperor": {
+    "name": "Emperor Nortan's Stationary Marching Band",
+    "loc": "Somerville, WA",
+    "url": "http://ensmb.com/",
+    "playing": true
+  },
+  "funkrust": {
+    "name": "Funkrust Brass Band",
+    "loc": "New York, NY",
+    "url": "http://funkrust.com/",
+    "playing": true
+  },
+  "chervona": {
+    "name": "Chervona",
+    "loc": "Portland, OR",
+    "url": "https://www.facebook.com/ChervonaParty/",
+    "playing": true
+  },
+  "labamba": {
+    "name": "La bamba",
+    "loc": "Los Angeles, CA",
+    "url": "https://labamba.lahonk.org/",
+    "playing": true
   }
 }
