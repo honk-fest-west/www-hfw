@@ -17,6 +17,10 @@
       "link": "/donate"
     },
     {
+      "name": "Media",
+      "link": "/media"
+    },
+    {
       "name": "About",
       "link": "/about"
     }
