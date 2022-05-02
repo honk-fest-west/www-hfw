@@ -80,7 +80,7 @@ import sponsors from '@data/sponsors.json'
 					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
 
 					<Markdown>
-						HONK! Festival West is supported by grants from the Community Investments Fund of [4Culture](http://www.4culture.org/), 
+						HONK! Festival West is supported by grants from [4Culture](http://www.4culture.org/), 
 						 [Arts Fund](https://www.artsfund.org/), and [King County CREATIVE](https://kingcountycreative.com/).
 					</Markdown>
 					<span class="block grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
@@ -100,7 +100,7 @@ import sponsors from '@data/sponsors.json'
 					<Markdown>
 						Thank you to our partner organizations for their support in building a thriving creative community in Seattle:
 					</Markdown>
-					<span class="block grid grid-cols-6 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
+					<div class="grid grid-cols-5 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
 						{sponsors.shoutouts.map((sponsor) => (
 							<a class="block  h-16 lg:h-32 mb-3 sm:mb-0" href={sponsor.link} >
 								<Image 
@@ -110,7 +110,7 @@ import sponsors from '@data/sponsors.json'
 								/>
 							</a>	
 						))}
-					</span>
+					</div>
 
 					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
 
