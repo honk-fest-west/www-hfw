@@ -65,13 +65,13 @@
     "playing": false
   },
   "chaotic": {
-    "name": "Chaotic Noise",
+    "name": "Chaotic Noise Marching Corps",
     "loc": "Seattle, WA",
     "url": "http://chaoticnoise.com/",
     "playing": true
   },
   "kouyate": {
-    "name": "Kouyate Arts",
+    "name": "Kouyaté Arts",
     "loc": "Seattle, WA",
     "url": "https://www.kouyatearts.com/performance-company",
     "playing": true
@@ -88,7 +88,7 @@
     "playing": true
   },
   "baque": {
-    "name": "Baque Mare",
+    "name": "Baque Maré",
     "loc": "Seattle, WA",
     "url": "https://www.facebook.com/baquemareseattle/",
     "playing": true
@@ -136,8 +136,8 @@
     "playing": true
   },
   "emperor": {
-    "name": "Emperor Nortan's Stationary Marching Band",
-    "loc": "Somerville, WA",
+    "name": "Emperor Norton's Stationary Marching Band",
+    "loc": "Somerville, MA",
     "url": "http://ensmb.com/",
     "playing": true
   },
@@ -157,6 +157,42 @@
     "name": "La bamba",
     "loc": "Los Angeles, CA",
     "url": "https://labamba.lahonk.org/",
+    "playing": true
+  },
+  "bainbridge": {
+    "name": "Bainbridge High School Spartan Brass Band",
+    "loc": "Bainbridge Island, WA",
+    "url": "https://www.bainbridgebands.org/home/marchingband",
+    "playing": true
+  },
+  "kokon": {
+    "name": "Kokon Taiko",
+    "loc": "Seattle, WA",
+    "url": "https://seattlekokontaiko.org/",
+    "playing": true
+  },
+  "louisa-cleaveland": {
+    "name": "Louisa Boren & Cleaveland STEM Middle School Band",
+    "loc": "Seattle, WA",
+    "url": "#",
+    "playing": true
+  },
+  "reign-city": {
+    "name": "Reign City Riot",
+    "loc": "Seattle, WA",
+    "url": "http://www.rainbowcityband.com/riot/",
+    "playing": true
+  },
+  "seattle-u": {
+    "name": "Seattle U Drumline",
+    "loc": "Seattle, WA",
+    "url": "https://goseattleu.com/sports/2020/1/15/drumline.aspx",
+    "playing": true
+  },
+  "tacomarama": {
+    "name": "Tacomarama",
+    "loc": "Tacoma, WA",
+    "url": "#",
     "playing": true
   }
 }
