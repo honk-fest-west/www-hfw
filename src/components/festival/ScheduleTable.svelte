@@ -31,7 +31,7 @@
 					<tbody class="divide-y-4 divide-main-color-600 divide-dotted">
 						{#each day.schedule as timeSlot}
 							<tr>
-								<td class="whitespace-nowrap py-4 pl-4 pr-3  font-medium text-gray-900 sm:pl-6 lg:pl-8"><p>{shortTime(timeSlot.t)}</p></td>
+								<td class="whitespace-nowrap py-4 pl-4 pr-3 font-medium text-gray-900 sm:pl-6 lg:pl-8"><p>{shortTime(timeSlot.t)}</p></td>
 								{#each timeSlot.b as bandkey}
 									<td class="whitespace-nowrap px-3 py-4 text-ellipsis w-1/4 overflow-clip text-sm text-main-color-600">
 										{#if bandkey}
