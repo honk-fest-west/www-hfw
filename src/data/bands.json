@@ -17,6 +17,12 @@
     "url": "https://www.bainbridgebands.org/home/marchingband",
     "playing": true
   },
+  "ballard": {
+    "name": "Ballard Brass Band",
+    "loc": "Ballard, WA",
+    "url": "http://www.ballardband.org/",
+    "playing": true
+  },
   "baque": {
     "name": "Baque Maré",
     "loc": "Seattle, WA",
@@ -82,6 +88,12 @@
     "url": "http://funkrust.com/",
     "playing": true
   },
+  "allstars": {
+    "name": "Honk All-Stars",
+    "loc": "Everywhere",
+    "url": "https://fb.me/e/3iEVNcKgG",
+    "playing": true
+  },
   "kokon": {
     "name": "Kokon Taiko",
     "loc": "Seattle, WA",
@@ -123,7 +135,7 @@
     "url": "http://www.rainbowcityband.com/riot/",
     "playing": false
   },
-  "reign-city": {
+  "reign": {
     "name": "Reign City Riot",
     "loc": "Seattle, WA",
     "url": "http://www.rainbowcityband.com/riot/",
@@ -135,11 +147,11 @@
     "url": "https://riseupactionband.com/",
     "playing": false
   },
-  "seattle-u": {
+  "seattleu": {
     "name": "Seattle U Drumline",
     "loc": "Seattle, WA",
     "url": "https://goseattleu.com/sports/2020/1/15/drumline.aspx",
-    "playing": true
+    "playing": false
   },
   "shpilkis": {
     "name": "Shpilkis!",
@@ -171,7 +183,7 @@
     "url": "http://them9.com/",
     "playing": true
   },
-  "tenman": {
+  "tmb": {
     "name": "TMB",
     "loc": "Seattle, WA",
     "url": "https://tmbbrass.bandcamp.com/",

@@ -3,8 +3,10 @@
 	import FestivalLayout from '@layouts/FestivalLayout.astro'
 	import Title from '@components/Title.astro'
 	import BackToTop from '@components/BackToTop.astro'
-	import schedule from '@data/schedule.json'
+	import ScheduleTable from '../../components/festival/ScheduleTable.svelte'
 	import bands from '@data/bands.json'
+	import schedule from '@data/schedule.json'
+
 
 	const playingBands = Object.values(bands)
 		.filter(band => band.playing)
@@ -34,6 +36,21 @@
 			</p>
 		</div>
 	</div>
+	<div id="friday" class="content-container mb-4 sm:mb-6">
+		<BackToTop />
+		<Title title="Friday Schedule" />
+		<ScheduleTable day={schedule.friday} {bands} />
+	</div>
+	<div id="saturday" class="content-container mb-4 sm:mb-6">
+		<BackToTop />
+		<Title title="Saturday Schedule" />
+		<ScheduleTable day={schedule.saturday} {bands} />
+	</div>
+	<div id="sunday" class="content-container mb-4 sm:mb-6">
+		<BackToTop />
+		<Title title="Sunday Schedule" />
+		<ScheduleTable day={schedule.sunday} {bands} />
+	</div>
 	<div id="bands" class="content-container mb-4 sm:mb-6">
 		<BackToTop />
 		<Title title="Bands" />
@@ -46,5 +63,4 @@
 			))}
 		</div>
 	</div>
-
 </FestivalLayout>
