@@ -9,7 +9,7 @@
 
 
 	const playingBands = Object.values(bands)
-		.filter(band => band.playing)
+		.filter(band => band.playing.includes(2022))
 		.sort((a, b) => a.name.localeCompare(b.name))
 ---
 
