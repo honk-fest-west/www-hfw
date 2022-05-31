@@ -79,7 +79,7 @@
     {
       "name": "Columbia City Beatwalk",
       "link": "https://www.facebook.com/ColumbiaCityBeatwalk/",
-      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/beat-walk_MUi7d5Qge.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1650783250441"
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/BeatWalk-logo-blue-print___002__c_NNISjLkB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515968"
     },
     {
       "name": "Rainier Valley Creative District",
@@ -90,6 +90,46 @@
       "name": "Neon Brass Party",
       "link": "https://www.neonbrassparty.com/",
       "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/neon-brass-party_7z5XYNNpJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651466257137&tr=w-600"
+    },
+    {
+      "name": "Jules Maes Saloon",
+      "link": "https://www.julesmaessaloon.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/jules-maes_TVLJoZrK0.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653980628229"
+    },
+    {
+      "name": "9LB HAMMER",
+      "link": "http://ninepoundhammer.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/9lbhammer_lZ_kCbxpq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515906"
+    },
+    {
+      "name": "Chomp!",
+      "link": "https://www.chomplocal.org/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/CHOMP-Logo-Plain-2022_tt3do75MnI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980516024"
+    },
+    {
+      "name": "Artisan Electric",
+      "link": "https://artisanelectricinc.com/about/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/artisan_XLqUZo47h.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515857"
+    },
+    {
+      "name": "Super Six",
+      "link": "http://www.supersixseattle.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/S6_6BEwMRi1V.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980514811"
+    },
+    {
+      "name": "Bennett Properties",
+      "link": "https://johnbennettproperties.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/cropped-cropped-BP-logo-blue_ChFMGeCqT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515012"
+    },
+    {
+      "name": "Secret Aardvark",
+      "link": "https://secretaardvark.com/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/SATC_LogoPrimary_nZQZuza_m.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515982"
+    },
+    {
+      "name": "Ballard Odd Fellows",
+      "link": "https://www.ballardoddfellows.org/",
+      "image": "https://ik.imagekit.io/thegoldendino/hfw/supporters/ballard-odd-fellows_WJs3tWsRj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653981434550"
     }
   ]
 }

@@ -100,17 +100,25 @@ import sponsors from '@data/sponsors.json'
 					<Markdown>
 						Thank you to our partner organizations for their support in building a thriving creative community in Seattle:
 					</Markdown>
-					<div class="grid grid-cols-5 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5">
-						{sponsors.shoutouts.map((sponsor) => (
-							<a class="block  h-16 lg:h-32 mb-3 sm:mb-0" href={sponsor.link} >
+
+					<div class="relative flex flex-col justify-center py-6">
+  <div
+    class="columns-2 2xl:columns-3 gap-10 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit">
+    
+			{sponsors.shoutouts.map((sponsor) => (
+				<div class="break-inside-avoid mb-6 rounded-lg">
+							<a href={sponsor.link} >
 								<Image 
-									className="w-auto rounded bg-white p-1" 
+									className="w-auto rounded p-1" 
 									src={sponsor.image} alt={sponsor.name}
 									tr={sponsor.tr}
 								/>
 							</a>	
+				</div>
 						))}
-					</div>
+				
+</div>
+</div>
 
 					<span class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"/>
 
