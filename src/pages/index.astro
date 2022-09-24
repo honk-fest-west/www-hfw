@@ -82,8 +82,6 @@ const postColumns = (index) => {
     <!-- POST BLURBS -->
     {posts.map((post, index) => (
       <article class={`w-full content-container sm:col-span-6 ${postColumns(index).span}`}>
-        <div class="l-jagged-bg bg-[length:100px_25px] opacity-30"/>
-	      <div class="r-jagged-bg  bg-[length:100px_25px] opacity-30"/>
         <PostBlurb post={post} cols={postColumns(index).cols}/>
       </article>
     ))}
