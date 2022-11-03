@@ -1,24 +1,24 @@
 {
-  "name": "@honk-fest-west/www-hfw",
+  "name": "@example/basics",
+  "type": "module",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "@types/node": "*",
-    "astro": "^0.21.2",
-    "autoprefixer": "^10.4.1",
-    "netlify-cli": "^8.6.2",
-    "postcss": "^8.4.5",
-    "react-responsive": "^9.0.0-beta.5",
-    "tailwindcss": "^3.0.9",
-    "typescript": "^4.5.2"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "react": ">=16.8.0"
+    "@astrojs/image": "^0.11.0",
+    "@astrojs/netlify": "^1.2.0",
+    "@astrojs/partytown": "^1.0.1",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/svelte": "^1.0.2",
+    "@astrojs/tailwind": "^2.1.1",
+    "astro": "^1.6.0",
+    "svelte": "^3.52.0",
+    "tailwindcss": "^3.2.1"
   }
 }

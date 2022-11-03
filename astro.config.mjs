@@ -1,27 +1,26 @@
-// Full Astro Configuration API Documentation:
-// https://docs.astro.build/reference/configuration-reference
+import { defineConfig } from 'astro/config';
 
-// @type-check enabled!
-// VSCode and other TypeScript-enabled text editors will provide auto-completion,
-// helpful tooltips, and warnings if your exported object is invalid.
-// You can disable this by removing "@ts-check" and `@type` comments below.
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
+// https://astro.build/config
+import tailwind from "@astrojs/tailwind";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// https://astro.build/config
+import partytown from "@astrojs/partytown";
 
-// @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  renderers: ['@astrojs/renderer-react', '@astrojs/renderer-svelte'],
-  vite: {
-    resolve: {
-      alias: {
-        '@components': path.resolve(__dirname, './src/components'),
-        '@layouts': path.resolve(__dirname, './src/layouts'),
-        '@data': path.resolve(__dirname, './src/data'),
-        '@pages': path.resolve(__dirname, './src/pages'),
-        '@lib': path.resolve(__dirname, './src/lib'),
-      },
-    },
-  },
+// https://astro.build/config
+import image from "@astrojs/image";
+
+// https://astro.build/config
+import svelte from "@astrojs/svelte";
+
+// https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
+import netlify from "@astrojs/netlify/functions";
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [tailwind(), partytown(), image(), svelte(), sitemap()],
+  output: "server",
+  adapter: netlify()
 });
