@@ -233,11 +233,11 @@ import committee from '@data/committee.json';
       </div>
       <div class="content">
         <h3 class="text-lg text-title-primary-color font-semibold">
-          Marketing, Outreach, and Communications
+          Creative & Communications
         </h3>
         <ul>
           {
-            committee.moc.map((member) => (
+            committee.createcomm.map((member) => (
               <li>
                 <span class="underline">{member.role}:</span> {member.name}
               </li>
@@ -252,6 +252,16 @@ import committee from '@data/committee.json';
         <ul>
           {
             committee.fundraising.map((member) => (
+              <li>
+                <span class="underline">{member.role}:</span> {member.name}
+              </li>
+            ))
+          }
+        </ul>
+        <h3 class="text-lg text-title-primary-color font-semibold">Outreach</h3>
+        <ul>
+          {
+            committee.outreach.map((member) => (
               <li>
                 <span class="underline">{member.role}:</span> {member.name}
               </li>

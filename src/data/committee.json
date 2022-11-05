@@ -46,14 +46,6 @@
       "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/lazer-dwight_qDmJ89KI9.png?updatedAt=1628555952814"
     },
     {
-      "name": "Liz",
-      "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/lizk_UIeLeq8IE?ik-sdk-version=javascript-1.4.3&updatedAt=1651302560754"
-    },
-    {
-      "name": "Jenny",
-      "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/jenny_DyBtLkif8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651289671004"
-    },
-    {
       "name": "Ginny",
       "image_url": "https://ik.imagekit.io/thegoldendino/hfw/people/ginny_pjQra4hZ3?ik-sdk-version=javascript-1.4.3&updatedAt=1651289398764"
     }
@@ -90,11 +82,15 @@
       "role": "Operations Lead"
     },
     {
+      "name": "Ginny",
+      "role": "Volunteer Coordinator"
+    },
+    {
       "name": "Elsbeth",
       "role": "Volunteer Engagement"
     },
     {
-      "name": "Jenny",
+      "name": "Paul G.",
       "role": "Housing"
     },
     {
@@ -110,15 +106,7 @@
       "role": "Permitting"
     }
   ],
-  "moc": [
-    {
-      "name": "Lu Badu",
-      "role": "Outreach Lead"
-    },
-    {
-      "name": "Ginny",
-      "role": "Community Engagement"
-    },
+  "createcomm": [
     {
       "name": "Dwight",
       "role": "Art & Website"
@@ -132,12 +120,26 @@
       "role": "Videographer"
     },
     {
-      "name": "Liz",
-      "role": "Social Media"
-    },
-    {
       "name": "Jeanette",
       "role": "Newsletter"
+    }
+  ],
+  "outreach": [
+    {
+      "name": "Lu Badu",
+      "role": "Outreach Lead"
+    },
+    {
+      "name": "Al & Paul G.",
+      "role": "Community Engagement"
+    },
+    {
+      "name": "Paul R., Julia & Irina",
+      "role": "HONK! Junior"
+    },
+    {
+      "name": "Heather",
+      "role": "HONK! All-Stars & Jams"
     }
   ],
   "fundraising": [
