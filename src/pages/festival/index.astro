@@ -1,0 +1,79 @@
+---
+import FestivalLayout from '@layouts/FestivalLayout.astro';
+import Title from '@components/Title.astro';
+import BackToTop from '@components/BackToTop.astro';
+import ScheduleTable from '../../components/festival/ScheduleTable.svelte';
+import bands from '@data/bands.json';
+import schedule from '@data/schedule.json';
+
+const playingBands = Object.values(bands)
+  .filter((band) => band.playing.includes(2022))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<FestivalLayout title="Schedule" active="schedule">
+  <div id="locations" class="content-container mb-4 sm:mb-6">
+    <BackToTop />
+    <Title title="Locations" />
+    <div
+      class="content divide-y-4 divide-main-color-600 divide-dotted grid grid-cols-1"
+    >
+      <p class="py-3">
+        <span class="font-bold text-lg block">Thursday, June 2nd, 8pm</span>
+        <span
+          >Opening night at <a href="https://goo.gl/maps/KfYuxjmM6zDBRXoo9"
+            >Ballard Odd Fellows</a
+          >
+        </span>
+      </p>
+      <p class="py-3">
+        <span class="font-bold text-lg block">Friday, June 3rd, 6pm-10pm</span>
+        <a href="https://goo.gl/maps/Fe2k87KPDpzyEapG7"
+          >Georgetown neighborhood</a
+        >
+      </p>
+      <p class="py-3">
+        <span class="font-bold text-lg block">Saturday, June 4th, 12pm-7pm</span
+        >
+        <a href="https://goo.gl/maps/RxwK1paeFxighgFK6"
+          >Columbia Park, Columbia City</a
+        >
+      </p>
+      <p class="py-3">
+        <span class="font-bold text-lg block">Sunday, June 5th, 12pm-6pm</span>
+        <a href="https://goo.gl/maps/e57QBXWWsQQ1LnwB6">Yesler Terrace Park</a>
+      </p>
+    </div>
+  </div>
+  <div id="friday" class="content-container mb-4 sm:mb-6">
+    <BackToTop />
+    <Title title="Friday 6/3" />
+    <ScheduleTable day={schedule.friday} {bands} />
+  </div>
+  <div id="saturday" class="content-container mb-4 sm:mb-6">
+    <BackToTop />
+    <Title title="Saturday 6/4" />
+    <ScheduleTable day={schedule.saturday} {bands} />
+  </div>
+  <div id="sunday" class="content-container mb-4 sm:mb-6">
+    <BackToTop />
+    <Title title="Sunday 6/5" />
+    <ScheduleTable day={schedule.sunday} {bands} />
+  </div>
+  <div id="bands" class="content-container mb-4 sm:mb-6">
+    <BackToTop />
+    <Title title="Bands" />
+    <div class="content grid grid-cols-3 gap-4">
+      {
+        playingBands.map((band) => (
+          <div>
+            <a href={band.url} class="block">
+              {band.name}
+            </a>
+            <span>{band.loc}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</FestivalLayout>

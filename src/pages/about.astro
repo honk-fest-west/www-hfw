@@ -1,0 +1,301 @@
+---
+import { Image } from '@astrojs/image/components';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Title from '@components/Title.astro';
+import BackToTop from '@components/BackToTop.astro';
+
+import family from '@data/honk-family.json';
+import emails from '@data/email-addresses.json';
+import committee from '@data/committee.json';
+---
+
+<BaseLayout title="About">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
+    <nav class="content-container md:row-span-2">
+      <div class="menu sticky">
+        <a class="button" href="#mission">» Our Mission</a>
+        <a class="button" href="#contact">» Contact Us</a>
+        <a class="button" href="#story">» Our Story</a>
+        <a class="button" href="#diversity">» Diversity & Inclusion</a>
+        <a class="button" href="#join">» Join Us!</a>
+        <a class="button" href="#committee">» Committee</a>
+        <a class="button" href="#family">» HONK! Family</a>
+      </div>
+    </nav>
+
+    <!-- MISSION -->
+    <section id="mission" class="content-container md:col-span-2">
+      <BackToTop />
+      <Title title="Our" subtitle="Mission" />
+      <p class="content">
+        HONK! Fest West is dedicated to the activation of public space through
+        energetic musical performance.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="content-container md:col-span-2">
+      <BackToTop />
+      <Title title="Contact Us" />
+      <dl class="grid grid-cols-1 md:grid-cols-3">
+        {
+          Object.keys(emails).map((email) => (
+            <>
+              <dt class="md:p-2 font-base antialiased text-main-color-300 leading-7 text-lg sm:text-xl flex-1">
+                {emails[email].name}:
+              </dt>
+              <dd class="content pb-2 md:p-2 font-base antialiased text-main-color-300 leading-7 text-lg md:text-xl col-span-2">
+                <a href={`mailto:${emails[email].email}`}>
+                  {emails[email].email}
+                </a>
+              </dd>
+            </>
+          ))
+        }
+      </dl>
+    </section>
+  </div>
+
+  <div class="grid grid-cols-1 gap-5">
+    <!-- STORY -->
+    <section id="story" class="content-container">
+      <BackToTop />
+      <Title title="Our" subtitle="Story" />
+      <div class="flex flex-col md:flex-row w-full gap-2">
+        <div>
+          <Image
+            class="block w-full md:w-auto md:mr-5 mb-3 sm:mb-0 rounded h-auto"
+            src="https://ik.imagekit.io/thegoldendino/hfw/henryart_0A59z8KGn.png?updatedAt=1628230159141&tr=b-5_FFFFFF"
+            alt="Henry Art for H!FW"
+            width="233"
+            height="300"
+          />
+        </div>
+        <p class="content">
+          HONK! Festival West is an independent 501(c)(3) arts organization that
+          produces an annual free, three-day, community-supported music festival
+          in public spaces of the Seattle area. This immersive festival is
+          driven by the energetic performances of street bands from around the
+          world. HONK! is part of a global renaissance of street band culture,
+          with Seattle’s festival occurring since 2008.
+
+          <br /><br />
+
+          In 2021 HONK! Fest West transitioned to a federally recognized
+          501(c)(3) non-profit known as HONK Festival West. We are excited to
+          usher in a new era of programming for our community, while continuing
+          our iconic annual HONK! Fest West in June.
+
+          <br /><br />
+
+          HONK! is a celebration of community, collaboration and creative
+          expression and is dedicated to creating a community of inclusion. We
+          work to break down systemic barriers to inclusion for those
+          underrepresented within our community, and increase community access
+          to our programming by producing the festival in neighborhoods of the
+          Seattle area underserved by the arts. Our interactive celebrations are
+          designed to be accessible, with representation from a wide range of
+          ages and abilities; offering pick-up bands throughout the festival
+          open for anyone who would like to pick up an instrument and play.
+
+          <br /><br />
+
+          Bands at HONK! Fest West travel from all over the country to
+          temporarily transform streets in various neighborhoods with a free
+          showcase of various musical styles. The bands represent traditions
+          ranging from New Orleans second line brass bands, punk rock marching
+          bands, European Klezmer, Balkan and Romani music, Samba, Maracatu, as
+          well as the passion and spirit of Mardi Gras and Carnival!
+
+          <br /><br />
+
+          We have called Georgetown our home since the festival’s inception, and
+          have also celebrated in Columbia City, White Center, South Park, The
+          Waterfront, Fremont/Gas Works Park, Capitol Hill, Central District,
+          Pioneer Square, Downtown, Seattle Center, and West Seattle. We will
+          host our first Yesler Terrace neighborhood festival in 2022.
+
+          <br /><br />
+
+          <b
+            >Join us! June 3: Georgetown (6p – 10p), June 4: Columbia City (12p
+            – 7p), and June 5: Yesler Terrace (12p – 6p).</b
+          > We can’t wait to kick off Summer in Seattle with you in 2022.
+        </p>
+      </div>
+    </section>
+
+    <!-- DIVERSITY -->
+    <section id="diversity" class="content-container">
+      <BackToTop />
+      <Title title="Diversity &" subtitle="Inclusion" />
+      <p class="content">
+        HONK! Fest West activates public space to make communities stronger and
+        more connected. The raucously engaging performances provide the
+        universal benefits of celebrating music together with no limitations
+        arising from age, race, gender identity, cultural background, ethnic and
+        indigenous identity, native language, immigration status, ability,
+        religion, education, socioeconomic status, or sexual orientation. HONK!
+        Fest West focuses on cooperative values; participatory culture; breaking
+        down barriers to music and art; introduction to different cultural
+        traditions through music; and the key tenet that anyone can be a part of
+        the experience.
+      </p>
+    </section>
+
+    <!-- JOIN US! -->
+    <section id="join" class="content-container">
+      <BackToTop />
+      <Title title="Join Us!" />
+      <p class="content">
+        We are a completely volunteer-run organization and festival and are
+        currently recruiting to fill some key roles on our various Committees.
+        We have roles both big and small on our <b>Event Production Committee</b
+        >, our <b>Marketing, Outreach and Communication Committee</b>, and our <b
+          >Fundraising Committee</b
+        >. If you are interested, head over to our Volunteers page to see some
+        specific roles or just send an email to
+        <a href="mailto:volunteer@honkfestwest.org"
+          >volunteer@honkfestwest.org</a
+        > for more information on how you can get involved.
+      </p>
+    </section>
+
+    <!-- COMMITTEE -->
+    <section id="committee">
+      <h2
+        class="text-3xl sm:text-4xl text-main-color-900 text-center tracking-wide mb-8 font-bold"
+      >
+        YOUR
+        <span class="text-accent-color">HONK! FEST WEST</span>
+        COMMITTEE
+      </h2>
+      <div class="flex flex-wrap justify-around gap-6">
+        {
+          committee.photos.map((member) => (
+            <div class="flex flex-col items-center">
+              <Image
+                class="rounded-full h-32 w-auto   mb-2 border-[.5rem] border-main-color-900"
+                src={member.image_url}
+                alt={member.name}
+                width="150"
+                height="150"
+              />
+              <p class="content text-center ">
+                <span class="text-main-color-900 text-xl font-bold">
+                  {member.name}
+                </span>
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- COMMITTEE ROLES -->
+    <section class="content-container grid grid-cols-1 md:grid-cols-4">
+      <BackToTop />
+      <div class="content">
+        <h3 class="text-lg text-title-primary-color font-semibold">
+          Board of Directors
+        </h3>
+        <ul>
+          {
+            committee.board.map((member) => (
+              <li>
+                <span class="underline">{member.role}:</span> {member.name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="content">
+        <h3 class="text-lg text-title-primary-color font-semibold">
+          Event Production
+        </h3>
+        <ul>
+          {
+            committee.production.map((member) => (
+              <li>
+                <span class="underline">{member.role}:</span> {member.name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="content">
+        <h3 class="text-lg text-title-primary-color font-semibold">
+          Marketing, Outreach, and Communications
+        </h3>
+        <ul>
+          {
+            committee.moc.map((member) => (
+              <li>
+                <span class="underline">{member.role}:</span> {member.name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="content">
+        <h3 class="text-lg text-title-primary-color font-semibold">
+          Fundraising
+        </h3>
+        <ul>
+          {
+            committee.fundraising.map((member) => (
+              <li>
+                <span class="underline">{member.role}:</span> {member.name}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="md:col-span-4 flex justify-end items-center mt-4">
+        <span class="content mr-4 text-right">. . . and</span>
+        <div class="rounded-full overflow-hidden">
+          <a href="/volunteer" class="button text-center"> YOU!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONK! FAMILY -->
+    <div id="family" class="grid grid-cols-1 gap-5">
+      {
+        Object.keys(family).map((continent) => (
+          <section class="content-container">
+            <BackToTop />
+            <Title title={`HONK! Family - ${continent}`} center={true} />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-7 w-full content my-4 sm:my-5">
+              {family[continent].map((honk) => (
+                <a
+                  class="font-bold block w-full flex flex-col text-center items-center"
+                  href={honk.url}
+                >
+                  <div class="block border-main-color-300 border-opacity-70 border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-main-color-300 hover:bg-opacity-20 hover:border-opacity-100">
+                    <span class="inline-block relative bottom-4 bg-[#006662] px-2 rounded-xl bg-opacity-90">
+                      {honk.name}
+                    </span>
+                  </div>
+                  <span class="block bg-[#006662] px-2 z-10 text-main-color-300 rounded-xl bg-opacity-90">
+                    {honk.location}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  a.button {
+    @apply block bg-accent-color rounded text-xl text-main-color-300 mb-5 last:mb-0 font-base font-bold py-2 bg-opacity-70 px-4 cursor-pointer;
+  }
+  a.button:hover {
+    @apply bg-opacity-100;
+  }
+</style>

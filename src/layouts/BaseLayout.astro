@@ -1,0 +1,46 @@
+---
+import Head from '@components/base-head/BaseHead.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- HEAD -->
+  <head>
+    <Head title={title}>   
+      <slot name="head" />
+    </Head>
+  </head>
+
+  <body class="min-h-full">
+    <div id="back-to-top"></div>
+
+    <!-- BACKGROUND IMAGE -->
+    <div class="w-full h-full fixed top-0 left-0">
+	    <div class="bg-[#D2AC54] w-full h-full fixed top-0 left-0"></div>
+      <div class="bg-site  w-full h-full fixed top-0 left-0"></div>
+    </div>
+
+    <div class="w-full h-full absolute top-0 left-0 flex flex-col justify-between">
+      <!-- HEADER -->
+      <header class=" w-full mx-auto">
+        <Header />
+      </header>
+
+      <!-- MAIN -->
+      <main class=" max-w-screen-xl pb-6 sm:pb-10 px-3 sm:px-6 w-full mx-auto">
+        <slot />
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="mt-auto w-full">
+        <Footer />
+      </footer>
+    </div>
+  </body>
+
+</html>

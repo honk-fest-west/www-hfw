@@ -1,0 +1,64 @@
+---
+const {start, end, className} = Astro.props
+
+const start_date = start && new Date(start)
+const end_date = end && new Date(end)
+
+const format = (date, options: Intl.DateTimeFormatOptions = {dateStyle: 'long'}) => {
+	return new Intl.DateTimeFormat('en-US', options).format(date)
+}
+
+const dateFormatted = (date1, date2) => {
+	if (!date1) {
+		return ''
+
+	} else if (!date2) {
+		return format(date1)
+
+	} else if (date1.getFullYear() !== date2.getFullYear()) {
+		// Date spans years
+		return `${format(date1)} to<br/>${format(date2)}`
+
+	} else if (date1.getMonth() !== date2.getMonth()) {
+		// Date spans month
+		const start = format(date1, {month: 'long', day: 'numeric'})
+		const end = format(date2)
+		return `${start} to<br/>${end}`
+
+	} else if (date1.getDay() !== date2.getDay()) {
+		// Date spans days
+		const year = format(date1, {year: 'numeric'})
+		const month = format(date1, {month: 'long'}) 
+		const start = format(date1, {day: 'numeric'})
+		const end = format(date2, {day: 'numeric'})
+		return `${month} ${start}-${end} ${year}`
+
+	} else {
+		return format(date1)
+	}
+}
+
+const timeFormatted = (date1, date2) => {
+	const re = /(\s+|:00)/g
+
+	if (!date1)
+		return ''
+	else if (!date2) {
+		return format(date1, {timeStyle: 'short'}).replace(re, '')
+	} else if (Math.abs(date1.getHours() - date2.getHours()) >= 23) {
+		return ''
+	}
+	else if (date1.getTime() !== date2.getTime()) {
+		return `${format(date1, {timeStyle: 'short'})
+							.replace(re, '')}
+							-
+						${format(date2, {timeStyle: 'short'})
+							.replace(re, '')}`
+	} else {
+		return format(date1, {timeStyle: 'short'}).replace(re, '')
+	}
+}
+---
+
+<span class={className}>{dateFormatted(start_date, end_date)}</span>
+<span class={className}>{timeFormatted(start_date, end_date).toLowerCase()}</span>

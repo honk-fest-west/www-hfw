@@ -1,0 +1,169 @@
+---
+import { Image } from '@astrojs/image/components';
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Title from '@components/Title.astro';
+import BackToTop from '@components/BackToTop.astro';
+
+import sponsors from '@data/sponsors.json';
+import type { neutral } from 'tailwindcss/colors';
+---
+
+<BaseLayout title="Supporters">
+  <!-- INTRO -->
+  <section class="content-container mb-4 sm:mb-6">
+    <p class="content">
+      Your tax-deductible contribution will help to pay for the many expenses
+      and logistics associated with this amazing event as well as outreach
+      programming throughout the year. Financial support or in-kind
+      contributions from businesses and community members are the backbone of
+      our success.
+      <br /><br />
+      For more information about sponsorship opportunities please contact us at:
+      <br />
+      <a href="mailto:fundraising@honkfestwest.org"
+        >fundraising@honkfestwest.org</a
+      >
+    </p>
+  </section>
+
+  <div class="flex flex-wrap lg:flex-nowrap gap-4 sm:gap-6">
+    <div class="w-full lg:w-1/3 flex flex-col gap-4 sm:gap-6">
+      <!-- READY TO PARTICIPATE? -->
+      <section class="content-container">
+        <Title title="Ready to Participate?" />
+        <p class="content">
+          HONK! Festival West is a 501(c)(3) nonprofit organization.
+          <br /><br />
+          Tax ID #86-3761255.
+          <br /><br />
+          Donations to HONK! Festival West are tax-deductible to the extent allowed
+          by law.
+          <br /><br />
+          Donations can be made via check to:
+          <span class="flex flex-col block mt-2 font-bold">
+            HONK! Festival West
+            <br />
+            PO Box 20242
+            <br />
+            Seattle, WA 98102
+          </span>
+          <br />
+          Or securely at:
+          <br />
+          <a
+            href="https://connect.clickandpledge.com/w/Form/a6086a7f-ef18-4eb8-a2bc-ffa205759fcc"
+            class="block transition ease-in-out hover:bg-main-color-300 hover:bg-opacity-20 py-1 px-4 mt-2 text-center rounded-full border-4 border-main-color-300 border-opacity-80 hover:border-opacity-100 w-auto"
+          >
+            <span class="block text-lg content hover:text-white"
+              >Click & Pledge</span
+            >
+          </a>
+        </p>
+      </section>
+    </div>
+    <div class="w-full lg:w-2/3 flex flex-col gap-4 sm:gap-6">
+      <section class="content-container">
+        <BackToTop />
+        <Title title="Supporters" />
+        <p class="content">
+          <span>
+            This project is supported in part by the
+            <a href="https://www.arts.gov/">National Endowment for the Arts</a>
+            and the
+            <a href="https://www.arts.wa.gov/">WA State Arts Commission</a>.
+          </span>
+          <span
+            class="block grid grid-cols-2 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
+          >
+            <a class="block mb-3 sm:mb-0" href={sponsors.nea.link}>
+              <Image
+                class="w-auto rounded bg-white p-2"
+                src={sponsors.nea.image}
+                alt={sponsors.nea.name}
+                aspectRatio={sponsors.nea.ratio}
+                width="347"
+              />
+            </a>
+            <a class="block mb-3 sm:mb-0" href={sponsors.artswa.link}>
+              <Image
+                class="w-auto rounded bg-white p-2"
+                src={sponsors.artswa.image}
+                alt={sponsors.artswa.name}
+                aspectRatio={sponsors.artswa.ratio}
+                width="347"
+              />
+            </a>
+          </span>
+          <span
+            class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"
+          ></span>
+
+          <span>
+            HONK! Festival West is supported by grants from
+            <a href="http://www.4culture.org/">4Culture</a>,
+            <a href="https://www.artsfund.org/">Arts Fund</a>, and
+            <a href="https://kingcountycreative.com/">King County CREATIVE</a>.
+          </span>
+          <span
+            class="block grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
+          >
+            {
+              sponsors.arts.map((sponsor) => (
+                <a class="block mb-3 sm:mb-0" href={sponsor.link}>
+                  <Image
+                    class="w-auto rounded bg-white p-2"
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    aspectRatio={sponsor.ratio}
+                    width="188"
+                  />
+                </a>
+              ))
+            }
+          </span>
+
+          <span
+            class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"
+          ></span>
+
+          <span>
+            Thank you to our partner organizations for their support in building
+            a thriving creative community in Seattle:
+          </span>
+        </p><div class="relative flex flex-col justify-center py-6">
+          <div
+            class="columns-2 sm:columns-3 gap-10 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit"
+          >
+            {
+              sponsors.shoutouts.map((sponsor) => (
+                <div class="break-inside-avoid mb-6 rounded-lg">
+                  <a href={sponsor.link}>
+                    <Image
+                      className="w-auto rounded p-1"
+                      src={sponsor.image}
+                      alt={sponsor.name}
+                      aspectRatio={sponsor.ratio}
+                      width="188"
+                    />
+                  </a>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <span
+          class="border-b-4 border-opacity-60 border-title-primary-color border-dotted w-full block mb-4"
+        ></span>
+
+        <p>
+          We thank the original
+          <a href="HONK! festival">http://honkfest.org/</a>—the mothership—which
+          inspired our festival and has since seen other offspring arise in
+          Austin, Detroit, Australia, Brazil and beyond!
+        </p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

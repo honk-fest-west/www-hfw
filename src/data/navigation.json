@@ -1,0 +1,34 @@
+{
+  "main": [
+    {
+      "name": "Festival",
+      "link": "/festival"
+    },
+    {
+      "name": "Volunteer",
+      "link": "/volunteer"
+    },
+    {
+      "name": "Supporters",
+      "link": "/supporters"
+    },
+    {
+      "name": "Donate",
+      "link": "/donate"
+    },
+    {
+      "name": "Media",
+      "link": "/media"
+    },
+    {
+      "name": "About",
+      "link": "/about"
+    }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/HONKFestWest/",
+    "twitter": "https://twitter.com/honkfestwest",
+    "instagram": "https://www.instagram.com/honkfestwest/",
+    "flickr": "https://www.flickr.com/groups/1352913@N23/"
+  }
+}

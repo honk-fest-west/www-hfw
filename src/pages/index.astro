@@ -1,81 +1,160 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Image } from '@astrojs/image/components';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PostBlurb from '@components/post-blurb/PostBlurb.astro';
+import LinkBlurb from '@components/LinkBlurb.astro';
+
+import Title from '@components/Title.astro';
+import NewsletterForm from '@components/NewsletterForm.astro';
+import Slideshow from '../components/slideshow/Slideshow.jsx';
+import BonfireMerch from '@components/home/BonfireMerch.astro';
+import BackToTop from '@components/BackToTop.astro';
+import slides from '@data/slideshow.json';
+
+let posts = [];
+
+try {
+  posts = Astro.fetchContent('/src/pages/posts/*.md')
+    .filter((post) => !!post.order)
+    .sort((a, b) => a.order - b.order);
+} catch (error) {
+  console.error('No posts available in the posts folder');
+}
+
+const posts_length = posts.length;
+const postColumns = (index) => {
+  if (posts_length % 3 === 1 && index > posts_length - 2) {
+    return { span: 'md:col-span-6', cols: 3 };
+  } else if (posts_length % 3 === 2 && index > posts_length - 3) {
+    return { span: 'md:col-span-3', cols: 2 };
+  } else {
+    return { span: 'md:col-span-2', cols: 1 };
+  }
+};
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<BaseLayout title="Home">
+  <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-6 w-full lg:mt-14">
+    <!-- INFO BLOCK -->
+    <section
+      itemscope
+      itemtype="https://schema.org/Event"
+      class="w-full col-span-6 lg:col-span-2 content-container z-10"
+    >
+      <Title title="Upcoming Festival" center={true} />
+      <div
+        class="flex flex-col items-center h-full text-2xl sm:text-4xl font-medium tracking-wide z-10"
+      >
+        <span
+          class="text-title-primary-color text-center mb-2 hidden font-emphasis"
+          itemprop="name"
+        >
+          <span class="text-main-color-300">HONK!</span> FEST WEST
+        </span>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center w-full"
+        >
+          <span
+            class="block lg:mb-0 text-title-primary-color tracking-normal md:mr-2 font-emphasis text-center"
+          >
+            <time itemprop="startDate">JUNE 3 - 5, 2022</time>
+          </span>
+        </div>
+        <span
+          class="text-main-color-300 text-center block font-emphasis"
+          itemprop="location"
+        >
+          SEATTLE, WA
+        </span>
+        <a
+          class="block font-base antialiased text-base sm:text-lg text-title-primary-color font-bold flex-none z-10 mt-5"
+          href="/festival"
+        >
+          » More Info
+        </a>
+      </div>
+    </section>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+    <section
+      class="col-span-6 lg:col-span-4 row-span-2 flex justify-center rounded-full w-full relative"
+    >
+      <Image
+        src="https://ik.imagekit.io/thegoldendino/hfw/festival/2022/dino-dates_nMvqTkwT5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648738004275&tr=w-600"
+        alt="When Marching Bands Ruled the Earth"
+        class="scale-[1.1] lg:absolute lg:-bottom-10"
+        width="600"
+        height="615"
+      />
+    </section>
+
+    <!-- NEWSLETTER BLOCK -->
+    <section class="w-full col-span-6 lg:col-span-2 content-container">
+      <NewsletterForm />
+    </section>
+
+    <article
+      class="w-full content-container col-span-6 flex flex-col md:flex-row"
+    >
+      <BackToTop />
+      <BonfireMerch />
+    </article>
+
+    <!-- POST BLURBS -->
+    {
+      posts.map((post, index) => (
+        <article
+          class={`w-full content-container sm:col-span-6 ${
+            postColumns(index).span
+          }`}
+        >
+          <PostBlurb post={post} cols={postColumns(index).cols} />
+        </article>
+      ))
+    }
+
+    <!-- LINK BLURBS -->
+    <section class="col-span-6 md:col-span-2 content-container">
+      <LinkBlurb title="About" href="/about">
+        HONK! Fest West is an accessible community music festival driven by the
+        energetic performances of street bands in public spaces.
+      </LinkBlurb>
+    </section>
+    <section class="col-span-6 md:col-span-2 content-container">
+      <LinkBlurb title="Volunteer" href="/volunteer">
+        If you want to volunteer, and help make HONK! Fest West magic, please
+        <a class="text-accent-color font-bold" href="/volunteer"> APPLY HERE</a>
+        and Thank You!!
+      </LinkBlurb>
+    </section>
+    <section class="col-span-6 md:col-span-2 content-container">
+      <LinkBlurb title="Donate" href="/donate">
+        Your contributions help make this event possible. Through the generous
+        efforts of our shared community, we’ll keep bringing music to the
+        streets and parks of Seattle’s neighborhoods.
+      </LinkBlurb>
+    </section>
+
+    <!-- SLIDESHOW -->
+    <div class="col-span-6 content-container">
+      <Slideshow slides={slides} client:visible />
+    </div>
+
+    <!-- SUPPORT DUAMISH  -->
+    <div class="col-span-6 content-container">
+      <BackToTop />
+      <p class="content font-base italic">
+        H!FW acknowledges that we are on the traditional land of the first
+        people of Seattle — the Duwamish People past and present — and honor
+        with gratitude the land itself, the Duwamish Tribe, and the Coast Salish
+        people.
+      </p>
+      <br />
+      <a
+        class="font-base link text-title-primary-color font-bold text-base sm:text-lg"
+        href="https://www.duwamishtribe.org/donate"
+      >
+        » Please support the Duwamish Tribe
+      </a>
+    </div>
+  </div>
+</BaseLayout>

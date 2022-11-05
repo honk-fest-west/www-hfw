@@ -1,0 +1,80 @@
+---
+import SocialLinks from '@components/SocialLinks.astro';
+import { Image } from '@astrojs/image/components';
+import GoldenDino from './GoldenDino.svelte';
+
+import sponsors from '@data/sponsors.json';
+import navigation from '@data/navigation.json';
+
+const displaySponsors = [sponsors.nea, sponsors.artswa, ...sponsors.arts];
+const golden_dino = true;
+---
+
+<div class="bg-[#962C2B]">
+  <!-- SPONSORS -->
+  <div class="border-b-[1rem] border-[#0E4341] border-opacity-80">
+    <div
+      class="max-w-screen-xl w-full mx-auto pt-3 px-3 sm:py-4 sm:px-6 flex flex-wrap sm:flex-nowrap"
+    >
+      <!-- SPONSORS -->
+      <div class="flex flex-col items-center w-full mb-2 sm:mb-0">
+        <div
+          class="flex flex-wrap justify-around align-center sm:w-3/4 items-center pt-3"
+        >
+          <span
+            class="text-xs leading-tight w-1/5 text-main-color-300 mr-6 text-justify text-opacity-80 pr-3"
+          >
+            This project is supported in part by the National Endowment for the
+            Arts and the WA State Arts Commission.
+          </span>
+          {
+            displaySponsors.map((sponsor) => (
+              <div class="mx-2 mb-3">
+                <a
+                  href="{ sponsor.link }"
+                  class="rounded block bg-white w-fit p-1 h-fit"
+                >
+                  <Image
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    height="60"
+                    aspectRatio={sponsor.ratio}
+                    class="rounded"
+                  />
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM -->
+<div
+  class="max-w-screen-xl w-full mx-auto p-1 sm:p-0 flex flex-wrap sm:flex-nowrap items-center"
+>
+  <a
+    class="w-full text-center text-main-color-900 text-lg font-bold font-base block w-full sm:w-1/3 m-1 sm:m-4"
+    href="/">© 2022 HONK! Fest West</a
+  >
+  <ul
+    class="items-center h-full flex-1 w-full sm:w-1/3 m-1 sm:m-4 hidden sm:flex justify-around"
+  >
+    {
+      Object.keys(navigation.social).map((item) => (
+        <li class="text-main-color-900">
+          <SocialLinks link={item} size="1.25rem" />
+        </li>
+      ))
+    }
+  </ul>
+  <GoldenDino client:visible />
+  <a
+    class="w-full text-center font-base link text-accent-color font-bold text-lg block sm:w-1/3 m-1 sm:m-4 underline"
+    href="#"
+  >
+    Back to top
+  </a>
+</div>

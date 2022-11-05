@@ -1,0 +1,14 @@
+{
+  "info": {
+    "name": "General Info",
+    "email": "info@honkfestwest.org"
+  },
+  "booking": {
+    "name": "Booking",
+    "email": "booking@honkfestwest.org"
+  },
+  "volunteer": {
+    "name": "Volunteer",
+    "email": "volunteer@honkfestwest.org"
+  }
+}

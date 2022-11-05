@@ -11,13 +11,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.11.0",
+    "@astrojs/image": "^0.11.1",
     "@astrojs/netlify": "^1.2.0",
     "@astrojs/partytown": "^1.0.1",
+    "@astrojs/react": "^1.2.2",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/svelte": "^1.0.2",
     "@astrojs/tailwind": "^2.1.1",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
     "astro": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-responsive": "^9.0.0-beta.5",
+    "sharp": "^0.31.2",
     "svelte": "^3.52.0",
     "tailwindcss": "^3.2.1"
   }
