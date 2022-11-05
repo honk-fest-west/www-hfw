@@ -13,14 +13,6 @@ import slides from '@data/slideshow.json';
 
 let posts = [];
 
-try {
-  posts = Astro.fetchContent('/src/pages/posts/*.md')
-    .filter((post) => !!post.order)
-    .sort((a, b) => a.order - b.order);
-} catch (error) {
-  console.error('No posts available in the posts folder');
-}
-
 const posts_length = posts.length;
 const postColumns = (index) => {
   if (posts_length % 3 === 1 && index > posts_length - 2) {
