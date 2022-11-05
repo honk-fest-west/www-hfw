@@ -1,8 +1,8 @@
 ---
-import FestivalLayout from '@layouts/FestivalLayout.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
-import ScheduleTable from '../../components/festival/ScheduleTable.svelte';
+import ScheduleTable from '@components/festival/ScheduleTable.svelte';
 import bands from '@data/bands.json';
 import schedule from '@data/schedule.json';
 
@@ -11,8 +11,13 @@ const playingBands = Object.values(bands)
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<FestivalLayout title="Schedule" active="schedule">
-  <div id="locations" class="content-container mb-4 sm:mb-6">
+<BaseLayout title="Schedule">
+  <div
+    class="flex justify-center items-center w-full py-28 text-7xl font-bold text-accent-color"
+  >
+    Coming Soon
+  </div>
+  <!--   <div id="locations" class="content-container mb-4 sm:mb-6">
     <BackToTop />
     <Title title="Locations" />
     <div
@@ -75,5 +80,5 @@ const playingBands = Object.values(bands)
         ))
       }
     </div>
-  </div>
-</FestivalLayout>
+  </div> -->
+</BaseLayout>
