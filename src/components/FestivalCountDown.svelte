@@ -1,5 +1,5 @@
 <script>
-	const countDownDate = new Date("June 3, 2022 06:00:00 PM PST").getTime();
+	const countDownDate = new Date("June 2, 2023 06:00:00 PM PST").getTime();
 
 	let days = 0;
 	let hours = 0;
