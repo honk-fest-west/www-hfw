@@ -31,9 +31,7 @@ export default defineConfig({
     svelte(),
     sitemap(),
     react(),
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp',
-    }),
+    image(),
   ],
   output: 'server',
   adapter: netlify(),
