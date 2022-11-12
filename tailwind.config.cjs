@@ -4,24 +4,15 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: ['./src/**/*.{html,astro,js,jsx,ts,tsx,vue,svelte}'],
   theme: {
+    colors: {
+      aqua: 'var(--colors-aqua)',
+      pink: 'var(--colors-pink)',
+      navy: 'var(--colors-navy)',
+      cobalt: 'var(--colors-cobalt)',
+      gray: colors.slate,
+      transparent: colors.transparent,
+    },
     extend: {
-      colors: {
-        gray: colors.stone,
-        'main-color': {
-          DEFAULT: 'var(--main-color)',
-          200: '#F8F2DD',
-          300: '#F2E5BB',
-          600: '#DBB948',
-          700: '#C4A027',
-          900: '#665314',
-        },
-        'title-primary-color': '#F1AA00',
-        'accent-color': '#962C2B',
-        'content-container': '#4D546A',
-      },
-      backgroundImage: (theme) => ({
-        site: 'url(https://ik.imagekit.io/thegoldendino/hfw/shatter-background_1__yeFkQzR5s.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1648439951103)',
-      }),
       fontFamily: {
         title: ['Josefin Sans', 'sans-serif'],
         emphasis: ['Alatsi', 'sans-serif'],

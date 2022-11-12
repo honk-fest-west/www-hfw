@@ -11,10 +11,12 @@ const { title = '', href = '#' } = Astro.props;
   <p class="content flex-1">
     <slot />
   </p>
-  <a
-    class="block font-base antialiased text-base sm:text-lg text-title-primary-color font-bold flex-none mt-3 z-10"
-    href={href}
-  >
-    » Read More
-  </a>
+  <div>
+    <a
+      class="text-shadow block font-base antialiased text-base sm:text-lg text-pink font-bold flex-none mt-3 z-10 relative hover:scale-105 hover:left-2"
+      href={href}
+    >
+      » Read More
+    </a>
+  </div>
 </div>

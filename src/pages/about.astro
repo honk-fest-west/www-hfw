@@ -14,13 +14,15 @@ import committee from '@data/committee.json';
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
     <nav class="content-container md:row-span-2">
       <div class="menu sticky">
-        <a class="button" href="#mission">» Our Mission</a>
-        <a class="button" href="#contact">» Contact Us</a>
-        <a class="button" href="#story">» Our Story</a>
-        <a class="button" href="#diversity">» Diversity & Inclusion</a>
-        <a class="button" href="#join">» Join Us!</a>
-        <a class="button" href="#committee">» Committee</a>
-        <a class="button" href="#family">» HONK! Family</a>
+        <a class="button text-shadow" href="#mission">» Our Mission</a>
+        <a class="button text-shadow" href="#contact">» Contact Us</a>
+        <a class="button text-shadow" href="#story">» Our Story</a>
+        <a class="button text-shadow" href="#diversity"
+          >» Diversity & Inclusion</a
+        >
+        <a class="button text-shadow" href="#join">» Join Us!</a>
+        <a class="button text-shadow" href="#committee">» Committee</a>
+        <a class="button text-shadow" href="#family">» HONK! Family</a>
       </div>
     </nav>
 
@@ -42,10 +44,10 @@ import committee from '@data/committee.json';
         {
           Object.keys(emails).map((email) => (
             <>
-              <dt class="md:p-2 font-base antialiased text-main-color-300 leading-7 text-lg sm:text-xl flex-1">
+              <dt class="md:p-2 font-base antialiased text-gray-200 leading-7 text-lg sm:text-xl flex-1">
                 {emails[email].name}:
               </dt>
-              <dd class="content pb-2 md:p-2 font-base antialiased text-main-color-300 leading-7 text-lg md:text-xl col-span-2">
+              <dd class="content pb-2 md:p-2 font-base antialiased text-gray-200 leading-7 text-lg md:text-xl col-span-2">
                 <a href={`mailto:${emails[email].email}`}>
                   {emails[email].email}
                 </a>
@@ -171,10 +173,10 @@ import committee from '@data/committee.json';
     <!-- COMMITTEE -->
     <section id="committee">
       <h2
-        class="text-3xl sm:text-4xl text-main-color-900 text-center tracking-wide mb-8 font-bold"
+        class="text-3xl sm:text-4xl text-cobalt text-center tracking-wide mb-8 font-bold bg-pink"
       >
         YOUR
-        <span class="text-accent-color">HONK! FEST WEST</span>
+        <span class="text-pink bg-cobalt px-2">HONK! FEST WEST</span>
         COMMITTEE
       </h2>
       <div class="flex flex-wrap justify-around gap-6">
@@ -182,7 +184,7 @@ import committee from '@data/committee.json';
           committee.photos.map((member) => (
             <div class="flex flex-col items-center">
               <Image
-                class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-main-color-900"
+                class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-cobalt"
                 src={member.image_url}
                 alt={member.name}
                 width="150"
@@ -190,7 +192,7 @@ import committee from '@data/committee.json';
                 format="jpeg"
               />
               <p class="content text-center ">
-                <span class="text-main-color-900 text-xl font-bold">
+                <span class="text-shadow text-gray-200 text-xl font-black">
                   {member.name}
                 </span>
               </p>
@@ -204,7 +206,7 @@ import committee from '@data/committee.json';
     <section class="content-container grid grid-cols-1 md:grid-cols-4">
       <BackToTop />
       <div class="content">
-        <h3 class="text-lg text-title-primary-color font-semibold">
+        <h3 class="text-shadow text-lg text-pink font-semibold">
           Board of Directors
         </h3>
         <ul>
@@ -218,7 +220,7 @@ import committee from '@data/committee.json';
         </ul>
       </div>
       <div class="content">
-        <h3 class="text-lg text-title-primary-color font-semibold">
+        <h3 class="text-shadow text-lg text-pink font-semibold">
           Event Production
         </h3>
         <ul>
@@ -232,7 +234,7 @@ import committee from '@data/committee.json';
         </ul>
       </div>
       <div class="content">
-        <h3 class="text-lg text-title-primary-color font-semibold">
+        <h3 class="text-shadow text-lg text-pink font-semibold">
           Creative & Communications
         </h3>
         <ul>
@@ -246,9 +248,7 @@ import committee from '@data/committee.json';
         </ul>
       </div>
       <div class="content">
-        <h3 class="text-lg text-title-primary-color font-semibold">
-          Fundraising
-        </h3>
+        <h3 class="text-shadow text-lg text-pink font-semibold">Fundraising</h3>
         <ul>
           {
             committee.fundraising.map((member) => (
@@ -258,7 +258,7 @@ import committee from '@data/committee.json';
             ))
           }
         </ul>
-        <h3 class="text-lg text-title-primary-color font-semibold">Outreach</h3>
+        <h3 class="text-shadow text-lg text-pink font-semibold">Outreach</h3>
         <ul>
           {
             committee.outreach.map((member) => (
@@ -271,8 +271,13 @@ import committee from '@data/committee.json';
       </div>
       <div class="md:col-span-4 flex justify-end items-center mt-4">
         <span class="content mr-4 text-right">. . . and</span>
-        <div class="rounded-full overflow-hidden">
-          <a href="/volunteer" class="button text-center"> YOU!</a>
+        <div class="rounded-full overflow-hidden animate-bounce">
+          <a
+            href="/volunteer"
+            class="text-shadow button text-center ease-in-out hover:scale-105"
+          >
+            YOU!</a
+          >
         </div>
       </div>
     </section>
@@ -290,12 +295,12 @@ import committee from '@data/committee.json';
                   class="font-bold block w-full flex flex-col text-center items-center"
                   href={honk.url}
                 >
-                  <div class="block border-main-color-300 border-opacity-70 border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-main-color-300 hover:bg-opacity-20 hover:border-opacity-100">
-                    <span class="inline-block relative bottom-4 bg-[#006662] px-2 rounded-xl bg-opacity-90">
+                  <div class="block border-navy border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-navy hover:bg-opacity-100 hover:scale-105">
+                    <span class="inline-block relative bottom-4 bg-cobalt px-2 rounded-xl bg-opacity-90 text-pink">
                       {honk.name}
                     </span>
                   </div>
-                  <span class="block bg-[#006662] px-2 z-10 text-main-color-300 rounded-xl bg-opacity-90">
+                  <span class="block bg-cobalt px-2 z-10 text-gray-200 rounded-xl bg-opacity-90">
                     {honk.location}
                   </span>
                 </a>
@@ -310,9 +315,10 @@ import committee from '@data/committee.json';
 
 <style>
   a.button {
-    @apply block bg-accent-color rounded text-xl text-main-color-300 mb-5 last:mb-0 font-base font-bold py-2 bg-opacity-70 px-4 cursor-pointer;
+    @apply block bg-navy rounded text-xl text-pink mb-5 last:mb-0 font-base font-bold py-2 px-4 cursor-pointer;
   }
+
   a.button:hover {
-    @apply bg-opacity-100;
+    @apply scale-105 text-gray-200;
   }
 </style>

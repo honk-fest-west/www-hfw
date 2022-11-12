@@ -7,9 +7,9 @@ import LinkBlurb from '@components/LinkBlurb.astro';
 import Title from '@components/Title.astro';
 import NewsletterForm from '@components/NewsletterForm.astro';
 import Slideshow from '../components/slideshow/Slideshow.jsx';
-import BonfireMerch from '@components/home/BonfireMerch.astro';
 import BackToTop from '@components/BackToTop.astro';
 import slides from '@data/slideshow.json';
+import androidGroupImage from '@images/android-group.png';
 
 let posts = [];
 
@@ -35,35 +35,37 @@ const postColumns = (index) => {
     >
       <Title title="Upcoming Festival" center={true} />
       <div
-        class="flex flex-col items-center h-full text-2xl sm:text-4xl font-medium tracking-wide z-10"
+        class="text-shadow flex flex-col items-center h-full text-2xl sm:text-4xl font-medium tracking-wide z-10"
       >
         <span
-          class="text-title-primary-color text-center mb-2 hidden font-emphasis"
+          class="text-pink text-center mb-2 hidden font-emphasis"
           itemprop="name"
         >
-          <span class="text-main-color-300">HONK!</span> FEST WEST
+          <span class="text-gray-200">HONK!</span> FEST WEST
         </span>
         <div
           class="flex flex-col lg:flex-row justify-center items-center w-full"
         >
           <span
-            class="block lg:mb-0 text-title-primary-color tracking-normal md:mr-2 font-emphasis text-center"
+            class="block lg:mb-0 text-gray-200 tracking-normal md:mr-2 font-emphasis text-center"
           >
             <time itemprop="startDate">JUNE 2 - 4, 2023</time>
           </span>
         </div>
         <span
-          class="text-main-color-300 text-center block font-emphasis"
+          class="text-gray-200 text-center block font-emphasis"
           itemprop="location"
         >
           SEATTLE, WA
         </span>
-        <a
-          class="block font-base antialiased text-base sm:text-lg text-title-primary-color font-bold flex-none z-10 mt-5"
-          href="/festival"
-        >
-          » More Info
-        </a>
+        <div class="content">
+          <a
+            class="block antialiased text-base sm:text-lg flex-none z-10 mt-5 hover:scale-105"
+            href="/festival"
+          >
+            » More Info
+          </a>
+        </div>
       </div>
     </section>
 
@@ -71,11 +73,11 @@ const postColumns = (index) => {
       class="col-span-6 lg:col-span-4 row-span-2 flex justify-center rounded-full w-full relative"
     >
       <Image
-        src="https://ik.imagekit.io/thegoldendino/hfw/festival/2022/dino-dates_nMvqTkwT5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648738004275&tr=w-600"
-        alt="When Marching Bands Ruled the Earth"
-        class="scale-[1.1] lg:absolute lg:-bottom-10"
-        width="600"
-        height="615"
+        src="https://ik.imagekit.io/thegoldendino/hfw/2023/android-group_JKBnLt9Mn.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668291708111"
+        alt="Let Us Transform"
+        class="lg:absolute lg:-top-28"
+        aspectRatio="1000:684"
+        width="1000"
         format="png"
       />
     </section>
@@ -114,7 +116,9 @@ const postColumns = (index) => {
     <section class="col-span-6 md:col-span-2 content-container">
       <LinkBlurb title="Volunteer" href="/volunteer">
         If you want to volunteer, and help make HONK! Fest West magic, please
-        <a class="text-accent-color font-bold" href="/volunteer"> APPLY HERE</a>
+        <a class="font-bold inline-block hover:scale-105" href="/volunteer">
+          APPLY HERE</a
+        >
         and Thank You!!
       </LinkBlurb>
     </section>
@@ -142,7 +146,7 @@ const postColumns = (index) => {
       </p>
       <br />
       <a
-        class="font-base link text-title-primary-color font-bold text-base sm:text-lg"
+        class="text-shadow block ease-in font-base link text-pink font-bold text-base sm:text-lg relative hover:scale-105 hover:left-6"
         href="https://www.duwamishtribe.org/donate"
       >
         » Please support the Duwamish Tribe

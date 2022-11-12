@@ -1,21 +1,33 @@
 ---
-const {title="", subtitle=false, center=false, id=""} = Astro.props;
+const {
+  title = '',
+  subtitle = false,
+  center = false,
+  id = '',
+  border = true,
+} = Astro.props;
 
-const _id = id.length ? id : title
+const _id = id.length ? id : title;
 ---
 
-<style>
-	.title {
-		@apply flex flex-wrap text-2xl sm:text-3xl font-title border-b-4  border-main-color-700 border-opacity-100 border-dotted mb-4 pb-1;
-	}
-</style>
-
-
-<h2 id={_id} class={`title ${center ? 'justify-center': ''}`}>
-	<span class={`text-main-color-300  ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} block ${center ? 'text-center' : ''}`}>
-		{title}
-	</span>
-	<span class={`text-title-primary-color block ${center && subtitle ? 'ml-3': ''} ${subtitle ? 'mr-3' : ''} ${center ? 'text-center' : ''}`}>
-		{subtitle}
-	</span>
+<h2
+  id={_id}
+  class={`title  ${center ? 'justify-center' : ''} ${
+    border ? 'border-b-4' : ''
+  }`}
+>
+  <span
+    class={`text-pink  ${center && subtitle ? 'ml-3' : ''} ${
+      subtitle ? 'mr-3' : ''
+    } block ${center ? 'text-center' : ''}`}
+  >
+    {title}
+  </span>
+  <span
+    class={`text-pink block ${center && subtitle ? 'ml-3' : ''} ${
+      subtitle ? 'mr-3' : ''
+    } ${center ? 'text-center' : ''}`}
+  >
+    {subtitle}
+  </span>
 </h2>
