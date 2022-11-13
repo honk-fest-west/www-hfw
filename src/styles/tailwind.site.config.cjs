@@ -10,7 +10,7 @@ module.exports = {
       'pink-lt': 'var(--colors-pink-lt)',
       navy: 'var(--colors-navy)',
       cobalt: 'var(--colors-cobalt)',
-      gray: colors.zinc,
+      gray: colors.gray,
       transparent: colors.transparent,
     },
     extend: {
