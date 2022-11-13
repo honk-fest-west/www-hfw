@@ -9,6 +9,7 @@ import NewsletterForm from '@components/NewsletterForm.astro';
 import Slideshow from '../components/slideshow/Slideshow.jsx';
 import BackToTop from '@components/BackToTop.astro';
 import slides from '@data/slideshow.json';
+import FestivalInfoBlock from '@components/home/FestivalInfoBlock.astro';
 
 let posts = [];
 
@@ -26,47 +27,7 @@ const postColumns = (index) => {
 
 <BaseLayout title="Home">
   <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-6 w-full lg:mt-14">
-    <!-- INFO BLOCK -->
-    <section
-      itemscope
-      itemtype="https://schema.org/Event"
-      class="w-full col-span-6 lg:col-span-2 content-container z-10"
-    >
-      <Title title="Upcoming Festival" center={true} />
-      <div
-        class="text-shadow flex flex-col items-center h-full text-2xl sm:text-4xl font-medium tracking-wide z-10"
-      >
-        <span
-          class="text-pink text-center mb-2 hidden font-emphasis"
-          itemprop="name"
-        >
-          <span class="text-gray-200">HONK!</span> FEST WEST
-        </span>
-        <div
-          class="flex flex-col lg:flex-row justify-center items-center w-full"
-        >
-          <span
-            class="block lg:mb-0 text-gray-200 tracking-normal md:mr-2 font-emphasis text-center"
-          >
-            <time itemprop="startDate">JUNE 2 - 4, 2023</time>
-          </span>
-        </div>
-        <span
-          class="text-gray-200 text-center block font-emphasis"
-          itemprop="location"
-        >
-          SEATTLE, WA
-        </span>
-        <div class="content">
-          <a
-            class="block antialiased text-base sm:text-lg flex-none z-10 mt-5 hover:scale-105"
-            href="/festival"
-          >
-            » More Info
-          </a>
-        </div>
-      </div>
-    </section>
+    <FestivalInfoBlock />
 
     <section
       class="col-span-6 lg:col-span-4 row-span-2 flex justify-center rounded-full w-full relative"
