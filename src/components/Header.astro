@@ -5,7 +5,7 @@ import navigation from '@data/navigation.json';
 
 const activeListItem = (link: string) => {
   return Astro.url.pathname.includes(link)
-    ? 'bg-pink ring-4 ring-cobalt text-cobalt cursor-default'
+    ? 'bg-pink ring-4 ring-cobalt text-gray-100 text-shadow cursor-default'
     : 'text-shadow bg-navy text-gray-200 hover:scale-105 hover:bg-pink';
 };
 
