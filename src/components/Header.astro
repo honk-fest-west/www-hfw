@@ -56,7 +56,9 @@ const activeAnchor = (link: string) => {
     }
 
     <!-- SOCIAL NAV -->
-    <li class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10">
+    <li
+      class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
+    >
       {
         Object.keys(navigation.social).map((item) => (
           <div>
