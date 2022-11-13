@@ -11,7 +11,7 @@
 }
 
 .content-container {
-  @apply bg-cobalt p-3 sm:p-5 rounded-xl overflow-hidden border-b-[4px] border-l-[4px] border-t-[8px] border-r-[4px]  border-pink border-opacity-70 relative;
+  @apply bg-cobalt p-3 sm:p-5 rounded-xl overflow-hidden border-b-[4px] border-l-[4px] border-t-[8px] border-r-[4px]  border-pink border-opacity-70 relative shadow-lg;
 }
 
 .content,
