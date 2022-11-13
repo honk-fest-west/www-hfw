@@ -24,7 +24,7 @@ p {
 }
 .content a,
 p a {
-  @apply text-pink font-black;
+  @apply text-pink-lt font-black;
 }
 
 .content a,
