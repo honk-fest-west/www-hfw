@@ -7,6 +7,7 @@ module.exports = {
     colors: {
       aqua: 'var(--colors-aqua)',
       pink: 'var(--colors-pink)',
+      'pink-lt': 'var(--colors-pink-lt)',
       navy: 'var(--colors-navy)',
       cobalt: 'var(--colors-cobalt)',
       gray: colors.zinc,
