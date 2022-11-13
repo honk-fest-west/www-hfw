@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Alatsi&family=Poppins:wght@400;600&display=swap');
-@config "./tailwind.site.config.cjs";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,7 +36,7 @@ p a {
 }
 
 .title {
-  @apply flex flex-wrap font-semibold text-2xl sm:text-3xl font-title border-pink border-dotted mb-4 pb-1;
+  @apply flex flex-wrap font-semibold text-2xl sm:text-3xl font-title border-pink-lt border-dotted mb-4 pb-1;
 }
 /* .title {
   text-shadow: 3px 3px 0 var(--colors-cobalt),

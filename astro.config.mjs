@@ -23,8 +23,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    tailwind(),
-    partytown(),
+    tailwind({ config: { applyBaseStyles: false } }),
     svelte(),
     sitemap(),
     react(),
