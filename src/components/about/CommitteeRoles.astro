@@ -1,8 +1,8 @@
 ---
 import { notion } from '@lib/notion_cms/client';
 
-const roles_db_id = '265a42529e3d45a791e0e961fcd38c19';
-const committee_db_id = '2aec2745c80e4d558f2e4d4699b84d67';
+const members_db_id = import.meta.env.COMMITTEE_MEMBERS_DB_ID;
+const roles_db_id = import.meta.env.COMMITTEE_ROLES_DB_ID;
 
 async function group_roles(roles) {
   return roles.reduce((groups, role) => {
@@ -26,7 +26,7 @@ const committee = await notion.databases
   .catch((err) => console.log(err));
 
 const names = await notion.databases
-  .query({ database_id: committee_db_id })
+  .query({ database_id: members_db_id })
   .then((response) => {
     return response.results.reduce((members, member) => {
       members[member.id] = member.properties['Name'].title[0].plain_text;

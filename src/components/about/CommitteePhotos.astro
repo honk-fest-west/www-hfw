@@ -2,16 +2,20 @@
 import { Image } from '@astrojs/image/components';
 import { notion } from '@lib/notion_cms/client';
 
-const database_id = '2aec2745c80e4d558f2e4d4699b84d67';
-
 const query = {
-  database_id,
+  database_id: import.meta.env.COMMITTEE_MEMBERS_DB_ID,
   filter: {
     property: 'Image URL',
     url: {
       is_not_empty: true,
     },
   },
+  sorts: [
+    {
+      property: 'Order',
+      direction: 'ascending',
+    },
+  ],
 };
 
 const committee_photos = await notion.databases
