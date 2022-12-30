@@ -1,0 +1,56 @@
+---
+import { Image } from '@astrojs/image/components';
+import { notion } from '@lib/notion_cms/client';
+
+const database_id = '2aec2745c80e4d558f2e4d4699b84d67';
+
+const query = {
+  database_id,
+  filter: {
+    property: 'Image URL',
+    url: {
+      is_not_empty: true,
+    },
+  },
+};
+
+const committee_photos = await notion.databases
+  .query(query)
+  .then((response) =>
+    response.results.map((res) => ({
+      id: res.id,
+      image_url: res.properties['Image URL'].url,
+      name: res.properties['Name'].title[0].plain_text,
+    }))
+  )
+  .catch((err) => console.log(err));
+---
+
+<h2
+  class="text-3xl sm:text-4xl text-cobalt text-center tracking-wide mb-8 font-bold bg-pink"
+>
+  YOUR
+  <span class="text-pink bg-cobalt px-2">HONK! FEST WEST</span>
+  COMMITTEE
+</h2>
+<div class="flex flex-wrap justify-around gap-6">
+  {
+    committee_photos.map((member) => (
+      <div class="flex flex-col items-center">
+        <Image
+          class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-cobalt"
+          src={member.image_url}
+          alt={member.name}
+          width="150"
+          height="150"
+          format="jpeg"
+        />
+        <p class="content text-center ">
+          <span class="text-shadow text-gray-200 text-xl font-black">
+            {member.name}
+          </span>
+        </p>
+      </div>
+    ))
+  }
+</div>

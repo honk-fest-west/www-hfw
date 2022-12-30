@@ -1,0 +1,125 @@
+---
+import { notion } from '@lib/notion_cms/client';
+
+const roles_db_id = '265a42529e3d45a791e0e961fcd38c19';
+const committee_db_id = '2aec2745c80e4d558f2e4d4699b84d67';
+
+async function group_roles(roles) {
+  return roles.reduce((groups, role) => {
+    const name = role.properties['Group']['select']['name'];
+
+    const reduced_role = {
+      role: role.properties['Role']['title'][0]['plain_text'],
+      id: role.properties['Member']['relation'][0]['id'],
+    };
+
+    groups[name] = groups[name] || [];
+    groups[name] = [...(groups[name] || []), reduced_role];
+
+    return groups;
+  }, {});
+}
+
+const committee = await notion.databases
+  .query({ database_id: roles_db_id })
+  .then((response) => group_roles(response.results))
+  .catch((err) => console.log(err));
+
+const names = await notion.databases
+  .query({ database_id: committee_db_id })
+  .then((response) => {
+    return response.results.reduce((members, member) => {
+      members[member.id] = member.properties['Name'].title[0].plain_text;
+      return members;
+    }, {});
+  })
+  .catch((err) => console.log(err));
+
+function member_name(id) {
+  return names[id];
+}
+---
+
+<div class="content">
+  <h3 class="text-shadow text-lg text-pink font-semibold">
+    Board of Directors
+  </h3>
+  <ul>
+    {
+      committee['Board of Directors'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member_name(member.id)}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="content">
+  <h3 class="text-shadow text-lg text-pink font-semibold">Event Production</h3>
+  <ul>
+    {
+      committee['Event Production'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member_name(member.id)}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="content">
+  <h3 class="text-shadow text-lg text-pink font-semibold">
+    Creative & Communications
+  </h3>
+  <ul>
+    {
+      committee['Creative & Communications'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member_name(member.id)}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="content">
+  <h3 class="text-shadow text-lg text-pink font-semibold">Fundraising</h3>
+  <ul>
+    {
+      committee['Fundraising'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member_name(member.id)}
+        </li>
+      ))
+    }
+  </ul>
+  <h3 class="text-shadow text-lg text-pink font-semibold">Outreach</h3>
+  <ul>
+    {
+      committee['Outreach'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member_name(member.id)}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="md:col-span-4 flex justify-end items-center mt-4">
+  <span class="content mr-4 text-right">. . . and</span>
+  <div class="rounded-full overflow-hidden animate-bounce">
+    <a
+      href="/volunteer"
+      class="text-shadow button text-center ease-in-out hover:scale-105"
+    >
+      YOU!</a
+    >
+  </div>
+</div>
+
+<style>
+  a.button {
+    @apply block bg-navy rounded text-xl text-gray-200 mb-5 last:mb-0 font-base font-bold py-2 px-4 cursor-pointer;
+  }
+
+  a.button:hover {
+    @apply scale-105 bg-pink transition ease-in-out;
+  }
+</style>

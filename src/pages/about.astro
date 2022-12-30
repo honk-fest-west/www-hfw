@@ -4,10 +4,11 @@ import { Image } from '@astrojs/image/components';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
+import CommitteePhotos from '@components/about/CommitteePhotos.astro';
+import CommitteeRoles from '@components/about/CommitteeRoles.astro';
 
 import family from '@data/honk-family.json';
 import emails from '@data/email-addresses.json';
-import committee from '@data/committee.json';
 ---
 
 <BaseLayout title="About">
@@ -172,114 +173,13 @@ import committee from '@data/committee.json';
 
     <!-- COMMITTEE -->
     <section id="committee">
-      <h2
-        class="text-3xl sm:text-4xl text-cobalt text-center tracking-wide mb-8 font-bold bg-pink"
-      >
-        YOUR
-        <span class="text-pink bg-cobalt px-2">HONK! FEST WEST</span>
-        COMMITTEE
-      </h2>
-      <div class="flex flex-wrap justify-around gap-6">
-        {
-          committee.photos.map((member) => (
-            <div class="flex flex-col items-center">
-              <Image
-                class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-cobalt"
-                src={member.image_url}
-                alt={member.name}
-                width="150"
-                height="150"
-                format="jpeg"
-              />
-              <p class="content text-center ">
-                <span class="text-shadow text-gray-200 text-xl font-black">
-                  {member.name}
-                </span>
-              </p>
-            </div>
-          ))
-        }
-      </div>
+      <CommitteePhotos />
     </section>
 
     <!-- COMMITTEE ROLES -->
     <section class="content-container grid grid-cols-1 md:grid-cols-4">
       <BackToTop />
-      <div class="content">
-        <h3 class="text-shadow text-lg text-pink font-semibold">
-          Board of Directors
-        </h3>
-        <ul>
-          {
-            committee.board.map((member) => (
-              <li>
-                <span class="underline">{member.role}:</span> {member.name}
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="content">
-        <h3 class="text-shadow text-lg text-pink font-semibold">
-          Event Production
-        </h3>
-        <ul>
-          {
-            committee.production.map((member) => (
-              <li>
-                <span class="underline">{member.role}:</span> {member.name}
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="content">
-        <h3 class="text-shadow text-lg text-pink font-semibold">
-          Creative & Communications
-        </h3>
-        <ul>
-          {
-            committee.createcomm.map((member) => (
-              <li>
-                <span class="underline">{member.role}:</span> {member.name}
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="content">
-        <h3 class="text-shadow text-lg text-pink font-semibold">Fundraising</h3>
-        <ul>
-          {
-            committee.fundraising.map((member) => (
-              <li>
-                <span class="underline">{member.role}:</span> {member.name}
-              </li>
-            ))
-          }
-        </ul>
-        <h3 class="text-shadow text-lg text-pink font-semibold">Outreach</h3>
-        <ul>
-          {
-            committee.outreach.map((member) => (
-              <li>
-                <span class="underline">{member.role}:</span> {member.name}
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="md:col-span-4 flex justify-end items-center mt-4">
-        <span class="content mr-4 text-right">. . . and</span>
-        <div class="rounded-full overflow-hidden animate-bounce">
-          <a
-            href="/volunteer"
-            class="text-shadow button text-center ease-in-out hover:scale-105"
-          >
-            YOU!</a
-          >
-        </div>
-      </div>
+      <CommitteeRoles />
     </section>
 
     <!-- HONK! FAMILY -->
