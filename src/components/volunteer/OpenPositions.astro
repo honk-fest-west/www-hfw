@@ -1,0 +1,47 @@
+---
+import { notion } from '@lib/notion_cms/client';
+import BackToTop from '@components/BackToTop.astro';
+import Title from '@components/Title.astro';
+
+const query = {
+  database_id: import.meta.env.VOLUNTEER_POSITIONS_DB_ID,
+  filter: {
+    property: 'Open',
+    checkbox: {
+      equals: true,
+    },
+  },
+  sorts: [
+    {
+      property: 'Order',
+      direction: 'ascending',
+    },
+  ],
+};
+
+const positions = await notion.databases
+  .query(query)
+  .then((response) =>
+    response.results.map((res) => ({
+      title: res.properties['Title'].title[0].plain_text,
+      description: res.properties['Description'].rich_text[0].plain_text,
+    }))
+  )
+  .catch((err) => console.log(err));
+---
+
+{
+  positions.map((position) => (
+    <div class="content-container">
+      <BackToTop />
+      <Title title={position.title} />
+      <p>{position.description}</p>
+      <a
+        href={`/volunteer/committee-form?position=${position.title}`}
+        class="text-shadow block font-base text-center rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-navy w-fit text-lg bg-opacity-80 px-2 hover:bg-opacity-90"
+      >
+        » APPLY
+      </a>
+    </div>
+  ))
+}

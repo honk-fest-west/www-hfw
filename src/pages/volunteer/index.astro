@@ -2,11 +2,8 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
-
-import volunteer_data from '@data/volunteer.json';
-import FestivalVolunteer from '../../components/FestivalVolunteer.astro';
-
-const positions = volunteer_data.positions;
+import OpenPositions from '@components/volunteer/OpenPositions.astro';
+import FestivalVolunteer from '@components/FestivalVolunteer.astro';
 ---
 
 <BaseLayout title="Volunteer">
@@ -37,21 +34,7 @@ const positions = volunteer_data.positions;
         </p>
       </div>
 
-      {
-        Object.keys(positions).map((position) => (
-          <div class="content-container">
-            <BackToTop />
-            <Title title={position} />
-            <p>{positions[position].description}</p>
-            <a
-              href={`/volunteer/committee-form?position=${position}`}
-              class="text-shadow block font-base text-center rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-navy w-fit text-lg bg-opacity-80 px-2 hover:bg-opacity-90"
-            >
-              » APPLY
-            </a>
-          </div>
-        ))
-      }
+      <OpenPositions />
     </div>
   </div>
 </BaseLayout>
