@@ -4,7 +4,7 @@ import { notion } from '@lib/notion_cms/client';
 const members_db_id = import.meta.env.COMMITTEE_MEMBERS_DB_ID;
 const roles_db_id = import.meta.env.COMMITTEE_ROLES_DB_ID;
 
-async function group_roles(roles) {
+function group_roles(roles) {
   return roles.reduce((groups, role) => {
     const name = role.properties['Group']['select']['name'];
 

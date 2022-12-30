@@ -1,0 +1,55 @@
+---
+import { notion } from '@lib/notion_cms/client';
+import BackToTop from '@components/BackToTop.astro';
+import Title from '@components/Title.astro';
+
+function group_regions(regions) {
+  return regions.reduce((groups, festival) => {
+    const region = festival.properties['Region']['select']['name'];
+
+    const item = {
+      name: festival.properties['Name']['title'][0]['plain_text'],
+      location: festival.properties['Location'].rich_text[0].plain_text,
+      url: festival.properties['Website'].url,
+    };
+
+    groups[region] = groups[region] || [];
+    groups[region] = [...(groups[region] || []), item];
+
+    return groups;
+  }, {});
+}
+
+const family = await notion.databases
+  .query({ database_id: import.meta.env.HONK_FAMILY_DB_ID })
+  .then((response) => group_regions(response.results))
+  .catch((err) => console.log(err));
+---
+
+<div id="family" class="grid grid-cols-1 gap-5">
+  {
+    Object.keys(family).map((region) => (
+      <section class="content-container">
+        <BackToTop />
+        <Title title={`HONK! Family - ${region}`} center={true} />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-7 w-full content my-4 sm:my-5">
+          {family[region].map((honk) => (
+            <a
+              class="font-bold block w-full flex flex-col text-center items-center"
+              href={honk.url}
+            >
+              <div class="block border-navy border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-navy hover:bg-opacity-100 hover:scale-105">
+                <span class="inline-block relative bottom-4 bg-cobalt px-2 rounded-xl bg-opacity-90 text-pink-lt">
+                  {honk.name}
+                </span>
+              </div>
+              <span class="block bg-cobalt px-2 z-10 text-gray-200 rounded-xl bg-opacity-90">
+                {honk.location}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</div>
