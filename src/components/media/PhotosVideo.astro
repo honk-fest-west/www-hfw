@@ -1,0 +1,51 @@
+---
+import { notion } from '@lib/notion';
+import Notion from '@data/notion.yml';
+
+const years = await notion.databases
+  .query({
+    database_id: Notion.PHOTOS_VIDEO,
+  })
+  .then((res) => group_years(res.results));
+
+function group_years(media) {
+  return media.reduce((years, block) => {
+    const year = block.properties['Year']['select']['name'];
+
+    const item = {
+      name: block.properties['Name']['title'][0]['plain_text'],
+      type: block.properties['Type']['select']['name'],
+      url: block.properties['URL']['url'],
+    };
+
+    years[year] = years[year] || [];
+    years[year] = [...(years[year] || []), item];
+
+    return years;
+  }, {});
+}
+
+const sorted_years = Object.keys(years).sort().reverse();
+---
+
+<div class="content">
+  {
+    sorted_years.map((year) => (
+      <div class="flex mb-5">
+        <div class="text-xl w-20">{year}</div>
+        <div>
+          <ul>
+            {years[year].map((item) => (
+              <li>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.name}
+                </a>
+                <span>({item.type})</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))
+  }
+</div>

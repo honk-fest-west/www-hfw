@@ -1,6 +1,6 @@
 ---
 import { Image } from '@astrojs/image/components';
-import { notion } from '@lib/notion_cms/client';
+import { notion } from '@lib/notion';
 import Notion from '@data/notion.yml';
 
 const query = {
@@ -23,7 +23,6 @@ const committee_photos = await notion.databases
   .query(query)
   .then((response) =>
     response.results.map((res) => ({
-      id: res.id,
       image_url: res.properties['Image URL'].url,
       name: res.properties['Name'].title[0].plain_text,
     }))

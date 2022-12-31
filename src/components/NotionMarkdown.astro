@@ -1,6 +1,5 @@
 ---
-import { notion } from '@lib/notion_cms/client';
-import { marked } from 'marked';
+import { notion, format_rich } from '@lib/notion';
 
 const { page_id } = Astro.props;
 
@@ -12,41 +11,10 @@ const blocks = await notion.blocks
 
 function block_item(content, block) {
   if (block?.paragraph?.rich_text && block.paragraph.rich_text.length > 0) {
-    const markdown = block.paragraph.rich_text
-      .map((rich) => format_rich(rich))
-      .join('');
-
-    console.log(block.paragraph.rich_text);
-    return [...content, marked.parse(markdown)];
+    const markdown = format_rich(block.paragraph.rich_text);
+    return [...content, markdown];
   } else {
     return [...content];
-  }
-}
-
-function format_rich(rich_text) {
-  const text = rich_text.plain_text;
-  const href = rich_text.href;
-
-  if (rich_text.annotations.bold) {
-    return `**${rich_link(href, text)}**`;
-  } else if (rich_text.annotations.italic) {
-    return `*${rich_link(href, text)}*`;
-  } else if (rich_text.annotations.strikethrough) {
-    return `~~${rich_link(href, text)}~~`;
-  } else if (rich_text.annotations.underline) {
-    return `<u>${rich_link(href, text)}</u>`;
-  } else if (rich_text.annotations.code) {
-    return `\`${rich_link(href, text)}\``;
-  } else {
-    return rich_link(href, text);
-  }
-}
-
-function rich_link(href, text) {
-  if (href) {
-    return `<a href="${text}">${text}</a>`;
-  } else {
-    return text;
   }
 }
 ---
