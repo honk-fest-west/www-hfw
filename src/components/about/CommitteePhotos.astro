@@ -1,9 +1,10 @@
 ---
 import { Image } from '@astrojs/image/components';
 import { notion } from '@lib/notion_cms/client';
+import Notion from '@data/notion.yml';
 
 const query = {
-  database_id: import.meta.env.COMMITTEE_MEMBERS_DB_ID,
+  database_id: Notion.COMMITTEE_MEMBERS_DB_ID,
   filter: {
     property: 'Image URL',
     url: {

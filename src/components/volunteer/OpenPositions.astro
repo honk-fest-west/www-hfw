@@ -2,9 +2,10 @@
 import { notion } from '@lib/notion_cms/client';
 import BackToTop from '@components/BackToTop.astro';
 import Title from '@components/Title.astro';
+import Notion from '@data/notion.yml';
 
 const query = {
-  database_id: import.meta.env.VOLUNTEER_POSITIONS_DB_ID,
+  database_id: Notion.VOLUNTEER_POSITIONS_DB_ID,
   filter: {
     property: 'Open',
     checkbox: {

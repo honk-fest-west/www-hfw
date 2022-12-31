@@ -1,8 +1,9 @@
 ---
 import { notion } from '@lib/notion_cms/client';
+import Notion from '@data/notion.yml';
 
-const members_db_id = import.meta.env.COMMITTEE_MEMBERS_DB_ID;
-const roles_db_id = import.meta.env.COMMITTEE_ROLES_DB_ID;
+const members_db_id = Notion.COMMITTEE_MEMBERS_DB_ID;
+const roles_db_id = Notion.COMMITTEE_ROLES_DB_ID;
 
 function group_roles(roles) {
   return roles.reduce((groups, role) => {
