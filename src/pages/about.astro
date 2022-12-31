@@ -7,8 +7,11 @@ import BackToTop from '@components/BackToTop.astro';
 import CommitteePhotos from '@components/about/CommitteePhotos.astro';
 import CommitteeRoles from '@components/about/CommitteeRoles.astro';
 import HonkFamily from '@components/about/HonkFamily.astro';
+import NotionMarkdown from '@components/NotionMarkdown.astro';
 
 import emails from '@data/email-addresses.json';
+
+import Notion from '@data/notion.yml';
 ---
 
 <BaseLayout title="About">
@@ -31,10 +34,7 @@ import emails from '@data/email-addresses.json';
     <section id="mission" class="content-container md:col-span-2">
       <BackToTop />
       <Title title="Our" subtitle="Mission" />
-      <p class="content">
-        HONK! Fest West is dedicated to the activation of public space through
-        energetic musical performance.
-      </p>
+      <NotionMarkdown page_id={Notion.OUR_MISSION_ID} />
     </section>
 
     <!-- Contact -->
@@ -76,61 +76,7 @@ import emails from '@data/email-addresses.json';
             format="png"
           />
         </div>
-        <p class="content">
-          HONK! Festival West is an independent 501(c)(3) arts organization that
-          produces an annual free, three-day, community-supported music festival
-          in public spaces of the Seattle area. This immersive festival is
-          driven by the energetic performances of street bands from around the
-          world. HONK! is part of a global renaissance of street band culture,
-          with Seattle’s festival occurring since 2008.
-
-          <br /><br />
-
-          In 2021 HONK! Fest West transitioned to a federally recognized
-          501(c)(3) non-profit known as HONK Festival West. We are excited to
-          usher in a new era of programming for our community, while continuing
-          our iconic annual HONK! Fest West in June, including the return of the
-          HONK! All-Stars Band, monthly HONK! Jams, and HONK! Junior.
-
-          <br /><br />
-
-          HONK! is a celebration of community, collaboration and creative
-          expression and is dedicated to creating a community of inclusion. We
-          work to break down systemic barriers to inclusion for those
-          underrepresented within our community, and increase community access
-          to our programming by producing the festival in neighborhoods of the
-          Seattle area underserved by the arts. Our interactive celebrations are
-          designed to be accessible, with representation from a wide range of
-          ages and abilities; offering pick-up bands throughout the festival
-          open for anyone who would like to pick up an instrument and play.
-
-          <br /><br />
-
-          Bands at HONK! Fest West travel from all over the country to
-          temporarily transform streets in various neighborhoods with a free
-          showcase of various musical styles. The bands represent traditions
-          ranging from New Orleans second line brass bands, punk rock marching
-          bands, European Klezmer, Balkan and Romani music, Samba, Maracatu, as
-          well as the passion and spirit of Mardi Gras and Carnival!
-
-          <br /><br />
-
-          We have called Georgetown our home since the festival’s inception, and
-          have also celebrated in Columbia City, White Center, South Park, The
-          Waterfront, Fremont/Gas Works Park, Capitol Hill, Central District,
-          Pioneer Square, Downtown, Seattle Center, and West Seattle. In 2022 we
-          celebrated for the first time with the Yesler Terrace community and
-          are looking forward to returning there in 2023.
-
-          <br /><br />
-
-          <b>
-            Join us! June 2: Georgetown, June 3: Columbia City, and June 4:
-            Yesler Terrace Park.
-          </b>
-
-          We can’t wait to kick off Summer in Seattle with you in 2023.
-        </p>
+        <NotionMarkdown page_id={Notion.OUR_STORY_ID} />
       </div>
     </section>
 
@@ -138,37 +84,14 @@ import emails from '@data/email-addresses.json';
     <section id="diversity" class="content-container">
       <BackToTop />
       <Title title="Diversity &" subtitle="Inclusion" />
-      <p class="content">
-        HONK! Fest West activates public space to make communities stronger and
-        more connected. The raucously engaging performances provide the
-        universal benefits of celebrating music together with no limitations
-        arising from age, race, gender identity, cultural background, ethnic and
-        indigenous identity, native language, immigration status, ability,
-        religion, education, socioeconomic status, or sexual orientation. HONK!
-        Fest West focuses on cooperative values; participatory culture; breaking
-        down barriers to music and art; introduction to different cultural
-        traditions through music; and the key tenet that anyone can be a part of
-        the experience.
-      </p>
+      <NotionMarkdown page_id={Notion.DIVERSITY_ID} />
     </section>
 
     <!-- JOIN US! -->
     <section id="join" class="content-container">
       <BackToTop />
       <Title title="Join Us!" />
-      <p class="content">
-        We are a completely volunteer-run organization and festival and are
-        currently recruiting to fill some key roles on our various Committees.
-        We have roles both big and small on our <b>Event Production Committee</b
-        >, our <b>Outreach Committee</b>, our <b
-          >Creative Communications Committee</b
-        >, and our <b>Fundraising Committee</b>. If you are interested, head
-        over to our Volunteers page to see some specific roles or just send an
-        email to
-        <a href="mailto:volunteer@honkfestwest.org"
-          >volunteer@honkfestwest.org</a
-        > for more information on how you can get involved.
-      </p>
+      <NotionMarkdown page_id={Notion.JOIN_US_ID} />
     </section>
 
     <!-- COMMITTEE -->

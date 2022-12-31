@@ -1,0 +1,42 @@
+---
+import { notion } from '@lib/notion_cms/client';
+import { marked } from 'marked';
+
+const { page_id } = Astro.props;
+
+const blocks = await notion.blocks
+  .retrieve({
+    block_id: `${page_id}/children`,
+  })
+  .then((res) => res.results.reduce(block_item, []).join('<br/>'));
+
+function block_item(content, block) {
+  if (block?.paragraph?.rich_text && block.paragraph.rich_text.length > 0) {
+    const markdown = block.paragraph.rich_text
+      .map((rich) => format_rich(rich))
+      .join('');
+
+    return [...content, marked.parse(markdown)];
+  } else {
+    return [...content];
+  }
+}
+
+function format_rich(rich_text) {
+  if (rich_text.annotations.bold) {
+    return `**${rich_text.plain_text}**`;
+  } else if (rich_text.annotations.italic) {
+    return `*${rich_text.plain_text}*`;
+  } else if (rich_text.annotations.strikethrough) {
+    return `~~${rich_text.plain_text}~~`;
+  } else if (rich_text.annotations.underline) {
+    return `<u>${rich_text.plain_text}</u>`;
+  } else if (rich_text.annotations.code) {
+    return `\`${rich_text.plain_text}\``;
+  } else {
+    return rich_text.plain_text;
+  }
+}
+---
+
+<div class="content" set:html={blocks}></div>
