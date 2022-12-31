@@ -1,10 +1,9 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
-import Image from '@components/Image.astro';
 import BackToTop from '@components/BackToTop.astro';
-
-import sponsors from '@data/sponsors.json';
+import NotionMarkdown from '@components/NotionMarkdown.astro';
+import Notion from '@data/notion.yml';
 ---
 
 <BaseLayout title="Donate">
@@ -64,28 +63,7 @@ import sponsors from '@data/sponsors.json';
     <div class="w-full md:w-2/3">
       <div class="content-container">
         <BackToTop />
-        <div class="content">
-          Your contributions help make this event possible. Through the generous
-          efforts of our shared community, we’ll keep bringing music to the
-          streets and parks of Seattle’s neighborhoods.
-          <br /><br />
-          HONK! Festival West is a 501(c)(3) nonprofit organization. <span
-            class="font-bold">Tax ID #86-3761255</span
-          >. Donations to HONK! Fest West are tax-deductible to the extent
-          allowed by law. Donations can be made via check to:
-          <br />
-          <span class="flex flex-col block my-4 sm:my-5 font-bold">
-            HONK! Festival West
-            <br />
-            PO Box 20242
-            <br />
-            Seattle, WA 98102
-          </span>
-          Please get in touch with us at
-          <a href="mailto:info@honkfestwest.org">info@honkfestwest.org</a>
-          if you’d like another option, or would like to arrange donations of goods
-          or services. Thanks so much, and we hope to see you at HONK! Fest West.
-        </div>
+        <NotionMarkdown page_id={Notion.DONATE_INFO} />
       </div>
     </div>
   </div>
