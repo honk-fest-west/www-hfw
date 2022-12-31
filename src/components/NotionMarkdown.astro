@@ -16,6 +16,7 @@ function block_item(content, block) {
       .map((rich) => format_rich(rich))
       .join('');
 
+    console.log(block.paragraph.rich_text);
     return [...content, marked.parse(markdown)];
   } else {
     return [...content];
@@ -23,18 +24,29 @@ function block_item(content, block) {
 }
 
 function format_rich(rich_text) {
+  const text = rich_text.plain_text;
+  const href = rich_text.href;
+
   if (rich_text.annotations.bold) {
-    return `**${rich_text.plain_text}**`;
+    return `**${rich_link(href, text)}**`;
   } else if (rich_text.annotations.italic) {
-    return `*${rich_text.plain_text}*`;
+    return `*${rich_link(href, text)}*`;
   } else if (rich_text.annotations.strikethrough) {
-    return `~~${rich_text.plain_text}~~`;
+    return `~~${rich_link(href, text)}~~`;
   } else if (rich_text.annotations.underline) {
-    return `<u>${rich_text.plain_text}</u>`;
+    return `<u>${rich_link(href, text)}</u>`;
   } else if (rich_text.annotations.code) {
-    return `\`${rich_text.plain_text}\``;
+    return `\`${rich_link(href, text)}\``;
   } else {
-    return rich_text.plain_text;
+    return rich_link(href, text);
+  }
+}
+
+function rich_link(href, text) {
+  if (href) {
+    return `<a href="${text}">${text}</a>`;
+  } else {
+    return text;
   }
 }
 ---
