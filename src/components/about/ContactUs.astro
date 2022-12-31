@@ -1,0 +1,36 @@
+---
+import { notion } from '@lib/notion_cms/client';
+import Notion from '@data/notion.yml';
+
+const emails = await notion.databases
+  .query({
+    database_id: Notion.CONTACT_US,
+    sorts: [
+      {
+        property: 'Order',
+        direction: 'ascending',
+      },
+    ],
+  })
+  .then((res) =>
+    res.results.map((result) => ({
+      name: result.properties.Name.title[0].plain_text,
+      email: result.properties.Email.email,
+    }))
+  );
+---
+
+<dl class="grid grid-cols-1 md:grid-cols-3">
+  {
+    emails.map((email) => (
+      <>
+        <dt class="md:p-2 font-base antialiased text-gray-200 leading-7 text-lg sm:text-xl flex-1">
+          {email.name}:
+        </dt>
+        <dd class="content pb-2 md:p-2 font-base antialiased text-gray-200 leading-7 text-lg md:text-xl col-span-2">
+          <a href={`mailto:${email.email}`}>{email.email}</a>
+        </dd>
+      </>
+    ))
+  }
+</dl>

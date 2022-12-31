@@ -7,6 +7,7 @@ import BackToTop from '@components/BackToTop.astro';
 import CommitteePhotos from '@components/about/CommitteePhotos.astro';
 import CommitteeRoles from '@components/about/CommitteeRoles.astro';
 import HonkFamily from '@components/about/HonkFamily.astro';
+import ContactUs from '@components/about/ContactUs.astro';
 import NotionMarkdown from '@components/NotionMarkdown.astro';
 
 import emails from '@data/email-addresses.json';
@@ -34,29 +35,14 @@ import Notion from '@data/notion.yml';
     <section id="mission" class="content-container md:col-span-2">
       <BackToTop />
       <Title title="Our" subtitle="Mission" />
-      <NotionMarkdown page_id={Notion.OUR_MISSION_ID} />
+      <NotionMarkdown page_id={Notion.OUR_MISSION} />
     </section>
 
     <!-- Contact -->
     <section id="contact" class="content-container md:col-span-2">
       <BackToTop />
       <Title title="Contact Us" />
-      <dl class="grid grid-cols-1 md:grid-cols-3">
-        {
-          Object.keys(emails).map((email) => (
-            <>
-              <dt class="md:p-2 font-base antialiased text-gray-200 leading-7 text-lg sm:text-xl flex-1">
-                {emails[email].name}:
-              </dt>
-              <dd class="content pb-2 md:p-2 font-base antialiased text-gray-200 leading-7 text-lg md:text-xl col-span-2">
-                <a href={`mailto:${emails[email].email}`}>
-                  {emails[email].email}
-                </a>
-              </dd>
-            </>
-          ))
-        }
-      </dl>
+      <ContactUs />
     </section>
   </div>
 
@@ -76,7 +62,7 @@ import Notion from '@data/notion.yml';
             format="png"
           />
         </div>
-        <NotionMarkdown page_id={Notion.OUR_STORY_ID} />
+        <NotionMarkdown page_id={Notion.OUR_STORY} />
       </div>
     </section>
 
@@ -84,14 +70,14 @@ import Notion from '@data/notion.yml';
     <section id="diversity" class="content-container">
       <BackToTop />
       <Title title="Diversity &" subtitle="Inclusion" />
-      <NotionMarkdown page_id={Notion.DIVERSITY_ID} />
+      <NotionMarkdown page_id={Notion.DIVERSITY} />
     </section>
 
     <!-- JOIN US! -->
     <section id="join" class="content-container">
       <BackToTop />
       <Title title="Join Us!" />
-      <NotionMarkdown page_id={Notion.JOIN_US_ID} />
+      <NotionMarkdown page_id={Notion.JOIN_US} />
     </section>
 
     <!-- COMMITTEE -->

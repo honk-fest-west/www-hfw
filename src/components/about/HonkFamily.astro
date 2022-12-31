@@ -22,7 +22,7 @@ function group_regions(regions) {
 }
 
 const family = await notion.databases
-  .query({ database_id: Notion.HONK_FAMILY_DB_ID })
+  .query({ database_id: Notion.HONK_FAMILY })
   .then((response) => group_regions(response.results))
   .catch((err) => console.log(err));
 ---
