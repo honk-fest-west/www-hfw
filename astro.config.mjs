@@ -17,9 +17,6 @@ import svelte from '@astrojs/svelte';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
-import react from '@astrojs/react';
-
-// https://astro.build/config
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,7 +24,6 @@ export default defineConfig({
     tailwind({ config: { applyBaseStyles: false } }),
     svelte(),
     sitemap(),
-    react(),
     image(),
   ],
   vite: {

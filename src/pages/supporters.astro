@@ -1,12 +1,13 @@
 ---
+import { supporter_by_name, supporters_by_type } from '@lib/notion';
 import { Image } from '@astrojs/image/components';
 
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
 
-import sponsors from '@data/sponsors.json';
-import type { neutral } from 'tailwindcss/colors';
+const nea_support = supporter_by_name('National Endowment for the Arts');
+const artswa_support = supporter_by_name('WA State Arts Commission');
 ---
 
 <BaseLayout title="Supporters">
@@ -67,33 +68,27 @@ import type { neutral } from 'tailwindcss/colors';
         <p class="content">
           <span>
             This project is supported in part by the
-            <a href="https://www.arts.gov/">National Endowment for the Arts</a>
+            <a href="{nea_support.url}">{nea_support.name}</a>
             and the
-            <a href="https://www.arts.wa.gov/">WA State Arts Commission</a>.
+            <a href="{artswa_support.url}">{artswa_support.name}</a>.
           </span>
           <span
             class="block grid grid-cols-2 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
           >
-            <a class="block mb-3 sm:mb-0" href={sponsors.nea.link}>
-              <Image
-                class="w-auto rounded bg-white p-2"
-                src={sponsors.nea.image}
-                alt={sponsors.nea.name}
-                aspectRatio={sponsors.nea.ratio}
-                width="347"
-                format="png"
-              />
-            </a>
-            <a class="block mb-3 sm:mb-0" href={sponsors.artswa.link}>
-              <Image
-                class="w-auto rounded bg-white p-2"
-                src={sponsors.artswa.image}
-                alt={sponsors.artswa.name}
-                aspectRatio={sponsors.artswa.ratio}
-                width="347"
-                format="png"
-              />
-            </a>
+            {
+              supporters_by_type('Grant').map((supporter) => (
+                <a class="block mb-3 sm:mb-0" href={supporter.url}>
+                  <Image
+                    class="w-auto rounded bg-white p-2"
+                    src={supporter.image_url}
+                    alt={supporter.name}
+                    aspectRatio={supporter.image_ratio}
+                    width="347"
+                    format="png"
+                  />
+                </a>
+              ))
+            }
           </span>
           <span
             class="border-b-4 border-opacity-60 border-pink border-dotted w-full block mb-4"
@@ -109,13 +104,13 @@ import type { neutral } from 'tailwindcss/colors';
             class="block grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
           >
             {
-              sponsors.arts.map((sponsor) => (
-                <a class="block mb-3 sm:mb-0" href={sponsor.link}>
+              supporters_by_type('Art').map((supporter) => (
+                <a class="block mb-3 sm:mb-0" href={supporter.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    aspectRatio={sponsor.ratio}
+                    src={supporter.image_url}
+                    alt={supporter.name}
+                    aspectRatio={supporter.image_ratio}
                     width="188"
                     format="png"
                   />
@@ -137,14 +132,14 @@ import type { neutral } from 'tailwindcss/colors';
             class="columns-2 sm:columns-3 gap-10 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit"
           >
             {
-              sponsors.shoutouts.map((sponsor) => (
+              supporters_by_type('Shout Out').map((supporter) => (
                 <div class="break-inside-avoid mb-6 rounded-lg">
-                  <a href={sponsor.link}>
+                  <a href={supporter.url}>
                     <Image
                       className="w-auto rounded p-1"
-                      src={sponsor.image}
-                      alt={sponsor.name}
-                      aspectRatio={sponsor.ratio}
+                      src={supporter.image_url}
+                      alt={supporter.name}
+                      aspectRatio={supporter.image_ratio}
                       width="188"
                       format="png"
                     />
@@ -161,9 +156,9 @@ import type { neutral } from 'tailwindcss/colors';
 
         <p>
           We thank the original
-          <a href="HONK! festival">http://honkfest.org/</a>—the mothership—which
-          inspired our festival and has since seen other offspring arise in
-          Austin, Detroit, Australia, Brazil and beyond!
+          <a href="http://honkfest.org/">HONK! Boston, MA</a>—the
+          mothership—which inspired our festival and has since seen other
+          offspring arise in Austin, Detroit, Australia, Brazil and beyond!
         </p>
       </section>
     </div>

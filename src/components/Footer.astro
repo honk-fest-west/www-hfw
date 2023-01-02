@@ -2,12 +2,9 @@
 import SocialLinks from '@components/SocialLinks.astro';
 import { Image } from '@astrojs/image/components';
 import GoldenDino from './GoldenDino.svelte';
+import { footer_supporters } from '@lib/notion';
 
-import sponsors from '@data/sponsors.json';
 import navigation from '@data/navigation.json';
-
-const displaySponsors = [sponsors.nea, sponsors.artswa, ...sponsors.arts];
-const golden_dino = true;
 ---
 
 <div class="bg-cobalt">
@@ -28,17 +25,17 @@ const golden_dino = true;
             Arts and the WA State Arts Commission.
           </span>
           {
-            displaySponsors.map((sponsor) => (
+            footer_supporters.map((supporter) => (
               <div class="mx-2 mb-3">
                 <a
                   href="{ sponsor.link }"
                   class="rounded block bg-white w-fit p-1 h-fit"
                 >
                   <Image
-                    src={sponsor.image}
-                    alt={sponsor.name}
+                    src={supporter.image_url}
+                    alt={supporter.name}
                     height="60"
-                    aspectRatio={sponsor.ratio}
+                    aspectRatio={supporter.image_ratio}
                     class="rounded"
                     format="png"
                   />

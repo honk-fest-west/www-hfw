@@ -7,9 +7,9 @@ import GivingTuesday from '@components/home/GivingTuesday.astro';
 
 import Title from '@components/Title.astro';
 import NewsletterForm from '@components/NewsletterForm.astro';
-import Slideshow from '../components/slideshow/Slideshow.jsx';
+import Slideshow from '../components/slideshow/Slideshow.svelte';
 import BackToTop from '@components/BackToTop.astro';
-import slides from '@data/slideshow.json';
+import { slides } from '@lib/notion';
 import FestivalInfoBlock from '@components/home/FestivalInfoBlock.astro';
 
 let posts = [];
@@ -97,7 +97,7 @@ const postColumns = (index) => {
 
     <!-- SLIDESHOW -->
     <div class="col-span-6 content-container">
-      <Slideshow slides={slides} client:visible />
+      <Slideshow slides={slides} client:idle />
     </div>
 
     <!-- SUPPORT DUAMISH  -->
