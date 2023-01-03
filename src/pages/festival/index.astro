@@ -3,12 +3,6 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
 import ScheduleTable from '@components/festival/ScheduleTable.svelte';
-import bands from '@data/bands.json';
-import schedule from '@data/schedule.json';
-
-const playingBands = Object.values(bands)
-  .filter((band) => band.playing.includes(2022))
-  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <BaseLayout title="Schedule">

@@ -73,6 +73,7 @@
 <a 
 	id="golden-dino" 
 	href="https://thegoldendino.com/"
+	aria-label="Visit the Golden Dino"
 	bind:this={dino}
 	on:mouseenter={dinoCorneredRawr}
 	on:mouseleave={dinoCornered}
