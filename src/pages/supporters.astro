@@ -8,6 +8,7 @@ import BackToTop from '@components/BackToTop.astro';
 
 const nea_support = supporter_by_name('National Endowment for the Arts');
 const artswa_support = supporter_by_name('WA State Arts Commission');
+const sdn_support = supporter_by_name('Seattle Department of Neighborhoods');
 ---
 
 <BaseLayout title="Supporters">
@@ -69,8 +70,9 @@ const artswa_support = supporter_by_name('WA State Arts Commission');
           <span>
             This project is supported in part by the
             <a href="{nea_support.url}">{nea_support.name}</a>
-            and the
-            <a href="{artswa_support.url}">{artswa_support.name}</a>.
+            the
+            <a href="{artswa_support.url}">{artswa_support.name}</a>, and
+            <a href="{sdn_support.url}">{sdn_support.name}</a>.
           </span>
           <span
             class="block grid grid-cols-2 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
@@ -96,8 +98,7 @@ const artswa_support = supporter_by_name('WA State Arts Commission');
 
           <span>
             HONK! Festival West is supported by grants from
-            <a href="http://www.4culture.org/">4Culture</a>,
-            <a href="https://www.artsfund.org/">Arts Fund</a>, and
+            <a href="http://www.4culture.org/">4Culture</a> and
             <a href="https://kingcountycreative.com/">King County CREATIVE</a>.
           </span>
           <span
