@@ -1,14 +1,11 @@
 ---
-import { supporter_by_name, supporters_by_type } from '@lib/notion';
 import { Image } from '@astrojs/image/components';
 
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
+import supporters from './_supporters.toml'
 
-const nea_support = supporter_by_name('National Endowment for the Arts');
-const artswa_support = supporter_by_name('WA State Arts Commission');
-const sdn_support = supporter_by_name('Seattle Department of Neighborhoods');
 ---
 
 <BaseLayout title="Supporters">
@@ -69,16 +66,15 @@ const sdn_support = supporter_by_name('Seattle Department of Neighborhoods');
         <p class="content">
           <span>
             This project is supported in part by the
-            <a href="{nea_support.url}">{nea_support.name}</a>
-            the
-            <a href="{artswa_support.url}">{artswa_support.name}</a>, and
-            <a href="{sdn_support.url}">{sdn_support.name}</a>.
+            <a href="{supporters.grant[0].url}">{supporters.grant[0].name}</a> the
+            <a href="{supporters.grant[1].url}">{supporters.grant[1].name}</a>, and
+            <a href="{supporters.grant[2].url}">{supporters.grant[2].name}</a>.
           </span>
           <span
             class="block grid grid-cols-2 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
           >
             {
-              supporters_by_type('Grant').map((supporter) => (
+              supporters.grant.map((supporter) => (
                 <a class="block mb-3 sm:mb-0" href={supporter.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
@@ -98,14 +94,14 @@ const sdn_support = supporter_by_name('Seattle Department of Neighborhoods');
 
           <span>
             HONK! Festival West is supported by grants from
-            <a href="http://www.4culture.org/">4Culture</a> and
-            <a href="https://kingcountycreative.com/">King County CREATIVE</a>.
+            <a href="{supporters.art[0].url}">{supporters.art[0].name}</a> and
+            <a href="{supporters.art[1].url}">{supporters.art[1].name}</a>.
           </span>
           <span
             class="block grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
           >
             {
-              supporters_by_type('Art').map((supporter) => (
+              supporters.art.map((supporter) => (
                 <a class="block mb-3 sm:mb-0" href={supporter.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
@@ -133,7 +129,7 @@ const sdn_support = supporter_by_name('Seattle Department of Neighborhoods');
             class="columns-2 sm:columns-3 gap-10 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit"
           >
             {
-              supporters_by_type('Shout Out').map((supporter) => (
+              supporters.shout_out.map((supporter) => (
                 <div class="break-inside-avoid mb-6 rounded-lg">
                   <a href={supporter.url}>
                     <Image

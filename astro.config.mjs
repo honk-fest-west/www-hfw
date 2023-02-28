@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import yaml from '@rollup/plugin-yaml';
+import { ViteToml } from 'vite-plugin-toml';
 
 // https://astro.build/config
 import tailwind from '@astrojs/tailwind';
@@ -20,6 +21,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://honkfestwest.org',
   integrations: [
     tailwind({ config: { applyBaseStyles: false } }),
     svelte(),
@@ -27,6 +29,6 @@ export default defineConfig({
     image(),
   ],
   vite: {
-    plugins: [yaml()],
+    plugins: [yaml(), ViteToml()],
   },
 });

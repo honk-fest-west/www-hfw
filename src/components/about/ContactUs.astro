@@ -1,23 +1,5 @@
 ---
-import { notion } from '@lib/notion';
-import Notion from '@data/notion.yml';
-
-const emails = await notion.databases
-  .query({
-    database_id: Notion.CONTACT_US,
-    sorts: [
-      {
-        property: 'Order',
-        direction: 'ascending',
-      },
-    ],
-  })
-  .then((res) =>
-    res.results.map((result) => ({
-      name: result.properties.Name.title[0].plain_text,
-      email: result.properties.Email.email,
-    }))
-  );
+const { emails } = Astro.props
 ---
 
 <dl class="grid grid-cols-1 md:grid-cols-3">

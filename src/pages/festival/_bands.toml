@@ -1,0 +1,198 @@
+[[bands.8bit]]
+name = "8-Bit Brass Band"
+location = "Seattle, WA"
+url = "http://8bitbrassband.com/"
+description = "8-Bit Brass Band is your geeky, mobile brass band specializing in bringing our brand of brassy, bangy, and nerdly to the streets and stages of Seattle — and beyond!"
+
+[[bands.artesian]]
+name = "Artesian Rumble"
+location = "Olympia, WA"
+url = "https://oly-wa.us/artesianrumble/"
+description = "We play a myriad of tunes, with mobile, mostly unamplified, melodic and percussive instruments to enliven our spirits, working towards peace and social justice."
+
+[[bands.bainbridge]]
+name = "Bainbridge High School Spartan Brass Band"
+location = "Bainbridge Island, WA"
+url = "https://www.bainbridgebands.org/home/marchingband"
+description = ""
+
+[[bands.ballard]]
+name = "Ballard Brass Band"
+location = "Seattle, WA"
+url = "https://www.ballardperformingarts.org/"
+description = ""
+
+[[bands.barque]]
+name = "Baque Maré"
+location = "Seattle, WA"
+url = "https://www.facebook.com/baquemareseattle/"
+description = ""
+
+[[bands.bigblitz]]
+name = "Big Blitz"
+location = "Pittsburgh, PA"
+url = "https://www.bigblitzband.com/"
+description = "Whether we perform on the street or stage, Big Blitz will transform any of your preconceived notions of the music that can be created by a saxophone-and-drum trio."
+
+[[bands.blacksheep]]
+name = "Black Sheep"
+location = "Santa Rosa, CA"
+url = "https://www.blacksheepbrassband.com/"
+description = "Black Sheep Brass Band is based out of Sonoma County, in the North Bay Area of California. Together they have created their own unique brand of California grown, 100% certified #BRASSfedFUNK, that permeates all layers of being. From the uptown to the get-down, it's time for the Black Sheep to vibrate y'all to the good sound, all around."
+
+[[bands.bluethunder]]
+name = "Blue Thunder"
+location = "Seattle, WA"
+url = "https://www.seahawks.com/drumline/blue-thunder"
+description = "Seahawks Blue Thunder is the heartbeat of the fans. This high-energy entertainment drumline was established in 2004 at Lumen Field, performing throughout the stadium before, during and after games."
+
+[[bands.brasscadia]]
+name = "Brasscadia"
+location = "Bellingham, WA"
+url = "https://www.facebook.com/Brasscadia/"
+description = "Brasscadia is based in Bellingham Washington. We play New Orleans style jazz, as well as brassy twists on old favorites, and international anthems."
+
+[[bands.burnout]]
+name = "Burn Out Brass Band"
+location = "Seattle, WA"
+url = "https://www.burnoutbrassband.com/"
+description = "Founded in June of 2021, Burn Out Brass Band is a Queer HONK! band roving the streets and bringing music to the ears of tired Queers and allies. We've got a team of catgirls, bois, butch punks, daddies and xaddies, them fatales, and perhaps even a few cryptids. Our mission is to celebrate Queer joy and build supportive community all while getting those booties dancing to your favorite gay bar sing-alongs and antifascist anthems!"
+
+[[bands.chaotic]]
+name = "Chaotic Noise Marching Corps"
+location = "Seattle, WA"
+url = "http://chaoticnoise.com/"
+description = "Chaotic Noise Marching Corps is a Seattle based renegade marching band that is dedicated to keeping the tradition of music, performance, energy, havok, discipline and sheer stupid fun alive in Seattle’s streets."
+
+[[bands.chervona]]
+name = "Chervona"
+location = "Portland, OR"
+url = "https://www.facebook.com/ChervonaParty/"
+description = ""
+
+[[bands.emporer]]
+name = "Emperor Norton's Stationary Marching Band"
+location = "Somerville, MA"
+url = "http://ensmb.com/"
+description = ""
+
+[[bands.filthy]]
+name = "Filthy FemCorps"
+location = "Seattle, WA"
+url = "http://www.filthyfemcorps.com/"
+description = ""
+
+[[bands.funkrust]]
+name = "Funkrust Brass Band"
+location = "New York, NY"
+url = "http://funkrust.com/"
+description = ""
+
+[[bands.allstars]]
+name = "Honk All-Stars (open jam)"
+location = "Everywhere"
+url = "#"
+description = ""
+
+[[bands.kouyate]]
+name = "Kouyaté Arts"
+location = "Seattle, WA"
+url = "https://www.kouyatearts.com/performance-company"
+description = ""
+
+[[bands.labamba]]
+name = "LA BAMBA"
+location = "Los Angeles, CA"
+url = "https://labamba.lahonk.org/"
+description = ""
+
+[[bands.lbcs]]
+name = "Louisa Boren & Cleveland STEM Middle School Band"
+location = "Seattle, WA"
+url = "#"
+description = ""
+
+[[bands.neon]]
+name = "Neon Brass Party"
+location = "Seattle, WA"
+url = "https://www.neonbrassparty.com/"
+description = ""
+
+[[bands.onelove]]
+name = "One Love"
+location = "Seattle, WA"
+url = "http://marcsmason.com/ensembles.html"
+description = ""
+
+[[bands.reigncity]]
+name = "Reign City Riot"
+location = "Seattle, WA"
+url = "http://www.rainbowcityband.com/riot/"
+description = ""
+
+[[bands.riseup]]
+name = "Rise Up! Action Band"
+location = "Seattle, WA"
+url = "https://riseupactionband.com/"
+description = ""
+
+[[bands.kokontaiko]]
+name = "Seattle Kokon Taiko"
+location = "Seattle, WA"
+url = "https://seattlekokontaiko.org/"
+description = ""
+
+[[bands.shpilkis]]
+name = "Shpilkis!"
+location = "Seattle, WA"
+url = "https://www.shpilkisseattle.com/"
+description = ""
+
+[[bands.soundwave]]
+name = "Soundwave"
+location = "Seattle, WA"
+url = "https://www.soundersfc.com/matchday/sound-wave"
+description = ""
+
+[[bands.sticks]]
+name = "Sticks & Bones"
+location = "Olympia, WA"
+url = "https://www.facebook.com/olysnewcommuityactivistband/"
+description = ""
+
+
+[[bands.tacomarama]]
+name = "Tacomarama"
+location = "Tacoma, WA"
+url = "https://www.facebook.com/Tacomarama"
+description = ""
+
+[[bands.m9]]
+name = "The m9"
+location = "Seattle, WA"
+url = "http://them9.com/"
+description = ""
+
+[[bands.tmb]]
+name = "TMB"
+location = "Seattle, WA"
+url = "https://tmbbrass.bandcamp.com/"
+description = ""
+
+[[bands.unexpected]]
+name = "Unexpected Brass Band"
+location = "Port Townsand, WA"
+url = "https://www.facebook.com/The-Unexpected-Brass-Band-957531164311787/"
+description = ""
+
+[[bands.vamola]]
+name = "VamoLá"
+location = "Seattle, WA"
+url = "https://vamola.org/"
+description = ""
+
+[[bands.window]]
+name = "Window Smashing Job Creators"
+location = "Olympia, WA"
+url = "https://thewindowsmashingjobcreators.bandcamp.com/"
+description = ""

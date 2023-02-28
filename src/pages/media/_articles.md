@@ -1,0 +1,1 @@
+Snyder, A. & Allen, E. & Garofalo, R., (2022) “HONK!United: A Virtual Global Festival of Activist Brass Bands during the COVID-19 Pandemic”, Music & Politics 16(1). doi: [https://doi.org/10.3998/mp.2337]

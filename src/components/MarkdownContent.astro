@@ -1,0 +1,11 @@
+---
+import { marked } from 'marked';
+
+const { md } = Astro.props;
+
+const rich_text = md.split(/\n/).join('<br/>')
+const html = marked.parse(rich_text);
+
+---
+
+<div class="content" set:html={html}></div>

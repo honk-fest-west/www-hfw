@@ -1,29 +1,13 @@
 ---
 import { Image } from '@astrojs/image/components';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import PostBlurb from '@components/post-blurb/PostBlurb.astro';
 import LinkBlurb from '@components/LinkBlurb.astro';
-import MardiGrasFundraiser from '@components/home/MardiGrasFundraiser.astro';
-
-import Title from '@components/Title.astro';
 import NewsletterForm from '@components/NewsletterForm.astro';
 import Slideshow from '../components/slideshow/Slideshow.svelte';
 import BackToTop from '@components/BackToTop.astro';
-import { slides } from '@lib/notion';
 import FestivalInfoBlock from '@components/home/FestivalInfoBlock.astro';
 
-let posts = [];
-
-const posts_length = posts.length;
-const postColumns = (index) => {
-  if (posts_length % 3 === 1 && index > posts_length - 2) {
-    return { span: 'md:col-span-6', cols: 3 };
-  } else if (posts_length % 3 === 2 && index > posts_length - 3) {
-    return { span: 'md:col-span-3', cols: 2 };
-  } else {
-    return { span: 'md:col-span-2', cols: 1 };
-  }
-};
+import slideshow from './_slideshow.toml';
 ---
 
 <BaseLayout title="Home">
@@ -54,22 +38,6 @@ const postColumns = (index) => {
       <BackToTop />
     </article> -->
 
-    <!-- POST BLURBS -->
-    {
-      posts.map((post, index) => (
-        <article
-          class={`w-full content-container sm:col-span-6 ${
-            postColumns(index).span
-          }`}
-        >
-          <PostBlurb post={post} cols={postColumns(index).cols} />
-        </article>
-      ))
-    }
-
-    <section class="col-span-6 content-container sm:flex">
-      <MardiGrasFundraiser />
-    </section>
 
     <!-- LINK BLURBS -->
     <section class="col-span-6 md:col-span-2 content-container">
@@ -97,7 +65,7 @@ const postColumns = (index) => {
 
     <!-- SLIDESHOW -->
     <div class="col-span-6 content-container">
-      <Slideshow slides={slides} client:idle />
+      <Slideshow slides={slideshow.slides} client:idle />
     </div>
 
     <!-- SUPPORT DUAMISH  -->

@@ -4,6 +4,8 @@ import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
 import OpenPositions from '@components/volunteer/OpenPositions.astro';
 import FestivalVolunteer from '@components/FestivalVolunteer.astro';
+
+import positions from './_positions.toml';
 ---
 
 <BaseLayout title="Volunteer">
@@ -34,7 +36,7 @@ import FestivalVolunteer from '@components/FestivalVolunteer.astro';
         </p>
       </div>
 
-      <OpenPositions />
+      <OpenPositions positions={positions}/>
     </div>
   </div>
 </BaseLayout>

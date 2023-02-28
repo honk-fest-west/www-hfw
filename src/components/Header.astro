@@ -1,7 +1,8 @@
 ---
 import { Image } from '@astrojs/image/components';
 import SocialLinks from '@components/SocialLinks.astro';
-import navigation from '@data/navigation.json';
+
+const { nav, social } = Astro.props
 
 const activeListItem = (link: string) => {
   return Astro.url.pathname.includes(link)
@@ -39,7 +40,7 @@ const activeAnchor = (link: string) => {
   <ul class="flex flex-wrap justify-center items-center w-full">
     <!-- MAIN NAV -->
     {
-      navigation.main.map((item) => (
+      nav.links.map((item) => (
         <li
           class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
             item.link
@@ -62,13 +63,13 @@ const activeAnchor = (link: string) => {
       class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
     >
       {
-        Object.keys(navigation.social).map((item) => (
+        Object.keys(social.links).map((key) => (
           <div>
             <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
-              <SocialLinks link={item} size="1.875rem" />
+              <SocialLinks key={key} link={social[key]} size="1.875rem" />
             </div>
             <div class="block sm:hidden px-1 h-7">
-              <SocialLinks link={item} size="1.5rem" />
+              <SocialLinks key={key} link={social[key]} size="1.5rem" />
             </div>
           </div>
         ))

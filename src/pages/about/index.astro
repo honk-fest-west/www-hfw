@@ -8,9 +8,15 @@ import CommitteePhotos from '@components/about/CommitteePhotos.astro';
 import CommitteeRoles from '@components/about/CommitteeRoles.astro';
 import HonkFamily from '@components/about/HonkFamily.astro';
 import ContactUs from '@components/about/ContactUs.astro';
-import NotionMarkdown from '@components/NotionMarkdown.astro';
+import MarkdownContent from '@components/MarkdownContent.astro';
+import committee from './_committee.toml';
+import family from './_family.toml';
+import contact from './_contact.toml';
+import { rawContent as diversity_content } from './_diversity.md';
+import { rawContent as join_us_content } from './_join_us.md';
+import { rawContent as mission_content } from './_mission.md';
+import { rawContent as story_content } from './_story.md';
 
-import Notion from '@data/notion.yml';
 ---
 
 <BaseLayout title="About">
@@ -33,14 +39,14 @@ import Notion from '@data/notion.yml';
     <section id="mission" class="content-container md:col-span-2">
       <BackToTop />
       <Title title="Our" subtitle="Mission" />
-      <NotionMarkdown page_id={Notion.OUR_MISSION} />
+      <MarkdownContent md={mission_content()} />
     </section>
 
     <!-- Contact -->
     <section id="contact" class="content-container md:col-span-2">
       <BackToTop />
       <Title title="Contact Us" />
-      <ContactUs />
+      <ContactUs emails={contact.emails}/>
     </section>
   </div>
 
@@ -60,7 +66,7 @@ import Notion from '@data/notion.yml';
             format="png"
           />
         </div>
-        <NotionMarkdown page_id={Notion.OUR_STORY} />
+        <MarkdownContent md={story_content()} />
       </div>
     </section>
 
@@ -68,29 +74,29 @@ import Notion from '@data/notion.yml';
     <section id="diversity" class="content-container">
       <BackToTop />
       <Title title="Diversity &" subtitle="Inclusion" />
-      <NotionMarkdown page_id={Notion.DIVERSITY} />
+      <MarkdownContent md={diversity_content()} />
     </section>
 
     <!-- JOIN US! -->
     <section id="join" class="content-container">
       <BackToTop />
       <Title title="Join Us!" />
-      <NotionMarkdown page_id={Notion.JOIN_US} />
+      <MarkdownContent md={join_us_content()} />
     </section>
 
     <!-- COMMITTEE -->
     <section id="committee">
-      <CommitteePhotos />
+      <CommitteePhotos photos={committee.photos} />
     </section>
 
     <!-- COMMITTEE ROLES -->
     <section class="content-container grid grid-cols-1 md:grid-cols-4">
       <BackToTop />
-      <CommitteeRoles />
+      <CommitteeRoles groups={committee.groups} />
     </section>
 
     <!-- HONK! FAMILY -->
-    <HonkFamily />
+    <HonkFamily family={family}/>
   </div>
 </BaseLayout>
 

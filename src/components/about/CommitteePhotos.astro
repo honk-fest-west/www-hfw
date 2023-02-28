@@ -1,33 +1,7 @@
 ---
 import { Image } from '@astrojs/image/components';
-import { notion } from '@lib/notion';
-import Notion from '@data/notion.yml';
 
-const query = {
-  database_id: Notion.COMMITTEE_MEMBERS,
-  filter: {
-    property: 'Image URL',
-    url: {
-      is_not_empty: true,
-    },
-  },
-  sorts: [
-    {
-      property: 'Order',
-      direction: 'ascending',
-    },
-  ],
-};
-
-const committee_photos = await notion.databases
-  .query(query)
-  .then((response) =>
-    response.results.map((res) => ({
-      image_url: res.properties['Image URL'].url,
-      name: res.properties['Name'].title[0].plain_text,
-    }))
-  )
-  .catch((err) => console.log(err));
+const { photos } = Astro.props;
 ---
 
 <h2
@@ -39,7 +13,7 @@ const committee_photos = await notion.databases
 </h2>
 <div class="flex flex-wrap justify-around gap-6">
   {
-    committee_photos.map((member) => (
+    photos.map((member) => (
       <div class="flex flex-col items-center">
         <Image
           class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-cobalt"

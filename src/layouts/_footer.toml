@@ -1,0 +1,30 @@
+[[supporters]]
+name = 'King County CREATIVE'
+url = 'https://kingcountycreative.com/'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/king-county-creative_jHEHtTLOA.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=165083452915'
+image_ratio = '300:104'
+
+[[supporters]]
+name = '4Culture'
+url = 'http://www.4culture.org'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/4culture_IW6D7aOFH.png?updatedAt=1628178274430&tr=b-2_FFFFFF'
+image_ratio = '1:1'
+
+[[supporters]]
+name = 'National Endowment for the Arts'
+url = 'https://www.arts.gov/'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/nea_logo_xqSse_Pbb.jpg?updatedAt=1628843291841'
+image_ratio = '36:18'
+
+[[supporters]]
+name = 'WA State Arts Commission'
+url = 'https://www.arts.wa.gov/'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/Transparent-background-ArtsWA-logo_State-with-full-name_2019_2HKh-O2il0I.png?updatedAt=1628630949914'
+image_ratio = '100:105'
+
+[[supporters]]
+name = 'Seattle Department of Neighborhoods'
+url = 'https://www.seattle.gov/neighborhoods'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/seattle-neighborhoods_gbnnL8OPS.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673058115133'
+image_ratio = '23:7'
+

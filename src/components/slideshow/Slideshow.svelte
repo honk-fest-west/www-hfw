@@ -1,16 +1,13 @@
 <script>
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css';
-
-	export let slides;
-
 	const width = 984;
 	const height = 430;
+	export let slides;	
 
 	function transform(image_url) {
 		return`${image_url}&tr=w-${width},h-${height},f-jpg,pr-true`;
 	}
-
 </script>
 
 <Splide options={ { type: 'loop', autoplay: true, interval: 3000 } } aria-label="HONK! Fest West 2022">

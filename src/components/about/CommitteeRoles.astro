@@ -1,44 +1,7 @@
 ---
-import { notion } from '@lib/notion';
-import Notion from '@data/notion.yml';
 
-const members_db_id = Notion.COMMITTEE_MEMBERS;
-const roles_db_id = Notion.COMMITTEE_ROLES;
+const { groups } = Astro.props;
 
-function group_roles(roles) {
-  return roles.reduce((groups, role) => {
-    const name = role.properties['Group']['select']['name'];
-
-    const reduced_role = {
-      role: role.properties['Role']['title'][0]['plain_text'],
-      id: role.properties['Member']['relation'][0]['id'],
-    };
-
-    groups[name] = groups[name] || [];
-    groups[name] = [...(groups[name] || []), reduced_role];
-
-    return groups;
-  }, {});
-}
-
-const committee = await notion.databases
-  .query({ database_id: roles_db_id })
-  .then((response) => group_roles(response.results))
-  .catch((err) => console.log(err));
-
-const names = await notion.databases
-  .query({ database_id: members_db_id })
-  .then((response) => {
-    return response.results.reduce((members, member) => {
-      members[member.id] = member.properties['Name'].title[0].plain_text;
-      return members;
-    }, {});
-  })
-  .catch((err) => console.log(err));
-
-function member_name(id) {
-  return names[id];
-}
 ---
 
 <div class="content">
@@ -47,9 +10,9 @@ function member_name(id) {
   </h3>
   <ul>
     {
-      committee['Board of Directors'].map((member) => (
+      groups['Board of Directors'].map((member) => (
         <li>
-          <span class="underline">{member.role}:</span> {member_name(member.id)}
+          <span class="underline">{member.role}:</span> {member.name}
         </li>
       ))
     }
@@ -59,9 +22,9 @@ function member_name(id) {
   <h3 class="text-shadow text-lg text-pink font-semibold">Event Production</h3>
   <ul>
     {
-      committee['Event Production'].map((member) => (
+      groups['Event Production'].map((member) => (
         <li>
-          <span class="underline">{member.role}:</span> {member_name(member.id)}
+          <span class="underline">{member.role}:</span> {member.name}
         </li>
       ))
     }
@@ -73,9 +36,9 @@ function member_name(id) {
   </h3>
   <ul>
     {
-      committee['Creative & Communications'].map((member) => (
+      groups['Creative & Communications'].map((member) => (
         <li>
-          <span class="underline">{member.role}:</span> {member_name(member.id)}
+          <span class="underline">{member.role}:</span> {member.name}
         </li>
       ))
     }
@@ -85,9 +48,9 @@ function member_name(id) {
   <h3 class="text-shadow text-lg text-pink font-semibold">Fundraising</h3>
   <ul>
     {
-      committee['Fundraising'].map((member) => (
+      groups['Fundraising'].map((member) => (
         <li>
-          <span class="underline">{member.role}:</span> {member_name(member.id)}
+          <span class="underline">{member.role}:</span> {member.name}
         </li>
       ))
     }
@@ -95,9 +58,9 @@ function member_name(id) {
   <h3 class="text-shadow text-lg text-pink font-semibold">Outreach</h3>
   <ul>
     {
-      committee['Outreach'].map((member) => (
+      groups['Outreach'].map((member) => (
         <li>
-          <span class="underline">{member.role}:</span> {member_name(member.id)}
+          <span class="underline">{member.role}:</span> {member.name}
         </li>
       ))
     }

@@ -1,0 +1,9 @@
+[[emails]]
+name = 'General Info'
+email ='info@honkfestwest.org'
+[[emails]]
+name ='Booking'
+email ='booking@honkfestwest.org'
+[[emails]]
+name ='Volunteer'
+email ='volunteer@honkfestwest.org'

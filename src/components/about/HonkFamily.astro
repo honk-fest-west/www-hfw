@@ -1,30 +1,8 @@
 ---
-import { notion } from '@lib/notion';
 import BackToTop from '@components/BackToTop.astro';
 import Title from '@components/Title.astro';
-import Notion from '@data/notion.yml';
 
-function group_regions(regions) {
-  return regions.reduce((groups, festival) => {
-    const region = festival.properties['Region']['select']['name'];
-
-    const item = {
-      name: festival.properties['Name']['title'][0]['plain_text'],
-      location: festival.properties['Location'].rich_text[0].plain_text,
-      url: festival.properties['Website'].url,
-    };
-
-    groups[region] = groups[region] || [];
-    groups[region] = [...(groups[region] || []), item];
-
-    return groups;
-  }, {});
-}
-
-const family = await notion.databases
-  .query({ database_id: Notion.HONK_FAMILY })
-  .then((response) => group_regions(response.results))
-  .catch((err) => console.log(err));
+const {family} = Astro.props;
 ---
 
 <div id="family" class="grid grid-cols-1 gap-5">

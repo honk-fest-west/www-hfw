@@ -2,8 +2,9 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
-import NotionMarkdown from '@components/NotionMarkdown.astro';
-import Notion from '@data/notion.yml';
+import MarkdownContent from '@components/MarkdownContent.astro';
+import { rawContent as info } from './_info.md';
+
 ---
 
 <BaseLayout title="Donate">
@@ -64,7 +65,7 @@ import Notion from '@data/notion.yml';
     <div class="w-full md:w-2/3">
       <div class="content-container">
         <BackToTop />
-        <NotionMarkdown page_id={Notion.DONATE_INFO} />
+        <MarkdownContent md={info()} />
       </div>
     </div>
   </div>

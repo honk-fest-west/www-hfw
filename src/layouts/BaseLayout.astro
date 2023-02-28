@@ -3,6 +3,9 @@ import Head from '@components/base-head/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import BackgroundImage from '@components/BackgroundImage.astro';
+import nav from './_nav.toml'
+import footer from './_footer.toml'
+import social from './_social.toml'
 
 const { title } = Astro.props;
 ---
@@ -31,7 +34,7 @@ const { title } = Astro.props;
     >
       <!-- HEADER -->
       <header class="w-full mx-auto">
-        <Header />
+        <Header nav={nav} social={social} />
       </header>
 
       <!-- MAIN -->
@@ -41,7 +44,7 @@ const { title } = Astro.props;
 
       <!-- FOOTER -->
       <footer class="mt-auto w-full">
-        <Footer />
+        <Footer supporters={footer.supporters} social={social} />
       </footer>
     </div>
   </body>
