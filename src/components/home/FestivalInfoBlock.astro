@@ -3,32 +3,22 @@ import Title from '@components/Title.astro';
 ---
 
 <!-- INFO BLOCK -->
-<section
-  itemscope
-  itemtype="https://schema.org/Event"
-  class="w-full col-span-6 lg:col-span-2 content-container z-10"
->
+<section class="w-full col-span-6 lg:col-span-2 content-container z-10">
   <Title title="Upcoming Festival" center={true} />
   <div
     class="text-shadow flex flex-col items-center h-full text-2xl sm:text-4xl font-medium tracking-wide z-10"
   >
-    <span
-      class="text-pink text-center mb-2 hidden font-emphasis"
-      itemprop="name"
-    >
+    <span class="text-pink text-center mb-2 hidden font-emphasis">
       <span class="text-gray-200">HONK!</span> FEST WEST
     </span>
     <div class="flex flex-col lg:flex-row justify-center items-center w-full">
       <span
         class="block lg:mb-0 text-gray-200 tracking-normal md:mr-2 font-emphasis text-center"
       >
-        <time itemprop="startDate">JUNE 2 - 4, 2023</time>
+        <time>JUNE 2 - 4, 2023</time>
       </span>
     </div>
-    <span
-      class="text-gray-300 text-center block font-emphasis"
-      itemprop="location"
-    >
+    <span class="text-gray-300 text-center block font-emphasis">
       SEATTLE, WA
     </span>
     <div class="content">
