@@ -2,7 +2,7 @@
 import { Image } from '@astrojs/image/components';
 import SocialLinks from '@components/SocialLinks.astro';
 
-const { nav, social } = Astro.props
+const { nav, social } = Astro.props;
 
 const activeListItem = (link: string) => {
   return Astro.url.pathname.includes(link)
@@ -66,10 +66,10 @@ const activeAnchor = (link: string) => {
         Object.keys(social.links).map((key) => (
           <div>
             <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
-              <SocialLinks key={key} link={social[key]} size="1.875rem" />
+              <SocialLinks key={key} link={social.links[key]} size="1.875rem" />
             </div>
             <div class="block sm:hidden px-1 h-7">
-              <SocialLinks key={key} link={social[key]} size="1.5rem" />
+              <SocialLinks key={key} link={social.links[key]} size="1.5rem" />
             </div>
           </div>
         ))

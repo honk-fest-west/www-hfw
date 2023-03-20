@@ -4,8 +4,6 @@ import { ViteToml } from 'vite-plugin-toml';
 
 import tailwind from '@astrojs/tailwind';
 
-import partytown from '@astrojs/partytown';
-
 import image from '@astrojs/image';
 
 import svelte from '@astrojs/svelte';
@@ -23,7 +21,7 @@ const sitemap_filter_urls = [
 ];
 
 export default defineConfig({
-  site: 'https://honkfestwest.org',
+  site: 'https://honkfestwest.org/',
   integrations: [
     tailwind({ config: { applyBaseStyles: false } }),
     svelte(),
