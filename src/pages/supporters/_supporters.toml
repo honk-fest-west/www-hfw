@@ -41,6 +41,13 @@ image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/seattle-neighbo
 image_ratio = '23:7'
 
 [[shout_out]]
+name = 'Electric Habitat'
+footer = false
+url = 'https://www.electric-habitat.com/`
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/electric-habitat_cB5p_jJ9K.png?updatedAt=1679948893835'
+image_ratio = '1:1'
+
+[[shout_out]]
 name = 'Bennett Properties'
 footer = false
 url = 'https://johnbennettproperties.com/'
