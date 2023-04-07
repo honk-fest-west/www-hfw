@@ -40,6 +40,13 @@ url = 'https://www.seattle.gov/neighborhoods'
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/seattle-neighborhoods_gbnnL8OPS.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673058115133'
 image_ratio = '23:7'
 
+[[grant]]
+name = 'Seattle Office of Arts & Culture'
+footer = true
+url = 'https://www.seattle.gov/arts'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/OAC_logo_9fSxWFvCS.jpg?updatedAt=1680894463597'
+image_ratio = '43:39'
+
 [[shout_out]]
 name = 'Electric Habitat'
 footer = false
