@@ -40,52 +40,48 @@ const activeListItem = (link: string) => {
 <nav class="w-full pb-8">
   <div class="w-full block sm:hidden">
     <MobileMenu {nav} {social} {currentMenuItem} client:load />
-    <div class="w-full hidden sm:block">
-      <ul class="flex flex-wrap justify-center items-center w-full">
-        <!-- MAIN NAV -->
-        {
-          nav.links.map((item) => (
-            <li
-              class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
-                item.link
-              )}`}
+  </div>
+  <div class="w-full hidden sm:block">
+    <ul class="flex flex-wrap justify-center items-center w-full">
+      <!-- MAIN NAV -->
+      {
+        nav.links.map((item) => (
+          <li
+            class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
+              item.link
+            )}`}
+          >
+            <a
+              class="mx-4 sm:mx-2 block  font-semibold ease-in"
+              href={item.link}
             >
-              <a
-                class="mx-4 sm:mx-2 block  font-semibold ease-in"
-                href={item.link}
-              >
-                {item.name}
-              </a>
-            </li>
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+
+      <!-- SOCIAL NAV -->
+      <li
+        class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
+      >
+        {
+          Object.keys(social.links).map((key) => (
+            <div>
+              <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
+                <SocialLinks
+                  key={key}
+                  link={social.links[key]}
+                  size="1.875rem"
+                />
+              </div>
+              <div class="block sm:hidden px-1 h-7">
+                <SocialLinks key={key} link={social.links[key]} size="1.5rem" />
+              </div>
+            </div>
           ))
         }
-
-        <!-- SOCIAL NAV -->
-        <li
-          class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
-        >
-          {
-            Object.keys(social.links).map((key) => (
-              <div>
-                <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
-                  <SocialLinks
-                    key={key}
-                    link={social.links[key]}
-                    size="1.875rem"
-                  />
-                </div>
-                <div class="block sm:hidden px-1 h-7">
-                  <SocialLinks
-                    key={key}
-                    link={social.links[key]}
-                    size="1.5rem"
-                  />
-                </div>
-              </div>
-            ))
-          }
-        </li>
-      </ul>
-    </div>
+      </li>
+    </ul>
   </div>
 </nav>
