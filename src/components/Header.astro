@@ -1,17 +1,18 @@
 ---
 import { Image } from '@astrojs/image/components';
 import SocialLinks from '@components/SocialLinks.astro';
+import MobileMenu from '@components/MobileMenu.svelte';
 
 const { nav, social } = Astro.props;
 
+const currentMenuItem = nav.links.find(
+  (item) => item.link === Astro.url.pathname
+);
+
 const activeListItem = (link: string) => {
-  return Astro.url.pathname.includes(link)
+  return currentMenuItem?.link === link
     ? 'bg-pink ring-4 ring-cobalt text-gray-100 text-shadow cursor-default'
     : 'text-shadow bg-navy text-gray-200 hover:scale-105 hover:bg-pink';
-};
-
-const activeAnchor = (link: string) => {
-  return Astro.url.pathname.includes(link) ? '' : '';
 };
 ---
 
@@ -20,7 +21,7 @@ const activeAnchor = (link: string) => {
 <!-- H!FW LOGO -->
 
 <div
-  class="min-h-[153px] sm:min-h-[273px] flex justify-center w-full relative z-10 mt-6 sm:mt-12 mb-4 sm:mb-8"
+  class="min-h-[153px] sm:min-h-[273px] flex justify-center w-full relative z-10 mt-6 sm:mt-12 mb-4"
 >
   <h1 class="w-full">
     <a class="block mx-auto sm:w-2/3 lg:w-2/5 z-0 peer" href="/">
@@ -37,43 +38,54 @@ const activeAnchor = (link: string) => {
 </div>
 
 <nav class="w-full pb-8">
-  <ul class="flex flex-wrap justify-center items-center w-full">
-    <!-- MAIN NAV -->
-    {
-      nav.links.map((item) => (
-        <li
-          class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
-            item.link
-          )}`}
-        >
-          <a
-            class={` mx-4 sm:mx-2 block  font-semibold ease-in ${activeAnchor(
-              item.link
-            )}`}
-            href={item.link}
-          >
-            {item.name}
-          </a>
-        </li>
-      ))
-    }
+  <div class="w-full block sm:hidden">
+    <MobileMenu {nav} {social} {currentMenuItem} client:load />
+    <div class="w-full hidden sm:block">
+      <ul class="flex flex-wrap justify-center items-center w-full">
+        <!-- MAIN NAV -->
+        {
+          nav.links.map((item) => (
+            <li
+              class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
+                item.link
+              )}`}
+            >
+              <a
+                class="mx-4 sm:mx-2 block  font-semibold ease-in"
+                href={item.link}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
 
-    <!-- SOCIAL NAV -->
-    <li
-      class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
-    >
-      {
-        Object.keys(social.links).map((key) => (
-          <div>
-            <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
-              <SocialLinks key={key} link={social.links[key]} size="1.875rem" />
-            </div>
-            <div class="block sm:hidden px-1 h-7">
-              <SocialLinks key={key} link={social.links[key]} size="1.5rem" />
-            </div>
-          </div>
-        ))
-      }
-    </li>
-  </ul>
+        <!-- SOCIAL NAV -->
+        <li
+          class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
+        >
+          {
+            Object.keys(social.links).map((key) => (
+              <div>
+                <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
+                  <SocialLinks
+                    key={key}
+                    link={social.links[key]}
+                    size="1.875rem"
+                  />
+                </div>
+                <div class="block sm:hidden px-1 h-7">
+                  <SocialLinks
+                    key={key}
+                    link={social.links[key]}
+                    size="1.5rem"
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
