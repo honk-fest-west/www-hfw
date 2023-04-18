@@ -5,8 +5,8 @@ import MobileMenu from '@components/MobileMenu.svelte';
 
 const { nav, social } = Astro.props;
 
-const currentMenuItem = nav.links.find(
-  (item) => item.link === Astro.url.pathname
+const currentMenuItem = nav.links.find((item) =>
+  Astro.url.pathname.includes(item.link)
 );
 
 const activeListItem = (link: string) => {
