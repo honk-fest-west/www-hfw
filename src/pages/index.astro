@@ -8,6 +8,7 @@ import BackToTop from '@components/BackToTop.astro';
 import FestivalInfoBlock from '@components/home/FestivalInfoBlock.astro';
 
 import slideshow from './_slideshow.toml';
+import GiveBig from '@components/home/GiveBig.astro';
 ---
 
 <BaseLayout title="Home">
@@ -37,6 +38,12 @@ import slideshow from './_slideshow.toml';
     >
       <BackToTop />
     </article> -->
+    <article
+      class="w-full content-container col-span-6 flex flex-col md:flex-row"
+    >
+      <BackToTop />
+      <GiveBig />
+    </article>
 
     <!-- LINK BLURBS -->
     <section class="col-span-6 md:col-span-2 content-container">
