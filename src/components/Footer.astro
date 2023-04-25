@@ -4,7 +4,6 @@ import { Image } from '@astrojs/image/components';
 import GoldenDino from './GoldenDino.svelte';
 
 const { supporters, social } = Astro.props;
-
 ---
 
 <div class="bg-cobalt">
@@ -56,7 +55,7 @@ const { supporters, social } = Astro.props;
   >
     <a
       class="w-full text-center text-cobalt text-lg font-bold font-base block w-full sm:w-1/3 m-1 sm:m-4"
-      href="/">© 2022 HONK! Fest West</a
+      href="/">© {new Date().getFullYear()} HONK! Fest West</a
     >
     <ul
       class="items-center h-full flex-1 w-full sm:w-1/3 m-1 sm:m-4 hidden sm:flex justify-around"
