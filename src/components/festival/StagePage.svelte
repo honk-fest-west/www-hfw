@@ -41,7 +41,7 @@
 </script>
 
 <div>
-  <ListBox class="py-4 px-2 h-full">
+  <ListBox class="py-4 px-2 h-full" active="bg-surface-700">
     {#each selectedStage.schedule as timeSlot}
       <ListBoxItem
         bind:group={slotTime}
@@ -58,7 +58,7 @@
           {shortTime(timeSlot.time)}
         </span>
         <span
-          class="h-6 text-xl font-semibold text-right text-ellipsis overflow-hidden block w-full text-primary-200"
+          class="h-7 text-xl underline decoration-dashed decoration-1 underline-offset-4 text-right text-ellipsis overflow-hidden block w-full text-surface-100"
         >
           {bandName(timeSlot)}
         </span>

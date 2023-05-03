@@ -12,6 +12,7 @@ import stages from './_stages.toml';
 import map0 from '/src/images/map/0_Georgetown_basemap2.jpg';
 import map1 from '/src/images/map/1_Columbia_Basemap2.jpg';
 import map2 from '/src/images/map/2_Yesler_Basemap3.jpg';
+import logoImg from '/src/images/logos/2023-logo-white.png';
 
 const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
   files.map((file) => file.default)
@@ -25,6 +26,7 @@ const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
       bands={bands}
       schedule={schedule}
       stages={stages}
+      logoImg={logoImg}
       mapMetadata={[map0, map1, map2]}
       bandImgs={bandImgs}
     />

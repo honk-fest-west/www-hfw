@@ -25,6 +25,7 @@
   export let schedule: Partial<ImportSchedule> = {};
   export let stages: ImportStages = {};
   export let bands: ImportBands = {};
+  export let logoImg: ImageMetadata = [];
   export let mapMetadata: Array<ImageMetadata> = [];
   export let bandImgs: Array<ImageMetadata> = [];
 
@@ -86,7 +87,12 @@
 <AppShell title="Festival App" class="bg-surface-900">
   <div slot="header">
     {#key selectedDayIdx}
-      <DaySelection {selectedDayIdx} {days} on:selectDay={selectDay} />
+      <DaySelection
+        {selectedDayIdx}
+        {days}
+        {logoImg}
+        on:selectDay={selectDay}
+      />
     {/key}
     <div
       class="flex justify-end px-6 py-2 gap-2 bg-primary-500 text-on-surface-token font-bold items-center"
@@ -163,7 +169,11 @@
           Stages
         </header>
         <section>
-          <ListBox rounded="rounded" class="bg-primary-400 ">
+          <ListBox
+            rounded="rounded"
+            class="bg-primary-400"
+            active="bg-surface-700"
+          >
             {#each dayStages as stage, idx}
               <ListBoxItem
                 bind:group={selectedStageKey}
@@ -173,10 +183,13 @@
                 class="w-full"
               >
                 <span
-                  class="text-sm font-semibold block bg-surface-700 rounded-full w-6 h-6 text-center"
-                  slot="lead">{idx + 1}.</span
+                  class="text-md font-semibold block bg-surface-700 rounded-full w-6 h-6 text-center"
+                  slot="lead">{idx + 1}</span
                 >
-                <span class="text-lg font-semibold">{stage.name}</span>
+                <span
+                  class="text-xl underline decoration-dashed decoration-1 underline-offset-4"
+                  >{stage.name}</span
+                >
               </ListBoxItem>
             {/each}
           </ListBox>

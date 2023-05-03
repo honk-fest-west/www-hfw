@@ -13,24 +13,24 @@ const footerClass = clearPage ? 'hidden sm:block' : '';
 const mainClass = clearPage
   ? 'p-0 m-0 overflow-hidden min-h-screen sm:min-h-auto'
   : 'pb-6 px-3';
-const htmlClass = clearPage
-  ? 'overflow-hidden w-full sm:overflow-auto sm:w-auto'
-  : '';
-const bodyClass = clearPage
-  ? 'h-full overflow-y-scroll sm:h-auto sm:overflow-y-auto sm:static'
-  : '';
 ---
 
 <!DOCTYPE html>
-<html lang="en" class={htmlClass}>
+<html lang="en">
   <!-- HEAD -->
   <head>
     <Head title={title}>
       <slot name="head" />
     </Head>
+
+    {
+      clearPage && (
+        <meta name="viewport" content="minimal-ui, width=device-width" />
+      )
+    }
   </head>
 
-  <body class={`min-h-full ${bodyClass}`}>
+  <body class={`min-h-full `}>
     <div id="back-to-top"></div>
 
     <!-- BACKGROUND IMAGE -->

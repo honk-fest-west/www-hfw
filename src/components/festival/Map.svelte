@@ -11,12 +11,11 @@
   };
 </script>
 
-<div class="w-full h-full overflow-auto">
+<div class="w-full h-full overflow-auto grid place-content-center">
   <img
     src={imageMetadata.src}
     width={imageMetadata.width}
     height={imageMetadata.height}
-    class="my-auto"
     alt="festival map"
   />
   <!-- <svg
