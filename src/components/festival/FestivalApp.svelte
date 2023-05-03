@@ -108,7 +108,7 @@
         <h2 class="text-right">{selectedDay.location}</h2>
         <a
           href={selectedDay.mapUrl}
-          class="btn-icon variant-filled p-2 ml-6 mr-3 rounded flex-0"
+          class="btn-icon bg-surface-600 p-2 ml-6 mr-3 rounded flex-0 border-2 border-surface-400"
         >
           <FaMapMarkedAlt />
         </a>
@@ -119,7 +119,7 @@
         <h2 class="flex-1 text-right">{selectedStage.name}</h2>
         <a
           href={selectedStage.mapUrl}
-          class="btn-icon variant-filled p-2 ml-6 mr-3 rounded flex-0"
+          class="btn-icon bg-surface-600 p-2 ml-6 mr-3 rounded flex-0 border-2 border-surface-400"
         >
           <FaMapMarkedAlt />
         </a>
@@ -131,7 +131,7 @@
         >
         <h2 class="flex-1 text-right">{selectedBand.name}</h2>
         <a
-          class="btn-icon variant-filled p-2 ml-6 mr-3 rounded flex-0"
+          class="btn-icon bg-surface-600 p-2 ml-6 mr-3 rounded flex-0 border-2 border-surface-400"
           href={selectedBand.url}
         >
           <IoIosMusicalNotes />
@@ -162,7 +162,7 @@
     </div>
   {/if}
 
-  <div slot="footer" class="p-4 bg-surface-700 text-on-surface-token">
+  <div slot="footer" class="text-on-surface-token">
     {#if $state.value === 'viewingMap'}
       <div
         transition:slide={{
@@ -171,12 +171,17 @@
           easing: quintOut,
           axis: 'y',
         }}
+        class="p-4 bg-surface-900"
       >
         <header class="card-header text-center font-bold text-2xl -mt-6 mb-2">
           <span class="text-surface-50">Stages</span>
         </header>
         <section>
-          <ListBox rounded="rounded" active="bg-primary-500 rounded-none">
+          <ListBox
+            rounded="rounded"
+            active="bg-primary-500"
+            class="bg-surface-700"
+          >
             {#each dayStages as stage, idx}
               <ListBoxItem
                 bind:group={selectedStageKey}
@@ -199,7 +204,7 @@
       <button
         type="button"
         on:click={viewMap}
-        class="w-full text-center"
+        class="w-full text-center bg-surface-700 p-4"
         transition:slide={{
           delay: 0,
           duration: 200,
@@ -207,15 +212,21 @@
           axis: 'y',
         }}
       >
-        <span class="text-2xl text-surface-50">{selectedDay.location} Map</span>
+        <span
+          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded"
+          >{selectedDay.location} Map</span
+        >
       </button>
     {:else if $state.value === 'viewingBand' && selectedStage}
       <button
         type="button"
         on:click={viewStage}
-        class="w-full text-center text-xl"
+        class="w-full text-center bg-surface-700 p-4"
       >
-        <span class="text-2xl text-surface-50">{selectedStage.name}</span>
+        <span
+          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded"
+          >{selectedStage.name}</span
+        >
       </button>
     {/if}
   </div>

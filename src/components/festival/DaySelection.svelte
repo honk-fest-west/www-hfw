@@ -11,8 +11,15 @@
     dispatch('selectDay', idx);
   };
 
-  const formatDate = (date: Date) => {
+  const formatDay = (date: Date) => {
     return date.toLocaleDateString('en-US', { weekday: 'short' });
+  };
+
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'numeric',
+    });
   };
 
   const selectedClass = (idx: number) => {
@@ -33,10 +40,13 @@
   {#each days as day, idx}
     <button
       type="button"
-      class={`w-full ${selectedClass(idx)}`}
+      class={`w-full ${selectedClass(
+        idx
+      )} flex flex-col items-center justify-center`}
       on:click={() => selectDayIdx(idx)}
     >
-      <span class="text-3xl capitalize">{formatDate(day.date)}</span>
+      <span class="text-2xl capitalize block">{formatDay(day.date)}</span>
+      <span class="text-sm -ml-2 block">{formatDate(day.date)}</span>
     </button>
   {/each}
 </div>

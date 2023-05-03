@@ -58,7 +58,7 @@
           {shortTime(timeSlot.time)}
         </span>
         <span
-          class="h-7 text-xl underline decoration-dashed decoration-1 underline-offset-4 text-right text-ellipsis overflow-hidden block w-full text-surface-100"
+          class="h-7 text-xl underline decoration-dashed decoration-1 underline-offset-4 text-right text-ellipsis overflow-hidden block w-full text-surface-50"
         >
           {bandName(timeSlot)}
         </span>
