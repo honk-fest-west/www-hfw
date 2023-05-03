@@ -1,22 +1,21 @@
-<script lang='ts'>
-import { fade, fly } from 'svelte/transition';
-export let nav, social, currentMenuItem;
+<script lang="ts">
+  import { fade, fly } from 'svelte/transition';
+  export let nav, currentMenuItem;
 
-const activeListItem = (link: string) => {
-  return link === currentMenuItem?.link
-    ? 'hidden'
-    : 'text-shadow bg-navy text-gray-200';
-};
+  const activeListItem = (link: string) => {
+    return link === currentMenuItem?.link
+      ? 'hidden'
+      : 'text-shadow bg-navy text-gray-200';
+  };
 
-const pageName = currentMenuItem?.name;
-let menuOpen = false;
+  const pageName = currentMenuItem?.name;
+  let menuOpen = false;
 
-const handleOutsideClick = (event) => {
-  if (!event.target.closest('#mobile-menu')) {
-    menuOpen = false;
-  }
-};
-
+  const handleOutsideClick = (event) => {
+    if (!event.target.closest('#mobile-menu')) {
+      menuOpen = false;
+    }
+  };
 </script>
 
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,33 +37,35 @@ const handleOutsideClick = (event) => {
       >
         <span class="sr-only">Open main menu</span>
         {#if !menuOpen}
-        <svg
-          class="block h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-        </svg>
+          <svg
+            class="block h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         {/if}
         {#if menuOpen}
-        <svg
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         {/if}
       </div>
     </button>
@@ -73,26 +74,30 @@ const handleOutsideClick = (event) => {
 
 <!-- Mobile menu, show/hide based on menu state. -->
 {#if menuOpen}
-<div id="mobile-menu" in:fly|fade="{{ y: -200, duration: 200 }}" out:fly|fade="{{ y: -200, duration: 200 }}">
-  <ul class="px-2 pb-3 pt-2">
-    <!-- MAIN NAV -->
-    {#each nav.links as item}
+  <div
+    id="mobile-menu"
+    in:fly|fade={{ y: -200, duration: 200 }}
+    out:fly|fade={{ y: -200, duration: 200 }}
+  >
+    <ul class="px-2 pb-3 pt-2">
+      <!-- MAIN NAV -->
+      {#each nav.links as item}
         <li
           class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
             item.link
           )}`}
         >
           <a
-            class="w-full mx-4 sm:mx-2 block  font-semibold ease-in"
+            class="w-full mx-4 sm:mx-2 block font-semibold ease-in"
             href={item.link}
           >
             {item.name}
           </a>
         </li>
-    {/each}
+      {/each}
 
-    <!-- SOCIAL NAV -->
-    <!-- <li
+      <!-- SOCIAL NAV -->
+      <!-- <li
       class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
     >
       {
@@ -108,6 +113,6 @@ const handleOutsideClick = (event) => {
         ))
       }
     </li> -->
-  </ul>
-</div>
+    </ul>
+  </div>
 {/if}

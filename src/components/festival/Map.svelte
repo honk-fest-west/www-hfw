@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
 
-  export let stages: Stage[];
+  // export let stages: Stage[];
   export let imageMetadata: ImageMetadata;
 
   const dispatch = createEventDispatcher();
@@ -52,11 +52,11 @@
 </div>
 
 <style>
-  .stack {
+  /* .stack {
     display: grid;
     touch-action: none;
   }
   .stack > * {
     grid-area: 1 / 1;
-  }
+  } */
 </style>
