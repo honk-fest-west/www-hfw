@@ -4,10 +4,34 @@ import { Image } from '@astrojs/image/components';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
 import ScheduleTable from '@components/festival/ScheduleTable.svelte';
+import FestivalApp from '@components/festival/FestivalApp.svelte';
+
+import schedule from './_schedule.toml';
+import bands from './_bands.toml';
+import stages from './_stages.toml';
+import map0 from './src/images/map/0_Georgetown_basemap2.jpg';
+import map1 from './src/images/map/1_Columbia_Basemap2.jpg';
+import map2 from './src/images/map/2_Yesler_Basemap3.jpg';
+
+const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
+  files.map((file) => file.default)
+);
+console.log(bandImgs);
 ---
 
-<BaseLayout title="Schedule">
-  <section class="content-container">
+<BaseLayout title="Festival" clearPage="true">
+  <div class="sm:hidden h-full inset-0">
+    <FestivalApp
+      client:visible
+      bands={bands}
+      schedule={schedule}
+      stages={stages}
+      mapMetadata={[map0, map1, map2]}
+      bandImgs={bandImgs}
+    />
+  </div>
+
+  <section class="content-container hidden sm:block">
     <BackToTop />
     <div class="grid grid-cols-1 lg:grid-cols-3">
       <div class="flex lg:justify-center w-full">
@@ -33,7 +57,7 @@ import ScheduleTable from '@components/festival/ScheduleTable.svelte';
       </div>
     </div>
   </section>
-  <div class="w-full flex justify-center items-center">
+  <div class="w-full hidden sm:flex justify-center items-center">
     <Image
       src="https://ik.imagekit.io/thegoldendino/hfw/2023/stranger-ad-01_jRgpQLv4f.png?updatedAt=1682113255812"
       alt="Honk Fest West 2023, Stranger Ad"

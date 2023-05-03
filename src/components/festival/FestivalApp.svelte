@@ -1,0 +1,190 @@
+<script lang="ts">
+  // Your selected Skeleton theme:
+  import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
+
+  // This contains the bulk of Skeletons required styles:
+  import '@skeletonlabs/skeleton/styles/all.css';
+  import '@skeletonlabs/skeleton/themes/theme-modern.css';
+
+  import FaMapMarkedAlt from 'svelte-icons/fa/FaMapMarkedAlt.svelte';
+  import IoMdArrowRoundBack from 'svelte-icons/io/IoMdArrowRoundBack.svelte';
+  import IoIosMusicalNotes from 'svelte-icons/io/IoIosMusicalNotes.svelte';
+
+  import { AppShell, ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
+  import { useMachine } from '@xstate/svelte';
+  import { appMachine, type AppCtx } from './machines/app.machine.js';
+  import { process } from './util/import.js';
+  import Map from './Map.svelte';
+  import StagePage from './StagePage.svelte';
+  import BandPage from './BandPage.svelte';
+  import DaySelection from './DaySelection.svelte';
+
+  export let schedule: Partial<ImportSchedule> = {};
+  export let stages: ImportStages = {};
+  export let bands: ImportBands = {};
+  export let mapMetadata: Array<ImageMetadata> = [];
+  export let bandImgs: Array<ImageMetadata> = [];
+
+  const { pdays, pstages, pbands } = process(schedule, stages, bands, bandImgs);
+
+  const initialContext: AppCtx = {
+    days: pdays(),
+    stages: pstages(),
+    bands: pbands(),
+    selectedDayIdx: 0,
+    selectedStageKey: null,
+    selectedBandKey: null,
+    // selectedStageKey: 'coffee',
+    // selectedBandKey: 'chaotic',
+  };
+  const { state, send } = useMachine(appMachine, { context: initialContext });
+  // onMount(() => send('VIEW_BAND'));
+
+  $: days = $state.context.days;
+  $: selectedDayIdx = $state.context.selectedDayIdx;
+  $: selectedDay = $state.context.days[selectedDayIdx];
+  $: dayStages =
+    selectedDay?.stageKeys.map(
+      (stageKey: string) => $state.context.stages[stageKey]
+    ) || [];
+  $: selectedStageKey = $state.context.selectedStageKey;
+  $: selectedStage = selectedStageKey
+    ? $state.context.stages[selectedStageKey]
+    : null;
+  $: selectedBandKey = $state.context.selectedBandKey;
+  $: selectedBand = selectedBandKey
+    ? $state.context.bands[selectedBandKey]
+    : null;
+  $: dayMapMetadata = mapMetadata[selectedDayIdx];
+
+  $: allBands = $state.context.bands;
+
+  const selectDay = (event: { detail: number }) => {
+    send('SELECT_DAY', { dayIdx: event.detail });
+  };
+
+  const selectStage = (event: { detail: string }) => {
+    send('SELECT_STAGE', { stageKey: event.detail });
+  };
+
+  const selectBand = (event: { detail: string }) => {
+    send('SELECT_BAND', { bandKey: event.detail });
+  };
+
+  const viewMap = () => {
+    send('VIEW_MAP');
+  };
+
+  const viewStage = () => {
+    send('VIEW_STAGE');
+  };
+</script>
+
+<AppShell title="Festival App" class="bg-surface-900">
+  <div slot="header">
+    {#key selectedDayIdx}
+      <DaySelection {selectedDayIdx} {days} on:selectDay={selectDay} />
+    {/key}
+    <div
+      class="flex justify-end px-6 py-2 gap-2 bg-primary-500 text-on-surface-token font-bold items-center"
+    >
+      {#if $state.value === 'viewingMap'}
+        <h2 class="text-right">{selectedDay.location}</h2>
+        <a
+          href={selectedDay.mapUrl}
+          class="btn-icon variant-filled p-2 ml-6 mr-3 rounded flex-0"
+        >
+          <FaMapMarkedAlt />
+        </a>
+      {:else if $state.value === 'viewingStage' && selectedStage}
+        <button type="button" class="btn btn-icon p-2 flex-0" on:click={viewMap}
+          ><IoMdArrowRoundBack /></button
+        >
+        <h2 class="flex-1 text-right">{selectedStage.name}</h2>
+        <a
+          href={selectedStage.mapUrl}
+          class="btn-icon variant-filled p-2 ml-6 mr-3 rounded flex-0"
+        >
+          <FaMapMarkedAlt />
+        </a>
+      {:else if $state.value === 'viewingBand' && selectedBand}
+        <button
+          type="button"
+          class="btn btn-icon p-2 flex-0"
+          on:click={viewStage}><IoMdArrowRoundBack /></button
+        >
+        <h2 class="flex-1 text-right">{selectedBand.name}</h2>
+        <a
+          class="btn-icon variant-filled p-2 ml-6 mr-3 rounded flex-0"
+          href={selectedBand.url}
+        >
+          <IoIosMusicalNotes />
+        </a>
+      {/if}
+    </div>
+  </div>
+  {#if $state.value === 'viewingMap'}
+    <div class="card p-4 mt-4 mx-3 max-h-[45vh] h-full bg-secondary-500">
+      <Map
+        stages={dayStages}
+        imageMetadata={dayMapMetadata}
+        on:selectStage={selectStage}
+      />
+    </div>
+  {:else if $state.value === 'viewingStage' && selectedStage}
+    <StagePage
+      bands={allBands}
+      {selectedStage}
+      on:selectBand={selectBand}
+      on:viewMap={viewMap}
+    />
+  {:else if $state.value === 'viewingBand' && selectedBand}
+    <BandPage {selectedBand} on:viewStage={viewStage} />
+  {/if}
+
+  <div
+    slot="footer"
+    class="card p-4 mx-3 mt-3 rounded-b-none bg-primary-500 text-on-surface-token"
+  >
+    {#if $state.value === 'viewingMap'}
+      <header class="card-header text-center font-bold text-2xl -mt-4 mb-2">
+        Stages
+      </header>
+      <section>
+        <ListBox rounded="rounded" class="bg-primary-400 ">
+          {#each dayStages as stage}
+            <ListBoxItem
+              bind:group={selectedStageKey}
+              on:click={() => selectStage({ detail: stage.key })}
+              name="stage"
+              value={stage.key}
+              class="w-full"
+            >
+              <span class="text-lg font-semibold" slot="lead">&cirE;</span>
+              <span
+                class="text-lg text-on-surface-token font-semibold bg-surface-600 py-2 pl-2 pr-6 rounded-r-xl"
+                >{stage.name}</span
+              >
+            </ListBoxItem>
+          {/each}
+        </ListBox>
+      </section>
+    {:else if $state.value === 'viewingStage' && selectedDay}
+      <button
+        type="button"
+        on:click={viewMap}
+        class="w-full text-center font-bold text-xl"
+      >
+        <h2>{selectedDay.location}</h2>
+      </button>
+    {:else if $state.value === 'viewingBand' && selectedStage}
+      <button
+        type="button"
+        on:click={viewStage}
+        class="w-full text-center font-bold text-xl"
+      >
+        <h2>{selectedStage.name}</h2>
+      </button>
+    {/if}
+  </div>
+</AppShell>

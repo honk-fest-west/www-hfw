@@ -2,7 +2,14 @@ const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,astro,js,jsx,ts,tsx,vue,svelte}'],
+  darkMode: 'class',
+  content: [
+    './src/**/*.{html,astro,js,jsx,ts,tsx,vue,svelte}',
+    require('path').join(require.resolve(
+			'@skeletonlabs/skeleton'),
+			'../**/*.{html,js,svelte,ts}'
+    )
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -21,4 +28,7 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    ...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
+  ]
 };

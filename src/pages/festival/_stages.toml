@@ -1,0 +1,59 @@
+[jules]
+name = "Jules Maes"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
+
+[coffee]
+name = "Coffee Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/chBYDyvhdpfS5CHf9"
+
+[underpass]
+name = "Overpass Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/A6gbnFzCF2YfHJsLA"
+
+[artisan]
+name = "Electric Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
+
+[valley]
+name = "Valley Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
+
+[hill]
+name = "Hill Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
+
+[gateway]
+name = "Gateway Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
+
+[rac]
+name = "Rainier Art Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
+
+[upper]
+name = "Spray Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/SuYFTkq48jrPhs5Y8"
+
+[lower]
+name = "Lawn Stage"
+x = 0
+y = 0
+mapUrl = "https://goo.gl/maps/KPwtYko3d9EhzeXT6"
