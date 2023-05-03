@@ -13,10 +13,16 @@ const footerClass = clearPage ? 'hidden sm:block' : '';
 const mainClass = clearPage
   ? 'p-0 m-0 overflow-hidden min-h-screen sm:min-h-auto'
   : 'pb-6 px-3';
+const htmlClass = clearPage
+  ? 'overflow-hidden w-full sm:overflow-auto sm:w-auto'
+  : '';
+const bodyClass = clearPage
+  ? 'h-full overflow-y-scroll sm:h-auto sm:overflow-y-auto sm:static'
+  : '';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class={htmlClass}>
   <!-- HEAD -->
   <head>
     <Head title={title}>
@@ -24,7 +30,7 @@ const mainClass = clearPage
     </Head>
   </head>
 
-  <body class="min-h-full">
+  <body class={`min-h-full ${bodyClass}`}>
     <div id="back-to-top"></div>
 
     <!-- BACKGROUND IMAGE -->
