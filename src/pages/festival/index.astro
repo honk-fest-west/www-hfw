@@ -9,14 +9,13 @@ import FestivalApp from '@components/festival/FestivalApp.svelte';
 import schedule from './_schedule.toml';
 import bands from './_bands.toml';
 import stages from './_stages.toml';
-import map0 from './src/images/map/0_Georgetown_basemap2.jpg';
-import map1 from './src/images/map/1_Columbia_Basemap2.jpg';
-import map2 from './src/images/map/2_Yesler_Basemap3.jpg';
+import map0 from '/src/images/map/0_Georgetown_basemap2.jpg';
+import map1 from '/src/images/map/1_Columbia_Basemap2.jpg';
+import map2 from '/src/images/map/2_Yesler_Basemap3.jpg';
 
 const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
   files.map((file) => file.default)
 );
-console.log(bandImgs);
 ---
 
 <BaseLayout title="Festival" clearPage="true">
