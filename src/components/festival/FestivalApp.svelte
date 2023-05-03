@@ -67,10 +67,6 @@
     }
   };
 
-  onDestroy(() => {
-    //fscreen.exitFullscreen();
-  });
-
   const selectDay = (event: { detail: number }) => {
     requestFullscreen();
     send('SELECT_DAY', { dayIdx: event.detail });
@@ -166,7 +162,7 @@
     </div>
   {/if}
 
-  <div slot="footer" class="p-4 bg-primary-500 text-on-surface-token">
+  <div slot="footer" class="p-4 bg-surface-700 text-on-surface-token">
     {#if $state.value === 'viewingMap'}
       <div
         transition:slide={{
@@ -177,30 +173,23 @@
         }}
       >
         <header class="card-header text-center font-bold text-2xl -mt-6 mb-2">
-          Stages
+          <span class="text-surface-50">Stages</span>
         </header>
         <section>
-          <ListBox
-            rounded="rounded"
-            class="bg-primary-400"
-            active="bg-surface-700"
-          >
+          <ListBox rounded="rounded" active="bg-primary-500 rounded-none">
             {#each dayStages as stage, idx}
               <ListBoxItem
                 bind:group={selectedStageKey}
                 on:click={() => selectStage({ detail: stage.key })}
                 name="stage"
                 value={stage.key}
-                class="w-full"
+                class="w-full border-2 border-surface-400"
               >
                 <span
-                  class="text-md font-semibold block bg-surface-700 rounded-full w-6 h-6 text-center"
+                  class="text-md font-semibold block bg-primary-500 rounded-full w-6 h-6 text-center"
                   slot="lead">{idx + 1}</span
                 >
-                <span
-                  class="text-xl underline decoration-dashed decoration-1 underline-offset-4"
-                  >{stage.name}</span
-                >
+                <span class="text-xl">{stage.name}</span>
               </ListBoxItem>
             {/each}
           </ListBox>
@@ -210,7 +199,7 @@
       <button
         type="button"
         on:click={viewMap}
-        class="w-full text-center font-bold"
+        class="w-full text-center"
         transition:slide={{
           delay: 0,
           duration: 200,
@@ -218,17 +207,15 @@
           axis: 'y',
         }}
       >
-        <span class="text-2xl text-on-surface-token"
-          >{selectedDay.location} Map</span
-        >
+        <span class="text-2xl text-surface-50">{selectedDay.location} Map</span>
       </button>
     {:else if $state.value === 'viewingBand' && selectedStage}
       <button
         type="button"
         on:click={viewStage}
-        class="w-full text-center font-bold text-xl"
+        class="w-full text-center text-xl"
       >
-        <span class="text-2xl text-on-surface-token">{selectedStage.name}</span>
+        <span class="text-2xl text-surface-50">{selectedStage.name}</span>
       </button>
     {/if}
   </div>
