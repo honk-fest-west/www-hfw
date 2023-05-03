@@ -7,6 +7,8 @@
   import '@skeletonlabs/skeleton/themes/theme-modern.css';
 
   import FaMapMarkedAlt from 'svelte-icons/fa/FaMapMarkedAlt.svelte';
+  import { slide, blur, fly } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
   import IoMdArrowRoundBack from 'svelte-icons/io/IoMdArrowRoundBack.svelte';
   import IoIosMusicalNotes from 'svelte-icons/io/IoIosMusicalNotes.svelte';
 
@@ -125,7 +127,7 @@
     </div>
   </div>
   {#if $state.value === 'viewingMap'}
-    <div class="h-full">
+    <div class="h-full" transition:fly={{ y: 200, duration: 200 }}>
       <Map
         stages={dayStages}
         imageMetadata={dayMapMetadata}
@@ -133,42 +135,64 @@
       />
     </div>
   {:else if $state.value === 'viewingStage' && selectedStage}
-    <StagePage
-      bands={allBands}
-      {selectedStage}
-      on:selectBand={selectBand}
-      on:viewMap={viewMap}
-    />
+    <div class="h-full" transition:fly={{ y: 200, duration: 200 }}>
+      <StagePage
+        bands={allBands}
+        {selectedStage}
+        on:selectBand={selectBand}
+        on:viewMap={viewMap}
+      />
+    </div>
   {:else if $state.value === 'viewingBand' && selectedBand}
-    <BandPage {selectedBand} on:viewStage={viewStage} />
+    <div class="h-full" transition:fly={{ y: 200, duration: 200 }}>
+      <BandPage {selectedBand} on:viewStage={viewStage} />
+    </div>
   {/if}
 
   <div slot="footer" class="p-4 bg-primary-500 text-on-surface-token">
     {#if $state.value === 'viewingMap'}
-      <header class="card-header text-center font-bold text-2xl -mt-6 mb-2">
-        Stages
-      </header>
-      <section>
-        <ListBox rounded="rounded" class="bg-primary-400 ">
-          {#each dayStages as stage, idx}
-            <ListBoxItem
-              bind:group={selectedStageKey}
-              on:click={() => selectStage({ detail: stage.key })}
-              name="stage"
-              value={stage.key}
-              class="w-full"
-            >
-              <span class="text-lg font-semibold" slot="lead">{idx + 1}.</span>
-              <span class="text-lg font-semibold">{stage.name}</span>
-            </ListBoxItem>
-          {/each}
-        </ListBox>
-      </section>
+      <div
+        transition:slide={{
+          delay: 0,
+          duration: 200,
+          easing: quintOut,
+          axis: 'y',
+        }}
+      >
+        <header class="card-header text-center font-bold text-2xl -mt-6 mb-2">
+          Stages
+        </header>
+        <section>
+          <ListBox rounded="rounded" class="bg-primary-400 ">
+            {#each dayStages as stage, idx}
+              <ListBoxItem
+                bind:group={selectedStageKey}
+                on:click={() => selectStage({ detail: stage.key })}
+                name="stage"
+                value={stage.key}
+                class="w-full"
+              >
+                <span
+                  class="text-sm font-semibold block bg-surface-700 rounded-full w-6 h-6 text-center"
+                  slot="lead">{idx + 1}.</span
+                >
+                <span class="text-lg font-semibold">{stage.name}</span>
+              </ListBoxItem>
+            {/each}
+          </ListBox>
+        </section>
+      </div>
     {:else if $state.value === 'viewingStage' && selectedDay}
       <button
         type="button"
         on:click={viewMap}
         class="w-full text-center font-bold"
+        transition:slide={{
+          delay: 0,
+          duration: 200,
+          easing: quintOut,
+          axis: 'y',
+        }}
       >
         <span class="text-2xl text-on-surface-token"
           >{selectedDay.location} Map</span
