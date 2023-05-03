@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
 
-  // export let stages: Stage[];
+  export let stages: Stage[];
   export let imageMetadata: ImageMetadata;
 
   const dispatch = createEventDispatcher();
@@ -11,11 +11,12 @@
   };
 </script>
 
-<div class="rounded-xl w-full h-full overflow-auto">
+<div class="w-full h-full overflow-auto">
   <img
     src={imageMetadata.src}
     width={imageMetadata.width}
     height={imageMetadata.height}
+    class="my-auto"
     alt="festival map"
   />
   <!-- <svg
@@ -51,12 +52,12 @@
   </svg> -->
 </div>
 
-<style>
-  /* .stack {
+<!-- <style>
+  .stack {
     display: grid;
     touch-action: none;
   }
   .stack > * {
     grid-area: 1 / 1;
-  } */
-</style>
+  }
+</style> -->

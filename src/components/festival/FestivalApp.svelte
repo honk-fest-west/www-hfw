@@ -18,6 +18,7 @@
   import StagePage from './StagePage.svelte';
   import BandPage from './BandPage.svelte';
   import DaySelection from './DaySelection.svelte';
+  import { onMount } from 'svelte';
 
   export let schedule: Partial<ImportSchedule> = {};
   export let stages: ImportStages = {};
@@ -124,7 +125,7 @@
     </div>
   </div>
   {#if $state.value === 'viewingMap'}
-    <div class="card p-4 mt-4 mx-3 max-h-[45vh] h-full bg-secondary-500">
+    <div class="h-full">
       <Map
         stages={dayStages}
         imageMetadata={dayMapMetadata}
@@ -142,17 +143,14 @@
     <BandPage {selectedBand} on:viewStage={viewStage} />
   {/if}
 
-  <div
-    slot="footer"
-    class="card p-4 mx-3 mt-3 rounded-b-none bg-primary-500 text-on-surface-token"
-  >
+  <div slot="footer" class="p-4 bg-primary-500 text-on-surface-token">
     {#if $state.value === 'viewingMap'}
-      <header class="card-header text-center font-bold text-2xl -mt-4 mb-2">
+      <header class="card-header text-center font-bold text-2xl -mt-6 mb-2">
         Stages
       </header>
       <section>
         <ListBox rounded="rounded" class="bg-primary-400 ">
-          {#each dayStages as stage}
+          {#each dayStages as stage, idx}
             <ListBoxItem
               bind:group={selectedStageKey}
               on:click={() => selectStage({ detail: stage.key })}
@@ -160,11 +158,8 @@
               value={stage.key}
               class="w-full"
             >
-              <span class="text-lg font-semibold" slot="lead">&cirE;</span>
-              <span
-                class="text-lg text-on-surface-token font-semibold bg-surface-600 py-2 pl-2 pr-6 rounded-r-xl"
-                >{stage.name}</span
-              >
+              <span class="text-lg font-semibold" slot="lead">{idx + 1}.</span>
+              <span class="text-lg font-semibold">{stage.name}</span>
             </ListBoxItem>
           {/each}
         </ListBox>
@@ -173,9 +168,11 @@
       <button
         type="button"
         on:click={viewMap}
-        class="w-full text-center font-bold text-xl"
+        class="w-full text-center font-bold"
       >
-        <h2>{selectedDay.location}</h2>
+        <span class="text-2xl text-on-surface-token"
+          >{selectedDay.location} Map</span
+        >
       </button>
     {:else if $state.value === 'viewingBand' && selectedStage}
       <button
@@ -183,8 +180,21 @@
         on:click={viewStage}
         class="w-full text-center font-bold text-xl"
       >
-        <h2>{selectedStage.name}</h2>
+        <span class="text-2xl text-on-surface-token">{selectedStage.name}</span>
       </button>
     {/if}
   </div>
 </AppShell>
+
+<style global>
+  html {
+    overflow: hidden;
+    width: 100%;
+  }
+  body {
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
