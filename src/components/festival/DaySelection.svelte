@@ -27,6 +27,7 @@
       width={logoImg.width}
       height={logoImg.height}
       alt="back to HONK!"
+      class="scale-125"
     />
   </a>
   {#each days as day, idx}

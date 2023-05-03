@@ -6,6 +6,7 @@
   import '@skeletonlabs/skeleton/styles/all.css';
   import '@skeletonlabs/skeleton/themes/theme-modern.css';
 
+  import fscreen from 'fscreen';
   import FaMapMarkedAlt from 'svelte-icons/fa/FaMapMarkedAlt.svelte';
   import { slide, blur, fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
@@ -20,7 +21,8 @@
   import StagePage from './StagePage.svelte';
   import BandPage from './BandPage.svelte';
   import DaySelection from './DaySelection.svelte';
-  import { onMount } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
+  import { element } from 'svelte/internal';
 
   export let schedule: Partial<ImportSchedule> = {};
   export let stages: ImportStages = {};
@@ -30,7 +32,6 @@
   export let bandImgs: Array<ImageMetadata> = [];
 
   const { pdays, pstages, pbands } = process(schedule, stages, bands, bandImgs);
-
   const initialContext: AppCtx = {
     days: pdays(),
     stages: pstages(),
@@ -38,11 +39,8 @@
     selectedDayIdx: 0,
     selectedStageKey: null,
     selectedBandKey: null,
-    // selectedStageKey: 'coffee',
-    // selectedBandKey: 'chaotic',
   };
   const { state, send } = useMachine(appMachine, { context: initialContext });
-  // onMount(() => send('VIEW_BAND'));
 
   $: days = $state.context.days;
   $: selectedDayIdx = $state.context.selectedDayIdx;
@@ -63,15 +61,28 @@
 
   $: allBands = $state.context.bands;
 
+  const requestFullscreen = () => {
+    if (fscreen.fullscreenElement === null) {
+      fscreen.requestFullscreen(document.documentElement);
+    }
+  };
+
+  onDestroy(() => {
+    //fscreen.exitFullscreen();
+  });
+
   const selectDay = (event: { detail: number }) => {
+    requestFullscreen();
     send('SELECT_DAY', { dayIdx: event.detail });
   };
 
   const selectStage = (event: { detail: string }) => {
+    requestFullscreen();
     send('SELECT_STAGE', { stageKey: event.detail });
   };
 
   const selectBand = (event: { detail: string }) => {
+    requestFullscreen();
     send('SELECT_BAND', { bandKey: event.detail });
   };
 
