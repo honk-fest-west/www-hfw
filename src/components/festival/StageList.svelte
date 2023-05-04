@@ -12,11 +12,6 @@
   };
 </script>
 
-<header
-  class="card-header text-center font-bold text-2xl -mt-6 sm:mt-0 mb-2 sm:mb-6"
->
-  <span class="text-surface-50">Stages</span>
-</header>
 <section>
   <ListBox rounded="rounded-lg">
     {#each dayStages as stage, idx}

@@ -76,6 +76,10 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 				VIEW_STAGE: {
 					target: "viewingStage",
 				},
+				SELECT_STAGE: {
+					actions: "selectStage",
+					target: "viewingStage"
+				}
 			},
 		},
 	},

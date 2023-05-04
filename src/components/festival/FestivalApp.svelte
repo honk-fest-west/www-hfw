@@ -12,15 +12,15 @@
   import IoMdArrowRoundBack from 'svelte-icons/io/IoMdArrowRoundBack.svelte';
   import IoIosMusicalNotes from 'svelte-icons/io/IoIosMusicalNotes.svelte';
 
-  import { AppShell } from '@skeletonlabs/skeleton';
+  import { AppShell, Drawer, drawerStore } from '@skeletonlabs/skeleton';
   import { useMachine } from '@xstate/svelte';
   import { appMachine, type AppCtx } from './machines/app.machine.js';
   import { process } from './util/import.js';
   import Map from './Map.svelte';
-  import StagePage from './StagePage.svelte';
   import BandPage from './BandPage.svelte';
   import DaySelection from './DaySelection.svelte';
   import StageList from './StageList.svelte';
+  import Schedule from './Schedule.svelte';
 
   export let schedule: Partial<ImportSchedule> = {};
   export let stages: ImportStages = {};
@@ -41,7 +41,7 @@
   const { state, send } = useMachine(appMachine, { context: initialContext });
 
   $: days = $state.context.days;
-  $: stages = $state.context.stages;
+  $: allStages = $state.context.stages;
   $: selectedDayIdx = $state.context.selectedDayIdx;
   $: selectedDay = $state.context.days[selectedDayIdx];
   $: dayStages =
@@ -65,6 +65,7 @@
   };
 
   const selectStage = (event: { detail: string }) => {
+    drawerStore.close();
     send('SELECT_STAGE', { stageKey: event.detail });
   };
 
@@ -79,8 +80,36 @@
   const viewStage = () => {
     send('VIEW_STAGE');
   };
+
+  const viewBandSchedule = () => {
+    drawerStore.open();
+  };
+
+  const viewDayStages = () => {
+    drawerStore.open();
+  };
+
+  const hideDayStages = () => {
+    drawerStore.close();
+  };
 </script>
 
+<Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
+  <div class="pb-4 px-4">
+    {#if $state.value === 'viewingMap'}
+      <div class="w-full text-center p-4">
+        <span class="text-2xl text-on-surface-token">Stages</span>
+      </div>
+      <StageList {dayStages} {selectedStageKey} on:selectStage={selectStage} />
+    {:else if $state.value === 'viewingBand'}
+      <Schedule
+        schedule={selectedBand?.scheduleByDay[selectedDayIdx]}
+        items={allStages}
+        on:selectStage={selectStage}
+      />
+    {/if}
+  </div>
+</Drawer>
 <AppShell title="Festival App" class="bg-surface-900">
   <div slot="header">
     {#key selectedDayIdx}
@@ -150,11 +179,10 @@
         duration: 200,
       }}
     >
-      <StagePage
-        bands={allBands}
-        {selectedStage}
+      <Schedule
+        schedule={selectedStage.schedule}
+        items={allBands}
         on:selectBand={selectBand}
-        on:viewMap={viewMap}
       />
     </div>
   {:else if $state.value === 'viewingBand' && selectedBand}
@@ -163,12 +191,7 @@
       in:fade={{ duration: 200 }}
       out:fly={{ x: 200, duration: 200 }}
     >
-      <BandPage
-        dayIdx={selectedDayIdx}
-        band={selectedBand}
-        {stages}
-        on:viewStage={viewStage}
-      />
+      <BandPage band={selectedBand} />
     </div>
   {/if}
 
@@ -196,41 +219,25 @@
 
   <div slot="footer" class="text-on-surface-token block sm:hidden">
     {#if $state.value === 'viewingMap'}
-      <div
-        transition:slide={{
-          delay: 200,
-          duration: 200,
-          easing: quintOut,
-          axis: 'y',
-        }}
-        class="p-4 bg-surface-900"
-      >
-        <StageList
-          {dayStages}
-          {selectedStageKey}
-          on:selectStage={selectStage}
-        />
-      </div>
-    {:else if $state.value === 'viewingStage' && selectedDay}
       <button
         type="button"
-        on:click={viewMap}
-        class="w-full text-center bg-surface-700 p-4"
+        on:click={viewDayStages}
+        class="w-full text-center bg-surface-800 p-4"
       >
         <span
-          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded"
-          >Map</span
+          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded-xl"
+          >Stages</span
         >
       </button>
     {:else if $state.value === 'viewingBand' && selectedStage}
       <button
         type="button"
-        on:click={viewStage}
-        class="w-full text-center bg-surface-700 p-4"
+        on:click={viewBandSchedule}
+        class="w-full text-center bg-surface-800 p-4"
       >
         <span
-          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded"
-          >Day Schedule</span
+          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded-xl"
+          >Schedule</span
         >
       </button>
     {/if}
