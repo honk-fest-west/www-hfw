@@ -40,9 +40,8 @@
   };
   const { state, send } = useMachine(appMachine, { context: initialContext });
 
-  $: console.log('state', $state);
-
   $: days = $state.context.days;
+  $: stages = $state.context.stages;
   $: selectedDayIdx = $state.context.selectedDayIdx;
   $: selectedDay = $state.context.days[selectedDayIdx];
   $: dayStages =
@@ -164,7 +163,12 @@
       in:fade={{ duration: 200 }}
       out:fly={{ x: 200, duration: 200 }}
     >
-      <BandPage {selectedBand} on:viewStage={viewStage} />
+      <BandPage
+        dayIdx={selectedDayIdx}
+        band={selectedBand}
+        {stages}
+        on:viewStage={viewStage}
+      />
     </div>
   {/if}
 
@@ -226,7 +230,7 @@
       >
         <span
           class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded"
-          >Schedule</span
+          >Day Schedule</span
         >
       </button>
     {/if}

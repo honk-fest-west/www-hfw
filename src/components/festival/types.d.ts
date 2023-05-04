@@ -7,6 +7,7 @@ declare interface Day {
 	location: string
 	mapUrl: string
 	stageKeys: Array<string>
+	bandKeys: Array<string>
 }
 
 declare interface Stages {
@@ -33,15 +34,19 @@ declare interface Band {
 	url: string;
 	image: ImageMetadata | undefined;
 	description: string;
+	scheduleByDay: Array<Schedule>
 }
 
+// Schedule 
 declare type Schedule = Array<TimeSlot>
 
 declare interface TimeSlot {
 	time: string;
-	bandKey: string;
+	bandKey?: string;
+	stageKey?: string;
 }
 
+// Import types
 declare interface ImportStages {
 	[key: string]: {
 		name: string;
@@ -72,6 +77,7 @@ declare interface ImportSchedule {
 	}>;
 }
 
+// Image metadata types
 declare interface ImageMetadata {
 	src: string;
 	width: number;
