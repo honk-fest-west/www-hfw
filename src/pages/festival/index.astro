@@ -1,136 +1,39 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import { Image } from '@astrojs/image/components';
-import Title from '@components/Title.astro';
-import BackToTop from '@components/BackToTop.astro';
-import ScheduleTable from '@components/festival/ScheduleTable.svelte';
+import Head from '@components/base-head/BaseHead.astro';
 import FestivalApp from '@components/festival/FestivalApp.svelte';
 
 import schedule from './_schedule.toml';
 import bands from './_bands.toml';
 import stages from './_stages.toml';
-import map0 from '/src/images/map/0_Georgetown_basemap2.jpg';
-import map1 from '/src/images/map/1_Columbia_Basemap2.jpg';
-import map2 from '/src/images/map/2_Yesler_Basemap3.jpg';
 import logoImg from '/src/images/logos/2023-logo-white.png';
+
+const mapImgs = await Astro.glob('/src/images/map/*').then((files) =>
+  files.map((file) => file.default)
+);
 
 const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
   files.map((file) => file.default)
 );
 ---
 
-<BaseLayout title="Festival" clearPage="true">
-  <div class="sm:hidden h-full inset-0">
-    <FestivalApp
-      client:visible
-      bands={bands}
-      schedule={schedule}
-      stages={stages}
-      logoImg={logoImg}
-      mapMetadata={[map0, map1, map2]}
-      bandImgs={bandImgs}
-    />
-  </div>
+<!DOCTYPE html>
+<html lang="en" class="h-full overflow-hidden">
+  <!-- HEAD -->
+  <head>
+    <Head title="HONK! 2023" />
+  </head>
 
-  <section class="content-container hidden sm:block">
-    <BackToTop />
-    <div class="grid grid-cols-1 lg:grid-cols-3">
-      <div class="flex lg:justify-center w-full">
-        <div class="text-shadow py-4 font-bold text-pink-lt">
-          <h2 class="text-5xl">Georgetown</h2>
-          <p class="text-2xl mt-2 text-pink">Friday</p>
-          <p class="text-2xl">June 2nd 6-10 PM</p>
-        </div>
-      </div>
-      <div class="flex lg:justify-center w-full">
-        <div class="text-shadow py-4 font-bold text-pink-lt">
-          <h2 class="text-5xl">Columbia City</h2>
-          <p class="text-2xl mt-2 text-pink">Saturday</p>
-          <p class="text-2xl">June 3rd 12-8 PM</p>
-        </div>
-      </div>
-      <div class="flex lg:justify-center w-full">
-        <div class="text-shadow py-4 font-bold text-pink-lt">
-          <h2 class="text-5xl">Yesler Terrace</h2>
-          <p class="text-2xl mt-2 text-pink">Sunday</p>
-          <p class="text-2xl">June 4th 12-6 PM</p>
-        </div>
-      </div>
+  <body class="h-full overflow-hidden">
+    <div style="display: contents" class="h-full overflow-hidden">
+      <FestivalApp
+        client:load
+        bands={bands}
+        schedule={schedule}
+        stages={stages}
+        logoImg={logoImg}
+        mapImgs={mapImgs}
+        bandImgs={bandImgs}
+      />
     </div>
-  </section>
-  <div class="w-full hidden sm:flex justify-center items-center">
-    <Image
-      src="https://ik.imagekit.io/thegoldendino/hfw/2023/stranger-ad-01_jRgpQLv4f.png?updatedAt=1682113255812"
-      alt="Honk Fest West 2023, Stranger Ad"
-      width={600}
-      height={835}
-      aspectRatio="600:835"
-      format="png"
-      class="w-full max-w-2xl mt-10"
-    />
-  </div>
-  <!--   <div id="locations" class="content-container mb-4 sm:mb-6">
-    <BackToTop />
-    <Title title="Locations" />
-    <div
-      class="content divide-y-4 divide-main-color-600 divide-dotted grid grid-cols-1"
-    >
-      <p class="py-3">
-        <span class="font-bold text-lg block">Thursday, June 2nd, 8pm</span>
-        <span
-          >Opening night at <a href="https://goo.gl/maps/KfYuxjmM6zDBRXoo9"
-            >Ballard Odd Fellows</a
-          >
-        </span>
-      </p>
-      <p class="py-3">
-        <span class="font-bold text-lg block">Friday, June 3rd, 6pm-10pm</span>
-        <a href="https://goo.gl/maps/Fe2k87KPDpzyEapG7"
-          >Georgetown neighborhood</a
-        >
-      </p>
-      <p class="py-3">
-        <span class="font-bold text-lg block">Saturday, June 4th, 12pm-7pm</span
-        >
-        <a href="https://goo.gl/maps/RxwK1paeFxighgFK6"
-          >Columbia Park, Columbia City</a
-        >
-      </p>
-      <p class="py-3">
-        <span class="font-bold text-lg block">Sunday, June 5th, 12pm-6pm</span>
-        <a href="https://goo.gl/maps/e57QBXWWsQQ1LnwB6">Yesler Terrace Park</a>
-      </p>
-    </div>
-  </div>
-  <div id="friday" class="content-container mb-4 sm:mb-6">
-    <BackToTop />
-    <Title title="Friday 6/3" />
-    <ScheduleTable day={schedule.friday} {bands} />
-  </div>
-  <div id="saturday" class="content-container mb-4 sm:mb-6">
-    <BackToTop />
-    <Title title="Saturday 6/4" />
-    <ScheduleTable day={schedule.saturday} {bands} />
-  </div>
-  <div id="sunday" class="content-container mb-4 sm:mb-6">
-    <BackToTop />
-    <Title title="Sunday 6/5" />
-    <ScheduleTable day={schedule.sunday} {bands} />
-  </div>
-  <div id="bands" class="content-container mb-4 sm:mb-6">
-    <BackToTop />
-    <Title title="Bands" />
-    <div class="content grid grid-cols-3 gap-4">
-      {
-        playingBands.map((band) => (
-          <div>
-            <a href={band.url} class="block">
-              {band.name}
-            </a>
-            <span>{band.loc}</span>
-          </div>
-        ))
-      }
-    </div>
-  </div> -->
-</BaseLayout>
+  </body>
+</html>

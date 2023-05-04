@@ -21,7 +21,7 @@
 
   <a
     href={selectedBand.url}
-    class="btn bg-surface-600 text-surface-100 font-bold mt-7 border-2 border-surface-400 rounded"
+    class="btn bg-surface-600 text-surface-100 font-bold mt-7 border-2 border-surface-400 rounded-xl"
   >
     more info &raquo;
   </a>
