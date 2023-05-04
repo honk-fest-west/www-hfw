@@ -1,5 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
+  import { cubicOut } from 'svelte/easing';
+  import { blur } from 'svelte/transition';
 
   export let stages: Stage[];
   export let imageMetadata: ImageMetadata;
@@ -12,12 +14,20 @@
 </script>
 
 <div class="w-full h-full overflow-auto grid place-content-center">
-  <img
-    src={imageMetadata.src}
-    width={imageMetadata.width}
-    height={imageMetadata.height}
-    alt="festival map"
-  />
+  {#key imageMetadata}
+    <img
+      src={imageMetadata.src}
+      width={imageMetadata.width}
+      height={imageMetadata.height}
+      alt="festival map"
+      transition:blur={{
+        opacity: 100,
+        duration: 200,
+        easing: cubicOut,
+        amount: '1rem',
+      }}
+    />
+  {/key}
   <!-- <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1000 600"
