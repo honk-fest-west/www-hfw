@@ -93,13 +93,13 @@
       />
     {/key}
     <div
-      class="flex justify-end px-6 py-2 gap-2 bg-primary-500 text-on-surface-token font-bold items-center"
+      class="flex justify-end px-3 py-2 gap-2 bg-primary-500 text-on-surface-token font-bold items-center"
     >
       {#if $state.value === 'viewingMap'}
         <h2 class="text-right">{selectedDay.location}</h2>
         <a
           href={selectedDay.mapUrl}
-          class="btn-icon bg-surface-600 p-2 ml-6 mr-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
+          class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
         >
           <FaMapMarkedAlt />
         </a>
@@ -110,7 +110,7 @@
         <h2 class="flex-1 text-right">{selectedStage.name}</h2>
         <a
           href={selectedStage.mapUrl}
-          class="btn-icon bg-surface-600 p-2 ml-6 mr-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
+          class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
         >
           <FaMapMarkedAlt />
         </a>
@@ -122,7 +122,7 @@
         >
         <h2 class="flex-1 text-right">{selectedBand.name}</h2>
         <a
-          class="btn-icon bg-surface-600 p-2 ml-6 mr-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
+          class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
           href={selectedBand.url}
         >
           <IoIosMusicalNotes />
