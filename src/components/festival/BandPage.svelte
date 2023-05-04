@@ -2,7 +2,7 @@
   export let selectedBand: Band;
 </script>
 
-<div class="flex flex-col my-4 gap-3 items-center px-4">
+<div class="flex flex-col my-4 sm:my-8 gap-3 items-center px-4">
   <div class="w-52 rounded-xl overflow-hidden">
     {#if selectedBand.image}
       <img
@@ -17,7 +17,7 @@
   <h3 class="text-center text-2xl text-on-surface-token">
     {selectedBand.location}
   </h3>
-  <p>{selectedBand.description}</p>
+  <p class="max-w-xl">{selectedBand.description}</p>
 
   <a
     href={selectedBand.url}
