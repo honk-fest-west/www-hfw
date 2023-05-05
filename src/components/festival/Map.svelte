@@ -13,7 +13,7 @@
   };
 </script>
 
-<div class="w-full h-full overflow-auto grid place-content-center relative">
+<div class="w-[] h-full overflow-auto grid place-content-center relative">
   {#key imageMetadata}
     <img
       src={imageMetadata.src}
@@ -26,9 +26,10 @@
         easing: cubicOut,
         amount: '1rem',
       }}
-      class="absolute scale-150"
+      class="absolute m-auto top-0 left-0 bottom-0 right-0"
     />
   {/key}
+
   <!-- <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1000 600"
