@@ -22,7 +22,7 @@
     } else if (timeSlot.stageKey?.length) {
       return items[timeSlot.stageKey]?.name;
     }
-    return '';
+    return null;
   };
 
   let slotTime: string;
@@ -44,11 +44,18 @@
       >
         {shortTime(timeSlot.time)}
       </span>
-      <span
-        class="h-7 text-xl underline decoration-dashed decoration-1 underline-offset-4 text-right text-ellipsis overflow-hidden block w-full text-surface-50"
-      >
-        {itemName(timeSlot)}
-      </span>
+      {#if itemName(timeSlot)}
+        <span
+          class="h-7 text-xl underline decoration-dashed decoration-1 underline-offset-4 text-right text-ellipsis overflow-hidden block w-full text-surface-50"
+        >
+          {itemName(timeSlot)}
+        </span>
+      {:else}
+        <span
+          class="h-7 text-xl text-right text-ellipsis overflow-hidden block w-full text-surface-50"
+          >-</span
+        >
+      {/if}
     </ListBoxItem>
   {/each}
 </ListBox>
