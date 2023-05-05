@@ -10,8 +10,6 @@
   export let imageMetadata: ImageMetadata;
 
   let mapImgEl: HTMLImageElement;
-  let mapImgWidth: number;
-  let mapImgHeight: number;
   let infoPinEl: HTMLSpanElement;
   let medicPinEl: HTMLSpanElement;
   let pottyPinEl: HTMLSpanElement;
@@ -24,15 +22,12 @@
 
   function setPinCoordinates(
     mapEl: HTMLElement,
-    mapImgWidth: number,
-    mapImgHeight: number,
     stages: Stage[],
     other: Coordinates
   ) {
-    if (!(mapEl && mapImgWidth && mapImgHeight && stages?.length)) {
-      return;
-    }
+    if (!mapEl) return;
 
+    console.log('calculating');
     const map = {
       width: imageMetadata.width,
       height: imageMetadata.height,
@@ -40,18 +35,14 @@
 
     // Get the bounding client rect of element A and B
     const rectMap = mapEl.getBoundingClientRect();
-
     const widthQ = (rectMap.width * 1.0) / map.width;
-    const mapWidth = rectMap.width;
-
     const heightQ = (rectMap.height * 1.0) / map.height;
-    const mapHeight = rectMap.height;
 
     // Calculate the parent element center coordinates
-    const parentCenterX = mapWidth / 2.0;
-    const parentCenterY = mapHeight / 2.0;
+    const parentCenterX = rectMap.width / 2.0;
+    const parentCenterY = rectMap.height / 2.0;
 
-    stages.forEach((stage, idx) => {
+    stages.forEach((stage) => {
       // Calculate the relative position of the Pin to the center of the Map
       const relativeX = (stage.x - map.width / 2.0) * widthQ;
       const relativeY = (stage.y - map.height / 2.0) * heightQ;
@@ -64,7 +55,7 @@
       stage.pinEl && (stage.pinEl.style.top = `${top}px`);
     });
 
-    Object.entries(other).forEach(([key, [x, y]], idx) => {
+    Object.entries(other).forEach(([key, [x, y]]) => {
       const relativeX = (x - map.width / 2.0) * widthQ;
       const relativeY = (y - map.height / 2.0) * heightQ;
 
@@ -84,34 +75,30 @@
     });
   }
 
-  $: setPinCoordinates(
-    mapImgEl,
-    mapImgWidth,
-    mapImgHeight,
-    stages,
-    coordinates
-  );
+  $: setPinCoordinates(mapImgEl, stages, coordinates);
 </script>
 
+<svelte:window
+  on:resize={() => setPinCoordinates(mapImgEl, stages, coordinates)}
+/>
+
 <div
-  class="w-full h-full overflow-auto grid place-content-center relative"
-  bind:clientWidth={mapImgWidth}
-  bind:clientHeight={mapImgHeight}
+  class="w-full h-full overflow-auto grid place-content-center relative sm:bg-surface-700"
 >
   {#key imageMetadata}
-    <div class="absolute h-fit w-full">
+    <div class="absolute h-fit w-full sm:max-w-xl">
       <img
         src={imageMetadata.src}
         width={imageMetadata.width}
         height={imageMetadata.height}
         alt="festival map"
+        class="w-full"
         bind:this={mapImgEl}
         transition:blur={{
           opacity: 100,
-          duration: 300,
+          duration: 400,
           amount: '1rem',
         }}
-        class="w-full"
       />
     </div>
   {/key}

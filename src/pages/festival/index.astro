@@ -17,13 +17,13 @@ const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-full overflow-hidden">
+<html lang="en" class="h-full overflow-hidden bg-surface-800">
   <!-- HEAD -->
   <head>
     <Head title="HONK! 2023" />
   </head>
 
-  <body class="h-full overflow-hidden">
+  <body class="h-full overflow-hidden sm:max-w-3xl mx-auto">
     <div style="display: contents" class="h-full overflow-hidden">
       <FestivalApp
         client:load

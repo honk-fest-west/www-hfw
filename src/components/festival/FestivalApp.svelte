@@ -121,52 +121,56 @@
         on:selectDay={selectDay}
       />
     {/key}
-    <div
-      class="flex justify-end px-3 py-2 gap-2 bg-primary-500 text-primary-50 font-bold items-center"
-    >
-      {#if $state.value === 'viewingMap'}
-        <h2 class="text-right">
-          <a class="unstyled" href={selectedDay.mapUrl}
-            ><span class="">{selectedDay.location}</span></a
+    <div class="bg-primary-500">
+      <div
+        class="flex justify-end px-3 py-2 gap-2 text-primary-50 font-bold items-center max-w-2xl mx-auto"
+      >
+        {#if $state.value === 'viewingMap'}
+          <h2 class="text-right">
+            <a class="unstyled" href={selectedDay.mapUrl}
+              ><span class="">{selectedDay.location}</span></a
+            >
+          </h2>
+          <a
+            href={selectedDay.mapUrl}
+            class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
           >
-        </h2>
-        <a
-          href={selectedDay.mapUrl}
-          class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
-        >
-          <FaMapMarkedAlt />
-        </a>
-      {:else if $state.value === 'viewingStage' && selectedStage}
-        <button type="button" class="btn btn-icon p-2 flex-0" on:click={viewMap}
-          ><IoMdArrowRoundBack /></button
-        >
-        <h2 class="flex-1 text-right">
-          <a class="unstyled" href={selectedStage.mapUrl}
-            >{selectedStage.name}</a
+            <FaMapMarkedAlt />
+          </a>
+        {:else if $state.value === 'viewingStage' && selectedStage}
+          <button
+            type="button"
+            class="btn btn-icon p-2 flex-0"
+            on:click={viewMap}><IoMdArrowRoundBack /></button
           >
-        </h2>
-        <a
-          href={selectedStage.mapUrl}
-          class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
-        >
-          <FaMapMarkedAlt />
-        </a>
-      {:else if $state.value === 'viewingBand' && selectedBand}
-        <button
-          type="button"
-          class="btn btn-icon p-2 flex-0"
-          on:click={viewStage}><IoMdArrowRoundBack /></button
-        >
-        <h2 class="flex-1 text-right">
-          <a class="unstyled" href={selectedBand.url}>{selectedBand.name}</a>
-        </h2>
-        <a
-          class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
-          href={selectedBand.url}
-        >
-          <IoIosMusicalNotes />
-        </a>
-      {/if}
+          <h2 class="flex-1 text-right">
+            <a class="unstyled" href={selectedStage.mapUrl}
+              >{selectedStage.name}</a
+            >
+          </h2>
+          <a
+            href={selectedStage.mapUrl}
+            class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
+          >
+            <FaMapMarkedAlt />
+          </a>
+        {:else if $state.value === 'viewingBand' && selectedBand}
+          <button
+            type="button"
+            class="btn btn-icon p-2 flex-0"
+            on:click={viewStage}><IoMdArrowRoundBack /></button
+          >
+          <h2 class="flex-1 text-right">
+            <a class="unstyled" href={selectedBand.url}>{selectedBand.name}</a>
+          </h2>
+          <a
+            class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
+            href={selectedBand.url}
+          >
+            <IoIosMusicalNotes />
+          </a>
+        {/if}
+      </div>
     </div>
   </div>
   {#if $state.value === 'viewingMap'}

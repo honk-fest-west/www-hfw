@@ -28,7 +28,7 @@
   let slotTime: string;
 </script>
 
-<ListBox class="py-4 px-2 h-full" active="bg-surface-700">
+<ListBox class="py-4 px-2 h-full max-w-xl mx-auto" active="bg-surface-700">
   {#each schedule as timeSlot}
     <ListBoxItem
       bind:group={slotTime}

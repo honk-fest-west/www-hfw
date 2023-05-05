@@ -27,7 +27,9 @@
   };
 </script>
 
-<div class="btn-group flex justify-around variant-filled rounded-none">
+<div
+  class="btn-group flex justify-around variant-filled rounded-none max-w-2xl mx-auto"
+>
   <a href="/" class="flex-0">
     <img
       src={logoImg.src}
