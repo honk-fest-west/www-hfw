@@ -24,15 +24,15 @@ mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
 
 [valley]
 name = "Valley Stage"
-x = 416.0
-y = 1070.0
-mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
-
-[hill]
-name = "Hill Stage"
 x = 574.0
 y = 500.0
 mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
+
+[hill]
+name = "Hill Stage"
+x = 416.0
+y = 1070.0
+mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
 
 [gateway]
 name = "Gateway Stage"
