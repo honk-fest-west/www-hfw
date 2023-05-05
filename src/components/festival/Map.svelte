@@ -85,8 +85,7 @@
         bind:this={mapImgEl}
         transition:blur={{
           opacity: 100,
-          duration: 200,
-          easing: cubicOut,
+          duration: 300,
           amount: '1rem',
         }}
         class="w-full"
