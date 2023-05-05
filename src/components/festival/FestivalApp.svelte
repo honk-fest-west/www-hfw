@@ -22,7 +22,7 @@
   import StageList from './StageList.svelte';
   import Schedule from './Schedule.svelte';
 
-  export let schedule: Partial<ImportSchedule> = {};
+  export let schedule: ImportSchedule = { days: [] };
   export let stages: ImportStages = {};
   export let bands: ImportBands = {};
   export let logoImg: ImageMetadata;
@@ -100,10 +100,10 @@
       <div class="w-full text-center p-4">
         <span class="text-2xl text-on-surface-token">Stages</span>
       </div>
-      <StageList {dayStages} {selectedStageKey} on:selectStage={selectStage} />
-    {:else if $state.value === 'viewingBand'}
+      <StageList {dayStages} on:selectStage={selectStage} />
+    {:else if $state.value === 'viewingBand' && selectedBand}
       <Schedule
-        schedule={selectedBand?.scheduleByDay[selectedDayIdx]}
+        schedule={selectedBand.scheduleByDay[selectedDayIdx]}
         items={allStages}
         on:selectStage={selectStage}
       />
@@ -207,11 +207,7 @@
           }}
           class="p-4 bg-surface-900 hidden sm:block"
         >
-          <StageList
-            {dayStages}
-            {selectedStageKey}
-            on:selectStage={selectStage}
-          />
+          <StageList {dayStages} on:selectStage={selectStage} />
         </div>
       {/if}
     {/key}

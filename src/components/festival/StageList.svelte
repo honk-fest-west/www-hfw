@@ -2,7 +2,6 @@
   import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
   import { createEventDispatcher } from 'svelte';
 
-  export let selectedStageKey: string;
   export let dayStages: Array<Stage> = [];
 
   const dispatch = createEventDispatcher();
@@ -10,13 +9,15 @@
   const selectStage = (stageKey: string) => {
     dispatch('selectStage', stageKey);
   };
+
+  let stageKey: string;
 </script>
 
 <section>
   <ListBox rounded="rounded-lg">
     {#each dayStages as stage, idx}
       <ListBoxItem
-        bind:group={selectedStageKey}
+        bind:group={stageKey}
         on:click={() => selectStage(stage.key)}
         name="stage"
         value={stage.key}
