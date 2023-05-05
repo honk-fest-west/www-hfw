@@ -10,7 +10,6 @@
   let mapImgEl: HTMLImageElement;
   let mapImgWidth: number;
   let mapImgHeight: number;
-  let stagePinEl: HTMLSpanElement[] = Array<HTMLSpanElement>(stages.length);
 
   const dispatch = createEventDispatcher();
 
@@ -20,20 +19,11 @@
 
   function setPinCoordinates(
     mapEl: HTMLElement,
-    pinEls: HTMLElement[],
     mapImgWidth: number,
     mapImgHeight: number,
     stages: Stage[]
   ) {
-    if (
-      !(
-        mapEl &&
-        pinEls?.length &&
-        mapImgWidth &&
-        mapImgHeight &&
-        stages?.length
-      )
-    ) {
+    if (!(mapEl && mapImgWidth && mapImgHeight && stages?.length)) {
       return;
     }
 
@@ -72,13 +62,12 @@
       const left = parentCenterX + relativeX;
       const top = parentCenterY + relativeY;
 
-      const pinEl = pinEls[idx];
-      pinEl.style.left = `${left}px`;
-      pinEl.style.top = `${top}px`;
+      stage.pinEl && (stage.pinEl.style.left = `${left}px`);
+      stage.pinEl && (stage.pinEl.style.top = `${top}px`);
     });
   }
 
-  $: setPinCoordinates(mapImgEl, stagePinEl, mapImgWidth, mapImgHeight, stages);
+  $: setPinCoordinates(mapImgEl, mapImgWidth, mapImgHeight, stages);
 </script>
 
 <div
@@ -108,7 +97,7 @@
   {#each stages as stage, idx}
     <button
       class="absolute flex h-6 w-6"
-      bind:this={stagePinEl[idx]}
+      bind:this={stage.pinEl}
       on:click={() => selectStage(stage.key)}
     >
       <span

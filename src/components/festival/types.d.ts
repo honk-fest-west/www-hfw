@@ -18,9 +18,10 @@ declare interface Stage {
 	key: string;
 	name: string;
 	mapUrl: string;
+	schedule: Schedule
 	x: number;
 	y: number;
-	schedule: Schedule
+	pinEl: HTMLButtonElement | null;
 }
 
 declare interface Bands {

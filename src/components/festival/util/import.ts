@@ -43,6 +43,7 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 						key,
 						name: stage.name,
 						mapUrl: stage.mapUrl,
+						pinEl: null,
 						x: stage.x,
 						y: stage.y,
 						schedule: [],
