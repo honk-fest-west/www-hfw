@@ -26,6 +26,7 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 					date: new Date(Date.parse(`${day.date}T00:00`)),
 					location: day.location,
 					mapUrl: day.mapUrl,
+					coordinates: day.coordinates,
 					stageKeys: day.stages,
 					bandKeys:
 						Object

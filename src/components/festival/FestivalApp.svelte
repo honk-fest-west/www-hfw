@@ -48,6 +48,7 @@
     selectedDay?.stageKeys.map(
       (stageKey: string) => $state.context.stages[stageKey]
     ) || [];
+  $: dayCoordinates = selectedDay?.coordinates || [];
   $: selectedStageKey = $state.context.selectedStageKey;
   $: selectedStage = selectedStageKey
     ? $state.context.stages[selectedStageKey]
@@ -177,6 +178,7 @@
       <Map
         stages={dayStages}
         imageMetadata={mapImg}
+        coordinates={dayCoordinates}
         on:selectStage={selectStage}
       />
     </div>

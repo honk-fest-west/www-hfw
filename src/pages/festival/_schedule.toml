@@ -1,8 +1,12 @@
 [[days]]
 "date"	= "2023-06-02"
 "location" = "Georgetown"
-"mapUrl" = "https://goo.gl/maps/X1TwS4CkwqQyV1DUA"
+"mapUrl" = "https://goo.gl/maps/X1TwS4CkwqQyV1DUA" 
 "stages"= [ "jules", "coffee", "underpass", "artisan" ]
+[days.coordinates]
+"info" = [845.0,1040.0]
+"medic" = [845.0,1130.0]
+"potty" = [845.0,953.0]
 [days.schedule]
 "18:00" = [ "", "", "", "" ]
 "18:20" = [ "", "", "", "" ]
@@ -18,11 +22,16 @@
 "21:40" = [ "", "", "", "" ]
 "22:00" = [ "", "", "", "" ]
 
+
 [[days]]
 "date"	= "2023-06-03"
 "location" = "Columbia City"
 "stages"= [ "valley", "hill", "gateway", "rac" ]
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
+[days.coordinates]
+"info" = [480.0,1270.0]
+"medic" = [480.0,1180.0]
+"potty" = [410.0,1330.0]
 [days.schedule]
 "12:00" = [ "", "", "", "" ]
 "12:20" = [ "", "", "", "" ]
@@ -55,6 +64,10 @@
 "location" = "Yesler Terrace Park"
 "mapUrl" = "https://goo.gl/maps/Y2dD5U16Fqf4Fr6U8"
 "stages"= [ "upper", "lower" ]
+[days.coordinates]
+"info" = [963.0,540.0]
+"medic" = [875.0,561.0]
+"potty" = [1235.0,1031.0]
 [days.schedule]
 "12:00" = [ "", "" ]
 "12:20" = [ "", "" ]

@@ -1,24 +1,24 @@
 [jules]
 name = "Jules Maes"
-x = 888.0 
-y = 311.0
+x = 840.0 
+y = 280.0
 mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
 
 [coffee]
 name = "Coffee Stage"
-x = 950.0 
+x = 930.0 
 y = 835.0 
 mapUrl = "https://goo.gl/maps/chBYDyvhdpfS5CHf9"
 
 [underpass]
 name = "Overpass Stage"
-x = 955.0
+x = 920.0
 y = 1570.0
 mapUrl = "https://goo.gl/maps/A6gbnFzCF2YfHJsLA"
 
 [artisan]
 name = "Electric Stage"
-x = 236.0
+x = 220.0
 y = 787.0
 mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
 
@@ -30,20 +30,20 @@ mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
 
 [hill]
 name = "Hill Stage"
-x = 416.0
-y = 1070.0
+x = 385.0
+y = 1030.0
 mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
 
 [gateway]
 name = "Gateway Stage"
-x = 901.0
-y = 1470.0
+x = 870.0
+y = 1460.0
 mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
 
 [rac]
 name = "Rainier Arts Stage"
-x = 302.0
-y = 284.0
+x = 250.0
+y = 270.0
 mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
 
 [upper]

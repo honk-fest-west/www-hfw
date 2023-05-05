@@ -1,15 +1,20 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import { cubicOut } from 'svelte/easing';
   import { blur } from 'svelte/transition';
-  import { onMount } from 'svelte';
+  import FaInfo from 'svelte-icons/fa/FaInfo.svelte';
+  import FaBriefcaseMedical from 'svelte-icons/fa/FaBriefcaseMedical.svelte';
+  import FaRestroom from 'svelte-icons/fa/FaRestroom.svelte';
 
   export let stages: Stage[];
+  export let coordinates: Coordinates;
   export let imageMetadata: ImageMetadata;
 
   let mapImgEl: HTMLImageElement;
   let mapImgWidth: number;
   let mapImgHeight: number;
+  let infoPinEl: HTMLSpanElement;
+  let medicPinEl: HTMLSpanElement;
+  let pottyPinEl: HTMLSpanElement;
 
   const dispatch = createEventDispatcher();
 
@@ -21,26 +26,19 @@
     mapEl: HTMLElement,
     mapImgWidth: number,
     mapImgHeight: number,
-    stages: Stage[]
+    stages: Stage[],
+    other: Coordinates
   ) {
     if (!(mapEl && mapImgWidth && mapImgHeight && stages?.length)) {
       return;
     }
 
-    const rectPin = {
-      left: 950.0,
-      top: 835.0,
-      height: 12.0,
-      width: 12.0,
-    };
-
     const map = {
-      width: 1350.0,
-      height: 1800.0,
+      width: imageMetadata.width,
+      height: imageMetadata.height,
     };
 
     // Get the bounding client rect of element A and B
-
     const rectMap = mapEl.getBoundingClientRect();
 
     const widthQ = (rectMap.width * 1.0) / map.width;
@@ -65,9 +63,34 @@
       stage.pinEl && (stage.pinEl.style.left = `${left}px`);
       stage.pinEl && (stage.pinEl.style.top = `${top}px`);
     });
+
+    Object.entries(other).forEach(([key, [x, y]], idx) => {
+      const relativeX = (x - map.width / 2.0) * widthQ;
+      const relativeY = (y - map.height / 2.0) * heightQ;
+
+      const left = parentCenterX + relativeX;
+      const top = parentCenterY + relativeY;
+
+      if (key === 'info') {
+        infoPinEl && (infoPinEl.style.left = `${left}px`);
+        infoPinEl && (infoPinEl.style.top = `${top}px`);
+      } else if (key === 'medic') {
+        medicPinEl && (medicPinEl.style.left = `${left}px`);
+        medicPinEl && (medicPinEl.style.top = `${top}px`);
+      } else if (key === 'potty') {
+        pottyPinEl && (pottyPinEl.style.left = `${left}px`);
+        pottyPinEl && (pottyPinEl.style.top = `${top}px`);
+      }
+    });
   }
 
-  $: setPinCoordinates(mapImgEl, mapImgWidth, mapImgHeight, stages);
+  $: setPinCoordinates(
+    mapImgEl,
+    mapImgWidth,
+    mapImgHeight,
+    stages,
+    coordinates
+  );
 </script>
 
 <div
@@ -95,7 +118,7 @@
 
   {#each stages as stage, idx}
     <button
-      class="absolute flex h-6 w-6"
+      class="absolute flex h-8 w-8"
       bind:this={stage.pinEl}
       on:click={() => selectStage(stage.key)}
     >
@@ -104,9 +127,45 @@
       />
 
       <span
-        class="relative inline-flex h-6 w-6 bg-primary-500 text-md font-semibold text-on-surface-token justify-center"
+        class="relative inline-flex h-8 w-8 bg-primary-500 text-md font-semibold text-on-surface-token justify-center items-center"
         >{idx + 1}</span
       >
     </button>
   {/each}
+
+  <!-- Info Pin -->
+  <span
+    class="absolute flex h-7 w-7 justify-center items-center rounded-full overflow-hidden"
+    bind:this={infoPinEl}
+  >
+    <span class="absolute inline-flex h-full w-full bg-green-500" />
+    <span
+      class="relative inline-flex h-5 w-5 text-md font-semibold text-green-50 justify-center"
+      ><FaInfo /></span
+    >
+  </span>
+
+  <!-- Medic Pin -->
+  <span
+    class="absolute flex h-7 w-7 justify-center items-center rounded-t-lg overflow-hidden"
+    bind:this={medicPinEl}
+  >
+    <span class="absolute inline-flex h-full w-full bg-white" />
+    <span
+      class="relative inline-flex h-7 w-7 text-md font-semibold text-red-500 justify-center"
+      ><FaBriefcaseMedical /></span
+    >
+  </span>
+
+  <!-- Potty Pin -->
+  <span
+    class="absolute flex h-7 w-7 justify-center items-center rounded overflow-hidden"
+    bind:this={pottyPinEl}
+  >
+    <span class="absolute inline-flex h-full w-full bg-blue-500" />
+    <span
+      class="relative inline-flex h-5 w-5 bg-blue-500 text-md font-semibold text-blue-50 justify-center"
+      ><FaRestroom /></span
+    >
+  </span>
 </div>
