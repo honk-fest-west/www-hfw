@@ -17,8 +17,36 @@ Or
 
 ```
 npm install
-```
-
-```
 npm run dev
 ```
+
+## Content
+
+Below are links to content files in this repository. The live site will be updated once these files are modified and commited to the main git branch which triggers a rebuild of the entire site.
+
+### Home Page
+- [Slideshow](./src/pages/_slideshow.toml)
+
+### Festival App
+- [Bands](./src/pages/festival/_bands.toml)
+- [Stages](./src/pages/festival/_stages.toml)
+- [Schedule](./src/pages/festival/_schedule.toml)
+
+### About Page
+- [Contact us](./src/pages/about/_contact.toml)
+- [Committee](./src/pages/about/_committee.toml)
+- [HONK! Family](./src/pages/about/_family.toml)
+
+### Supporters Page
+- [Supporters](./src/pages/supporters/_supporters.toml)
+
+### Media Page
+- [Media Links](./src/pages/media/_media.toml)
+
+### Volunteer Page
+- [Volunteer Positions](./src/pages/volunteer/_positions.toml)
+
+### Layout
+- [Main Navigation](./src/layouts/_nav.toml)
+- [Social Media Links](./src/layouts/_social.toml)
+- [Footer Supporters](./src/layouts/_footer.toml )
