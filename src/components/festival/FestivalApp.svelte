@@ -33,12 +33,17 @@
   export let mapImgs: Array<ImageMetadata> = [];
   export let bandImgs: Array<ImageMetadata> = [];
 
-  const { pdays, pstages, pbands } = process(schedule, stages, bands, bandImgs);
+  const { pdays, pstages, pbands, pselectedDay } = process(
+    schedule,
+    stages,
+    bands,
+    bandImgs
+  );
   const initialContext: AppCtx = {
     days: pdays(),
     stages: pstages(),
     bands: pbands(),
-    selectedDayIdx: 0,
+    selectedDayIdx: pselectedDay(),
     selectedStageKey: null,
     selectedBandKey: null,
   };
@@ -70,8 +75,6 @@
   $: mapImg = mapImgs[selectedDayIdx];
 
   $: allBands = $state.context.bands;
-
-  $: console.log(selectedDay.bandKeys);
 
   const selectDay = (event: { detail: number }) => {
     send('SELECT_DAY', { dayIdx: event.detail });

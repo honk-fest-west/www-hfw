@@ -1,4 +1,5 @@
 import compact from 'just-compact';
+import { formatDate } from './dateFormat';
 
 export const process = (importSchedule: ImportSchedule, importStages: ImportStages, importBands: ImportBands, bandImgs: Array<ImageMetadata>) => {
 	function bandSchedule(bandKey: string): Schedule[] {
@@ -78,5 +79,16 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 				return acc;
 			}, {})
 		},
+
+		pselectedDay: (): number => {
+			const today = new Date().toLocaleDateString();
+
+			const initialDayIdx = importSchedule.days.findIndex((day) => {
+				const festivalDay = new Date(Date.parse(`${day.date}T00:00`)).toLocaleDateString();
+				return today === festivalDay;
+			})
+
+			return initialDayIdx > -1 ? initialDayIdx : 0;
+		}
 	}
 };

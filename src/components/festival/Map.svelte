@@ -27,7 +27,6 @@
   ) {
     if (!mapEl) return;
 
-    console.log('calculating');
     const map = {
       width: imageMetadata.width,
       height: imageMetadata.height,
