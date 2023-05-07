@@ -12,7 +12,7 @@
   };
 </script>
 
-<div class="grid grid-cols-2 gap-3">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
   {#each sortedBands as band}
     <button
       type="button"
@@ -22,7 +22,7 @@
       <div class="w-full rounded-xl overflow-hidden">
         {#if band.image}
           <img
-            class="w-full h-full"
+            class="w-full"
             src={band.image.src}
             alt={band.name}
             width={band.image.width}
@@ -31,7 +31,7 @@
         {/if}
       </div>
 
-      <span class="block">{band.name}</span>
+      <span class="block sm:text-2xl">{band.name}</span>
     </button>
   {/each}
 </div>

@@ -146,13 +146,13 @@
       >
         {#if $state.value === 'viewingMap'}
           <h2 class="text-right">
-            <a class="unstyled" href={selectedDay.mapUrl}
+            <a class="unstyled text-3xl" href={selectedDay.mapUrl}
               ><span class="">{selectedDay.location}</span></a
             >
           </h2>
           <a
             href={selectedDay.mapUrl}
-            class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
+            class="btn-icon bg-surface-600 p-2 mx-3 sm:mr-0 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
           >
             <FaMapMarkedAlt />
           </a>
@@ -163,13 +163,13 @@
             on:click={viewMap}><IoMdArrowRoundBack /></button
           >
           <h2 class="flex-1 text-right">
-            <a class="unstyled" href={selectedStage.mapUrl}
+            <a class="unstyled text-3xl" href={selectedStage.mapUrl}
               >{selectedStage.name}</a
             >
           </h2>
           <a
             href={selectedStage.mapUrl}
-            class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
+            class="btn-icon bg-surface-600 p-2 mx-3 sm:mr-0 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
           >
             <FaMapMarkedAlt />
           </a>
@@ -180,7 +180,9 @@
             on:click={viewStage}><IoMdArrowRoundBack /></button
           >
           <h2 class="flex-1 text-right">
-            <a class="unstyled" href={selectedBand.url}>{selectedBand.name}</a>
+            <a class="unstyled text-3xl" href={selectedBand.url}
+              >{selectedBand.name}</a
+            >
           </h2>
         {:else if $state.value === 'viewingBand' && selectedBand && !selectedStage}
           <button
@@ -189,7 +191,9 @@
             on:click={viewDayBands}><IoMdArrowRoundBack /></button
           >
           <h2 class="flex-1 text-right">
-            <a class="unstyled" href={selectedBand.url}>{selectedBand.name}</a>
+            <a class="unstyled text-3xl" href={selectedBand.url}
+              >{selectedBand.name}</a
+            >
           </h2>
         {:else if $state.value === 'viewingBands'}
           <button
@@ -198,7 +202,9 @@
             on:click={viewMap}><IoMdArrowRoundBack /></button
           >
           <h2 class="flex-1 text-right">
-            {formatLongDay(selectedDay.date)} Bands
+            <span class="text-3xl">
+              {formatLongDay(selectedDay.date)} Bands
+            </span>
           </h2>
         {/if}
       </div>
@@ -266,9 +272,29 @@
           class="p-4 bg-surface-900 hidden sm:block"
         >
           <StageList {dayStages} on:selectStage={selectStage} />
+
+          <hr class="mb-4 border-2 opacity-60 rounded" />
+
+          <button
+            type="button"
+            on:click={viewDayBands}
+            class="w-full border-2 border-surface-400 bg-surface-700 rounded-lg text-on-surface-token flex px-3 py-2 items-center gap-4"
+          >
+            <span class="w-6 h-6 bg-primary-500 p-1 rounded ml-1">
+              <FaDrum />
+            </span>
+            <span class="block text-xl">Bands</span>
+          </button>
         </div>
       {/if}
     {/key}
+    {#if $state.value === 'viewingBand' && selectedBand}
+      <Schedule
+        schedule={selectedBand.scheduleByDay[selectedDayIdx]}
+        items={allStages}
+        on:selectStage={selectStage}
+      />
+    {/if}
   </div>
 
   <div
