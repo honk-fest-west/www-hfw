@@ -20,4 +20,14 @@ export const actions = {
 			return evt.bandKey;
 		}
 	}),
+	clearStage: assign<AppCtx, AppEvt>({
+		selectedStageKey: () => {
+			return null;
+		}
+	}),
+	clearBand: assign<AppCtx, AppEvt>({
+		selectedBandKey: () => {
+			return null;
+		}
+	}),
 };

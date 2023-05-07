@@ -106,16 +106,16 @@
   <!-- Stage Pins -->
   {#each stages as stage, idx}
     <button
-      class="absolute flex h-8 w-8"
+      class="absolute flex h-8 w-8 rounded"
       bind:this={stage.pinEl}
       on:click={() => selectStage(stage.key)}
     >
       <span
-        class="animate-ping absolute inline-flex h-full w-full bg-primary-400 opacity-75"
+        class="animate-ping absolute inline-flex h-full w-full bg-primary-400 opacity-75 rounded"
       />
 
       <span
-        class="relative inline-flex h-8 w-8 bg-primary-500 text-md font-semibold text-on-surface-token justify-center items-center"
+        class="relative inline-flex h-8 w-8 bg-primary-500 text-md font-semibold text-on-surface-token justify-center items-center rounded"
         >{idx + 1}</span
       >
     </button>

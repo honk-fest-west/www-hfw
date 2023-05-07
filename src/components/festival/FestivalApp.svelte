@@ -6,21 +6,25 @@
   import '@skeletonlabs/skeleton/styles/all.css';
   import '@skeletonlabs/skeleton/themes/theme-modern.css';
 
-  import FaMapMarkedAlt from 'svelte-icons/fa/FaMapMarkedAlt.svelte';
-  import { slide, fade, fly } from 'svelte/transition';
+  import { slide, fade, fly, crossfade } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
-  import IoMdArrowRoundBack from 'svelte-icons/io/IoMdArrowRoundBack.svelte';
-  import IoIosMusicalNotes from 'svelte-icons/io/IoIosMusicalNotes.svelte';
-
   import { AppShell, Drawer, drawerStore } from '@skeletonlabs/skeleton';
   import { useMachine } from '@xstate/svelte';
+
+  import FaMapMarkedAlt from 'svelte-icons/fa/FaMapMarkedAlt.svelte';
+  import FaDrum from 'svelte-icons/fa/FaDrum.svelte';
+  import IoMdArrowRoundBack from 'svelte-icons/io/IoMdArrowRoundBack.svelte';
+  import FaMusic from 'svelte-icons/fa/FaMusic.svelte';
+
   import { appMachine, type AppCtx } from './machines/app.machine.js';
   import { process } from './util/import.js';
+  import { formatLongDay } from './util/dateFormat';
   import Map from './Map.svelte';
   import BandPage from './BandPage.svelte';
   import DaySelection from './DaySelection.svelte';
   import StageList from './StageList.svelte';
   import Schedule from './Schedule.svelte';
+  import Bands from './Bands.svelte';
 
   export let schedule: ImportSchedule = { days: [] };
   export let stages: ImportStages = {};
@@ -40,6 +44,8 @@
   };
   const { state, send } = useMachine(appMachine, { context: initialContext });
 
+  const [sendBandImg, receiveBandImg] = crossfade({});
+
   $: days = $state.context.days;
   $: allStages = $state.context.stages;
   $: selectedDayIdx = $state.context.selectedDayIdx;
@@ -47,6 +53,10 @@
   $: dayStages =
     selectedDay?.stageKeys.map(
       (stageKey: string) => $state.context.stages[stageKey]
+    ) || [];
+  $: dayBands =
+    selectedDay?.bandKeys.map(
+      (bandKey: string) => $state.context.bands[bandKey]
     ) || [];
   $: dayCoordinates = selectedDay?.coordinates || [];
   $: selectedStageKey = $state.context.selectedStageKey;
@@ -60,6 +70,8 @@
   $: mapImg = mapImgs[selectedDayIdx];
 
   $: allBands = $state.context.bands;
+
+  $: console.log(selectedDay.bandKeys);
 
   const selectDay = (event: { detail: number }) => {
     send('SELECT_DAY', { dayIdx: event.detail });
@@ -84,6 +96,10 @@
 
   const viewBandSchedule = () => {
     drawerStore.open();
+  };
+
+  const viewDayBands = () => {
+    send('VIEW_BANDS');
   };
 
   const viewDayStages = () => {
@@ -154,7 +170,7 @@
           >
             <FaMapMarkedAlt />
           </a>
-        {:else if $state.value === 'viewingBand' && selectedBand}
+        {:else if $state.value === 'viewingBand' && selectedBand && selectedStage}
           <button
             type="button"
             class="btn btn-icon p-2 flex-0"
@@ -163,12 +179,24 @@
           <h2 class="flex-1 text-right">
             <a class="unstyled" href={selectedBand.url}>{selectedBand.name}</a>
           </h2>
-          <a
-            class="btn-icon bg-surface-600 p-2 mx-3 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
-            href={selectedBand.url}
+        {:else if $state.value === 'viewingBand' && selectedBand && !selectedStage}
+          <button
+            type="button"
+            class="btn btn-icon p-2 flex-0"
+            on:click={viewDayBands}><IoMdArrowRoundBack /></button
           >
-            <IoIosMusicalNotes />
-          </a>
+          <h2 class="flex-1 text-right">
+            <a class="unstyled" href={selectedBand.url}>{selectedBand.name}</a>
+          </h2>
+        {:else if $state.value === 'viewingBands'}
+          <button
+            type="button"
+            class="btn btn-icon p-2 flex-0"
+            on:click={viewMap}><IoMdArrowRoundBack /></button
+          >
+          <h2 class="flex-1 text-right">
+            {formatLongDay(selectedDay.date)} Bands
+          </h2>
         {/if}
       </div>
     </div>
@@ -209,6 +237,17 @@
     >
       <BandPage band={selectedBand} />
     </div>
+  {:else if $state.value === 'viewingBands'}
+    <div
+      class="h-full p-3"
+      in:fade={{ duration: 200 }}
+      out:fly={{
+        x: $state.event?.type === 'SELECT_BAND' ? -200 : 200,
+        duration: 200,
+      }}
+    >
+      <Bands on:selectBand={selectBand} bands={dayBands} />
+    </div>
   {/if}
 
   <div slot="sidebarLeft">
@@ -229,17 +268,30 @@
     {/key}
   </div>
 
-  <div slot="footer" class="text-on-surface-token block sm:hidden">
+  <div
+    slot="footer"
+    class="text-on-surface-token flex gap-4 sm:hidden bg-surface-800 p-4"
+  >
     {#if $state.value === 'viewingMap'}
       <button
         type="button"
-        on:click={viewDayStages}
-        class="w-full text-center bg-surface-800 p-4"
+        on:click={viewDayBands}
+        class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
       >
-        <span
-          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded-xl"
-          >Stages</span
-        >
+        <span class="w-6 h-6 bg-primary-500 p-1 rounded">
+          <FaDrum />
+        </span>
+        <span class="block text-xl">Bands</span>
+      </button>
+      <button
+        type="button"
+        on:click={viewDayStages}
+        class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
+      >
+        <span class="w-6 h-6 bg-primary-500 p-1 rounded">
+          <FaMusic />
+        </span>
+        <span class="block text-xl">Stages</span>
       </button>
     {:else if $state.value === 'viewingBand' && selectedStage}
       <button

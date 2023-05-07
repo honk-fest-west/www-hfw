@@ -17,6 +17,7 @@ export type AppEvt =
 	| { type: "VIEW_MAP" }
 	| { type: "VIEW_STAGE" }
 	| { type: "VIEW_BAND" }
+	| { type: "VIEW_BANDS" }
 	;
 
 // const config: MachineConfig<AppCtx, any, AppEvt> = {
@@ -47,15 +48,15 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 					actions: "selectStage",
 					target: "viewingStage",
 				},
-				VIEW_BAND: {
-					target: "viewingBand"
+				VIEW_BANDS: {
+					target: "viewingBands"
 				}
 			},
 		},
 		viewingStage: {
 			on: {
 				SELECT_DAY: {
-					actions: "selectDay",
+					actions: ["selectDay", "clearStage"],
 					target: "viewingMap",
 				},
 				SELECT_BAND: {
@@ -63,6 +64,7 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 					target: "viewingBand",
 				},
 				VIEW_MAP: {
+					actions: "clearStage",
 					target: "viewingMap",
 				}
 			},
@@ -70,18 +72,37 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 		viewingBand: {
 			on: {
 				SELECT_DAY: {
-					actions: "selectDay",
+					actions: ["selectDay", "clearBand"],
 					target: "viewingMap"
-				},
-				VIEW_STAGE: {
-					target: "viewingStage",
 				},
 				SELECT_STAGE: {
 					actions: "selectStage",
 					target: "viewingStage"
-				}
+				},
+				VIEW_STAGE: {
+					actions: "clearBand",
+					target: "viewingStage",
+				},
+				VIEW_BANDS: {
+					actions: "clearBand",
+					target: "viewingBands"
+				},
 			},
 		},
+		viewingBands: {
+			on: {
+				SELECT_DAY: {
+					actions: "selectDay",
+				},
+				SELECT_BAND: {
+					actions: "selectBand",
+					target: "viewingBand"
+				},
+				VIEW_MAP: {
+					target: "viewingMap"
+				}
+			}
+		}
 	},
 }, {
 	actions

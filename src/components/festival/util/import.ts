@@ -1,3 +1,5 @@
+import compact from 'just-compact';
+
 export const process = (importSchedule: ImportSchedule, importStages: ImportStages, importBands: ImportBands, bandImgs: Array<ImageMetadata>) => {
 	function bandSchedule(bandKey: string): Schedule[] {
 		if (!importSchedule) return [];
@@ -29,10 +31,11 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 					coordinates: day.coordinates,
 					stageKeys: day.stages,
 					bandKeys:
-						Object
-							.values(day.schedule)
-							.flat()
-							.filter((key, idx, arr) => arr.indexOf(key) === idx)
+						compact(
+							Object
+								.values(day.schedule)
+								.flat()
+								.filter((key, idx, arr) => arr.indexOf(key) === idx))
 				}
 			));
 		},

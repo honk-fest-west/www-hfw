@@ -17,3 +17,18 @@ export function trimHours(timeString: string) {
 	}
 	return `${time} ${meridiem}`;
 }
+
+export function formatShortDay(date: Date) {
+	return date.toLocaleDateString('en-US', { weekday: 'short' });
+};
+
+export function formatLongDay(date: Date) {
+	return date.toLocaleDateString('en-US', { weekday: 'long' });
+};
+
+export const formatDate = (date: Date) => {
+	return date.toLocaleDateString('en-US', {
+		day: 'numeric',
+		month: 'numeric',
+	});
+};

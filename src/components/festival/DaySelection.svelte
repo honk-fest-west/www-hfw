@@ -1,5 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
+  import { formatShortDay, formatDate } from './util/dateFormat';
 
   export let selectedDayIdx: number;
   export let days: Array<Day>;
@@ -9,17 +10,6 @@
 
   const selectDayIdx = (idx: number) => {
     dispatch('selectDay', idx);
-  };
-
-  const formatDay = (date: Date) => {
-    return date.toLocaleDateString('en-US', { weekday: 'short' });
-  };
-
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-US', {
-      day: 'numeric',
-      month: 'numeric',
-    });
   };
 
   const selectedClass = (idx: number) => {
@@ -48,7 +38,7 @@
       on:click={() => selectDayIdx(idx)}
     >
       <span class="text-2xl sm:text-3xl capitalize block"
-        >{formatDay(day.date)}</span
+        >{formatShortDay(day.date)}</span
       >
       <span class="text-sm sm:text-lg block">{formatDate(day.date)}</span>
     </button>
