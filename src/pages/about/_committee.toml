@@ -75,6 +75,9 @@ name = 'Lizzy'
 [[groups."Event Production"]]
 role = 'Planning Lead'
 name = 'Firf'
+[[groups."Event Production"]]
+role = 'Med Ops'
+name = 'Grace'
 
 [[groups."Creative & Communications"]]
 role = "Newsletter"
@@ -88,6 +91,12 @@ name = "Susan"
 [[groups."Creative & Communications"]]
 role = "Art & Website"
 name = "Dwight"
+[[groups."Creative & Communications"]]
+role = "Social Media"
+name = "Andrea"
+[[groups."Creative & Communications"]]
+role = "PR/Media"
+name = "Leslie"
 
 [[groups."Fundraising"]]
 role = 'Grants'
@@ -95,6 +104,9 @@ name = 'Jeanette'
 [[groups."Fundraising"]]
 role = 'Sponsorship Coordinator'
 name = 'Nick'
+[[groups."Fundraising"]]
+role = 'Fundraising Events'
+name = 'Marisa'
 
 [[groups."Outreach"]]
 role = 'Outreach Lead'
