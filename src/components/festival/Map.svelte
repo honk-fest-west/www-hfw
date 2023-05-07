@@ -103,6 +103,7 @@
     </div>
   {/key}
 
+  <!-- Stage Pins -->
   {#each stages as stage, idx}
     <button
       class="absolute flex h-8 w-8"
@@ -122,36 +123,36 @@
 
   <!-- Info Pin -->
   <span
-    class="absolute flex h-7 w-7 justify-center items-center rounded-full overflow-hidden"
+    class="absolute flex h-6 w-6 justify-center items-center rounded-full overflow-hidden"
     bind:this={infoPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-green-500" />
     <span
-      class="relative inline-flex h-5 w-5 text-md font-semibold text-green-50 justify-center"
+      class="relative inline-flex h-4 w-4 text-md font-semibold text-green-50 justify-center"
       ><FaInfo /></span
     >
   </span>
 
   <!-- Medic Pin -->
   <span
-    class="absolute flex h-7 w-7 justify-center items-center rounded-t-lg overflow-hidden"
+    class="absolute flex h-6 w-6 justify-center items-center rounded-t-lg overflow-hidden"
     bind:this={medicPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-white" />
     <span
-      class="relative inline-flex h-7 w-7 text-md font-semibold text-red-500 justify-center"
+      class="relative inline-flex h-6 w-6 text-md font-semibold text-red-500 justify-center"
       ><FaBriefcaseMedical /></span
     >
   </span>
 
   <!-- Potty Pin -->
   <span
-    class="absolute flex h-7 w-7 justify-center items-center rounded overflow-hidden"
+    class="absolute flex h-6 w-6 justify-center items-center rounded overflow-hidden"
     bind:this={pottyPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-blue-500" />
     <span
-      class="relative inline-flex h-5 w-5 bg-blue-500 text-md font-semibold text-blue-50 justify-center"
+      class="relative inline-flex h-4 w-4 bg-blue-500 text-md font-semibold text-blue-50 justify-center"
       ><FaRestroom /></span
     >
   </span>
