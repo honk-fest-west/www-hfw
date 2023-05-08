@@ -105,7 +105,7 @@
   <!-- Stage Pins -->
   {#each stages as stage, idx}
     <button
-      class="absolute flex h-8 w-8 rounded"
+      class="absolute flex h-8 w-8 rounded shadow-lg"
       bind:this={stage.pinEl}
       on:click={() => selectStage(stage.key)}
     >
@@ -122,7 +122,7 @@
 
   <!-- Info Pin -->
   <span
-    class="absolute flex h-6 w-6 justify-center items-center rounded-full overflow-hidden"
+    class="absolute flex h-6 w-6 justify-center items-center rounded-full overflow-hidden shadow-lg"
     bind:this={infoPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-green-500" />
@@ -134,7 +134,7 @@
 
   <!-- Medic Pin -->
   <span
-    class="absolute flex h-6 w-6 justify-center items-center rounded-t-lg overflow-hidden"
+    class="absolute flex h-6 w-6 justify-center items-center rounded-t-lg overflow-hidden shadow-lg"
     bind:this={medicPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-white" />
@@ -146,7 +146,7 @@
 
   <!-- Potty Pin -->
   <span
-    class="absolute flex h-6 w-6 justify-center items-center rounded overflow-hidden"
+    class="absolute flex h-6 w-6 justify-center items-center rounded overflow-hidden shadow-lg"
     bind:this={pottyPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-blue-500" />

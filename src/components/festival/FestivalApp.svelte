@@ -141,7 +141,7 @@
         on:selectDay={selectDay}
       />
     {/key}
-    <div class="bg-primary-500">
+    <div class="bg-primary-500 border-primary-600 border-b-2 shadow-lg">
       <div
         class="flex justify-end px-3 py-2 gap-2 text-primary-50 font-bold items-center max-w-2xl mx-auto"
       >
@@ -305,7 +305,10 @@
     {/if}
   </div>
 
-  <div slot="footer" class="text-on-surface-token sm:hidden">
+  <div
+    slot="footer"
+    class="text-on-surface-token border-t-2 border-surface-700 sm:hidden"
+  >
     {#if $state.value === 'viewingMap' || $state.value === 'viewingStage'}
       <div class="flex gap-4 bg-surface-800 p-4">
         <button
