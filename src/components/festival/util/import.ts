@@ -27,6 +27,8 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 			return importSchedule.days.map((day) => (
 				{
 					date: new Date(Date.parse(`${day.date}T00:00`)),
+					startTime: day.startTime,
+					endTime: day.endTime,
 					location: day.location,
 					mapUrl: day.mapUrl,
 					coordinates: day.coordinates,

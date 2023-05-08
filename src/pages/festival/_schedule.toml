@@ -1,5 +1,7 @@
 [[days]]
 "date"	= "2023-06-02"
+"startTime" = "18:00"
+"endTime" = "22:00"
 "location" = "Georgetown"
 "mapUrl" = "https://goo.gl/maps/X1TwS4CkwqQyV1DUA" 
 "stages"= [ "jules", "coffee", "underpass", "artisan" ]
@@ -8,9 +10,9 @@
 "medic" = [845.0,1130.0]
 "potty" = [845.0,953.0]
 [days.schedule]
-"18:00" = [ "chaotic", "neon", "tmb", "analog" ]
-"18:20" = [ "chaotic", "neon", "filthy", "neighbors" ]
-"18:40" = [ "onelove", "seismic", "vamola", "kokontaiko" ]
+"18:00" = [ "", "", "", "" ]
+"18:20" = [ "", "", "", "" ]
+"18:40" = [ "", "", "", "" ]
 "19:00" = [ "", "", "", "" ]
 "19:20" = [ "", "", "", "" ]
 "19:40" = [ "", "", "", "" ]
@@ -20,11 +22,11 @@
 "21:00" = [ "", "", "", "" ]
 "21:20" = [ "", "", "", "" ]
 "21:40" = [ "", "", "", "" ]
-"22:00" = [ "", "", "", "" ]
-
 
 [[days]]
 "date"	= "2023-06-03"
+"startTime" = "12:00"
+"endTime" = "20:00"
 "location" = "Columbia City"
 "stages"= [ "valley", "hill", "gateway", "rac" ]
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
@@ -33,7 +35,7 @@
 "medic" = [480.0,1180.0]
 "potty" = [410.0,1330.0]
 [days.schedule]
-"12:00" = [ "artesian", "barque", "emporer", "" ]
+"12:00" = [ "", "", "", "" ]
 "12:20" = [ "", "", "", "" ]
 "12:40" = [ "", "", "", "" ]
 "13:00" = [ "", "", "", "" ]
@@ -57,10 +59,11 @@
 "19:00" = [ "", "", "", "" ]
 "19:20" = [ "", "", "", "" ]
 "19:40" = [ "", "", "", "" ]
-"20:00" = [ "", "", "", "" ]
 
 [[days]]
 "date"	= "2023-06-04"
+"startTime" = "12:00"
+"endTime" = "18:00"
 "location" = "Yesler Terrace Park"
 "mapUrl" = "https://goo.gl/maps/Y2dD5U16Fqf4Fr6U8"
 "stages"= [ "upper", "lower" ]
@@ -87,5 +90,4 @@
 "17:00" = [ "", "" ]
 "17:20" = [ "", "" ]
 "17:40" = [ "", "" ]
-"18:00" = [ "", "" ]
 

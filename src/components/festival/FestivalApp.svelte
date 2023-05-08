@@ -18,7 +18,7 @@
 
   import { appMachine, type AppCtx } from './machines/app.machine.js';
   import { process } from './util/import.js';
-  import { formatLongDay } from './util/dateFormat';
+  import { formatLongDay, timeRange } from './util/dateFormat';
   import Map from './Map.svelte';
   import BandPage from './BandPage.svelte';
   import DaySelection from './DaySelection.svelte';
@@ -146,9 +146,15 @@
       >
         {#if $state.value === 'viewingMap'}
           <h2 class="text-right">
-            <a class="unstyled text-3xl" href={selectedDay.mapUrl}
-              ><span class="">{selectedDay.location}</span></a
+            <a
+              class="unstyled flex flex-col items-end"
+              href={selectedDay.mapUrl}
             >
+              <span class="text-2xl">{selectedDay.location}</span>
+              <span class="text-lg"
+                >{timeRange(selectedDay.startTime, selectedDay.endTime)}
+              </span>
+            </a>
           </h2>
           <a
             href={selectedDay.mapUrl}
@@ -235,6 +241,7 @@
       <Schedule
         schedule={selectedStage.schedule}
         items={allBands}
+        smartMer={true}
         on:selectBand={selectBand}
       />
     </div>
@@ -248,7 +255,7 @@
     </div>
   {:else if $state.value === 'viewingBands'}
     <div
-      class="h-full p-3"
+      class="h-full p-4"
       in:fade={{ duration: 200 }}
       out:fly={{
         x: $state.event?.type === 'SELECT_BAND' ? -200 : 200,
@@ -259,7 +266,7 @@
     </div>
   {/if}
 
-  <div slot="sidebarLeft">
+  <div slot="sidebarLeft" class="hidden sm:block">
     {#key selectedStageKey}
       {#if $state.value === 'viewingMap'}
         <div
@@ -269,7 +276,7 @@
             easing: quintOut,
             axis: 'x',
           }}
-          class="p-4 bg-surface-900 hidden sm:block"
+          class="p-4 bg-surface-900"
         >
           <StageList {dayStages} on:selectStage={selectStage} />
 
@@ -297,42 +304,40 @@
     {/if}
   </div>
 
-  <div
-    slot="footer"
-    class="text-on-surface-token flex gap-4 sm:hidden bg-surface-800 p-4"
-  >
+  <div slot="footer" class="text-on-surface-token sm:hidden">
     {#if $state.value === 'viewingMap'}
-      <button
-        type="button"
-        on:click={viewDayBands}
-        class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
-      >
-        <span class="w-6 h-6 bg-primary-500 p-1 rounded">
-          <FaDrum />
-        </span>
-        <span class="block text-xl">Bands</span>
-      </button>
-      <button
-        type="button"
-        on:click={viewDayStages}
-        class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
-      >
-        <span class="w-6 h-6 bg-primary-500 p-1 rounded">
-          <FaMusic />
-        </span>
-        <span class="block text-xl">Stages</span>
-      </button>
-    {:else if $state.value === 'viewingBand' && selectedStage}
-      <button
-        type="button"
-        on:click={viewBandSchedule}
-        class="w-full text-center bg-surface-800 p-4"
-      >
-        <span
-          class="text-2xl text-on-surface-token border-2 border-surface-400 bg-surface-600 block rounded-xl"
-          >Schedule</span
+      <div class="flex gap-4 bg-surface-800 p-4">
+        <button
+          type="button"
+          on:click={viewDayBands}
+          class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
         >
-      </button>
+          <span class="w-6 h-6 bg-primary-500 p-1 rounded">
+            <FaDrum />
+          </span>
+          <span class="block text-xl">Bands</span>
+        </button>
+        <button
+          type="button"
+          on:click={viewDayStages}
+          class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
+        >
+          <span class="w-6 h-6 bg-primary-500 p-1 rounded">
+            <FaMusic />
+          </span>
+          <span class="block text-xl">Stages</span>
+        </button>
+      </div>
+    {:else if $state.value === 'viewingBand'}
+      <div class="flex gap-4 bg-surface-800 p-4">
+        <button
+          type="button"
+          on:click={viewBandSchedule}
+          class="w-full border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
+        >
+          <span class="block text-2xl">Schedule</span>
+        </button>
+      </div>
     {/if}
   </div>
 </AppShell>

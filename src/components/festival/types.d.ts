@@ -4,12 +4,13 @@ declare type Days = Array<Day>
 
 declare interface Day {
 	date: Date
+	startTime: string;
+	endTime: string;
 	location: string
 	mapUrl: string
 	stageKeys: Array<string>
 	bandKeys: Array<string>
 	coordinates: Coordinates
-
 }
 
 declare interface Coordinates {
@@ -75,6 +76,8 @@ declare interface ImportBands {
 declare interface ImportSchedule {
 	days: Array<{
 		date: string;
+		startTime: string;
+		endTime: string;
 		location: string;
 		mapUrl: string;
 		stages: Array<string>;

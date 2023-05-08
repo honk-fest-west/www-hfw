@@ -5,6 +5,7 @@
 
   export let schedule: Schedule;
   export let items: Bands | Stages;
+  export let smartMer: boolean = false;
 
   const dispatch = createEventDispatcher();
 
@@ -42,7 +43,7 @@
         class="text-xl font-medium block text-right flex-none text-surface-200"
         slot="lead"
       >
-        {shortTime(timeSlot.time)}
+        {shortTime(timeSlot.time, smartMer)}
       </span>
       {#if itemName(timeSlot)}
         <span

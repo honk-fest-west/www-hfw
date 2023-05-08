@@ -1,4 +1,4 @@
-export function shortTime(time: string): string {
+export function shortTime(time: string, smartMer: boolean = false): string {
 	const date = new Date(Date.parse('1970-01-01T' + time));
 
 	const formatted = date.toLocaleTimeString('en-US', {
@@ -6,16 +6,11 @@ export function shortTime(time: string): string {
 		minute: 'numeric',
 	});
 
-	return trimHours(formatted);
-}
+	let [hours, minutes, meridiem] = splitTime(formatted)
 
-export function trimHours(timeString: string) {
-	let [time, meridiem] = timeString.split(' ');
-	let [_, minutes] = time.split(':');
-	if (parseInt(minutes) > 0) {
-		meridiem = '';
-	}
-	return `${time} ${meridiem}`;
+	return smartMer
+		? `${hours}:${minutes} ${eitherGtZero(minutes, '', meridiem)}`
+		: `${hours}:${minutes} ${meridiem}`;
 }
 
 export function formatShortDay(date: Date) {
@@ -32,3 +27,33 @@ export const formatDate = (date: Date) => {
 		month: 'numeric',
 	});
 };
+
+export const timeRange = (from: string, to: string) => {
+	const fromDate = new Date(Date.parse('1970-01-01T' + from));
+	const toDate = new Date(Date.parse('1970-01-01T' + to));
+
+	const formattedFrom = fromDate.toLocaleTimeString('en-US', {
+		hour: 'numeric',
+		minute: 'numeric',
+	});
+	const formattedTo = toDate.toLocaleTimeString('en-US', {
+		hour: 'numeric',
+		minute: 'numeric',
+	});
+
+	let [hrFrom, minFrom, merFrom] = splitTime(formattedFrom)
+	let [hrTo, minTo, merTo] = splitTime(formattedTo)
+
+	return `${hrFrom}${eitherGtZero(minFrom, ':' + minFrom, '')} - ${hrTo}${eitherGtZero(minTo, ':' + minTo, '')}${merTo}`
+}
+
+function eitherGtZero(number: string, either: string, or: string): string {
+	return parseInt(number) > 0 ? either : or
+}
+
+function splitTime(timeString: string): [string, string, string] {
+	let [time, meridiem] = timeString.split(' ');
+	let [hours, minutes] = time.split(':');
+
+	return [hours, minutes, meridiem];
+}
