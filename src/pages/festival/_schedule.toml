@@ -2,6 +2,7 @@
 "date"	= "2023-06-02"
 "startTime" = "18:00"
 "endTime" = "22:00"
+"slotDuration" = 20
 "location" = "Georgetown"
 "mapUrl" = "https://goo.gl/maps/X1TwS4CkwqQyV1DUA" 
 "stages"= [ "jules", "coffee", "underpass", "artisan" ]
@@ -27,6 +28,7 @@
 "date"	= "2023-06-03"
 "startTime" = "12:00"
 "endTime" = "20:00"
+"slotDuration" = 20
 "location" = "Columbia City"
 "stages"= [ "valley", "hill", "gateway", "rac" ]
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
@@ -64,6 +66,7 @@
 "date"	= "2023-06-04"
 "startTime" = "12:00"
 "endTime" = "18:00"
+"slotDuration" = 20
 "location" = "Yesler Terrace Park"
 "mapUrl" = "https://goo.gl/maps/Y2dD5U16Fqf4Fr6U8"
 "stages"= [ "upper", "lower" ]

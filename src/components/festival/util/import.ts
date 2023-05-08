@@ -10,7 +10,7 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 				bandKeys.forEach((key, idx) => {
 					if (bandKey === key) {
 						schedule.push({
-							time,
+							time: new Date(Date.parse(`${day.date}T${time}`)),
 							stageKey: day.stages[idx]
 						});
 					}
@@ -27,8 +27,9 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 			return importSchedule.days.map((day) => (
 				{
 					date: new Date(Date.parse(`${day.date}T00:00`)),
-					startTime: day.startTime,
-					endTime: day.endTime,
+					startTime: new Date(Date.parse(`${day.date}T${day.startTime}`)),
+					endTime: new Date(Date.parse(`${day.date}T${day.endTime}`)),
+					slotDuration: day.slotDuration,
 					location: day.location,
 					mapUrl: day.mapUrl,
 					coordinates: day.coordinates,
@@ -65,7 +66,10 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 					stages[stageKey].schedule =
 						Object.entries(day.schedule).map(([time, bandKeys]) => {
 							const bandKey = bandKeys[idx];
-							return { time, bandKey };
+							return {
+								time: new Date(Date.parse(`${day.date}T${time}`)),
+								bandKey
+							};
 						});
 				});
 			});

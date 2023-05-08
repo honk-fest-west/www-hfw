@@ -124,6 +124,7 @@
       <StageList {dayStages} on:selectStage={selectStage} />
     {:else if $state.value === 'viewingBand' && selectedBand}
       <Schedule
+        day={selectedDay}
         schedule={selectedBand.scheduleByDay[selectedDayIdx]}
         items={allStages}
         on:selectStage={selectStage}
@@ -240,6 +241,7 @@
       }}
     >
       <Schedule
+        day={selectedDay}
         schedule={selectedStage.schedule}
         items={allBands}
         smartMer={true}
@@ -298,6 +300,7 @@
     {/key}
     {#if $state.value === 'viewingBand' && selectedBand}
       <Schedule
+        day={selectedDay}
         schedule={selectedBand.scheduleByDay[selectedDayIdx]}
         items={allStages}
         on:selectStage={selectStage}
@@ -345,3 +348,9 @@
     {/if}
   </div>
 </AppShell>
+
+<style>
+  :root {
+    --theme-rounded-base: 0.75rem;
+  }
+</style>

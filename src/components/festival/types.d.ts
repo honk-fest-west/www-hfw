@@ -4,8 +4,9 @@ declare type Days = Array<Day>
 
 declare interface Day {
 	date: Date
-	startTime: string;
-	endTime: string;
+	startTime: Date;
+	endTime: Date;
+	slotDuration: number;
 	location: string
 	mapUrl: string
 	stageKeys: Array<string>
@@ -49,7 +50,7 @@ declare interface Band {
 declare type Schedule = Array<TimeSlot>
 
 declare interface TimeSlot {
-	time: string;
+	time: Date;
 	bandKey?: string;
 	stageKey?: string;
 }
@@ -78,6 +79,7 @@ declare interface ImportSchedule {
 		date: string;
 		startTime: string;
 		endTime: string;
+		slotDuration: number;
 		location: string;
 		mapUrl: string;
 		stages: Array<string>;
