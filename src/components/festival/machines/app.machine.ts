@@ -59,7 +59,7 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 		viewingStage: {
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "clearStage", "animateBack"],
+					actions: ["selectDay", "clearStage", "animateBackward"],
 					target: "viewingMap",
 				},
 				SELECT_BAND: {
@@ -67,7 +67,7 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 					target: "viewingBand",
 				},
 				VIEW_MAP: {
-					actions: ["clearStage", "animateBack"],
+					actions: ["clearStage", "animateBackward"],
 					target: "viewingMap",
 				},
 				SELECT_STAGE: {
@@ -83,15 +83,15 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 		viewingBand: {
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "clearBand", "animateBack"],
+					actions: ["selectDay", "clearBand", "animateBackward"],
 					target: "viewingMap"
 				},
 				SELECT_STAGE: {
-					actions: ["selectStage", "animateBack"],
+					actions: ["selectStage", "animateBackward"],
 					target: "viewingStage"
 				},
 				VIEW_STAGE: {
-					actions: ["clearBand", "animateBack"],
+					actions: ["clearBand", "animateBackward"],
 					target: "viewingStage",
 				},
 				VIEW_BANDS: {
@@ -103,7 +103,8 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 		viewingBands: {
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "animateForward"]
+					actions: ["selectDay", "animateForward"],
+					target: "viewingMap"
 				},
 				SELECT_BAND: {
 					actions: ["selectBand", "animateBackward"],

@@ -31,7 +31,7 @@ export const actions = {
 			return null;
 		}
 	}),
-	animateBack: assign<AppCtx, AppEvt>({
+	animateBackward: assign<AppCtx, AppEvt>({
 		flyX: (ctx: AppCtx) => {
 			return ctx.flyX > 0
 				? ctx.flyX

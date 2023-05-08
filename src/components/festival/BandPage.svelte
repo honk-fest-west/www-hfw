@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-col my-4 sm:my-8 gap-3 items-center px-4">
-  <div class="w-52 rounded-xl overflow-hidden">
+  <a href={band.url} class="block w-52 rounded-xl overflow-hidden">
     {#if band.image}
       <img
         class="w-full h-full"
@@ -13,10 +13,7 @@
         height={band.image.height}
       />
     {/if}
-  </div>
-  <h3 class="text-center text-2xl text-on-surface-token">
-    {band.location}
-  </h3>
+  </a>
   <p class="max-w-xl">{band.description}</p>
 
   <a
