@@ -118,9 +118,9 @@
 <Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
   <div class="pb-4 px-4">
     {#if $state.value === 'viewingMap' || $state.value === 'viewingStage'}
-      <div class="w-full text-center p-4">
+      <button on:click={hideDayStages} class="w-full text-center p-4">
         <span class="text-2xl text-on-surface-token">Stages</span>
-      </div>
+      </button>
       <StageList {dayStages} on:selectStage={selectStage} />
     {:else if $state.value === 'viewingBand' && selectedBand}
       <Schedule
