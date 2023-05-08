@@ -202,7 +202,7 @@
             >
           </h2>
         {:else if $state.value === 'viewingBands'}
-          <h2 class="flex-1 text-left">
+          <h2 class="flex-1 text-left ml-2">
             <span class="text-2xl block">
               {formatLongDay(selectedDay.date)} Bands
             </span>

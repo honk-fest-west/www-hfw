@@ -12,6 +12,10 @@
   };
 </script>
 
+{#if bands.length === 0}
+  <p class="unstyled text-center text-2xl mt-6">Coming Soon</p>
+{/if}
+
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
   {#each sortedBands as band}
     <button
