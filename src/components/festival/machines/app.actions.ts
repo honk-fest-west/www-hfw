@@ -1,5 +1,6 @@
 import { assign } from 'xstate';
 import type { AppCtx, AppEvt } from './app.machine.js'
+import { claim_text } from 'svelte/internal';
 
 export const actions = {
 	selectDay: assign<AppCtx, AppEvt>({
@@ -28,6 +29,20 @@ export const actions = {
 	clearBand: assign<AppCtx, AppEvt>({
 		selectedBandKey: () => {
 			return null;
+		}
+	}),
+	animateBack: assign<AppCtx, AppEvt>({
+		flyX: (ctx: AppCtx) => {
+			return ctx.flyX > 0
+				? ctx.flyX
+				: ctx.flyX * -1
+		}
+	}),
+	animateForward: assign<AppCtx, AppEvt>({
+		flyX: (ctx: AppCtx) => {
+			return ctx.flyX > 0
+				? ctx.flyX * -1
+				: ctx.flyX
 		}
 	}),
 };

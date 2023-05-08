@@ -46,6 +46,7 @@
     selectedDayIdx: pselectedDay(),
     selectedStageKey: null,
     selectedBandKey: null,
+    flyX: 200,
   };
   const { state, send } = useMachine(appMachine, { context: initialContext });
 
@@ -116,7 +117,7 @@
 
 <Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
   <div class="pb-4 px-4">
-    {#if $state.value === 'viewingMap'}
+    {#if $state.value === 'viewingMap' || $state.value === 'viewingStage'}
       <div class="w-full text-center p-4">
         <span class="text-2xl text-on-surface-token">Stages</span>
       </div>
@@ -202,16 +203,16 @@
             >
           </h2>
         {:else if $state.value === 'viewingBands'}
-          <button
-            type="button"
-            class="btn btn-icon p-2 flex-0"
-            on:click={viewMap}><IoMdArrowRoundBack /></button
-          >
-          <h2 class="flex-1 text-right">
+          <h2 class="flex-1 text-left">
             <span class="text-3xl">
               {formatLongDay(selectedDay.date)} Bands
             </span>
           </h2>
+          <button
+            type="button"
+            class="btn btn-icon p-2 flex-0 rotate-180"
+            on:click={viewMap}><IoMdArrowRoundBack /></button
+          >
         {/if}
       </div>
     </div>
@@ -219,7 +220,7 @@
   {#if $state.value === 'viewingMap'}
     <div
       class="h-full"
-      out:fly={{ x: -200, duration: 200 }}
+      out:fly={{ x: $state.context.flyX, duration: 200 }}
       in:fade={{ duration: 200 }}
     >
       <Map
@@ -234,7 +235,7 @@
       class="h-full"
       in:fade={{ duration: 200 }}
       out:fly={{
-        x: $state.event?.type === 'SELECT_BAND' ? -200 : 200,
+        x: $state.context.flyX,
         duration: 200,
       }}
     >
@@ -249,7 +250,7 @@
     <div
       class="h-full"
       in:fade={{ duration: 200 }}
-      out:fly={{ x: 200, duration: 200 }}
+      out:fly={{ x: $state.context.flyX, duration: 200 }}
     >
       <BandPage band={selectedBand} />
     </div>
@@ -258,7 +259,7 @@
       class="h-full p-4"
       in:fade={{ duration: 200 }}
       out:fly={{
-        x: $state.event?.type === 'SELECT_BAND' ? -200 : 200,
+        x: $state.context.flyX,
         duration: 200,
       }}
     >
@@ -305,7 +306,7 @@
   </div>
 
   <div slot="footer" class="text-on-surface-token sm:hidden">
-    {#if $state.value === 'viewingMap'}
+    {#if $state.value === 'viewingMap' || $state.value === 'viewingStage'}
       <div class="flex gap-4 bg-surface-800 p-4">
         <button
           type="button"

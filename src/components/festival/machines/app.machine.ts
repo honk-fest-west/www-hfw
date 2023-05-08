@@ -8,6 +8,7 @@ export type AppCtx = {
 	selectedDayIdx: number;
 	selectedStageKey: string | null;
 	selectedBandKey: string | null;
+	flyX: number;
 }
 
 export type AppEvt =
@@ -37,6 +38,7 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 		selectedDayIdx: 0,
 		selectedStageKey: null,
 		selectedBandKey: null,
+		flyX: 0
 	},
 	states: {
 		viewingMap: {
@@ -45,10 +47,11 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 					actions: "selectDay",
 				},
 				SELECT_STAGE: {
-					actions: "selectStage",
+					actions: ["selectStage", "animateForward"],
 					target: "viewingStage",
 				},
 				VIEW_BANDS: {
+					actions: ["animateBackward"],
 					target: "viewingBands"
 				}
 			},
@@ -56,35 +59,43 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 		viewingStage: {
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "clearStage"],
+					actions: ["selectDay", "clearStage", "animateBack"],
 					target: "viewingMap",
 				},
 				SELECT_BAND: {
-					actions: "selectBand",
+					actions: ["selectBand", "animateForward"],
 					target: "viewingBand",
 				},
 				VIEW_MAP: {
-					actions: "clearStage",
+					actions: ["clearStage", "animateBack"],
 					target: "viewingMap",
+				},
+				SELECT_STAGE: {
+					actions: "selectStage",
+					target: "viewingStage",
+				},
+				VIEW_BANDS: {
+					actions: "animateBackward",
+					target: "viewingBands"
 				}
 			},
 		},
 		viewingBand: {
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "clearBand"],
+					actions: ["selectDay", "clearBand", "animateBack"],
 					target: "viewingMap"
 				},
 				SELECT_STAGE: {
-					actions: "selectStage",
+					actions: ["selectStage", "animateBack"],
 					target: "viewingStage"
 				},
 				VIEW_STAGE: {
-					actions: "clearBand",
+					actions: ["clearBand", "animateBack"],
 					target: "viewingStage",
 				},
 				VIEW_BANDS: {
-					actions: "clearBand",
+					actions: ["clearBand", "animateForward"],
 					target: "viewingBands"
 				},
 			},
@@ -92,13 +103,14 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 		viewingBands: {
 			on: {
 				SELECT_DAY: {
-					actions: "selectDay",
+					actions: ["selectDay", "animateForward"]
 				},
 				SELECT_BAND: {
-					actions: "selectBand",
+					actions: ["selectBand", "animateBackward"],
 					target: "viewingBand"
 				},
 				VIEW_MAP: {
+					actions: "animateForward",
 					target: "viewingMap"
 				}
 			}
