@@ -18,9 +18,9 @@
 </script>
 
 <div
-  class="btn-group flex justify-around variant-filled rounded-none max-w-2xl mx-auto"
+  class="flex justify-around variant-filled rounded-none max-w-2xl mx-auto divide-x-2 divide-surface-800 items-center"
 >
-  <a href="/" class="flex-0">
+  <a href="/" class="flex-0 px-3 py-2 sm:px-4">
     <img
       src={logoImg.src}
       width={logoImg.width}
@@ -34,7 +34,7 @@
       type="button"
       class={`w-full flex-1 ${selectedClass(
         idx
-      )} flex flex-col items-center justify-center`}
+      )} flex flex-col items-center justify-center py-5 px-4`}
       on:click={() => selectDayIdx(idx)}
     >
       <span class="text-2xl sm:text-3xl capitalize block"

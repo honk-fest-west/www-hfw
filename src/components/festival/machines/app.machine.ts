@@ -75,7 +75,7 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 					target: "viewingStage",
 				},
 				VIEW_BANDS: {
-					actions: "animateBackward",
+					actions: ["animateBackward", "clearStage"],
 					target: "viewingBands"
 				}
 			},

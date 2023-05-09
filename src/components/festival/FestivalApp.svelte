@@ -116,11 +116,8 @@
 </script>
 
 <Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
-  <div class="pb-4 px-4">
+  <div class="py-5 px-6">
     {#if $state.value === 'viewingMap' || $state.value === 'viewingStage'}
-      <button on:click={hideDayStages} class="w-full text-center p-4">
-        <span class="text-2xl text-on-surface-token">Stages</span>
-      </button>
       <StageList {dayStages} on:selectStage={selectStage} />
     {:else if $state.value === 'viewingBand' && selectedBand}
       <Schedule
@@ -195,7 +192,7 @@
           >
             <IoMdArrowRoundBack />
           </button>
-          <h2 class="flex-1 text-right">
+          <h2 class="flex-1 text-right mr-5">
             <a class="unstyled" href={selectedBand.url}>
               <span class="text-2xl block">{selectedBand.name}</span>
               <span class="text-lg block">{selectedBand.location}</span></a
@@ -233,7 +230,7 @@
     </div>
   {:else if $state.value === 'viewingStage' && selectedStage}
     <div
-      class="h-full"
+      class="h-full px-3 py-3"
       in:fade={{ duration: 200 }}
       out:fly={{
         x: $state.context.flyX,
@@ -351,6 +348,6 @@
 
 <style>
   :root {
-    --theme-rounded-base: 0.75rem;
+    --theme-rounded-base: 0.25rem;
   }
 </style>
