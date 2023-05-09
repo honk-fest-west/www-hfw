@@ -39,10 +39,10 @@ export const timeRange = (from: Date, to: Date) => {
 	let [hrFrom, minFrom, _] = splitTime(formattedFrom)
 	let [hrTo, minTo, merTo] = splitTime(formattedTo)
 
-	return `${hrFrom}${eitherGtZero(minFrom, ':' + minFrom, '')} - ${hrTo}${eitherGtZero(minTo, ':' + minTo, '')}${merTo}`
+	return `${hrFrom}${eitherGtZero(minFrom, ':' + minFrom)} - ${hrTo}${eitherGtZero(minTo, ':' + minTo)} ${merTo}`
 }
 
-function eitherGtZero(number: string, either: string, or: string): string {
+function eitherGtZero(number: string, either: string = '', or: string = ''): string {
 	return parseInt(number) > 0 ? either : or
 }
 
