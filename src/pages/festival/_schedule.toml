@@ -30,7 +30,7 @@
 "endTime" = "20:00"
 "slotDuration" = 20
 "location" = "Columbia City"
-"stages"= [ "valley", "hill", "gateway", "rac" ]
+"stages"= [ "rac", "valley", "hill", "gateway" ]
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
 [days.coordinates]
 "info" = [480.0,1270.0]

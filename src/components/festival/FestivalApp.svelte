@@ -6,7 +6,7 @@
   import '@skeletonlabs/skeleton/styles/all.css';
   import '@skeletonlabs/skeleton/themes/theme-modern.css';
 
-  import { slide, fade, fly, crossfade } from 'svelte/transition';
+  import { slide, fade, fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   import { AppShell, Drawer, drawerStore } from '@skeletonlabs/skeleton';
   import { useMachine } from '@xstate/svelte';
@@ -50,8 +50,6 @@
   };
   const { state, send } = useMachine(appMachine, { context: initialContext });
 
-  const [sendBandImg, receiveBandImg] = crossfade({});
-
   $: days = $state.context.days;
   $: allStages = $state.context.stages;
   $: selectedDayIdx = $state.context.selectedDayIdx;
@@ -64,7 +62,6 @@
     selectedDay?.bandKeys.map(
       (bandKey: string) => $state.context.bands[bandKey]
     ) || [];
-  $: dayCoordinates = selectedDay?.coordinates || [];
   $: selectedStageKey = $state.context.selectedStageKey;
   $: selectedStage = selectedStageKey
     ? $state.context.stages[selectedStageKey]
@@ -73,7 +70,6 @@
   $: selectedBand = selectedBandKey
     ? $state.context.bands[selectedBandKey]
     : null;
-  $: mapImg = mapImgs[selectedDayIdx];
 
   $: allBands = $state.context.bands;
 
@@ -221,12 +217,16 @@
       out:fly={{ x: $state.context.flyX, duration: 200 }}
       in:fade={{ duration: 200 }}
     >
-      <Map
-        stages={dayStages}
-        imageMetadata={mapImg}
-        coordinates={dayCoordinates}
-        on:selectStage={selectStage}
-      />
+      {#each days as day, idx}
+        {#if idx === selectedDayIdx}
+          <Map
+            stages={day.stageKeys.map((key) => allStages[key])}
+            imageMetadata={mapImgs[idx]}
+            coordinates={day.coordinates}
+            on:selectStage={selectStage}
+          />
+        {/if}
+      {/each}
     </div>
   {:else if $state.value === 'viewingStage' && selectedStage}
     <div

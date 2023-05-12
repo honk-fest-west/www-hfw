@@ -20,11 +20,11 @@
     dispatch('selectStage', stageKey);
   };
 
-  function setPinCoordinates(
+  const setPinCoordinates = (
     mapEl: HTMLElement,
     stages: Stage[],
     other: Coordinates
-  ) {
+  ) => {
     if (!mapEl) return;
 
     const map = {
@@ -72,7 +72,7 @@
         pottyPinEl && (pottyPinEl.style.top = `${top}px`);
       }
     });
-  }
+  };
 
   $: setPinCoordinates(mapImgEl, stages, coordinates);
 </script>
@@ -84,23 +84,21 @@
 <div
   class="w-full h-full overflow-auto grid place-content-center relative sm:bg-surface-700"
 >
-  {#key imageMetadata}
-    <div class="absolute h-fit w-full sm:max-w-xl">
-      <img
-        src={imageMetadata.src}
-        width={imageMetadata.width}
-        height={imageMetadata.height}
-        alt="festival map"
-        class="w-full"
-        bind:this={mapImgEl}
-        transition:blur={{
-          opacity: 100,
-          duration: 400,
-          amount: '1rem',
-        }}
-      />
-    </div>
-  {/key}
+  <div class="absolute h-fit w-full sm:max-w-xl">
+    <img
+      src={imageMetadata.src}
+      width={imageMetadata.width}
+      height={imageMetadata.height}
+      alt="festival map"
+      class="w-full"
+      bind:this={mapImgEl}
+      transition:blur={{
+        opacity: 100,
+        duration: 200,
+        amount: '1rem',
+      }}
+    />
+  </div>
 
   <!-- Stage Pins -->
   {#each stages as stage, idx}
