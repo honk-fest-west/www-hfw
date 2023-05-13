@@ -10,7 +10,7 @@
   export let imageMetadata: ImageMetadata;
   export let day: Day;
 
-  let mapImgEl: HTMLImageElement;
+  let mapImgEl: HTMLElement;
   let infoPinEl: HTMLSpanElement;
   let medicPinEl: HTMLSpanElement;
   let pottyPinEl: HTMLSpanElement;
@@ -38,7 +38,7 @@
       : '';
   };
 
-  const setPinCoordinates = (
+  const setPinCoordinates = async (
     mapEl: HTMLElement,
     stages: Stage[],
     other: Coordinates
@@ -51,7 +51,9 @@
     };
 
     // Get the bounding client rect of element A and B
+    await new Promise((r) => setTimeout(r, 100));
     const rectMap = mapEl.getBoundingClientRect();
+    console.log({ width: rectMap.width, height: rectMap.height });
     const widthQ = (rectMap.width * 1.0) / map.width;
     const heightQ = (rectMap.height * 1.0) / map.height;
 
