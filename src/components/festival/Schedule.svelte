@@ -2,7 +2,6 @@
   import { createEventDispatcher } from 'svelte';
   import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
   import { shortTime } from './util/dateFormat';
-  import { t } from 'xstate';
 
   export let schedule: Schedule;
   export let day: Day;
@@ -29,7 +28,7 @@
   };
 
   const currentTime = new Date();
-  $: nowPlaying = schedule.find((timeSlot, idx) => {
+  $: nowPlaying = schedule.find((timeSlot) => {
     const timeSlotEnd = new Date(
       timeSlot.time.getTime() + day.slotDuration * 60000
     );

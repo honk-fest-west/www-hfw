@@ -8,6 +8,7 @@
   export let stages: Stage[];
   export let coordinates: Coordinates;
   export let imageMetadata: ImageMetadata;
+  export let day: Day;
 
   let mapImgEl: HTMLImageElement;
   let infoPinEl: HTMLSpanElement;
@@ -18,6 +19,23 @@
 
   const selectStage = (stageKey: string) => {
     dispatch('selectStage', stageKey);
+  };
+
+  $: animatePing = (stageKey: string) => {
+    const currentTime = new Date();
+    const stage = stages.find((stage) => stage.key === stageKey);
+    return stage?.schedule.find((timeSlot) => {
+      const timeSlotEnd = new Date(
+        timeSlot.time.getTime() + day.slotDuration * 60000
+      );
+      return (
+        currentTime >= timeSlot.time &&
+        currentTime <= timeSlotEnd &&
+        (timeSlot.bandKey?.length || 0) > 0
+      );
+    })
+      ? 'animate-ping'
+      : '';
   };
 
   const setPinCoordinates = (
@@ -108,7 +126,9 @@
       on:click={() => selectStage(stage.key)}
     >
       <span
-        class="animate-ping absolute inline-flex h-full w-full bg-primary-400 opacity-75 rounded"
+        class={`absolute inline-flex h-full w-full bg-primary-400 opacity-75 rounded ${animatePing(
+          stage.key
+        )}`}
       />
 
       <span

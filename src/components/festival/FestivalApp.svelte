@@ -26,6 +26,7 @@
   import Schedule from './Schedule.svelte';
   import Bands from './Bands.svelte';
 
+  // Data Location: www-hfw/src/pages/festival/*.toml
   export let schedule: ImportSchedule = { days: [] };
   export let stages: ImportStages = {};
   export let bands: ImportBands = {};
@@ -104,10 +105,6 @@
 
   const viewDayStages = () => {
     drawerStore.open();
-  };
-
-  const hideDayStages = () => {
-    drawerStore.close();
   };
 </script>
 
@@ -220,6 +217,7 @@
       {#each days as day, idx}
         {#if idx === selectedDayIdx}
           <Map
+            {day}
             stages={day.stageKeys.map((key) => allStages[key])}
             imageMetadata={mapImgs[idx]}
             coordinates={day.coordinates}
