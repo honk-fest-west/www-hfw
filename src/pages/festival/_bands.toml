@@ -65,7 +65,7 @@ url = "https://www.facebook.com/Brasscadia/"
 description = "Brasscadia is based in Bellingham Washington. We play New Orleans style jazz, as well as brassy twists on old favorites, and international anthems."
 
 [brasscals]
-name = "Brasscals"
+name = "Brasscals!"
 location = "Santa Barbara County, CA"
 url = "https://brasscals.weebly.com/"
 description = "A street band made up of people from all around Santa Barbara County who play various brass, woodwind, percussion, and rhythm instruments."
@@ -181,7 +181,7 @@ description = ""
 
 [neighbors]
 name = "LOUD Neighbors"
-location = ""
+location = "Arcata, CA"
 url = "https://www.facebook.com/loud.neighbors.brass/"
 description = "When a Loud Neighbor extends a tiny hand, don't be afraid to shake it!"
 
@@ -221,6 +221,12 @@ location = "Seattle, WA"
 url = "http://marcsmason.com/ensembles.html"
 description = "An engaging street band - tuba, horns & percussion - playing music of planet earth at community events, concerts, festivals, rallies, parades, parties and anywhere!"
 
+[queens]
+name = "Queens of HONK!"
+location = "Everywhere"
+url = "http://www.honkfest.org.au/queens-of-honk.html"
+description = "Queens of HONK! is meant as an active and open invitation to ALL and especially minority and underrepresented populations in the HONK! community."
+
 [reigncity]
 name = "Reign City Riot"
 location = "Seattle, WA"
@@ -259,7 +265,7 @@ description = ""
 
 [jambalaya]
 name = "Soul Jambalaya"
-location = ""
+location = "Seattle, WA"
 url = ""
 description = ""
 
@@ -294,8 +300,8 @@ url = "https://tmbbrass.bandcamp.com/"
 description = "Wherever they go, Seattle-based TMB Brass creates a New Orleans-style dance party!"
 
 [unexpected]
-name = "Unexpected Brass Band"
-location = "Port Townsand, WA"
+name = "the UNEXPECTED BRASS BAND"
+location = "Port Townsend, WA"
 url = "https://www.facebook.com/The-Unexpected-Brass-Band-957531164311787/"
 description = "How can we describe the mystery? Why would we describe the mystery?"
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, onMount } from 'svelte';
   import { blur } from 'svelte/transition';
   import FaInfo from 'svelte-icons/fa/FaInfo.svelte';
   import FaBriefcaseMedical from 'svelte-icons/fa/FaBriefcaseMedical.svelte';
@@ -53,7 +53,6 @@
     // Get the bounding client rect of element A and B
     await new Promise((r) => setTimeout(r, 100));
     const rectMap = mapEl.getBoundingClientRect();
-    console.log({ width: rectMap.width, height: rectMap.height });
     const widthQ = (rectMap.width * 1.0) / map.width;
     const heightQ = (rectMap.height * 1.0) / map.height;
 
