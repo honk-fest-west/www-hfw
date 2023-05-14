@@ -107,8 +107,8 @@ image_ratio = '3:1'
 name = 'Artisan Electric'
 footer = false
 url = 'https://artisanelectricinc.com/about/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/artisan_XLqUZo47h.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515857'
-image_ratio = '4:1'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/artisan_27p_gurW6.png?updatedAt=1684089172752'
+image_ratio = '1072:415'
 
 [[shout_out]]
 name = 'Secret Aardvark'
