@@ -15,6 +15,7 @@
   import FaDrum from 'svelte-icons/fa/FaDrum.svelte';
   import IoMdArrowRoundBack from 'svelte-icons/io/IoMdArrowRoundBack.svelte';
   import FaMusic from 'svelte-icons/fa/FaMusic.svelte';
+  import FaQuestion from 'svelte-icons/fa/FaQuestion.svelte';
 
   import { appMachine, type AppCtx } from './machines/app.machine.js';
   import { process } from './util/import.js';
@@ -25,6 +26,7 @@
   import StageList from './StageList.svelte';
   import Schedule from './Schedule.svelte';
   import Bands from './Bands.svelte';
+  import Info from './Info.svelte';
 
   // Data Location: www-hfw/src/pages/festival/*.toml
   export let schedule: ImportSchedule = { days: [] };
@@ -50,6 +52,8 @@
     flyX: 200,
   };
   const { state, send } = useMachine(appMachine, { context: initialContext });
+
+  let drawerView: 'stages' | 'info' = 'stages';
 
   $: days = $state.context.days;
   $: allStages = $state.context.stages;
@@ -104,14 +108,22 @@
   };
 
   const viewDayStages = () => {
+    drawerView = 'stages';
+    drawerStore.open();
+  };
+
+  const viewInfo = () => {
+    drawerView = 'info';
     drawerStore.open();
   };
 </script>
 
 <Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
   <div class="py-5 px-6">
-    {#if $state.value === 'viewingMap' || $state.value === 'viewingStage'}
+    {#if ($state.value === 'viewingMap' || $state.value === 'viewingStage') && drawerView === 'stages'}
       <StageList {dayStages} on:selectStage={selectStage} />
+    {:else if ($state.value === 'viewingMap' || $state.value === 'viewingStage') && drawerView === 'info'}
+      <Info />
     {:else if $state.value === 'viewingBand' && selectedBand}
       <Schedule
         day={selectedDay}
@@ -290,6 +302,10 @@
             </span>
             <span class="block text-xl">Bands</span>
           </button>
+
+          <hr class="mb-4 border-2 opacity-60 rounded mt-4" />
+
+          <Info />
         </div>
       {/if}
     {/key}
@@ -309,6 +325,13 @@
   >
     {#if $state.value === 'viewingMap' || $state.value === 'viewingStage'}
       <div class="flex gap-4 bg-surface-800 p-4">
+        <button
+          type="button"
+          on:click={viewInfo}
+          class="border-2 border-surface-400 bg-primary-500 rounded-xl text-on-surface-token px-1 py-2 w-10"
+        >
+          <FaQuestion />
+        </button>
         <button
           type="button"
           on:click={viewDayBands}
