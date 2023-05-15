@@ -21,7 +21,7 @@
       >
         <a
           href={nav.link}
-          class="unstyled text-xl text-surface-50 hover:text-on-surface-token"
+          class="unstyled text-xl text-surface-50 hover:text-on-surface-token w-full block"
           >{nav.name}</a
         >
       </ListBoxItem>
