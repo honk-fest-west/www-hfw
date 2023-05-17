@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { fade, fly } from 'svelte/transition';
-  export let nav, currentMenuItem;
+  import { fly } from 'svelte/transition';
+  import SocialLink from '@components/SocialLink.svelte';
+  export let nav, social, currentMenuItem;
 
   const activeListItem = (link: string) => {
     return link === currentMenuItem?.link
@@ -10,12 +11,6 @@
 
   const pageName = currentMenuItem?.name;
   let menuOpen = false;
-
-  const handleOutsideClick = (event) => {
-    if (!event.target.closest('#mobile-menu')) {
-      menuOpen = false;
-    }
-  };
 </script>
 
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -96,23 +91,15 @@
         </li>
       {/each}
 
-      <!-- SOCIAL NAV -->
-      <!-- <li
-      class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
-    >
-      {
-        Object.keys(social.links).map((key) => (
+      <li class="text-2xl text-cobalt flex justify-center">
+        {#each Object.keys(social.links) as key}
           <div>
-            <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
-              <SocialLinks key={key} link={social.links[key]} size="1.875rem" />
-            </div>
-            <div class="block sm:hidden px-1 h-7">
-              <SocialLinks key={key} link={social.links[key]} size="1.5rem" />
+            <div class="block px-3 h-7">
+              <SocialLink {key} link={social.links[key]} size="1.875rem" />
             </div>
           </div>
-        ))
-      }
-    </li> -->
+        {/each}
+      </li>
     </ul>
   </div>
 {/if}

@@ -1,5 +1,5 @@
 ---
-import SocialLinks from '@components/SocialLinks.astro';
+import SocialLink from '@components/SocialLink.svelte';
 import { Image } from '@astrojs/image/components';
 import GoldenDino from './GoldenDino.svelte';
 
@@ -63,7 +63,7 @@ const { supporters, social } = Astro.props;
       {
         Object.keys(social.links).map((key) => (
           <li class="text-cobalt">
-            <SocialLinks key={key} link={social.links[key]} size="1.25rem" />
+            <SocialLink key={key} link={social.links[key]} size="1.25rem" />
           </li>
         ))
       }

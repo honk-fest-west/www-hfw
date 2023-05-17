@@ -25,28 +25,36 @@ npm run dev
 Below are links to content files in this repository. The live site will be updated once these files are modified and commited to the main git branch which triggers a rebuild of the entire site.
 
 ### Home Page
-- [Slideshow](./src/pages/_slideshow.toml)
+- [Slideshow](./src/data/slideshow.toml)
 
-### Festival App
-- [Bands](./src/pages/festival/_bands.toml)
-- [Stages](./src/pages/festival/_stages.toml)
-- [Schedule](./src/pages/festival/_schedule.toml)
-
-### About Page
-- [Contact us](./src/pages/about/_contact.toml)
-- [Committee](./src/pages/about/_committee.toml)
-- [HONK! Family](./src/pages/about/_family.toml)
-
-### Supporters Page
-- [Supporters](./src/pages/supporters/_supporters.toml)
-
-### Media Page
-- [Media Links](./src/pages/media/_media.toml)
+### Festival Page
+- [Bands](./src/data/bands.toml)
+- [Stages](./src/data/stages.toml)
+- [Schedule](./src/data/schedule.toml)
 
 ### Volunteer Page
-- [Volunteer Positions](./src/pages/volunteer/_positions.toml)
+- [Volunteer Positions](./src/pages/volunteer/positions.toml)
+
+### Supporters Page
+- [Supporters](./src/data/_supporters.toml)
+
+### Donate Page
+- [Info](./src/data/donate_info.md)
+
+### Media Page
+- [Media Links](./src/data/media.toml)
+- [Articles](./src/data/articles.md)
+
+### About Page
+- [Mission](./src/data/mission.md)
+- [Contact us](./src/data/contact.toml)
+- [Our Story](./src/data/story.md)
+- [Diversity](./src/data/diversity.md)
+- [Join Us!](./src/data/diversity.md)
+- [Committee](./src/data/committee.toml)
+- [HONK! Family](./src/data/family.toml)
 
 ### Layout
-- [Main Navigation](./src/layouts/_nav.toml)
-- [Social Media Links](./src/layouts/_social.toml)
-- [Footer Supporters](./src/layouts/_footer.toml )
+- [Main Navigation](./src/data/nav.toml)
+- [Social Media Links](./src/data/social.toml)
+- [Footer Supporters](./src/data/footer.toml )

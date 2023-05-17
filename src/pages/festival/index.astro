@@ -2,9 +2,9 @@
 import Head from '@components/base-head/BaseHead.astro';
 import FestivalApp from '@components/festival/FestivalApp.svelte';
 
-import schedule from './_schedule.toml';
-import bands from './_bands.toml';
-import stages from './_stages.toml';
+import schedule from '@data/schedule.toml';
+import bands from '@data/bands.toml';
+import stages from '@data/stages.toml';
 import logoImg from '/src/images/logos/2023-logo-white.png';
 
 const mapImgs = await Astro.glob('/src/images/map/*').then((files) =>

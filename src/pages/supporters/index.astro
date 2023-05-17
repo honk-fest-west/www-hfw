@@ -4,8 +4,7 @@ import { Image } from '@astrojs/image/components';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
-import supporters from './_supporters.toml'
-
+import supporters from '@data/supporters.toml';
 ---
 
 <BaseLayout title="Supporters">
@@ -67,8 +66,9 @@ import supporters from './_supporters.toml'
           <span>
             This project is supported in part by the
             <a href="{supporters.grant[0].url}">{supporters.grant[0].name}</a> the
-            <a href="{supporters.grant[1].url}">{supporters.grant[1].name}</a>, 
-            <a href="{supporters.grant[2].url}">{supporters.grant[2].name}</a>, and
+            <a href="{supporters.grant[1].url}">{supporters.grant[1].name}</a>,
+            <a href="{supporters.grant[2].url}">{supporters.grant[2].name}</a>,
+            and
             <a href="{supporters.grant[3].url}">{supporters.grant[3].name}</a>.
           </span>
           <span
