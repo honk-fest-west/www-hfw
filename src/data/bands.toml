@@ -34,7 +34,7 @@ location = "Seattle, WA"
 url = "https://www.ballardperformingarts.org/"
 description = ""
 
-[barque]
+[baque]
 name = "Baque Maré"
 location = "Seattle, WA"
 url = "https://www.facebook.com/baquemareseattle/"
@@ -209,6 +209,12 @@ location = "Seattle, WA"
 url = "https://www.neonbrassparty.com/"
 description = "We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music."
 
+[redalert]
+name = "Red Alert"
+location = "Seattle, WA"
+url = "https://www.nhl.com/kraken/fans/game-presentation"
+description = "Introducing Red Alert, the Kraken Marching band, led by Liz Harris Scruggs. Look out for this 32-member band at the Armory and on the plaza pre-game and in the arena during the game as they help us rock the rink."
+
 [step]
 name = "Northside Step Team"
 location = "Seattle, WA"
@@ -239,13 +245,13 @@ location = "Seattle, WA"
 url = "https://riseupactionband.com/"
 description = ""
 
-[kokontaiko]
+[kokon]
 name = "Seattle Kokon Taiko"
 location = "Seattle, WA"
 url = "https://seattlekokontaiko.org/"
 description = "Whether dancing at a festival, praying in a temple, watching a theater performance or fighting a battle, the sound of the taiko could be heard as part of everyday Japanese life for hundreds, perhaps thousands, of years."
 
-[seattleunivdrum]
+[seattleu]
 name = "Seattle University Drumline"
 location = "Seattle, WA"
 url = "https://goseattleu.com/sports/2020/1/15/drumline.aspx"
@@ -270,7 +276,7 @@ url = ""
 description = ""
 
 [soundwave]
-name = "Soundwave"
+name = "Sound Wave"
 location = "Seattle, WA"
 url = "https://www.soundersfc.com/matchday/sound-wave"
 description = "Sound Wave is the official band of Seattle Sounders FC. In 2009, minority owner Drew Carey conceptualized an ensemble made up of traditional marching percussion and brass instruments to bring the spirit of Sounders FC to life. "
@@ -316,3 +322,9 @@ name = "Window Smashing Job Creators"
 location = "Olympia, WA"
 url = "https://thewindowsmashingjobcreators.bandcamp.com/"
 description = "Friendly neighborhood anarchist communist jazz klezmer folk punk band"
+
+[jules]
+name = "After Party"
+location = "Jules Maes"
+url = "https://www.julesmaessaloon.com/"
+description = "JAM led by Filthy FemCorps"

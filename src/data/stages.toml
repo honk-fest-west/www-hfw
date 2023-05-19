@@ -4,19 +4,25 @@ x = 840.0
 y = 280.0
 mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
 
+[julesparking]
+name = "Jules Maes Parking Lot"
+x = 780.0
+y = 280.0
+mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
+
 [coffee]
 name = "Coffee Stage"
 x = 930.0 
 y = 835.0 
 mapUrl = "https://goo.gl/maps/chBYDyvhdpfS5CHf9"
 
-[underpass]
+[overpass]
 name = "Overpass Stage"
 x = 920.0
 y = 1570.0
 mapUrl = "https://goo.gl/maps/A6gbnFzCF2YfHJsLA"
 
-[artisan]
+[electric]
 name = "Electric Stage"
 x = 220.0
 y = 787.0
@@ -46,13 +52,13 @@ x = 250.0
 y = 270.0
 mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
 
-[upper]
+[spray]
 name = "Spray Stage"
 x = 1175.0
 y = 735.0
 mapUrl = "https://goo.gl/maps/SuYFTkq48jrPhs5Y8"
 
-[lower]
+[lawn]
 name = "Lawn Stage"
 x = 170.0
 y = 1000.0
