@@ -120,9 +120,9 @@
 
 <Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
   <div class="py-5 px-6">
-    {#if ($state.value === 'viewingMap' || $state.value === 'viewingStage') && drawerView === 'stages'}
+    {#if drawerView === 'stages' && ($state.value === 'viewingMap' || $state.value === 'viewingStage')}
       <StageList {dayStages} on:selectStage={selectStage} />
-    {:else if ($state.value === 'viewingMap' || $state.value === 'viewingStage') && drawerView === 'info'}
+    {:else if drawerView === 'info' && ($state.value === 'viewingMap' || $state.value === 'viewingStage')}
       <Info />
     {:else if $state.value === 'viewingBand' && selectedBand}
       <Schedule
@@ -291,6 +291,8 @@
           <StageList {dayStages} on:selectStage={selectStage} />
 
           <hr class="mb-4 border-2 opacity-60 rounded" />
+          <hr class="mb-4 border-2 opacity-60 rounded" />
+          <hr class="mb-4 border-2 opacity-60 rounded" />
 
           <button
             type="button"
@@ -302,10 +304,6 @@
             </span>
             <span class="block text-xl">Bands</span>
           </button>
-
-          <hr class="mb-4 border-2 opacity-60 rounded mt-4" />
-
-          <Info />
         </div>
       {/if}
     {/key}
