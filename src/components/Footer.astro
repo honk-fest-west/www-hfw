@@ -2,6 +2,12 @@
 import SocialLink from '@components/SocialLink.svelte';
 import { Image } from '@astrojs/image/components';
 import GoldenDino from './GoldenDino.svelte';
+import type { Supporter, Social } from 'src/env';
+
+interface Props {
+  supporters: Array<Supporter>;
+  social: Social;
+}
 
 const { supporters, social } = Astro.props;
 ---
@@ -33,7 +39,7 @@ const { supporters, social } = Astro.props;
                   <Image
                     src={supporter.image_url}
                     alt={supporter.name}
-                    height="60"
+                    height={60}
                     aspectRatio={supporter.image_ratio}
                     class="rounded"
                     format="png"

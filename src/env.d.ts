@@ -1,2 +1,29 @@
 // Replace `astro/client` with `@astrojs/image/client`
 /// <reference types="@astrojs/image/client" />
+
+export interface Nav {
+	links: Array<NavLink>
+}
+
+export interface NavLink {
+	name: string;
+	link: string;
+}
+
+export interface Social {
+	links: { [key: string]: string }
+}
+
+export interface Supporters {
+	art: Array<Supporter>
+	grant: Array<Supporter>
+	shout_out: Array<Supporter>
+}
+
+export interface Supporter {
+	name: string
+	footer: boolean
+	url: string
+	image_url: string
+	image_ratio: `${number}:${number}`
+}

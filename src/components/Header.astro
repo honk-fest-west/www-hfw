@@ -2,7 +2,12 @@
 import { Image } from '@astrojs/image/components';
 import SocialLink from '@components/SocialLink.svelte';
 import MobileMenu from '@components/MobileMenu.svelte';
+import type { Nav, Social } from 'src/env';
 
+interface Props {
+  nav: Nav;
+  social: Social;
+}
 const { nav, social } = Astro.props;
 
 const currentMenuItem = nav.links.find((item) =>
@@ -29,7 +34,7 @@ const activeListItem = (link: string) => {
         src="https://ik.imagekit.io/thegoldendino/hfw/2023/logo-2023_zZNEDpiqu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668291679349"
         alt="HONK! Fest West"
         format="png"
-        width="557"
+        width={557}
         aspectRatio="427:199"
         class="w-auto mx-auto hover:transition ease-in hover:scale-105"
       />

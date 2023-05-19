@@ -1,7 +1,10 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
   import SocialLink from '@components/SocialLink.svelte';
-  export let nav, social, currentMenuItem;
+  import type { Nav, Social, NavLink } from 'src/env';
+  export let nav: Nav;
+  export let social: Social;
+  export let currentMenuItem: NavLink;
 
   const activeListItem = (link: string) => {
     return link === currentMenuItem?.link

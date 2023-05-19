@@ -1,6 +1,10 @@
 ---
 import Title from '@components/Title.astro';
 
+interface Props {
+  title: string;
+  href: string;
+}
 const { title = '', href = '#' } = Astro.props;
 ---
 
