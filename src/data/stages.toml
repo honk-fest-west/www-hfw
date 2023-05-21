@@ -4,12 +4,6 @@ x = 840.0
 y = 280.0
 mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
 
-[julesparking]
-name = "Jules Maes Parking Lot"
-x = 720.0
-y = 250.0
-mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
-
 [coffee]
 name = "Coffee Stage"
 x = 930.0 
