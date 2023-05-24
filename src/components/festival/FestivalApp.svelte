@@ -19,7 +19,7 @@
 
   import { appMachine, type AppCtx } from './machines/app.machine.js';
   import { process } from './util/import.js';
-  import { formatLongDay, timeRange } from './util/dateFormat';
+  import { formatLongDay, formatShortDay, timeRange } from './util/dateFormat';
   import Map from './Map.svelte';
   import BandPage from './BandPage.svelte';
   import DaySelection from './DaySelection.svelte';
@@ -290,9 +290,31 @@
         >
           <StageList {dayStages} on:selectStage={selectStage} />
 
-          <hr class="mb-4 border-2 opacity-60 rounded" />
-          <hr class="mb-4 border-2 opacity-60 rounded" />
-          <hr class="mb-4 border-2 opacity-60 rounded" />
+          <div class="w-full flex flex-col items-center justify-center mb-4">
+            <span class="text-surface-50 font-bold text-lg block mb-2"
+              >All ages, Free festival</span
+            >
+            <a
+              href="/donate"
+              class="unstyled text-surface-200 underline text-xs hover:text-primary-400 mb-2 block"
+              >Donate</a
+            >
+            <a
+              href="/volunteer"
+              class="unstyled text-surface-200 underline text-xs hover:text-primary-400 mb-2 block"
+              >Volunteer</a
+            >
+            <a
+              href="/supporters"
+              class="unstyled text-surface-200 underline text-xs hover:text-primary-400 mb-2 block"
+              >Supporters</a
+            >
+            <a
+              href="/about"
+              class="unstyled text-surface-200 underline text-xs hover:text-primary-400 block"
+              >About</a
+            >
+          </div>
 
           <button
             type="button"
@@ -302,7 +324,9 @@
             <span class="w-6 h-6 bg-primary-500 p-1 rounded ml-1">
               <FaDrum />
             </span>
-            <span class="block text-xl">Bands</span>
+            <span class="block text-xl"
+              >{formatLongDay(selectedDay.date)} Bands</span
+            >
           </button>
         </div>
       {/if}
