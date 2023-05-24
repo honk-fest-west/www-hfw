@@ -291,8 +291,8 @@
           <StageList {dayStages} on:selectStage={selectStage} />
 
           <div class="w-full flex flex-col items-center justify-center mb-4">
-            <span class="text-surface-50 font-bold text-lg block mb-2"
-              >All ages, Free festival</span
+            <span class="text-surface-50 text-lg block mb-2 w-56 text-center"
+              >Free Celebration of Music and Community</span
             >
             <a
               href="/donate"

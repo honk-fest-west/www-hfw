@@ -11,6 +11,9 @@
 </script>
 
 <section>
+  <span class="text-surface-50 text-2xl block mb-4 w-full text-center"
+    >Free Celebration of Music and Community</span
+  >
   <ListBox rounded="rounded-lg">
     {#each infoNav as nav}
       <ListBoxItem
