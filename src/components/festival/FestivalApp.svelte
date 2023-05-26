@@ -375,7 +375,7 @@
           <span class="block text-xl">Stages</span>
         </button>
       </div>
-    {:else if $state.value === 'viewingBand'}
+    {:else if $state.value === 'viewingBand' && selectedBand?.scheduleByDay[selectedDayIdx].length}
       <div class="flex gap-4 bg-surface-800 p-4">
         <button
           type="button"
