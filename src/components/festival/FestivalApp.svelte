@@ -63,10 +63,9 @@
     selectedDay?.stageKeys.map(
       (stageKey: string) => $state.context.stages[stageKey]
     ) || [];
-  $: dayBands =
-    selectedDay?.bandKeys.map(
-      (bandKey: string) => $state.context.bands[bandKey]
-    ) || [];
+  $: dayBands = [...selectedDay?.bandKeys, ...selectedDay?.allDayKeys].map(
+    (bandKey: string) => $state.context.bands[bandKey]
+  );
   $: selectedStageKey = $state.context.selectedStageKey;
   $: selectedStage = selectedStageKey
     ? $state.context.stages[selectedStageKey]
@@ -253,6 +252,7 @@
         items={allBands}
         smartMer={true}
         on:selectBand={selectBand}
+        on:selectPerformer={selectBand}
       />
     </div>
   {:else if $state.value === 'viewingBand' && selectedBand}

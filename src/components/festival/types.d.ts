@@ -11,6 +11,7 @@ declare interface Day {
 	mapUrl: string
 	stageKeys: Array<string>
 	bandKeys: Array<string>
+	allDayKeys: Array<string>
 	coordinates: Coordinates
 }
 
@@ -87,6 +88,9 @@ declare interface ImportSchedule {
 		schedule: {
 			[time: string]: Array<string>;
 		};
+		allday: {
+			[type: string]: Array<string>;
+		}
 	}>;
 }
 

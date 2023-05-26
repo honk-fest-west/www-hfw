@@ -1,5 +1,4 @@
 import compact from 'just-compact';
-import { formatDate } from './dateFormat';
 
 export const process = (importSchedule: ImportSchedule, importStages: ImportStages, importBands: ImportBands, bandImgs: Array<ImageMetadata>) => {
 	function bandSchedule(bandKey: string): Schedule[] {
@@ -39,7 +38,15 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 							Object
 								.values(day.schedule)
 								.flat()
-								.filter((key, idx, arr) => arr.indexOf(key) === idx))
+								.filter((key, idx, arr) => arr.indexOf(key) === idx),
+						),
+					allDayKeys:
+						compact(
+							Object
+								.values(day.allday)
+								.flat()
+								.filter((key, idx, arr) => arr.indexOf(key) === idx),
+						)
 				}
 			));
 		},
@@ -95,6 +102,6 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 			})
 
 			return initialDayIdx > -1 ? initialDayIdx : 0;
-		}
+		},
 	}
 };

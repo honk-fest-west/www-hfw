@@ -179,6 +179,12 @@ location = "Los Angeles, CA"
 url = "https://labamba.lahonk.org/"
 description = ""
 
+[lovett]
+name = "Lovett Arts"
+location = "Seattle, WA"
+url = "https://www.lovettarts.com/"
+description = "Puppet Performance. Beautifully crafted giant puppets are lightweight and articulated, illuminated - engineered to be easy to move for creative play. Available for Events."
+
 [neighbors]
 name = "LOUD Neighbors"
 location = "Arcata, CA"
@@ -328,3 +334,9 @@ name = "After Party"
 location = "Jules Maes"
 url = "https://www.julesmaessaloon.com/"
 description = "JAM led by Filthy FemCorps"
+
+[westcas]
+name = "West Cascade Puppet Brigade"
+location = "Seattle, WA"
+url = "https://www.facebook.com/PuppetBrigade/"
+description = "Puppet Performance. West Cascade Puppet Brigade presents new tellings of ancient fairy & folk tales."
