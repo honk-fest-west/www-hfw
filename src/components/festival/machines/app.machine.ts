@@ -81,6 +81,7 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 			},
 		},
 		viewingBand: {
+			entry: "scrollToTop",
 			on: {
 				SELECT_DAY: {
 					actions: ["selectDay", "clearBand", "animateBackward"],

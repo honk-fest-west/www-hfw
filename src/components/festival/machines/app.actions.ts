@@ -45,4 +45,7 @@ export const actions = {
 				: ctx.flyX
 		}
 	}),
+	scrollToTop: () => {
+		document.getElementById("page")?.scrollTo(0, 0)
+	},
 };
