@@ -371,7 +371,7 @@
           type="button"
           on:click={viewDayBands}
           in:scale={{
-            duration: 600,
+            duration: 400,
             delay: 200,
             start: 0.5,
             easing: elasticOut,
@@ -387,7 +387,7 @@
           type="button"
           on:click={viewDayStages}
           in:scale={{
-            duration: 600,
+            duration: 400,
             delay: 300,
             start: 0.5,
             easing: elasticOut,
