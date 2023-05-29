@@ -6,8 +6,8 @@
   import '@skeletonlabs/skeleton/styles/all.css';
   import '@skeletonlabs/skeleton/themes/theme-modern.css';
 
-  import { slide, fade, fly } from 'svelte/transition';
-  import { quintOut } from 'svelte/easing';
+  import { slide, fade, fly, scale } from 'svelte/transition';
+  import { quintOut, elasticOut } from 'svelte/easing';
   import { AppShell, Drawer, drawerStore } from '@skeletonlabs/skeleton';
   import { useMachine } from '@xstate/svelte';
 
@@ -120,10 +120,16 @@
 <Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
   <div class="py-5 px-6">
     {#if drawerView === 'stages' && ($state.value === 'viewingMap' || $state.value === 'viewingStage')}
+      <h2 class="text-surface-50 w-full mb-3 -mt-2 flex justify-center">
+        {formatLongDay(selectedDay.date)}
+      </h2>
       <StageList {dayStages} on:selectStage={selectStage} />
     {:else if drawerView === 'info' && ($state.value === 'viewingMap' || $state.value === 'viewingStage')}
       <Info />
     {:else if $state.value === 'viewingBand' && selectedBand}
+      <h2 class="text-surface-50 w-full mb-3 -mt-2 flex justify-center">
+        {formatLongDay(selectedDay.date)}
+      </h2>
       <Schedule
         day={selectedDay}
         schedule={selectedBand.scheduleByDay[selectedDayIdx]}
@@ -182,6 +188,12 @@
           </h2>
           <a
             href={selectedStage.mapUrl}
+            in:scale={{
+              duration: 800,
+              delay: 200,
+              start: 0.5,
+              easing: elasticOut,
+            }}
             class="btn-icon bg-surface-600 p-2 mx-3 sm:mr-0 rounded-xl flex-0 border-2 border-surface-400 text-surface-50"
           >
             <FaMapMarkedAlt />
@@ -357,6 +369,12 @@
         <button
           type="button"
           on:click={viewDayBands}
+          in:scale={{
+            duration: 600,
+            delay: 200,
+            start: 0.5,
+            easing: elasticOut,
+          }}
           class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
         >
           <span class="w-6 h-6 bg-primary-500 p-1 rounded">
@@ -367,6 +385,12 @@
         <button
           type="button"
           on:click={viewDayStages}
+          in:scale={{
+            duration: 600,
+            delay: 300,
+            start: 0.5,
+            easing: elasticOut,
+          }}
           class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
         >
           <span class="w-6 h-6 bg-primary-500 p-1 rounded">
@@ -377,9 +401,23 @@
       </div>
     {:else if $state.value === 'viewingBand' && selectedBand?.scheduleByDay[selectedDayIdx].length}
       <div class="flex gap-4 bg-surface-800 p-4">
+        <a
+          href={selectedBand.url}
+          class="btn bg-primary-500 text-surface-100 font-bold border-2 border-surface-400 rounded-xl px-1 py-1"
+        >
+          more
+          <br />
+          info
+        </a>
         <button
           type="button"
           on:click={viewBandSchedule}
+          in:scale={{
+            duration: 600,
+            delay: 200,
+            start: 0.5,
+            easing: elasticOut,
+          }}
           class="w-full border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
         >
           <span class="block text-2xl">Schedule</span>

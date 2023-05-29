@@ -8,7 +8,7 @@
   <a
     href={band.url}
     class="block w-52 rounded-xl overflow-hidden"
-    in:scale={{ duration: 200, delay: 200, start: 0.5 }}
+    in:scale={{ duration: 0, delay: 200, start: 0.5 }}
   >
     {#if band.image}
       <img
@@ -21,11 +21,4 @@
     {/if}
   </a>
   <p class="max-w-xl mt-3">{band.description}</p>
-
-  <a
-    href={band.url}
-    class="btn bg-surface-600 text-surface-100 font-bold mt-3 border-2 border-surface-400 rounded-xl"
-  >
-    more info &raquo;
-  </a>
 </div>
