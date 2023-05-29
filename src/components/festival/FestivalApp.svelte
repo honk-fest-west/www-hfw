@@ -16,6 +16,7 @@
   import IoMdArrowRoundBack from 'svelte-icons/io/IoMdArrowRoundBack.svelte';
   import FaMusic from 'svelte-icons/fa/FaMusic.svelte';
   import FaQuestion from 'svelte-icons/fa/FaQuestion.svelte';
+  import FaClock from 'svelte-icons/fa/FaRegClock.svelte';
 
   import { appMachine, type AppCtx } from './machines/app.machine.js';
   import { process } from './util/import.js';
@@ -420,6 +421,9 @@
           }}
           class="w-full border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
         >
+          <span class="w-6 h-6 bg-primary-500 p-1 rounded">
+            <FaClock />
+          </span>
           <span class="block text-2xl">Schedule</span>
         </button>
       </div>
