@@ -17,6 +17,7 @@
   import FaMusic from 'svelte-icons/fa/FaMusic.svelte';
   import FaQuestion from 'svelte-icons/fa/FaQuestion.svelte';
   import FaClock from 'svelte-icons/fa/FaRegClock.svelte';
+  import MdMore from 'svelte-icons/md/MdMore.svelte';
 
   import { appMachine, type AppCtx } from './machines/app.machine.js';
   import { process } from './util/import.js';
@@ -401,15 +402,15 @@
         </button>
       </div>
     {:else if $state.value === 'viewingBand' && selectedBand?.scheduleByDay[selectedDayIdx].length}
-      <div class="flex gap-4 bg-surface-800 p-4">
-        <a
-          href={selectedBand.url}
-          class="btn bg-primary-500 text-surface-100 font-bold border-2 border-surface-400 rounded-xl px-1 py-1"
-        >
-          more
-          <br />
-          info
-        </a>
+      <div class="flex gap-4 bg-surface-800 p-4 items-center">
+        {#if selectedBand.url?.length && selectedBand.url !== '#'}
+          <a
+            href={selectedBand.url}
+            class="btn border-2 border-surface-400 bg-primary-500 rounded-xl text-on-surface-token px-2 h-12"
+          >
+            <MdMore />
+          </a>
+        {/if}
         <button
           type="button"
           on:click={viewBandSchedule}
