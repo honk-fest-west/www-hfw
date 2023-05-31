@@ -113,3 +113,11 @@ type ImageMetadatInputFormat =
 	| 'tiff'
 	| 'webp'
 	| 'svg';
+
+declare interface XStateSend<Ctx, Evt extends EventObject> {
+	state: Interpreter<Ctx, any, Evt>;
+	send: (
+		event: SingleOrArray<Event<Evt>> | SCXML.Event<Evt>,
+		payload?: EventData
+	) => State<Ctx, Evt>;
+}

@@ -15,13 +15,19 @@ export type AppEvt =
 	| { type: "SELECT_DAY"; dayIdx: number }
 	| { type: "SELECT_STAGE"; stageKey: string }
 	| { type: "SELECT_BAND"; bandKey: string }
+	| { type: "GOTO_DAY"; dayIdx: number }
+	| { type: "GOTO_STAGE"; stageKey: string }
+	| { type: "GOTO_BANDS" }
+	| { type: "GOTO_BAND"; bandKey: string }
+	| { type: "GO_BACK" }
 	| { type: "VIEW_MAP" }
 	| { type: "VIEW_STAGE" }
 	| { type: "VIEW_BAND" }
 	| { type: "VIEW_BANDS" }
 	;
 
-// const config: MachineConfig<AppCtx, any, AppEvt> = {
+export type AppStateSend = XStateSend<AppCtx, AppEvt>;
+
 export const appMachine = createMachine<AppCtx, AppEvt>({
 	id: "app",
 	predictableActionArguments: true,
@@ -46,37 +52,64 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 				SELECT_DAY: {
 					actions: "selectDay",
 				},
+				GOTO_DAY: {
+					actions: ["animateBackward", "gotoDay"]
+				},
 				SELECT_STAGE: {
-					actions: ["selectStage", "animateForward"],
+					actions: ["selectStage",],
 					target: "viewingStage",
 				},
+				GOTO_STAGE: {
+					actions: ["animateForward", "gotoStage"]
+				},
 				VIEW_BANDS: {
-					actions: ["animateBackward"],
 					target: "viewingBands"
+				},
+				GOTO_BANDS: {
+					actions: ["animateForward", "gotoBands"]
+				},
+				SELECT_BAND: {
+					actions: "selectBand",
+					target: "viewingBand"
 				}
 			},
 		},
 		viewingStage: {
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "clearStage", "animateBackward"],
+					actions: ["selectDay", "clearStage"],
 					target: "viewingMap",
 				},
+				GOTO_DAY: {
+					actions: ["animateBackward", "gotoDay"]
+				},
 				SELECT_BAND: {
-					actions: ["selectBand", "animateForward"],
+					actions: ["selectBand"],
 					target: "viewingBand",
 				},
+				GOTO_BAND: {
+					actions: ["animateForward", "gotoBand"]
+				},
+				GOTO_BANDS: {
+					actions: ["animateForward", "gotoBands"]
+				},
 				VIEW_MAP: {
-					actions: ["clearStage", "animateBackward"],
+					actions: ["clearStage", "animateForward"],
 					target: "viewingMap",
 				},
 				SELECT_STAGE: {
 					actions: "selectStage",
 					target: "viewingStage",
 				},
+				GOTO_STAGE: {
+					actions: ["animateForward", "gotoStage"]
+				},
 				VIEW_BANDS: {
-					actions: ["animateBackward", "clearStage"],
+					actions: ["animateForward", "clearStage"],
 					target: "viewingBands"
+				},
+				GO_BACK: {
+					actions: ["animateBackward", "goBack"]
 				}
 			},
 		},
@@ -84,36 +117,54 @@ export const appMachine = createMachine<AppCtx, AppEvt>({
 			entry: "scrollToTop",
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "clearBand", "animateBackward"],
+					actions: ["selectDay", "clearBand",],
 					target: "viewingMap"
 				},
+				GOTO_DAY: {
+					actions: ["animateBackward", "gotoDay"]
+				},
 				SELECT_STAGE: {
-					actions: ["selectStage", "animateBackward"],
+					actions: ["selectStage"],
 					target: "viewingStage"
 				},
 				VIEW_STAGE: {
-					actions: ["clearBand", "animateBackward"],
+					actions: ["clearBand", "animateForward"],
 					target: "viewingStage",
 				},
+				GOTO_STAGE: {
+					actions: ["animateBackward", "gotoStage"]
+				},
 				VIEW_BANDS: {
-					actions: ["clearBand", "animateForward"],
+					actions: ["clearBand", "animateBackward"],
 					target: "viewingBands"
 				},
+				GO_BACK: {
+					actions: ["animateBackward", "goBack"]
+				}
 			},
 		},
 		viewingBands: {
 			on: {
 				SELECT_DAY: {
-					actions: ["selectDay", "animateForward"],
+					actions: ["selectDay"],
 					target: "viewingMap"
 				},
 				SELECT_BAND: {
-					actions: ["selectBand", "animateBackward"],
+					actions: ["selectBand"],
 					target: "viewingBand"
 				},
-				VIEW_MAP: {
-					actions: "animateForward",
-					target: "viewingMap"
+				SELECT_STAGE: {
+					actions: ["selectStage"],
+					target: "viewingStage"
+				},
+				GOTO_DAY: {
+					actions: ["animateBackward", "gotoDay"],
+				},
+				GOTO_BAND: {
+					actions: ["animateForward", "gotoBand"]
+				},
+				GO_BACK: {
+					actions: ["animateBackward", "goBack"]
 				}
 			}
 		}

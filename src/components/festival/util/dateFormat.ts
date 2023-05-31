@@ -11,22 +11,22 @@ export function shortTime(time: Date, smartMer: boolean = false): string {
 		: `${hours}:${minutes} ${meridiem}`;
 }
 
-export function formatShortDay(date: Date) {
+export function formatShortDay(date: Date): string {
 	return date.toLocaleDateString('en-US', { weekday: 'short' });
 };
 
-export function formatLongDay(date: Date) {
+export function formatLongDay(date: Date): string {
 	return date.toLocaleDateString('en-US', { weekday: 'long' });
 };
 
-export const formatDate = (date: Date) => {
+export const formatDate = (date: Date): string => {
 	return date.toLocaleDateString('en-US', {
 		day: 'numeric',
 		month: 'numeric',
 	});
 };
 
-export const timeRange = (from: Date, to: Date) => {
+export const timeRange = (from: Date, to: Date): string => {
 	const formattedFrom = from.toLocaleTimeString('en-US', {
 		hour: 'numeric',
 		minute: 'numeric',

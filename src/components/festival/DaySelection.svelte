@@ -13,7 +13,7 @@
   };
 
   const selectedClass = (idx: number) => {
-    return idx === selectedDayIdx ? 'bg-surface-700' : '';
+    return `${idx}` === `${selectedDayIdx}` ? 'bg-surface-700' : '';
   };
 </script>
 

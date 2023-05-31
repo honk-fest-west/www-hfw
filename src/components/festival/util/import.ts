@@ -93,7 +93,7 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 			}, {})
 		},
 
-		pselectedDay: (): number => {
+		pselectedDayIdx: (): number => {
 			const today = new Date().toLocaleDateString();
 
 			const initialDayIdx = importSchedule.days.findIndex((day) => {

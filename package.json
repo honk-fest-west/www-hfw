@@ -22,11 +22,12 @@
     "just-compact": "^3.2.0",
     "marked": "^4.2.5",
     "svelte": "^3.55.0",
+    "svelte-spa-router": "^3.3.0",
     "tailwindcss": "^3.3.2",
     "xstate": "^4.37.2"
   },
   "devDependencies": {
-    "@rollup/plugin-yaml": "^4.0.1",
+    "@rollup/plugin-yaml": "^4.1.0",
     "@skeletonlabs/skeleton": "^1.2.5",
     "svelte-icons": "^2.1.0",
     "typescript-plugin-toml": "^0.2.0",

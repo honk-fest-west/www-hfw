@@ -26,7 +26,7 @@ const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
   <body class="h-full overflow-hidden sm:max-w-3xl mx-auto">
     <div style="display: contents" class="h-full overflow-hidden">
       <FestivalApp
-        client:load
+        client:only="svelte"
         bands={bands}
         schedule={schedule}
         stages={stages}
