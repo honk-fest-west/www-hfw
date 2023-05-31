@@ -11,6 +11,8 @@
   import type { AppStateSend } from '../machines/app.machine';
   import { formatLongDay } from '../util/dateFormat';
 
+  export let bounce = true;
+
   let drawerView: 'stages' | 'info' = 'stages';
 
   const { state, send } = getContext<AppStateSend>('app');
@@ -55,8 +57,8 @@
       on:click={viewDayBands}
       in:scale={{
         duration: 400,
-        delay: 200,
-        start: 0.5,
+        delay: bounce ? 100 : 0,
+        start: bounce ? 0.5 : 1,
         easing: elasticOut,
       }}
       class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
@@ -71,8 +73,8 @@
       on:click={viewDayStages}
       in:scale={{
         duration: 400,
-        delay: 300,
-        start: 0.5,
+        delay: bounce ? 200 : 0,
+        start: bounce ? 0.7 : 1,
         easing: elasticOut,
       }}
       class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"

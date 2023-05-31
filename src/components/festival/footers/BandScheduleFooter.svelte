@@ -46,7 +46,7 @@
       type="button"
       on:click={viewBandSchedule}
       in:scale={{
-        duration: 600,
+        duration: 500,
         delay: 200,
         start: 0.5,
         easing: elasticOut,

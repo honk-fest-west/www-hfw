@@ -33,7 +33,7 @@
     <a
       href={selectedStage.mapUrl}
       in:scale={{
-        duration: 800,
+        duration: 500,
         delay: 200,
         start: 0.5,
         easing: elasticOut,

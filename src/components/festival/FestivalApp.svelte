@@ -96,7 +96,10 @@
 
   const footerRoutes = {
     '/:day': BandsAndStagesFooter,
-    '/:day/stages/:stage': BandsAndStagesFooter,
+    '/:day/stages/:stage': wrap({
+      component: BandsAndStagesFooter,
+      props: { bounce: false },
+    }),
     '/:day/bands/:band': BandScheduleFooter,
   };
 
