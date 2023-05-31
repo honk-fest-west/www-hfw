@@ -3,18 +3,16 @@
   import { fade, fly } from 'svelte/transition';
   import type { AppStateSend } from '../machines/app.machine';
 
-  import Bands from '../Bands.svelte';
-
   const { state, send } = getContext<AppStateSend>('app');
 
   $: selectedDayIdx = $state.context.selectedDayIdx;
   $: selectedDay = $state.context.days[selectedDayIdx];
-  $: dayBands = [...selectedDay?.bandKeys, ...selectedDay?.allDayKeys].map(
-    (bandKey: string) => $state.context.bands[bandKey]
-  );
+  $: bands = [...selectedDay?.bandKeys, ...selectedDay?.allDayKeys]
+    .map((bandKey: string) => $state.context.bands[bandKey])
+    .sort((a, b) => a.name.localeCompare(b.name));
 
-  const selectBand = (event: { detail: string }) => {
-    send('GOTO_BAND', { bandKey: event.detail });
+  const selectBand = (band: Band) => {
+    send('GOTO_BAND', { bandKey: band.key });
   };
 </script>
 
@@ -26,5 +24,31 @@
     duration: 200,
   }}
 >
-  <Bands on:selectBand={selectBand} bands={dayBands} />
+  {#if bands.length === 0}
+    <p class="unstyled text-center text-2xl mt-6">Coming Soon</p>
+  {/if}
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+    {#each bands as band}
+      <button
+        type="button"
+        on:click={() => selectBand(band)}
+        class="border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex flex-col px-1 py-2 items-center justify-between gap-2"
+      >
+        <div class="w-full rounded-xl overflow-hidden">
+          {#if band.image}
+            <img
+              class="w-full"
+              src={band.image.src}
+              alt={band.name}
+              width={band.image.width}
+              height={band.image.height}
+            />
+          {/if}
+        </div>
+
+        <span class="block sm:text-2xl">{band.name}</span>
+      </button>
+    {/each}
+  </div>
 </div>

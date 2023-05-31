@@ -15,6 +15,7 @@
 
   import Blank from './Blank.svelte';
 
+  import DaySelection from './headers/DaySelection.svelte';
   import MapHeader from './headers/MapHeader.svelte';
   import StageScheduleHeader from './headers/StageScheduleHeader.svelte';
   import BandHeader from './headers/BandHeader.svelte';
@@ -29,8 +30,6 @@
   import MapSidebar from './sidebar/MapSidebar.svelte';
 
   import BandsAndStagesFooter from './footers/BandsAndStagesFooter.svelte';
-
-  import DaySelection from './DaySelection.svelte';
 
   import { process } from './util/import.js';
   import {

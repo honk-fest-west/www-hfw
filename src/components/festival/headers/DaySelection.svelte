@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import { formatShortDay, formatDate } from './util/dateFormat';
+  import { formatShortDay, formatDate } from '../util/dateFormat';
 
   export let selectedDayIdx: number;
   export let days: Array<Day>;
