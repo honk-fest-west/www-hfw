@@ -61,7 +61,7 @@
       </span>
     {:else if itemName(timeSlot) && !isNowPlaying}
       <span
-        class="w-fit h-8 text-xl block text-surface-50 overflow-hidden border-b-2 border-surface-600 border-dashed"
+        class="w-fit h-8 text-xl block text-surface-50 overflow-hidden border-b-2 border-surface-600 border-dashed break-all"
       >
         {itemName(timeSlot)}
       </span>
