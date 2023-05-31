@@ -41,47 +41,49 @@
   };
 </script>
 
-<div class="flex gap-4 bg-surface-800 p-4">
-  <button
-    type="button"
-    on:click={viewInfo}
-    class="border-2 border-surface-400 bg-primary-500 rounded-xl text-on-surface-token px-1 py-2 w-10"
-  >
-    <FaQuestion />
-  </button>
-  <button
-    type="button"
-    on:click={viewDayBands}
-    in:scale={{
-      duration: 400,
-      delay: 200,
-      start: 0.5,
-      easing: elasticOut,
-    }}
-    class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
-  >
-    <span class="w-6 h-6 bg-primary-500 p-1 rounded">
-      <FaDrum />
-    </span>
-    <span class="block text-xl">Bands</span>
-  </button>
-  <button
-    type="button"
-    on:click={viewDayStages}
-    in:scale={{
-      duration: 400,
-      delay: 300,
-      start: 0.5,
-      easing: elasticOut,
-    }}
-    class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
-  >
-    <span class="w-6 h-6 bg-primary-500 p-1 rounded">
-      <FaMusic />
-    </span>
-    <span class="block text-xl">Stages</span>
-  </button>
-</div>
+{#key selectedDayIdx}
+  <div class="flex gap-4 bg-surface-800 p-4">
+    <button
+      type="button"
+      on:click={viewInfo}
+      class="border-2 border-surface-400 bg-primary-500 rounded-xl text-on-surface-token px-1 py-2 w-10"
+    >
+      <FaQuestion />
+    </button>
+    <button
+      type="button"
+      on:click={viewDayBands}
+      in:scale={{
+        duration: 400,
+        delay: 200,
+        start: 0.5,
+        easing: elasticOut,
+      }}
+      class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
+    >
+      <span class="w-6 h-6 mx-1">
+        <FaDrum />
+      </span>
+      <span class="block text-xl">Bands</span>
+    </button>
+    <button
+      type="button"
+      on:click={viewDayStages}
+      in:scale={{
+        duration: 400,
+        delay: 300,
+        start: 0.5,
+        easing: elasticOut,
+      }}
+      class="w-1/2 border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
+    >
+      <span class="w-5 h-5 mx-1">
+        <FaMusic />
+      </span>
+      <span class="block text-xl">Stages</span>
+    </button>
+  </div>
+{/key}
 
 <Drawer position="bottom" bgDrawer="bg-surface-800" height="h-fit">
   <div class="py-5 px-6">

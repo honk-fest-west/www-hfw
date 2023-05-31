@@ -34,9 +34,12 @@
     {#if selectedBand.url?.length && selectedBand.url !== '#'}
       <a
         href={selectedBand.url}
-        class="btn border-2 border-surface-400 bg-primary-500 rounded-xl text-on-surface-token px-2 h-12"
+        class="btn border-2 border-surface-400 bg-primary-500 rounded-xl text-on-surface-token px-2 h-full flex-0"
       >
-        <MdMore />
+        <span class="w-6 h-6 mx-1">
+          <MdMore />
+        </span>
+        <span class="text-2xl">info</span>
       </a>
     {/if}
     <button
@@ -50,7 +53,7 @@
       }}
       class="w-full border-2 border-surface-400 bg-surface-600 rounded-xl text-on-surface-token flex px-1 py-2 items-center justify-center gap-2"
     >
-      <span class="w-6 h-6 bg-primary-500 p-1 rounded">
+      <span class="w-6 h-6 mx-1">
         <FaClock />
       </span>
       <span class="block text-2xl">Schedule</span>
