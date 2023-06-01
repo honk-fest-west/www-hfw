@@ -33,7 +33,7 @@ const { supporters, social } = Astro.props;
             supporters.map((supporter) => (
               <div class="mx-2 mb-3">
                 <a
-                  href="{ sponsor.link }"
+                  href={supporter.url}
                   class="rounded block bg-white w-fit p-1 h-fit"
                 >
                   <Image
