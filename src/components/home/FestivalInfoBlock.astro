@@ -1,11 +1,12 @@
 ---
 import Title from '@components/Title.astro';
+import type { now } from 'svelte/internal';
 ---
 
 <!-- INFO BLOCK -->
 <section class="w-full col-span-6 lg:col-span-2 content-container z-10">
   <a href="/festival" class="block">
-    <Title title="Upcoming Festival" center={true} />
+    <Title title="See Today's Festival" center={true} />
     <div
       class="text-shadow flex flex-col items-center h-full text-2xl sm:text-4xl font-medium tracking-wide z-10"
     >
