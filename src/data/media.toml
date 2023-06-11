@@ -3,9 +3,17 @@ name = 'Charles Daniels'
 type = 'photos'
 url = 'https://charlesdaniels.smugmug.com/HonkFest-West-2023-Spring-Rager-Fundraiser/'
 [[2023]]
+name = 'Charles Daniels'
+type = 'videos'
+url = 'https://www.youtube.com/watch?v=2FM_IAg6bk0&list=PLL7ppauF4ZjqGG6iPPrNySe2QLQndI0gW'
+[[2023]]
 name = 'Dylan Lockard'
 type = 'photos'
 url = 'https://drive.google.com/drive/folders/1mTSL9ciYJpVttcUDoVXMauO7tw3EQzZZ'
+[[2023]]
+name = 'Espresso Buzz'
+type = 'photos'
+url = 'https://www.espressobuzz.net/Events/2023/HonkFestWest'
 
 [[2022]]
 name = 'Charles Daniels'
