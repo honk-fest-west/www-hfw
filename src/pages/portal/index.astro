@@ -18,7 +18,7 @@ import '@styles/global.css';
   <body class="min-h-full bg-gray-50">
     <header class="pb-24 bg-gradient-to-r from-sky-800 to-cyan-600">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 pt-4">
-        <h1 class="text-white font-semibold text-4xl">
+        <h1 class="text-white font-semibold text-4xl hidden">
           HONK! FEST WEST - Portal
         </h1>
       </div>
@@ -29,13 +29,14 @@ import '@styles/global.css';
       >
         <div class="flex flex-col gap-4 items-start lg:grid-cols-3 lg:gap-8">
           <section class="w-full">
-            <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
+            <div class="rounded-lg overflow-hidden shadow bg-teal-50">
+              <div class="p-4">
                 <h2
-                  class="text-base font-medium text-gray-900 mb-3"
+                  class="font-bold text-teal-900 bg-teal-400 mb-3 rounded px-3 py-1"
                   id="slack-title"
                 >
-                  Festival Begins In:
+                  <span class="text-2xl">HONK! Fest West</span>
+                  <span class="text-lg text-red-500"> &nbsp; begins in:</span>
                 </h2>
                 <FestivalCountDown client:load date="May 31, 2024" />
               </div>
@@ -56,22 +57,54 @@ import '@styles/global.css';
               </div>
               <div class="flex flex-col justify-center p-3">
                 <h2
-                  class="text-base font-medium text-gray-900 block lg:hidden"
+                  class="mx-1 mb-2 text-base font-medium bg-blue-600 text-blue-100 px-3 py-1 rounded block lg:hidden"
                   id="calendar-title"
                 >
-                  HONK Fest West Committees Calendar
+                  HONK Fest West Committee Calendar
                 </h2>
                 <a
-                  class="block mt-3 font-semibold text-blue-500 hover:text-blue-600"
+                  class="pl-4 font-semibold text-blue-500 hover:text-blue-600 lg:hidden"
                   href="https://calendar.google.com/calendar/embed?src=c_sjkku2j6pdu59sh84beushj7ss%40group.calendar.google.com&ctz=America%2FLos_Angeles"
                   >https://calendar.google.com</a
                 >
+                <h3
+                  class="text-xl font-medium text-gray-800 hidden lg:block"
+                  id="calendar-title"
+                >
+                  If you are unable to see the calendar:
+                </h3>
+                <ul class="!list-disc text-gray-600 hidden lg:block">
+                  <li>
+                    &bull; Make sure you are signed in to your honkfestwest.org
+                    account by visiting:
+                    <br />
+                    <a
+                      class="pl-3 font-semibold text-blue-500 hover:text-blue-600"
+                      href="https://accounts.google.com/AccountChooser?service=cl&continue=https://calendar.google.com/calendar/embed%3Fsrc%3Dc_sjkku2j6pdu59sh84beushj7ss%2540group.calendar.google.com%26ctz%3DAmerica/Los_Angeles"
+                      >&#10095; https://accounts.google.com/AccountChooser</a
+                    >
+                  </li>
+                  <li>
+                    &bull; Your web-browser doesn't like it. Try a different
+                    one.
+                  </li>
+
+                  <li>
+                    &bull; Or visit:
+                    <br />
+                    <a
+                      class="pl-3 font-semibold text-blue-500 hover:text-blue-600"
+                      href="https://calendar.google.com/calendar/embed?src=c_sjkku2j6pdu59sh84beushj7ss%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+                      >&#10095; https://calendar.google.com</a
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
           <section class="w-full">
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6 lg:px-0 lg:py-6">
+              <div class="p-4 lg:px-0 lg:py-6">
                 <a
                   class="pl-6 hidden lg:block font-semibold text-blue-500 hover:text-blue-600"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScNKpVnx8nGBraZ0cIVCYNhr0fab5H5Ux9le811WjdlZ2q1rg/viewform"
@@ -88,13 +121,13 @@ import '@styles/global.css';
                   marginwidth="0">Loading…</iframe
                 >
                 <h2
-                  class="text-base font-medium text-gray-900 block md:hidden"
+                  class="text-base font-medium block md:hidden bg-teal-500 text-teal-100 px-3 py-1 rounded"
                   id="calendar-title"
                 >
                   Log Your Hours
                 </h2>
                 <a
-                  class="block md:hidden mt-3 font-semibold text-blue-500 hover:text-blue-600"
+                  class="block md:hidden mt-3 font-semibold text-blue-500 hover:text-blue-600 ml-3"
                   href="https://forms.gle/kpzfuyKpsTD8Tx6p8"
                   >https://forms.gle/kpzfuyKpsTD8Tx6p8</a
                 >
@@ -105,15 +138,15 @@ import '@styles/global.css';
         <div class="flex flex-col gap-4">
           <section>
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
+              <div class="p-4">
                 <h2
-                  class="text-base font-medium text-gray-900"
+                  class="text-base font-medium bg-green-600 text-green-100 px-3 py-1 rounded"
                   id="slack-title"
                 >
                   Google Workspace
                 </h2>
                 <a
-                  class="block mt-3 font-semibold text-blue-500 hover:text-blue-600"
+                  class="block mt-3 ml-3 font-semibold text-blue-500 hover:text-blue-600"
                   href="https://workspace.google.com/dashboard"
                   >https://workspace.google.com/dashboard</a
                 >
@@ -122,15 +155,15 @@ import '@styles/global.css';
           </section>
           <section>
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
+              <div class="p-4">
                 <h2
-                  class="text-base font-medium text-gray-900"
+                  class="text-base font-medium bg-yellow-500 text-yellow-100 px-3 py-1 rounded"
                   id="slack-title"
                 >
                   Slack
                 </h2>
                 <a
-                  class="block mt-3 font-semibold text-blue-500 hover:text-blue-600"
+                  class="block mt-3 ml-3 font-semibold text-blue-700 hover:text-blue-500"
                   href="https://honkfestwest.slack.com/"
                   >https://honkfestwest.slack.com/</a
                 >
@@ -139,15 +172,15 @@ import '@styles/global.css';
           </section>
           <section>
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
+              <div class="p-4">
                 <h2
-                  class="text-base font-medium text-gray-900"
+                  class="text-base font-medium bg-orange-600 text-orange-100 px-3 py-1 rounded"
                   id="slack-title"
                 >
                   Asana
                 </h2>
                 <a
-                  class="block mt-3 font-semibold text-blue-500 hover:text-blue-600"
+                  class="block mt-3 ml-3 font-semibold text-blue-500 hover:text-blue-600"
                   href="https://app.asana.com">https://app.asana.com</a
                 >
               </div>
@@ -155,14 +188,14 @@ import '@styles/global.css';
           </section>
           <section>
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
+              <div class="p-4">
                 <h2
-                  class="text-base font-medium text-gray-900"
+                  class="text-base font-medium bg-red-700 text-red-100 px-3 py-1 rounded"
                   id="slack-title"
                 >
                   Main Documents
                 </h2>
-                <ul class="mt-2 divide-y divide-gray-200">
+                <ul class="mt-2 ml-3 divide-y divide-gray-200">
                   <li class="py-3">
                     <a
                       class="font-semibold text-blue-500 hover:text-blue-600"
@@ -184,14 +217,14 @@ import '@styles/global.css';
           </section>
           <section>
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
+              <div class="p-4">
                 <h2
-                  class="text-base font-medium text-gray-900"
+                  class="text-base font-medium bg-purple-800 text-purple-100 px-3 py-1 rounded"
                   id="slack-title"
                 >
                   Google Drive
                 </h2>
-                <ul class="mt-2 divide-y divide-gray-200">
+                <ul class="mt-2 ml-3 divide-y divide-gray-200">
                   <li class="py-3">
                     <a
                       class="font-semibold text-blue-500 hover:text-blue-600"
