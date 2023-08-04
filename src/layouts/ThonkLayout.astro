@@ -1,0 +1,66 @@
+---
+import { Image } from '@astrojs/image/components';
+import Head from '@components/base-head/BaseHead.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import BackgroundImage from '@components/BackgroundImage.astro';
+import nav from '@data/nav.toml';
+import footer from '@data/footer.toml';
+import social from '@data/social.toml';
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <head>
+    <Head title={title}>
+      <slot name="head" />
+    </Head>
+  </head>
+
+  <body class="min-h-full">
+    <div id="back-to-top"></div>
+
+    <!-- BACKGROUND IMAGE -->
+    <div class="w-full h-full fixed top-0 left-0">
+      <div class="bg-aqua w-full h-full fixed top-0 left-0"></div>
+      <BackgroundImage />
+    </div>
+
+    <div
+      class="w-full h-full absolute top-0 left-0 flex flex-col justify-between"
+    >
+      <!-- HEADER -->
+      <header class="w-full mx-auto">
+        <div
+          class="min-h-[153px] sm:min-h-[273px] flex justify-center w-full relative z-10 mt-6 sm:mt-12 mb-4"
+        >
+          <h1 class="w-full">
+            <a class="block mx-auto sm:w-2/3 lg:w-2/5 z-0 peer" href="/">
+              <Image
+                src="https://ik.imagekit.io/thegoldendino/hfw/thonk/851x315%20-%20Tacoma%20Honk%202023_cEI3PO40v.png?updatedAt=1691173252084"
+                alt="HONK! Fest West"
+                format="png"
+                width={851}
+                aspectRatio="851:315"
+                class="w-auto mx-auto hover:transition ease-in hover:scale-105"
+              />
+            </a>
+          </h1>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main class="max-w-screen-xl mx-auto pb-10 px-6 w-full">
+        <slot />
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="mt-auto w-full">
+        <Footer supporters={footer.supporters} social={social} />
+      </footer>
+    </div>
+  </body>
+</html>

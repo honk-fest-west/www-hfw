@@ -1,0 +1,26 @@
+---
+import { Image } from '@astrojs/image/components';
+import ThonkLayout from '@layouts/ThonkLayout.astro';
+import Title from '@components/Title.astro';
+import BackToTop from '@components/BackToTop.astro';
+import MarkdownContent from '@components/MarkdownContent.astro';
+---
+
+<ThonkLayout title="THONK!">
+  <section class="content-container">
+    <BackToTop />
+    <Title title="THONK!" subtitle="October 14th, 2023" />
+    <div class="flex flex-col lg:flex-row w-full gap-2">
+      <div>
+        <Image
+          class="block w-full md:w-auto md:mr-5 mb-3 sm:mb-0 rounded h-auto"
+          src="https://ik.imagekit.io/thegoldendino/hfw/thonk/170x170%20-%20Tacoma%20Honk%202023_FmFoeqCmQ.png?updatedAt=1691172937382&tr=b-5_FFFFFF"
+          alt="Henry Art for H!FW"
+          width="170"
+          height="170"
+          format="png"
+        />
+      </div>
+    </div>
+  </section>
+</ThonkLayout>
