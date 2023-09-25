@@ -1,8 +1,4 @@
 [["Australia"]]
-name = 'WAHONK! FEST'
-location = 'Fremantle WA Australia'
-url = 'https://www.streetartsfestival.com.au/program-events/wahonk-fest/'
-[["Australia"]]
 name = 'HONK! OZ'
 location = 'Wollongong NSW Australia'
 url = 'http://www.honkfest.org.au/'
@@ -10,7 +6,7 @@ url = 'http://www.honkfest.org.au/'
 [["South America"]]
 name = 'HONK! BH'
 location = 'Bela Horizonte Brazil'
-url = 'https://www.instagram.com/honk_bh/'
+url = 'https://www.facebook.com/honkbh/'
 [["South America"]]
 name = 'Festival HONK! SP'
 location = 'São Paulo Brazil'
@@ -56,3 +52,12 @@ url = 'http://honkfest.org/'
 name = 'HONK! NYC'
 location = 'New York City NY USA'
 url = 'http://honknyc.com/'
+[["North America"]]
+name = 'Tacoma HONK! Fest'
+location = 'Tacoma WA USA'
+url = 'https://tacomahonk.org'
+[["North America"]]
+name = 'HONK! PDX'
+location = 'Portland OR USA'
+url = 'https://honkpdx.org/'
+
