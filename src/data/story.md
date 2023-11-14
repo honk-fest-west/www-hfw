@@ -6,8 +6,8 @@ HONK! is a celebration of community, collaboration and creative expression and i
 
 Bands at HONK! Fest West travel from all over the country to temporarily transform streets in various neighborhoods with a free showcase of various musical styles. The bands represent traditions ranging from New Orleans second line brass bands, punk rock marching bands, European Klezmer, Balkan and Romani music, Samba, Maracatu, as well as the passion and spirit of Mardi Gras and Carnival!
 
-We have called Georgetown our home since the festival’s inception, and have also celebrated in Columbia City, White Center, South Park, The Waterfront, Fremont/Gas Works Park, Capitol Hill, Central District, Pioneer Square, Downtown, Seattle Center, and West Seattle. In 2022 we celebrated for the first time with the Yesler Terrace community and are looking forward to returning there in 2023.
+We have called Georgetown our home since the festival’s inception, and have also celebrated in Columbia City, White Center, South Park, The Waterfront, Fremont/Gas Works Park, Capitol Hill, Central District, Pioneer Square, Downtown, Seattle Center, and West Seattle.
 
-**Join us! June 2: Georgetown, June 3: Columbia City, and June 4: Yesler Terrace Park.**
+**Join us! May 31: Georgetown, June 1: Columbia City, and June 2: TBD.**
 
-We can’t wait to kick off Summer in Seattle with you in 2023.
+We can’t wait to kick off Summer in Seattle with you in 2024.
