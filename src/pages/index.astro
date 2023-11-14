@@ -8,8 +8,7 @@ import BackToTop from '@components/BackToTop.astro';
 import FestivalInfoBlock from '@components/home/FestivalInfoBlock.astro';
 
 import slideshow from '@data/slideshow.toml';
-import GiveBig from '@components/home/GiveBig.astro';
-import ThursdayFundraiser from '@components/home/ThursdayFundraiser.astro';
+import GivingTuesday from '@components/home/GivingTuesday.astro';
 ---
 
 <BaseLayout title="Home">
@@ -33,6 +32,11 @@ import ThursdayFundraiser from '@components/home/ThursdayFundraiser.astro';
     <section class="w-full col-span-6 lg:col-span-2 content-container">
       <NewsletterForm />
     </section>
+
+    <article
+      class="w-full content-container col-span-6 flex flex-col md:flex-row">
+      <GivingTuesday /> 
+    </article>
 
     <!-- <article
       class="w-full content-container col-span-6 flex flex-col md:flex-row"
