@@ -1,14 +1,14 @@
 ---
-import { Image } from '@astrojs/image/components';
-import BaseLayout from '@layouts/BaseLayout.astro';
-import LinkBlurb from '@components/LinkBlurb.astro';
-import NewsletterForm from '@components/NewsletterForm.astro';
-import Slideshow from '../components/slideshow/Slideshow.svelte';
-import BackToTop from '@components/BackToTop.astro';
-import FestivalInfoBlock from '@components/home/FestivalInfoBlock.astro';
+import { Image } from "@astrojs/image/components";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import LinkBlurb from "@components/LinkBlurb.astro";
+import NewsletterForm from "@components/NewsletterForm.astro";
+import Slideshow from "../components/slideshow/Slideshow.svelte";
+import BackToTop from "@components/BackToTop.astro";
+import FestivalInfoBlock from "@components/home/FestivalInfoBlock.astro";
 
-import slideshow from '@data/slideshow.toml';
-import GivingTuesday from '@components/home/GivingTuesday.astro';
+import slideshow from "@data/slideshow.toml";
+import BandAppDeadline from "@components/home/BandAppDeadline.astro";
 ---
 
 <BaseLayout title="Home">
@@ -34,8 +34,9 @@ import GivingTuesday from '@components/home/GivingTuesday.astro';
     </section>
 
     <article
-      class="w-full content-container col-span-6 flex flex-col md:flex-row">
-      <GivingTuesday /> 
+      class="w-full content-container col-span-6 flex flex-col md:flex-row"
+    >
+      <BandAppDeadline />
     </article>
 
     <!-- <article
