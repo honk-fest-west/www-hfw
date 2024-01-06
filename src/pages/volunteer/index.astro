@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import Title from '@components/Title.astro';
-import BackToTop from '@components/BackToTop.astro';
-import OpenPositions from '@components/volunteer/OpenPositions.astro';
-import FestivalVolunteer from '@components/FestivalVolunteer.astro';
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Title from "@components/Title.astro";
+import BackToTop from "@components/BackToTop.astro";
+import OpenPositions from "@components/volunteer/OpenPositions.astro";
+import FestivalVolunteer from "@components/FestivalVolunteer.astro";
 
-import positions from '@data/positions.toml';
+import positions from "@data/positions.toml";
 ---
 
 <BaseLayout title="Volunteer">
@@ -17,12 +17,17 @@ import positions from '@data/positions.toml';
         <p class="content">
           Sign up to provide housing for HONK! Fest West out-of-town bands.
         </p>
-        <a
+        <p
+          class="text-shadow block font-base text-center rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-navy w-full text-lg bg-opacity-80 px-2"
+        >
+          Coming Soon
+        </p>
+        <!-- <a
           href="/volunteer/housing-form"
           class="text-shadow block font-base text-center rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-navy w-full text-lg bg-opacity-80 px-2 hover:bg-opacity-90"
         >
           » SIGN UP HERE
-        </a>
+        </a> -->
       </div>
     </div>
     <div class="w-full md:w-2/3 flex flex-col gap-4 sm:gap-6">
