@@ -11,8 +11,8 @@ name = 'Lu Badu'
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Lizzie_wzAulOj1l.jpg?updatedAt=1628536067160'
 name = 'Lizzy'
 [[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/leslie_MWr9hx-dAFr.png?updatedAt=1628552525114'
-name = 'Leslie'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Marisa%20photo_i3Rcojs9Y.jpg?updatedAt=1704510471059'
+name = 'Marisa'
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Elsbeth_G-ymnIE5av.jpg?updatedAt=1628536068712'
 name = 'Elsbeth'
@@ -25,9 +25,6 @@ name = 'Susan'
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Ethan_dCbGVPBGtK.jpg?updatedAt=1628536068852'
 name = 'Ethan'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Nick_hYIhzKKu4.jpg?updatedAt=1628536067550'
-name = 'Nick'
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/lazer-dwight_qDmJ89KI9.png?updatedAt=1628555952814'
 name = 'Dwight'
@@ -50,28 +47,37 @@ name = 'Firf'
 [[groups."Board of Directors"]]
 role = 'Member'
 name = 'Lu Badu'
+[[groups."Board of Directors"]]
+role = 'Member'
+name = 'Marcus Pimpleton'
+[[groups."Board of Directors"]]
+role = 'Member'
+name = 'Marisa'
 
 [[groups."Event Production"]]
 role = 'Permitting'
 name = 'Jeanette'
 [[groups."Event Production"]]
-role = 'Food Lead'
-name = 'Marisa'
+role = 'Food/Housing'
+name = 'Emily'
 [[groups."Event Production"]]
-role = 'Housing'
-name = 'Paul G.'
+role = 'Food/Housing'
+name = 'Ethan'
+[[groups."Event Production"]]
+role = 'Transportation'
+name = 'Miranda'
 [[groups."Event Production"]]
 role = 'Booking Lead'
-name = 'Ethan'
+name = 'Dee'
+[[groups."Event Production"]]
+role = "Int'l Bands"
+name = 'Chris'
 [[groups."Event Production"]]
 role = 'Volunteer Engagement'
 name = 'Elsbeth'
 [[groups."Event Production"]]
 role = 'Volunteer Coordinator'
 name = 'Ginny'
-[[groups."Event Production"]]
-role = 'Operations Lead'
-name = 'Lizzy'
 [[groups."Event Production"]]
 role = 'Planning Lead'
 name = 'Firf'
@@ -80,7 +86,7 @@ role = 'Med Ops'
 name = 'Grace'
 
 [[groups."Creative & Communications"]]
-role = "Newsletter"
+role = "Marketing"
 name = "Jeanette"
 [[groups."Creative & Communications"]]
 role = "Videographer"
@@ -94,19 +100,17 @@ name = "Dwight"
 [[groups."Creative & Communications"]]
 role = "Social Media"
 name = "Andrea"
-[[groups."Creative & Communications"]]
-role = "PR/Media"
-name = "Leslie"
+
 
 [[groups."Fundraising"]]
-role = 'Grants'
+role = 'Grants Manager'
 name = 'Jeanette'
-[[groups."Fundraising"]]
-role = 'Sponsorship Coordinator'
-name = 'Nick'
 [[groups."Fundraising"]]
 role = 'Fundraising Events'
 name = 'Marisa'
+[[groups."Fundraising"]]
+role = 'Online Giving'
+name = 'Andrea'
 
 [[groups."Outreach"]]
 role = 'Outreach Lead'
@@ -116,10 +120,10 @@ role = 'HONK! All-Stars & Jams'
 name = 'Heather'
 [[groups."Outreach"]]
 role = 'HONK! Junior'
-name = 'Irina'
+name = 'Aja'
 [[groups."Outreach"]]
 role = 'HONK! Junior'
-name = 'Paul R.'
+name = 'Marcus'
 [[groups."Outreach"]]
 role = 'HONK! Junior'
 name = 'Julia'
@@ -129,4 +133,9 @@ name = 'Paul G.'
 [[groups."Outreach"]]
 role = 'Community Engagement'
 name = 'Al'
-
+[[groups."Outreach"]]
+role = 'Community Engagement'
+name = 'Lizzy'
+[[groups."Outreach"]]
+role = 'Partnerships'
+name = 'Jeanette'
