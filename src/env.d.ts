@@ -1,29 +1,34 @@
-// Replace `astro/client` with `@astrojs/image/client`
-/// <reference types="@astrojs/image/client" />
+/// <reference types="astro/client" />
 
 export interface Nav {
-	links: Array<NavLink>
+  links: Array<NavLink>;
 }
 
 export interface NavLink {
-	name: string;
-	link: string;
+  name: string;
+  link: string;
 }
 
 export interface Social {
-	links: { [key: string]: string }
+  links: { [key: string]: string };
 }
 
 export interface Supporters {
-	art: Array<Supporter>
-	grant: Array<Supporter>
-	shout_out: Array<Supporter>
+  art: Array<Supporter>;
+  grant: Array<Supporter>;
+  shout_out: Array<Supporter>;
 }
 
 export interface Supporter {
-	name: string
-	footer: boolean
-	url: string
-	image_url: string
-	image_ratio: `${number}:${number}`
+  name: string;
+  footer: boolean;
+  url: string;
+  image_url: string;
+  width: number;
+  height: number;
+}
+
+declare module "*.toml" {
+  const value: unknown;
+  export default value;
 }

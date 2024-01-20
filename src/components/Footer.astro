@@ -1,8 +1,8 @@
 ---
-import SocialLink from '@components/SocialLink.svelte';
-import { Image } from '@astrojs/image/components';
-import GoldenDino from './GoldenDino.svelte';
-import type { Supporter, Social } from 'src/env';
+import SocialLink from "@components/SocialLink.svelte";
+import { Image } from "astro:assets";
+import GoldenDino from "./GoldenDino.svelte";
+import type { Supporter, Social } from "src/env";
 
 interface Props {
   supporters: Array<Supporter>;
@@ -34,15 +34,14 @@ const { supporters, social }: Props = Astro.props;
               <div class="mx-2 mb-3">
                 <a
                   href={supporter.url}
-                  class="rounded block bg-white w-fit p-1 h-fit"
+                  class="rounded block bg-white w-fit p-1 h-[60px]"
                 >
                   <Image
                     src={supporter.image_url}
                     alt={supporter.name}
-                    height={60}
-                    aspectRatio={supporter.image_ratio}
+                    width={supporter.width}
+                    height={supporter.height}
                     class="rounded"
-                    format="png"
                   />
                 </a>
               </div>

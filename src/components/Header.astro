@@ -1,8 +1,8 @@
 ---
-import { Image } from '@astrojs/image/components';
-import SocialLink from '@components/SocialLink.svelte';
-import MobileMenu from '@components/MobileMenu.svelte';
-import type { Nav, Social } from 'src/env';
+import { Image } from "astro:assets";
+import SocialLink from "@components/SocialLink.svelte";
+import MobileMenu from "@components/MobileMenu.svelte";
+import type { Nav, Social } from "src/env";
 
 interface Props {
   nav: Nav;
@@ -16,8 +16,8 @@ const currentMenuItem = nav.links.find((item) =>
 
 const activeListItem = (link: string) => {
   return currentMenuItem?.link === link
-    ? 'bg-pink ring-4 ring-cobalt text-gray-100 text-shadow cursor-default'
-    : 'text-shadow bg-navy text-gray-200 hover:scale-105 hover:bg-pink';
+    ? "bg-pink ring-4 ring-cobalt text-gray-100 text-shadow cursor-default"
+    : "text-shadow bg-navy text-gray-200 hover:scale-105 hover:bg-pink";
 };
 ---
 
@@ -34,8 +34,8 @@ const activeListItem = (link: string) => {
         src="https://ik.imagekit.io/thegoldendino/hfw/2023/logo-2023_zZNEDpiqu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668291679349"
         alt="HONK! Fest West"
         format="png"
-        width={557}
-        aspectRatio="427:199"
+        width={427}
+        height="199"
         class="w-auto mx-auto hover:transition ease-in hover:scale-105"
       />
     </a>
@@ -50,9 +50,9 @@ const activeListItem = (link: string) => {
     <ul class="flex flex-wrap justify-center items-center w-full">
       <!-- MAIN NAV -->
       {
-        nav.links.map((item) => (
+        nav.links.map((item: { link: string; name: string }) => (
           <li
-            class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
+            class={`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
               item.link
             )}`}
           >

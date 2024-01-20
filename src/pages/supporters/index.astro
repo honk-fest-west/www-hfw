@@ -1,10 +1,11 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from "astro:assets";
 
-import BaseLayout from '@layouts/BaseLayout.astro';
-import Title from '@components/Title.astro';
-import BackToTop from '@components/BackToTop.astro';
-import supporters from '@data/supporters.toml';
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Title from "@components/Title.astro";
+import BackToTop from "@components/BackToTop.astro";
+import supporters from "@data/supporters.toml";
+import type { Supporter } from "src/env";
 ---
 
 <BaseLayout title="Supporters">
@@ -39,7 +40,7 @@ import supporters from '@data/supporters.toml';
           by law.
           <br /><br />
           Donations can be made via check to:
-          <span class="flex flex-col block mt-2 font-bold">
+          <span class="flex flex-col mt-2 font-bold">
             HONK! Festival West
             <br />
             PO Box 20242
@@ -75,14 +76,14 @@ import supporters from '@data/supporters.toml';
             class="block grid grid-cols-2 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
           >
             {
-              supporters.grant.map((supporter) => (
-                <a class="block mb-3 sm:mb-0" href={supporter.url}>
+              supporters.grant.map((supporter: Supporter) => (
+                <a class="block mb-3 sm:mb-0 w-[347px]" href={supporter.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
                     src={supporter.image_url}
                     alt={supporter.name}
-                    aspectRatio={supporter.image_ratio}
-                    width="347"
+                    width={supporter.width}
+                    height={supporter.height}
                     format="png"
                   />
                 </a>
@@ -102,14 +103,14 @@ import supporters from '@data/supporters.toml';
             class="block grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
           >
             {
-              supporters.art.map((supporter) => (
-                <a class="block mb-3 sm:mb-0" href={supporter.url}>
+              supporters.art.map((supporter: Supporter) => (
+                <a class="block mb-3 sm:mb-0 w-[188px]" href={supporter.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
                     src={supporter.image_url}
                     alt={supporter.name}
-                    aspectRatio={supporter.image_ratio}
-                    width="188"
+                    width={supporter.width}
+                    height={supporter.height}
                     format="png"
                   />
                 </a>
@@ -130,15 +131,15 @@ import supporters from '@data/supporters.toml';
             class="columns-2 sm:columns-3 gap-10 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit"
           >
             {
-              supporters.shout_out.map((supporter) => (
-                <div class="break-inside-avoid mb-6 rounded-lg">
+              supporters.shout_out.map((supporter: Supporter) => (
+                <div class="break-inside-avoid mb-6 rounded-lg w-[188px]">
                   <a href={supporter.url}>
                     <Image
-                      className="w-auto rounded p-1"
+                      class="w-auto rounded p-1"
                       src={supporter.image_url}
                       alt={supporter.name}
-                      aspectRatio={supporter.image_ratio}
-                      width="188"
+                      width={supporter.width}
+                      height={supporter.height}
                       format="png"
                     />
                   </a>
