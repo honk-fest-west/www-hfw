@@ -39,8 +39,8 @@ const { supporters, social }: Props = Astro.props;
                   <Image
                     src={supporter.image_url}
                     alt={supporter.name}
-                    width={supporter.width}
-                    height={supporter.height}
+                    width={supporter.width * (54 / supporter.height)}
+                    height="54"
                     class="rounded"
                   />
                 </a>

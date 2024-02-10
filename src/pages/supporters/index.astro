@@ -73,17 +73,17 @@ import type { Supporter } from "src/env";
             <a href="{supporters.grant[3].url}">{supporters.grant[3].name}</a>.
           </span>
           <span
-            class="block grid grid-cols-2 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
+            class="grid grid-cols-2 gap-2 sm:gap-10 mt-2 sm:mb-5 items-center justify-center"
           >
             {
               supporters.grant.map((supporter: Supporter) => (
-                <a class="block mb-3 sm:mb-0 w-[347px]" href={supporter.url}>
+                <a class="block mb-3 sm:mb-0 w-[200px]" href={supporter.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
                     src={supporter.image_url}
                     alt={supporter.name}
-                    width={supporter.width}
-                    height={supporter.height}
+                    width="200"
+                    height={supporter.height * (200 / supporter.width)}
                     format="png"
                   />
                 </a>
@@ -104,13 +104,13 @@ import type { Supporter } from "src/env";
           >
             {
               supporters.art.map((supporter: Supporter) => (
-                <a class="block mb-3 sm:mb-0 w-[188px]" href={supporter.url}>
+                <a class="block mb-3 sm:mb-0 w-[200px]" href={supporter.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
                     src={supporter.image_url}
                     alt={supporter.name}
-                    width={supporter.width}
-                    height={supporter.height}
+                    width="200"
+                    height={supporter.height * (200 / supporter.width)}
                     format="png"
                   />
                 </a>
@@ -138,8 +138,8 @@ import type { Supporter } from "src/env";
                       class="w-auto rounded p-1"
                       src={supporter.image_url}
                       alt={supporter.name}
-                      width={supporter.width}
-                      height={supporter.height}
+                      width="188"
+                      height={supporter.height * (188 / supporter.width)}
                       format="png"
                     />
                   </a>
