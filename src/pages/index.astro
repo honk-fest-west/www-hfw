@@ -6,6 +6,8 @@ import NewsletterForm from "@components/NewsletterForm.astro";
 import Slideshow from "../components/slideshow/Slideshow.svelte";
 import BackToTop from "@components/BackToTop.astro";
 import FestivalInfoBlock from "@components/home/FestivalInfoBlock.astro";
+import HonkFuture from "@components/home/HonkFuture.astro";
+import HonkAllstars from "@components/home/HonkAllstars.astro";
 
 import slideshow from "@data/slideshow.toml";
 import BandAppDeadline from "@components/home/BandAppDeadline.astro";
@@ -33,11 +35,17 @@ import BandAppDeadline from "@components/home/BandAppDeadline.astro";
       <NewsletterForm />
     </section>
 
-    <!-- <article
-      class="w-full content-container col-span-6 flex flex-col md:flex-row"
+    <article
+      class="w-full content-container col-span-6 xl:col-span-4 flex flex-col md:flex-row"
     >
-      <BandAppDeadline />
-    </article> -->
+      <HonkFuture />
+    </article>
+
+    <article
+      class="w-full content-container col-span-6 xl:col-span-2 flex flex-col md:flex-row"
+    >
+      <HonkAllstars />
+    </article>
 
     <!-- <article
       class="w-full content-container col-span-6 flex flex-col md:flex-row"
