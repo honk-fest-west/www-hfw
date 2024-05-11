@@ -22,29 +22,29 @@ x = 220.0
 y = 787.0
 mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
 
-[valley]
-name = "Valley Stage"
+[edmunds]
+name = "Edmunds Stage"
 x = 574.0
 y = 430.0
 mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
 
-[hill]
-name = "Hill Stage"
+[columbia]
+name = "Columbia Park Stage"
 x = 385.0
 y = 900.0
 mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
+
+[37th]
+name = "Rainier Arts Stage"
+x = 250.0
+y = 270.0
+mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
 
 [gateway]
 name = "Gateway Stage"
 x = 870.0
 y = 1460.0
 mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
-
-[rac]
-name = "Rainier Arts Stage"
-x = 250.0
-y = 270.0
-mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
 
 [shady]
 name = "Shady Stage"
