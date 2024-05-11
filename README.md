@@ -58,3 +58,13 @@ Below are links to content files in this repository. The live site will be updat
 - [Main Navigation](./src/data/nav.toml)
 - [Social Media Links](./src/data/social.toml)
 - [Footer Supporters](./src/data/footer.toml )
+
+## Festival App
+
+### Dependencies
+
+- "svelte": "^4.2.0",
+- "@skeletonlabs/skeleton": "^1.2.5"
+- "xstate": "^4.37.2"
+- "@xstate/svelte": "^2.0.1"
+- "svelte-spa-router": "^3.3.0"

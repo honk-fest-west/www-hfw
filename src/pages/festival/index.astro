@@ -5,13 +5,13 @@ import FestivalApp from '@components/festival/FestivalApp.svelte';
 import schedule from '@data/schedule.toml';
 import bands from '@data/bands.toml';
 import stages from '@data/stages.toml';
-import logoImg from '/src/images/logos/2023-logo-white.png';
+import logoImg from '/src/assets/images/logos/2023-logo-white.png';
 
-const mapImgs = await Astro.glob('/src/images/map/*').then((files) =>
+const mapImgs = await Astro.glob('/src/assets/images/map/*').then((files) =>
   files.map((file) => file.default),
 );
 
-const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
+const bandImgs = await Astro.glob('/src/assets/images/bands/*').then((files) =>
   files.map((file) => file.default),
 );
 ---
