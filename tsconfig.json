@@ -16,5 +16,9 @@
     "plugins": [
       {"name": "typescript-plugin-toml"}
     ]
-  }
+  },
+  "exclude": [
+    "src/assets",
+    "src/styles",
+  ]
 }

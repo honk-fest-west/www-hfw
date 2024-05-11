@@ -1,14 +1,39 @@
 ---
-import { Image } from "astro:assets";
+import Head from '@components/base-head/BaseHead.astro';
+import FestivalApp from '@components/festival/FestivalApp.svelte';
 
-import BaseLayout from "@layouts/BaseLayout.astro";
-import Title from "@components/Title.astro";
-import BackToTop from "@components/BackToTop.astro";
+import schedule from '@data/schedule.toml';
+import bands from '@data/bands.toml';
+import stages from '@data/stages.toml';
+import logoImg from '/src/images/logos/2023-logo-white.png';
+
+const mapImgs = await Astro.glob('/src/images/map/*').then((files) =>
+  files.map((file) => file.default),
+);
+
+const bandImgs = await Astro.glob('/src/images/bands/*').then((files) =>
+  files.map((file) => file.default),
+);
 ---
 
-<BaseLayout title="2024 - Festival">
-  <section class="content-container text-center">
-    <p class="text-5xl font-bold mt-4">Festival . 2024</p>
-    <p class="text-3xl font-bold mt-10 mb-4">More info coming soon</p>
-  </section>
-</BaseLayout>
+<!doctype html>
+<html lang="en" class="h-full overflow-hidden bg-surface-800">
+  <!-- HEAD -->
+  <head>
+    <Head title="HONK! 2023" />
+  </head>
+
+  <body class="h-full overflow-hidden sm:max-w-3xl mx-auto">
+    <div style="display: contents" class="h-full overflow-hidden">
+      <FestivalApp
+        client:only="svelte"
+        bands={bands}
+        schedule={schedule}
+        stages={stages}
+        logoImg={logoImg}
+        mapImgs={mapImgs}
+        bandImgs={bandImgs}
+      />
+    </div>
+  </body>
+</html>
