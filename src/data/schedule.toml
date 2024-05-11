@@ -1,5 +1,5 @@
 [[days]]
-"date"	= "2023-06-02"
+"date"	= "2024-05-31"
 "startTime" = "18:00"
 "endTime" = "22:00"
 "slotDuration" = 20
@@ -25,15 +25,13 @@
 "23:00" = [ "", 					"", 				"filthy", 		"" ]
 "23:20" = [ "", 					"", 				"jules", 			"" ]
 "23:40" = [ "", 					"", 				"jules", 			"" ]
-[days.allday]
-"puppets"		= [ "westcas",		"lovett"]
 [days.coordinates]
 "info" = [845.0,1040.0]
 "medic" = [845.0,1130.0]
 "potty" = [845.0,953.0]
 
 [[days]]
-"date"	= "2023-06-03"
+"date"	= "2024-06-01"
 "startTime" = "12:00"
 "endTime" = "20:00"
 "slotDuration" = 30
@@ -57,7 +55,6 @@
 "18:30" = [ "chunky", 	"baque", 			"brassless",	"" ]
 "19:00" = [ "tmb", 			"neighbors", 	"tacomarama", "" ]
 "19:30" = [ "allstars", "", 					"", 					"" ]
-[days.allday]
 [days.coordinates]
 "info" = [480.0,1270.0]
 "medic" = [480.0,1180.0]
@@ -65,15 +62,15 @@
 
 
 [[days]]
-"date"	= "2023-06-04"
+"date"	= "2023-06-02"
 "startTime" = "12:00"
 "endTime" = "18:00"
 "slotDuration" = 20
-"location" = "Yesler Terrace Park"
-"mapUrl" = "https://goo.gl/maps/Y2dD5U16Fqf4Fr6U8"
-"stages"= [ "spray", 		"lawn" ]
+"location" = "Pratt Park"
+"mapUrl" = "https://maps.app.goo.gl/nX3NEqR9PTTX1KnC6"
+"stages"= [ "shady", 		"sun" ]
 [days.schedule]
-"12:00" = [ "artesian", "brassless" ]
+"12:00" = [ "", "brassless" ]
 "12:20" = [ "artesian", "seattleu" ]
 "12:40" = [ "goat", 		"neighbors" ]
 "13:00" = [ "chunky", 	"neighbors" ]
@@ -92,10 +89,7 @@
 "17:20" = [ "", 				"neon" ]
 "17:40" = [ "", 				"allstars" ]
 "18:00" = [ "", 				"queens" ]
-[days.allday]
-"puppets"		= [ "westcas",		"lovett" ]
 [days.coordinates]
-"info" = [963.0,540.0]
-"medic" = [875.0,561.0]
-"potty" = [1235.0,1031.0]
-
+"info" = [800.0,660.0]
+"medic" = [760.0,720.0]
+"potty" = [980.0, 640.0]

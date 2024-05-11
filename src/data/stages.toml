@@ -46,14 +46,14 @@ x = 250.0
 y = 270.0
 mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
 
-[spray]
-name = "Spray Stage"
-x = 1175.0
-y = 735.0
-mapUrl = "https://goo.gl/maps/SuYFTkq48jrPhs5Y8"
+[shady]
+name = "Shady Stage"
+x = 775.0
+y = 460.0
+mapUrl = "https://maps.app.goo.gl/wLuc4GYbDgv3yMsn9"
 
-[lawn]
-name = "Lawn Stage"
-x = 170.0
-y = 1000.0
-mapUrl = "https://goo.gl/maps/KPwtYko3d9EhzeXT6"
+[sun]
+name = "Sun Stage"
+x = 520.0
+y = 820.0
+mapUrl = "https://maps.app.goo.gl/p6ABBAaRYkgAQ5At7"

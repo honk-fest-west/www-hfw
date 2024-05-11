@@ -43,7 +43,7 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 					allDayKeys:
 						compact(
 							Object
-								.values(day.allday)
+								.values(day.allday || {})
 								.flat()
 								.filter((key, idx, arr) => arr.indexOf(key) === idx),
 						)
