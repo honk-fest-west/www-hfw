@@ -51,7 +51,7 @@
     schedule,
     stages,
     bands,
-    bandImgs
+    bandImgs,
   );
 
   const initialContext: AppCtx = {
