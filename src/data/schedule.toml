@@ -37,7 +37,7 @@
 "slotDuration" = 30
 "location" = "Columbia City"
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
-"stages"= [ "edmunds", 		"columbia", 		"37th", 	"gateway" ]
+"stages"= [ "edmunds", 		"columbia", 		"gateway", 	"37th" ]
 [days.schedule]
 "12:00" = [ "chunky", 	"", 					"", 					"" ]
 "12:30" = [ "onelove", 	"artesian", 	"", 					"brassless" ]
