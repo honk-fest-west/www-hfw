@@ -26,19 +26,19 @@ mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
 name = "Edmunds Stage"
 x = 100.0
 y = 800.0
-mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
+mapUrl = "https://maps.app.goo.gl/XLbUVWercZPEC9SU8"
 
 [columbia]
 name = "Columbia Park Stage"
 x = 510.0
 y = 150.0
-mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
+mapUrl = "https://maps.app.goo.gl/mVyyPUsp3DPErK6i8"
 
 [37th]
 name = "37th Stage"
 x = 1220.0
 y = 1300.0
-mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
+mapUrl = "https://maps.app.goo.gl/mVyyPUsp3DPErK6i8"
 
 [gateway]
 name = "Gateway Stage"
