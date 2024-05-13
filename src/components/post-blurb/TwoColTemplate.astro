@@ -1,7 +1,7 @@
 ---
-import { Image } from "astro:assets";
-import Title from "@components/Title.astro";
-import DateTime from "./DateTime.astro";
+import { Image } from 'astro:assets';
+import Title from '@components/Title.astro';
+import DateTime from './DateTime.astro';
 
 const { post } = Astro.props;
 ---
@@ -15,9 +15,7 @@ const { post } = Astro.props;
         class="max-h-[245px] w-auto border-2 border-accent-color border-opacity-80 hover:border-opacity-100 rounded"
         src={post.image_url}
         alt={`${post.title} ${post.subtitle}`}
-        height="245"
-        width="245"
-        format={post.image_format}
+        inferSize
       />
     </a>
     <div

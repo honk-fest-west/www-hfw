@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import SocialLink from "@components/SocialLink.svelte";
-import MobileMenu from "@components/MobileMenu.svelte";
-import type { Nav, Social } from "src/env";
+import { Image } from 'astro:assets';
+import SocialLink from '@components/SocialLink.svelte';
+import MobileMenu from '@components/MobileMenu.svelte';
+import type { Nav, Social } from 'src/env';
 
 interface Props {
   nav: Nav;
@@ -11,13 +11,13 @@ interface Props {
 const { nav, social } = Astro.props;
 
 const currentMenuItem = nav.links.find((item) =>
-  Astro.url.pathname.includes(item.link)
+  Astro.url.pathname.includes(item.link),
 );
 
 const activeListItem = (link: string) => {
   return currentMenuItem?.link === link
-    ? "bg-pink ring-4 ring-cobalt text-gray-100 text-shadow cursor-default"
-    : "text-shadow bg-navy text-gray-200 hover:scale-105 hover:bg-pink";
+    ? 'bg-pink ring-4 ring-cobalt text-gray-100 text-shadow cursor-default'
+    : 'text-shadow bg-navy text-gray-200 hover:scale-105 hover:bg-pink';
 };
 ---
 
@@ -33,10 +33,8 @@ const activeListItem = (link: string) => {
       <Image
         src="https://ik.imagekit.io/thegoldendino/hfw/2023/logo-2023_zZNEDpiqu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668291679349"
         alt="HONK! Fest West"
-        format="png"
-        width="557"
-        height="260"
         class="w-auto mx-auto hover:transition ease-in hover:scale-105"
+        inferSize
       />
     </a>
   </h1>
@@ -53,7 +51,7 @@ const activeListItem = (link: string) => {
         nav.links.map((item: { link: string; name: string }) => (
           <li
             class={`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
-              item.link
+              item.link,
             )}`}
           >
             <a
