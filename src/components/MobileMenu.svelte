@@ -4,7 +4,7 @@
   import type { Nav, Social, NavLink } from 'src/env';
   export let nav: Nav;
   export let social: Social;
-  export let currentMenuItem: NavLink;
+  export let currentMenuItem: NavLink | undefined;
 
   const activeListItem = (link: string) => {
     return link === currentMenuItem?.link
@@ -82,7 +82,7 @@
       {#each nav.links as item}
         <li
           class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
-            item.link
+            item.link,
           )}`}
         >
           <a
