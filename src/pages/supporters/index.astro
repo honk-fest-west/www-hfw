@@ -1,11 +1,11 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
-import BaseLayout from "@layouts/BaseLayout.astro";
-import Title from "@components/Title.astro";
-import BackToTop from "@components/BackToTop.astro";
-import supporters from "@data/supporters.toml";
-import type { Supporter } from "src/env";
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Title from '@components/Title.astro';
+import BackToTop from '@components/BackToTop.astro';
+import supporters from '@data/supporters.toml';
+import type { Supporter } from 'src/env';
 ---
 
 <BaseLayout title="Supporters">
@@ -82,9 +82,7 @@ import type { Supporter } from "src/env";
                     class="w-auto rounded bg-white p-2"
                     src={supporter.image_url}
                     alt={supporter.name}
-                    width="200"
-                    height={supporter.height * (200 / supporter.width)}
-                    format="png"
+                    inferSize
                   />
                 </a>
               ))
@@ -109,9 +107,7 @@ import type { Supporter } from "src/env";
                     class="w-auto rounded bg-white p-2"
                     src={supporter.image_url}
                     alt={supporter.name}
-                    width="200"
-                    height={supporter.height * (200 / supporter.width)}
-                    format="png"
+                    inferSize
                   />
                 </a>
               ))
@@ -138,9 +134,7 @@ import type { Supporter } from "src/env";
                       class="w-auto rounded p-1"
                       src={supporter.image_url}
                       alt={supporter.name}
-                      width="188"
-                      height={supporter.height * (188 / supporter.width)}
-                      format="png"
+                      inferSize
                     />
                   </a>
                 </div>
