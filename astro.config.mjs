@@ -30,6 +30,11 @@ export default defineConfig({
   ],
   vite: {
     plugins: [yaml(), ViteToml()],
+    build: {
+			rollupOptions: {
+				external: ['sharp'],
+			}
+		}
   },
   image: {
     domains: ["ik.imagekit.io"],
