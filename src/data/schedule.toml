@@ -7,7 +7,7 @@
 "mapUrl" = "https://goo.gl/maps/X1TwS4CkwqQyV1DUA" 
 "stages" = ["coffee", 		"overpass", "electric"]
 [days.schedule]
-"18:00" = [ "", 		"", 	"" ]
+"18:00" = [ "tbd", 		"", 	"" ]
 "18:20" = [ "", 		"", 	"" ]
 "18:40" = [ "", 		"", 	"" ]
 "19:00" = [ "", 		"", 	"" ]
@@ -39,7 +39,7 @@
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
 "stages"= [ "edmunds", 		"columbia", 		"gateway", 	"37th" ]
 [days.schedule]
-"12:00" = [ "", 	"", 					"", 					"" ]
+"12:00" = [ "tbd", 	"", 					"", 					"" ]
 "12:30" = [ "", 	"", 					"", 					"" ]
 "13:00" = [ "", 	"", 					"", 					"" ]
 "13:30" = [ "", 	"", 					"", 					"" ]
@@ -62,7 +62,7 @@
 
 
 [[days]]
-"date"	= "2023-06-02"
+"date"	= "2024-06-02"
 "startTime" = "12:00"
 "endTime" = "18:00"
 "slotDuration" = 30
@@ -70,7 +70,7 @@
 "mapUrl" = "https://maps.app.goo.gl/nX3NEqR9PTTX1KnC6"
 "stages"= [ "hill", 		"field" ]
 [days.schedule]
-"12:00" = [ "", "" ]
+"12:00" = [ "tbd", "" ]
 "12:30" = [ "", "" ]
 "13:00" = [ "", "" ]
 "13:30" = [ "", "" ]

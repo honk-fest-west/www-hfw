@@ -46,14 +46,14 @@ x = 1000.0
 y = 930.0
 mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
 
-[shady]
-name = "Shady Stage"
+[hill]
+name = "North Hill Stage"
 x = 775.0
 y = 460.0
 mapUrl = "https://maps.app.goo.gl/wLuc4GYbDgv3yMsn9"
 
-[sun]
-name = "Sun Stage"
+[field]
+name = "South Field Stage"
 x = 520.0
 y = 820.0
 mapUrl = "https://maps.app.goo.gl/p6ABBAaRYkgAQ5At7"

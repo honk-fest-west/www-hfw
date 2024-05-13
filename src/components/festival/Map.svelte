@@ -26,7 +26,7 @@
     const stage = stages.find((stage) => stage.key === stageKey);
     return stage?.schedule.find((timeSlot) => {
       const timeSlotEnd = new Date(
-        timeSlot.time.getTime() + day.slotDuration * 60000
+        timeSlot.time.getTime() + day.slotDuration * 60000,
       );
       return (
         currentTime >= timeSlot.time &&
@@ -41,7 +41,7 @@
   const setPinCoordinates = async (
     mapEl: HTMLElement,
     stages: Stage[],
-    other: Coordinates
+    other: Coordinates,
   ) => {
     if (!mapEl) return;
 
@@ -121,22 +121,24 @@
 
   <!-- Stage Pins -->
   {#each stages as stage, idx}
-    <button
-      class="absolute flex h-8 w-8 rounded shadow-lg"
-      bind:this={stage.pinEl}
-      on:click={() => selectStage(stage.key)}
-    >
-      <span
-        class={`absolute inline-flex h-full w-full bg-primary-400 opacity-75 rounded ${animatePing(
-          stage.key
-        )}`}
-      />
-
-      <span
-        class="relative inline-flex h-8 w-8 bg-primary-500 text-md font-semibold text-on-surface-token justify-center items-center rounded"
-        >{idx + 1}</span
+    {#if stage}
+      <button
+        class="absolute flex h-8 w-8 rounded shadow-lg"
+        bind:this={stage.pinEl}
+        on:click={() => selectStage(stage.key)}
       >
-    </button>
+        <span
+          class={`absolute inline-flex h-full w-full bg-primary-400 opacity-75 rounded ${animatePing(
+            stage.key,
+          )}`}
+        />
+
+        <span
+          class="relative inline-flex h-8 w-8 bg-primary-500 text-md font-semibold text-on-surface-token justify-center items-center rounded"
+          >{idx + 1}</span
+        >
+      </button>
+    {/if}
   {/each}
 
   <!-- Info Pin -->
