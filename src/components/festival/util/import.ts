@@ -70,14 +70,16 @@ export const process = (importSchedule: ImportSchedule, importStages: ImportStag
 
 			importSchedule.days.forEach(day => {
 				day.stages.forEach((stageKey, idx) => {
-					stages[stageKey].schedule =
-						Object.entries(day.schedule).map(([time, bandKeys]) => {
-							const bandKey = bandKeys[idx];
-							return {
-								time: new Date(Date.parse(`${day.date}T${time}`)),
-								bandKey
-							};
-						});
+					if (stages[stageKey]) {
+						stages[stageKey].schedule =
+							Object.entries(day.schedule).map(([time, bandKeys]) => {
+								const bandKey = bandKeys[idx];
+								return {
+									time: new Date(Date.parse(`${day.date}T${time}`)),
+									bandKey
+								};
+							});
+					}
 				});
 			});
 
