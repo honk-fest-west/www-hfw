@@ -21,6 +21,8 @@
 				"svelte.svelte-vscode"
 			]
 		}
+	},
+	"features": {
 	}
 
 	// Configure tool-specific properties.

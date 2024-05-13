@@ -18,7 +18,7 @@ height = 1
 name = 'Arts Fund'
 footer = false
 url = 'https://www.artsfund.org/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/ScreenArtsFund_Logo_Stacked_RGB_SM_BHsCBeExa.jpg?updatedAt=1628630949084&tr=b-18_FFFFFF'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/ScreenArtsFund_Logo_Stacked_RGB_SM_BHsCBeExa.jpg?tr=b-18_FFFFFF'
 width = 961
 height = 499
 
@@ -26,7 +26,7 @@ height = 499
 name = 'National Endowment for the Arts'
 footer = true
 url = 'https://www.arts.gov/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/nea_logo_xqSse_Pbb.jpg?updatedAt=1628843291841'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/nea_logo_xqSse_Pbb.jpg'
 width = 36
 height = 18
 
@@ -34,7 +34,7 @@ height = 18
 name = 'WA State Arts Commission'
 footer = true
 url = 'https://www.arts.wa.gov/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/Transparent-background-ArtsWA-logo_State-with-full-name_2019_2HKh-O2il0I.png?updatedAt=1628630949914'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/Transparent-background-ArtsWA-logo_State-with-full-name_2019_2HKh-O2il0I.png'
 width = 100
 height = 105
 
@@ -42,7 +42,7 @@ height = 105
 name = 'Seattle Department of Neighborhoods'
 footer = true
 url = 'https://www.seattle.gov/neighborhoods'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/seattle-neighborhoods_gbnnL8OPS.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1673058115133'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/seattle-neighborhoods_gbnnL8OPS.jpg'
 width = 23
 height = 7
 
@@ -50,7 +50,7 @@ height = 7
 name = 'Seattle Office of Arts & Culture'
 footer = true
 url = 'https://www.seattle.gov/arts'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/OAC_logo_9fSxWFvCS.jpg?updatedAt=1680894463597'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/OAC_logo_9fSxWFvCS.jpg'
 width = 43
 height = 39
 
@@ -58,7 +58,7 @@ height = 39
 name = 'Electric Habitat'
 footer = false
 url = 'https://www.electric-habitat.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/electric-habitat_cB5p_jJ9K.png?updatedAt=1679948893835'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/electric-habitat_cB5p_jJ9K.png'
 width = 1
 height = 1
 
@@ -66,7 +66,7 @@ height = 1
 name = 'Bennett Properties'
 footer = false
 url = 'https://johnbennettproperties.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/cropped-cropped-BP-logo-blue_ChFMGeCqT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515012'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/cropped-cropped-BP-logo-blue_ChFMGeCqT.png'
 width = 2
 height = 1
 
@@ -74,7 +74,7 @@ height = 1
 name = 'Ballard Odd Fellows'
 footer = false
 url = 'https://www.ballardoddfellows.org/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/ballard-odd-fellows_WJs3tWsRj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653981434550'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/ballard-odd-fellows_WJs3tWsRj.jpg'
 width = 114
 height = 63
 
@@ -82,7 +82,7 @@ height = 63
 name = 'Neon Brass Party'
 footer = false
 url = 'https://www.neonbrassparty.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/neon-brass-party_7z5XYNNpJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651466257137&tr=w-600'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/neon-brass-party_7z5XYNNpJ.jpg'
 width = 1
 height = 1
 
@@ -90,7 +90,7 @@ height = 1
 name = '9LB Hammer'
 footer = false
 url = 'http://ninepoundhammer.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/9lbhammer_lZ_kCbxpq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515906'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/9lbhammer_lZ_kCbxpq.jpg'
 width = 1701
 height = 2205
 
@@ -98,7 +98,7 @@ height = 2205
 name = 'Rainier Valley Creative District'
 footer = false
 url = 'https://rainiervalleycreativedistrict.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/rvcd/brand/logo-lg_uqHNphXcj.png?ik-sdk-version=javascript-1.4.3&updatedAt=1636003240128'
+image_url = 'https://ik.imagekit.io/thegoldendino/rvcd/brand/logo-lg_uqHNphXcj.png'
 width = 1
 height = 1
 
@@ -106,7 +106,7 @@ height = 1
 name = 'Super Six'
 footer = false
 url = 'http://www.supersixseattle.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/SUPER_SIX_Logo_cA7OjRt0Y.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654018810234'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/SUPER_SIX_Logo_cA7OjRt0Y.png'
 width = 2625
 height = 1064
 
@@ -114,7 +114,7 @@ height = 1064
 name = 'Chomp!'
 footer = false
 url = 'https://www.chomplocal.org/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/CHOMP-Logo-Plain-2022_tt3do75MnI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980516024'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/CHOMP-Logo-Plain-2022_tt3do75MnI.png'
 width = 3
 height = 1
 
@@ -122,7 +122,7 @@ height = 1
 name = 'Artisan Electric'
 footer = false
 url = 'https://artisanelectricinc.com/about/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/artisan_27p_gurW6.png?updatedAt=1684089172752'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/artisan_27p_gurW6.png'
 width = 1072
 height = 415
 
@@ -130,7 +130,7 @@ height = 415
 name = 'Secret Aardvark'
 footer = false
 url = 'https://secretaardvark.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/SATC_LogoPrimary_nZQZuza_m.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515982'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/SATC_LogoPrimary_nZQZuza_m.png'
 width = 1
 height = 1
 
@@ -138,7 +138,7 @@ height = 1
 name = 'Jules Maes Saloon'
 footer = false
 url = 'https://www.julesmaessaloon.com/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/jules-maes_TVLJoZrK0.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653980628229'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/jules-maes_TVLJoZrK0.jpg'
 width = 702
 height = 456
 
@@ -146,6 +146,6 @@ height = 456
 name = 'Columbia City Beatwalk'
 footer = false
 url = 'https://www.facebook.com/ColumbiaCityBeatwalk/'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/BeatWalk-logo-blue-print___002__c_NNISjLkB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653980515968'
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/supporters/BeatWalk-logo-blue-print___002__c_NNISjLkB.png'
 width = 2982
 height = 1125
