@@ -36,8 +36,11 @@ name = 'Ginny'
 role = 'President'
 name = 'Jeanette'
 [[groups."Board of Directors"]]
-role = 'Secretary/Treasurer'
+role = 'Treasurer'
 name = 'Dee'
+[[groups."Board of Directors"]]
+role = 'Secretary'
+name = 'Ginny Trufan'
 [[groups."Board of Directors"]]
 role = 'Member'
 name = 'Lizzy'
@@ -99,7 +102,7 @@ role = "Art & Website"
 name = "Dwight"
 [[groups."Creative & Communications"]]
 role = "Social Media"
-name = "Andrea"
+name = "Jeanette"
 
 
 [[groups."Fundraising"]]
@@ -108,9 +111,6 @@ name = 'Jeanette'
 [[groups."Fundraising"]]
 role = 'Fundraising Events'
 name = 'Marisa'
-[[groups."Fundraising"]]
-role = 'Online Giving'
-name = 'Andrea'
 
 [[groups."Outreach"]]
 role = 'Outreach Lead'
