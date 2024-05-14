@@ -4,8 +4,10 @@ import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 import BackToTop from '@components/BackToTop.astro';
-import supporters from '@data/supporters.toml';
 import type { Supporter } from 'src/env';
+
+// @ts-ignore
+import supporters from '@data/supporters.toml';
 ---
 
 <BaseLayout title="Supporters">

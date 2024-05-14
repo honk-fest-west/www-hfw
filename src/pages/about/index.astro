@@ -9,13 +9,17 @@ import CommitteeRoles from '@components/about/CommitteeRoles.astro';
 import HonkFamily from '@components/about/HonkFamily.astro';
 import ContactUs from '@components/about/ContactUs.astro';
 import MarkdownContent from '@components/MarkdownContent.astro';
-import committee from '@data/committee.toml';
-import family from '@data/family.toml';
-import contact from '@data/contact.toml';
 import { rawContent as diversity_content } from '@data/diversity.md';
 import { rawContent as join_us_content } from '@data/join_us.md';
 import { rawContent as mission_content } from '@data/mission.md';
 import { rawContent as story_content } from '@data/story.md';
+
+// @ts-ignore
+import committee from '@data/committee.toml';
+// @ts-ignore
+import family from '@data/family.toml';
+// @ts-ignore
+import contact from '@data/contact.toml';
 ---
 
 <BaseLayout title="About">
