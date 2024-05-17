@@ -225,6 +225,12 @@ location = "Los Angeles, CA"
 url = "https://labamba.lahonk.org/"
 description = ""
 
+[gozona]
+name = "La Banda Gozona"
+location = "Seattle, WA"
+url = "https://www.facebook.com/people/La-Banda-Gozona/100065180273378/"
+description = "gozona (go·soh·nah), [noun]: In the Sierra Madre of Oaxaca, a gozona is a four-day combination serenade and battle of the bands. We are La Banda Gozona, a group of Seattle musicians who play the traditional music of Oaxaca, Mexico."
+
 [lovett]
 name = "Lovett Arts"
 location = "Seattle, WA"
@@ -242,6 +248,12 @@ name = "Louisa Boren & Cleveland STEM Middle School Band"
 location = "Seattle, WA"
 url = "#"
 description = ""
+
+[lynx]
+name = "Lynxcorps"
+location = "Seattle, WA"
+url = ""
+description = "Seattle youth band"
 
 [meownow]
 name = "MeowNow Brass Band"
