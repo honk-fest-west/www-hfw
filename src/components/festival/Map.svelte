@@ -14,6 +14,7 @@
   let infoPinEl: HTMLSpanElement;
   let medicPinEl: HTMLSpanElement;
   let pottyPinEl: HTMLSpanElement;
+  let potty2PinEl: HTMLSpanElement;
 
   const dispatch = createEventDispatcher();
 
@@ -89,6 +90,9 @@
       } else if (key === 'potty') {
         pottyPinEl && (pottyPinEl.style.left = `${left}px`);
         pottyPinEl && (pottyPinEl.style.top = `${top}px`);
+      } else if (key === 'potty2') {
+        potty2PinEl && (potty2PinEl.style.left = `${left}px`);
+        potty2PinEl && (potty2PinEl.style.top = `${top}px`);
       }
     });
   };
@@ -169,6 +173,18 @@
   <span
     class="absolute flex h-6 w-6 justify-center items-center rounded overflow-hidden shadow-lg"
     bind:this={pottyPinEl}
+  >
+    <span class="absolute inline-flex h-full w-full bg-blue-500" />
+    <span
+      class="relative inline-flex h-4 w-4 bg-blue-500 text-md font-semibold text-blue-50 justify-center"
+      ><FaRestroom /></span
+    >
+  </span>
+
+  <!-- Potty 2 Pin -->
+  <span
+    class="absolute flex h-6 w-6 justify-center items-center rounded overflow-hidden shadow-lg"
+    bind:this={potty2PinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-blue-500" />
     <span

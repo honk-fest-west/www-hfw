@@ -4,6 +4,12 @@ x = 840.0
 y = 280.0
 mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
 
+[fondala]
+name = "Fonda La Catrina"
+x = 360
+y = 60
+mapUrl = "https://maps.app.goo.gl/Z6m1XvsppQ83G3A88"
+
 [coffee]
 name = "Coffee Stage"
 x = 930.0 
