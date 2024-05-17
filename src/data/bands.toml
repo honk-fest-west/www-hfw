@@ -118,6 +118,12 @@ location = ""
 url = "https://chunkyhustlebrassband.com/"
 description = "A brassalicious, bouncy castle of spirited song and sound"
 
+[cimarrona]
+name = "Cimarrona"
+location = "Santo Domingo, Costa Rica"
+url = "https://www.facebook.com/cimarronalaoriginal/"
+description = "The Original Domingueña"
+
 [emporer]
 name = "Emperor Norton's Stationary Marching Band"
 location = "Somerville, MA"
@@ -129,6 +135,13 @@ name = "Filthy FemCorps"
 location = "Seattle, WA"
 url = "http://www.filthyfemcorps.com/"
 description = "We are a hot bag full of fierce women who aren’t afraid to be weird, genuine, raw, sweaty, confident, honest, loving and real. We are a feminist organization, in that we are an organized activity in support of women’s interests. We are accepting of all women from all walks of life and invite them to participate in the joy and excitement we create through our performance."
+
+[flyby]
+name = "Fly By"
+location = "Boston, MA"
+url = "https://flybybrassband.com/"
+description = "We are a ~12 piece brass-band out of the greater Boston Area who enjoys playing interesting and approachable music. Born of the local HONK scene we focus on bringing live horn harmonies to the people."
+
 
 [funkrust]
 name = "Funkrust Brass Band"
@@ -220,12 +233,6 @@ location = "Seattle, WA"
 url = "https://www.neonbrassparty.com/"
 description = "We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music."
 
-[redalert]
-name = "Red Alert"
-location = "Seattle, WA"
-url = "https://www.nhl.com/kraken/fans/game-presentation"
-description = "Introducing Red Alert, the Kraken Marching band, led by Liz Harris Scruggs. Look out for this 32-member band at the Armory and on the plaza pre-game and in the arena during the game as they help us rock the rink."
-
 [step]
 name = "Northside Step Team"
 location = "Seattle, WA"
@@ -243,6 +250,12 @@ name = "Queens of HONK!"
 location = "Everywhere"
 url = "http://www.honkfest.org.au/queens-of-honk.html"
 description = "Queens of HONK! is meant as an active and open invitation to ALL and especially minority and underrepresented populations in the HONK! community."
+
+[redalert]
+name = "Red Alert"
+location = "Seattle, WA"
+url = "https://www.nhl.com/kraken/fans/game-presentation"
+description = "Introducing Red Alert, the Kraken Marching band, led by Liz Harris Scruggs. Look out for this 32-member band at the Armory and on the plaza pre-game and in the arena during the game as they help us rock the rink."
 
 [reigncity]
 name = "Reign City Riot"
@@ -291,6 +304,12 @@ name = "Sound Wave"
 location = "Seattle, WA"
 url = "https://www.soundersfc.com/matchday/sound-wave"
 description = "Sound Wave is the official band of Seattle Sounders FC. In 2009, minority owner Drew Carey conceptualized an ensemble made up of traditional marching percussion and brass instruments to bring the spirit of Sounders FC to life. "
+
+[southendpep]
+name = "South End Pep"
+location = "Seattle, WA"
+url = "#"
+description = "Pep band from the south end. Yo."
 
 [sticks]
 name = "Sticks & Bones"
