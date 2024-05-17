@@ -195,6 +195,12 @@ location = "Everywhere"
 url = "https://drive.google.com/drive/folders/1WO2k6tIspmt4BY8wz62tWIBVZOIPIftP?usp=share_link"
 description = "HONK! All-Stars is a collection of the best and the loudest musicians from all over. Anyone who can play is welcome to participate."
 
+[future]
+name = "HONK! Future"
+location = "Seattle, WA"
+url = "#"
+description = "Brilliant musicians from the Future here to perform for us now."
+
 [hungry]
 name = "Hungry March Band"
 location = "Brooklyn, NYC"
@@ -273,6 +279,12 @@ location = "Everywhere"
 url = "http://www.honkfest.org.au/queens-of-honk.html"
 description = "Queens of HONK! is meant as an active and open invitation to ALL and especially minority and underrepresented populations in the HONK! community."
 
+[phinney]
+name = "Phinney Ridge Steel Band"
+location = "Seattle, WA"
+url = "https://steeldrums.podia.com/"
+description = "Groovin' in the Pacific Northwest"
+
 [redalert]
 name = "Red Alert"
 location = "Seattle, WA"
@@ -320,6 +332,12 @@ name = "Soul Jambalaya"
 location = "Seattle, WA"
 url = ""
 description = ""
+
+[machine]
+name = "SOUND MACHINE"
+location = "Whidbey Island, WA"
+url = "#"
+description = "Are you ready to get FAMILY FUNKY?"
 
 [soundwave]
 name = "Sound Wave"
