@@ -18,7 +18,8 @@
 			"extensions": [
 				"bradlc.vscode-tailwindcss",
 				"astro-build.astro-vscode",
-				"svelte.svelte-vscode"
+				"svelte.svelte-vscode",
+				"tamasfe.even-better-toml"
 			]
 		}
 	},

@@ -5,7 +5,7 @@
 "slotDuration" = 20
 "location" = "Georgetown"
 "mapUrl" = "https://goo.gl/maps/X1TwS4CkwqQyV1DUA" 
-"stages" = ["coffee", "jules", "fondala",	"overpass", "electric"]
+"stages" = ["coffee", "overpass", "electric",	"stables", "jules"]
 [days.schedule]
 "18:00" = [ "", 		"", 	"", 		"", 	"" ]
 "18:20" = [ "", 		"", 	"", 		"", 	"" ]
@@ -38,7 +38,7 @@
 "slotDuration" = 30
 "location" = "Columbia City"
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
-"stages"= [ "edmunds", 		"columbia_hill", 		"gateway", 	"columbia_valley" ]
+"stages"= [ "columbia_hill", 	"edmunds",	"gateway" ]
 [days.schedule]
 "12:00" = [ "", 	"", 					"", 					"" ]
 "12:30" = [ "", 	"", 					"", 					"" ]

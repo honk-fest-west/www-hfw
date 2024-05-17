@@ -4,11 +4,11 @@ x = 840.0
 y = 280.0
 mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
 
-[fondala]
-name = "Fonda La Catrina"
+[stables]
+name = "The Stables"
 x = 360
 y = 60
-mapUrl = "https://maps.app.goo.gl/Z6m1XvsppQ83G3A88"
+mapUrl = "https://maps.app.goo.gl/Z59suUFTPvegYmUcA"
 
 [coffee]
 name = "Coffee Stage"
@@ -35,13 +35,13 @@ y = 430.0
 mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
 
 [columbia_hill]
-name = "Hill Stage"
+name = "Columbia Park"
 x = 385.0
 y = 900.0
 mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
 
 [gateway]
-name = "Gateway Stage"
+name = "Gateway Park"
 x = 870.0
 y = 1460.0
 mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
@@ -53,19 +53,19 @@ y = 270.0
 mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
 
 [edmunds]
-name = "Edmunds Stage"
+name = "Street Stage"
 x = 180.0
 y = 1380.0
 mapUrl = "https://maps.app.goo.gl/XLbUVWercZPEC9SU8"
 
 [pratt_hill]
-name = "North Hill Stage"
+name = "North Hill"
 x = 775.0
 y = 460.0
 mapUrl = "https://maps.app.goo.gl/wLuc4GYbDgv3yMsn9"
 
 [pratt_field]
-name = "South Field Stage"
+name = "South Field"
 x = 520.0
 y = 820.0
 mapUrl = "https://maps.app.goo.gl/p6ABBAaRYkgAQ5At7"
