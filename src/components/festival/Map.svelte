@@ -4,6 +4,7 @@
   import FaInfo from 'svelte-icons/fa/FaInfo.svelte';
   import FaBriefcaseMedical from 'svelte-icons/fa/FaBriefcaseMedical.svelte';
   import FaRestroom from 'svelte-icons/fa/FaRestroom.svelte';
+  import { info } from 'node_modules/astro/dist/core/logger/core';
 
   export let stages: Stage[];
   export let coordinates: Coordinates;
@@ -72,6 +73,7 @@
 
       stage.pinEl && (stage.pinEl.style.left = `${left}px`);
       stage.pinEl && (stage.pinEl.style.top = `${top}px`);
+      stage.pinEl && (stage.pinEl.style.display = 'flex');
     });
 
     Object.entries(other).forEach(([key, [x, y]]) => {
@@ -84,15 +86,19 @@
       if (key === 'info') {
         infoPinEl && (infoPinEl.style.left = `${left}px`);
         infoPinEl && (infoPinEl.style.top = `${top}px`);
+        infoPinEl && (infoPinEl.style.display = 'flex');
       } else if (key === 'medic') {
         medicPinEl && (medicPinEl.style.left = `${left}px`);
         medicPinEl && (medicPinEl.style.top = `${top}px`);
+        medicPinEl && (medicPinEl.style.display = 'flex');
       } else if (key === 'potty') {
         pottyPinEl && (pottyPinEl.style.left = `${left}px`);
         pottyPinEl && (pottyPinEl.style.top = `${top}px`);
+        pottyPinEl && (pottyPinEl.style.display = 'flex');
       } else if (key === 'potty2') {
         potty2PinEl && (potty2PinEl.style.left = `${left}px`);
         potty2PinEl && (potty2PinEl.style.top = `${top}px`);
+        potty2PinEl && (potty2PinEl.style.display = 'flex');
       }
     });
   };
@@ -128,6 +134,7 @@
     {#if stage}
       <button
         class="absolute flex h-8 w-8 rounded shadow-lg"
+        style="display: none;"
         bind:this={stage.pinEl}
         on:click={() => selectStage(stage.key)}
       >
@@ -148,6 +155,7 @@
   <!-- Info Pin -->
   <span
     class="absolute flex h-6 w-6 justify-center items-center rounded-full overflow-hidden shadow-lg"
+    style="display: none;"
     bind:this={infoPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-green-500" />
@@ -160,6 +168,7 @@
   <!-- Medic Pin -->
   <span
     class="absolute flex h-6 w-6 justify-center items-center rounded-t-lg overflow-hidden shadow-lg"
+    style="display: none;"
     bind:this={medicPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-white" />
@@ -172,6 +181,7 @@
   <!-- Potty Pin -->
   <span
     class="absolute flex h-6 w-6 justify-center items-center rounded overflow-hidden shadow-lg"
+    style="display: none;"
     bind:this={pottyPinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-blue-500" />
@@ -184,6 +194,7 @@
   <!-- Potty 2 Pin -->
   <span
     class="absolute flex h-6 w-6 justify-center items-center rounded overflow-hidden shadow-lg"
+    style="display: none;"
     bind:this={potty2PinEl}
   >
     <span class="absolute inline-flex h-full w-full bg-blue-500" />

@@ -54,10 +54,9 @@ mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
 
 [edmunds]
 name = "Edmunds Stage"
-x = 100.0
-y = 800.0
+x = 180.0
+y = 1380.0
 mapUrl = "https://maps.app.goo.gl/XLbUVWercZPEC9SU8"
-
 
 [pratt_hill]
 name = "North Hill Stage"
