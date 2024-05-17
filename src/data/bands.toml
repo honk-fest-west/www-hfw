@@ -88,6 +88,11 @@ location = "Santa Barbara County, CA"
 url = "https://brasscals.weebly.com/"
 description = "A street band made up of people from all around Santa Barbara County who play various brass, woodwind, percussion, and rhythm instruments."
 
+[brasscheeks]
+name = "Brass Cheeks"
+location = "Seattle, WA"
+description = "Feel the breeze."
+
 [brassless]
 name = "Brassless Chaps"
 location = "Portland, OR"
@@ -183,7 +188,6 @@ name = "Good Trouble"
 location = ""
 url = "#"
 description = ""
-
 
 [allstars]
 name = "HONK! All-Stars (open jam)"
