@@ -16,6 +16,12 @@ location = "Seattle, WA"
 url = "https://www.adefuacenter.org/"
 description = "West African Drumming & Dance"
 
+[agab]
+name = "AGAB"
+location = "Seattle, WA"
+url = "#"
+description = ""
+
 [analog]
 name = "Analog Brass"
 location = "Bellingham, WA"
@@ -45,6 +51,12 @@ name = "Baque Maré"
 location = "Seattle, WA"
 url = "https://www.facebook.com/baquemareseattle/"
 description = "Página oficial do grupo de maracatu baque virado de Seattle. Official account of Seattle's own mara"
+
+[better]
+name = "Better as Brass"
+location = "Seattle, WA"
+url = "https://www.youtube.com/watch?v=LwcRs60F_bE"
+description = "Imagine a great mixtape from a school dance (slow dances included plus possibly a little singing and/or karaoke!) but brass and that’s the plan: En Vogue, Boyz II Men, The Police, Radiohead, Soundgarden, Kansas, Lonely Island, Britney Spears, and more!"
 
 [bigblitz]
 name = "Big Blitz"
@@ -142,7 +154,6 @@ location = "Boston, MA"
 url = "https://flybybrassband.com/"
 description = "We are a ~12 piece brass-band out of the greater Boston Area who enjoys playing interesting and approachable music. Born of the local HONK scene we focus on bringing live horn harmonies to the people."
 
-
 [funkrust]
 name = "Funkrust Brass Band"
 location = "New York, NY"
@@ -163,9 +174,16 @@ description = ""
 
 [goat]
 name = "G.O.A.T. Band"
-location = ""
+location = "Seattle, WA"
 url = ""
 description = ""
+
+[goodtrouble]
+name = "Good Trouble"
+location = ""
+url = "#"
+description = ""
+
 
 [allstars]
 name = "HONK! All-Stars (open jam)"
@@ -364,3 +382,9 @@ name = "West Cascade Puppet Brigade"
 location = "Seattle, WA"
 url = "https://www.facebook.com/PuppetBrigade/"
 description = "West Cascade Puppet Brigade is a multifaceted, intergenerational group of puppeteers that bring joy & whimsey to parades, festivals, fairs, & events. From giant puppets to shadows, they bring ancient fairy & folk tales to life with a sensibility for modern audiences."
+
+[youngfellaz]
+name = "Young Fellaz Brass Band"
+location = "New Orleans, LA"
+url = "https://www.youngfellazbrassband.com/"
+description = "Formed in 2006, the Young Fellaz Brass Band has been a staple in the New Orleans live music scene for over 15 years. This enthusiastic and talented group of musicians honor the brass band tradition while innovating their own unique sound. Their new self-produced album Block Party (2022) is out now."
