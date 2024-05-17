@@ -28,37 +28,44 @@ x = 220.0
 y = 787.0
 mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
 
+[columbia_valley]
+name = "Valley Stage"
+x = 574.0
+y = 430.0
+mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
+
+[columbia_hill]
+name = "Hill Stage"
+x = 385.0
+y = 900.0
+mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
+
+[gateway]
+name = "Gateway Stage"
+x = 870.0
+y = 1460.0
+mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
+
+[rac]
+name = "Rainier Arts Stage"
+x = 250.0
+y = 270.0
+mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
+
 [edmunds]
 name = "Edmunds Stage"
 x = 100.0
 y = 800.0
 mapUrl = "https://maps.app.goo.gl/XLbUVWercZPEC9SU8"
 
-[columbia]
-name = "Columbia Park Stage"
-x = 510.0
-y = 150.0
-mapUrl = "https://maps.app.goo.gl/mVyyPUsp3DPErK6i8"
 
-[37th]
-name = "37th Stage"
-x = 1220.0
-y = 1300.0
-mapUrl = "https://maps.app.goo.gl/mVyyPUsp3DPErK6i8"
-
-[gateway]
-name = "Gateway Stage"
-x = 1000.0
-y = 930.0
-mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
-
-[hill]
+[pratt_hill]
 name = "North Hill Stage"
 x = 775.0
 y = 460.0
 mapUrl = "https://maps.app.goo.gl/wLuc4GYbDgv3yMsn9"
 
-[field]
+[pratt_field]
 name = "South Field Stage"
 x = 520.0
 y = 820.0

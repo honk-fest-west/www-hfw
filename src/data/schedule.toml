@@ -38,9 +38,9 @@
 "slotDuration" = 30
 "location" = "Columbia City"
 "mapUrl"= "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
-"stages"= [ "edmunds", 		"columbia", 		"gateway", 	"37th" ]
+"stages"= [ "edmunds", 		"columbia_hill", 		"gateway", 	"columbia_valley" ]
 [days.schedule]
-"12:00" = [ "tbd", 	"", 					"", 					"" ]
+"12:00" = [ "", 	"", 					"", 					"" ]
 "12:30" = [ "", 	"", 					"", 					"" ]
 "13:00" = [ "", 	"", 					"", 					"" ]
 "13:30" = [ "", 	"", 					"", 					"" ]
@@ -69,9 +69,9 @@
 "slotDuration" = 30
 "location" = "Pratt Park"
 "mapUrl" = "https://maps.app.goo.gl/nX3NEqR9PTTX1KnC6"
-"stages"= [ "hill", 		"field" ]
+"stages"= [ "pratt_hill", 		"pratt_field" ]
 [days.schedule]
-"12:00" = [ "tbd", "" ]
+"12:00" = [ "", "" ]
 "12:30" = [ "", "" ]
 "13:00" = [ "", "" ]
 "13:30" = [ "", "" ]
