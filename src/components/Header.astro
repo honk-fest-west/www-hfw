@@ -16,8 +16,8 @@ const currentMenuItem = nav.links.find((item) =>
 
 const activeListItem = (link: string) => {
   return currentMenuItem?.link === link
-    ? 'bg-nav_active_background ring-nav_active_ring text-nav_active_text text-shadow cursor-default'
-    : 'text-shadow bg-nav_background text-nav_text hover:scale-105 hover:bg-nav_active_background';
+    ? 'bg-black ring-nav_active_ring text-nav_active_text text-shadow cursor-default'
+    : 'text-shadow bg-nav_background text-nav_text hover:scale-105 hover:bg-black';
 };
 ---
 

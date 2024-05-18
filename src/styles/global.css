@@ -5,7 +5,7 @@
 
 :root {
   --colors-rock: hsl(352, 75%, 60%);
-  --colors-sky: hsl(165, 50%, 65%);
+  --colors-sky: hsl(165, 50%, 60%);
   --colors-sky-dk: hsl(165, 50%, 45%);
   --colors-pearl: hsl(45, 90%, 92%);
   --colors-violet: hsl(330, 57%, 43%);
@@ -14,8 +14,8 @@
   
   --colors-gray-50: hsl(45, 50%, 92%);
   --colors-gray-100: hsl(45, 70%, 92%);
-  --colors-gray-200: hsl(45, 90%, 92%);
-  --colors-gray-300: hsl(45, 90%, 82%);
+  --colors-gray-200: hsl(45, 90%, 88%);
+  --colors-gray-300: hsl(45, 90%, 80%);
   --colors-gray-700: hsl(45, 50%, 52%);
 
   --colors-accent: var(--colors-violet);
