@@ -37,8 +37,7 @@ module.exports = {
         "tertiary-dk": "var(--colors-sky-dk)",
         accent: "var(--colors-accent)",
         "accent-lt": "var(--colors-accent-lt)",
-        navy: "var(--colors-navy)",
-        cobalt: "var(--colors-cobalt)",
+        paypal: "var(--colors-paypal)",
         gray: {
           "50": "var(--colors-gray-50)", 
           "100": "var(--colors-gray-100)",

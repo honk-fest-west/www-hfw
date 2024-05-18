@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 :root {
+
+  --colors-paypal: hsl(210, 100%, 40%);
+
   --colors-rock: hsl(352, 75%, 60%);
   --colors-sky: hsl(165, 50%, 60%);
   --colors-sky-dk: hsl(165, 50%, 45%);
@@ -37,13 +40,6 @@
 
   --colors-title-border: var(--colors-accent);
 
-  --colors-nav-text: var(--colors-pearl);
-  --colors-nav-background: var(--colors-violet);
-  --colors-nav-ring: var(--colors-rock);
-  --colors-nav-active-text: var(--colors-pearl);
-  --colors-nav-active-background: var(--colors-black);
-  --colors-nav-active-ring: var(--colors-pearl);
-
   --colors-footer-background: var(--colors-violet);
 }
 
@@ -70,6 +66,8 @@ p a {
     1px -1px 3px var(--colors-content-link-shadow), -1px 1px 3px var(--colors-content-link-shadow),
     1px 1px 3px var(--colors-content-link-shadow);
 }
+
+
 
 .title {
   @apply flex flex-wrap font-semibold text-2xl sm:text-3xl font-title border-title_border mb-4 pb-2;

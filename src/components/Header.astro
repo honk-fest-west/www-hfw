@@ -16,8 +16,8 @@ const currentMenuItem = nav.links.find((item) =>
 
 const activeListItem = (link: string) => {
   return currentMenuItem?.link === link
-    ? 'bg-accent ring-accent-lt text-nav_active_text cursor-default rounded-full shadow-lg ring-4'
-    : 'text-shadow text-nav_text hover:scale-105 rounded-full shadow-lg bg-tertiary-dk ring-4 ring-tertiary hover:focus:scale-90';
+    ? 'text-shadow  cursor-default rounded-full shadow-lg bg-accent ring-accent-lt ring-4'
+    : 'text-shadow hover:scale-105 focus:scale-100 hover:focus:scale-90 group-hover:group-focus-within:scale-100 rounded-full shadow-lg bg-tertiary-dk ring-tertiary ring-4';
 };
 ---
 
@@ -45,12 +45,12 @@ const activeListItem = (link: string) => {
     <MobileMenu {nav} {social} {currentMenuItem} client:visible />
   </div>
   <div class="w-full hidden sm:block">
-    <ul class="flex flex-wrap justify-center items-center w-full">
+    <ul class="flex flex-wrap justify-center items-center w-full group">
       <!-- MAIN NAV -->
       {
         nav.links.map((item: { link: string; name: string }) => (
           <li
-            class={`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 z-10 ${activeListItem(
+            class={`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 z-10 text-gray-200 ${activeListItem(
               item.link,
             )}`}
           >
@@ -88,3 +88,9 @@ const activeListItem = (link: string) => {
     </ul>
   </div>
 </nav>
+
+<style>
+  .group:hover .group-focus-within:hover {
+    background-color: initial; /* Reset the background color */
+  }
+</style>
