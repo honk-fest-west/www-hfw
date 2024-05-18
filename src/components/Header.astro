@@ -16,8 +16,8 @@ const currentMenuItem = nav.links.find((item) =>
 
 const activeListItem = (link: string) => {
   return currentMenuItem?.link === link
-    ? 'bg-black ring-nav_active_ring text-nav_active_text cursor-default rounded-full shadow-lg ring-8 ring-accent'
-    : 'text-shadow text-nav_text hover:scale-105 rounded-full shadow-lg bg-tertiary-dk ring-4 ring-tertiary';
+    ? 'bg-accent ring-accent-lt text-nav_active_text cursor-default rounded-full shadow-lg ring-4'
+    : 'text-shadow text-nav_text hover:scale-105 rounded-full shadow-lg bg-tertiary-dk ring-4 ring-tertiary hover:focus:scale-90';
 };
 ---
 
