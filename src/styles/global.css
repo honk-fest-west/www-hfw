@@ -35,7 +35,7 @@
   --colors-content-link: var(--colors-rock);
   --colors-content-link-shadow: var(--colors-black);
 
-  --colors-title-border: var(--colors-pearl);
+  --colors-title-border: var(--colors-accent);
 
   --colors-nav-text: var(--colors-pearl);
   --colors-nav-background: var(--colors-violet);
@@ -72,7 +72,7 @@ p a {
 }
 
 .title {
-  @apply flex flex-wrap font-semibold text-2xl sm:text-3xl font-title border-title_border border-dotted mb-4 pb-1;
+  @apply flex flex-wrap font-semibold text-2xl sm:text-3xl font-title border-title_border mb-4 pb-2;
 }
 /* .title {
   text-shadow: 3px 3px 0 var(--colors-tertiary-dk),
