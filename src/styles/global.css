@@ -4,17 +4,17 @@
 @tailwind utilities;
 
 :root {
-  --colors-aqua: #00bfc9;
-  --colors-pink: #ff7eba;
-  --colors-pink-lt: #ffadd5;
-  --colors-navy: #0078cd;
-  --colors-cobalt: #1c4dab;
+  --colors-aqua: hsl(185, 100%, 40%);
+  --colors-pink: hsl(327, 100%, 69%);
+  --colors-pink-lt: hsl(327, 100%, 80%);
+  --colors-navy: hsl(210, 100%, 40%);
+  --colors-cobalt: hsl(222, 70%, 40%);
 
-  --colors-rock: #E35268;
-  --colors-sky: #85C3B7;
-  --colors-pearl: #FDF3D9;
-  --colors-violet: #B33167;
-  --colors-black: #000500;
+  --colors-rock: hsl(352, 75%, 60%);
+  --colors-sky: hsl(165, 50%, 65%);
+  --colors-pearl: hsl(45, 90%, 92%);
+  --colors-violet: hsl(330, 57%, 43%);
+  --colors-black: hsl(120, 100%, 1%);
 
   --colors-site-background: var(--colors-rock);
   --colors-content-background: var(--colors-black);
