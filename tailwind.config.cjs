@@ -34,13 +34,15 @@ module.exports = {
         nav_active_ring: "var(--colors-nav-active-ring)",
         accent: "var(--colors-accent)",
         "accent-lt": "var(--colors-accent-lt)",
-
-
-        pink: "var(--colors-pink)",
-        "pink-lt": "var(--colors-pink-lt)",
         navy: "var(--colors-navy)",
         cobalt: "var(--colors-cobalt)",
-        gray: colors.gray,
+        gray: {
+          "50": "var(--colors-gray-50)", 
+          "100": "var(--colors-gray-100)",
+          "200": "var(--colors-gray-200)", 
+          "300": "var(--colors-gray-300)", 
+          "700": "var(--colors-gray-700)",
+        },
         transparent: colors.transparent,
       },
     },

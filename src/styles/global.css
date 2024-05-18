@@ -17,6 +17,12 @@
   --colors-violet: hsl(330, 57%, 43%);
   --colors-violet-lt: hsl(330, 57%, 63%);
   --colors-black: hsl(120, 100%, 1%);
+  
+  --colors-gray-50: hsl(45, 50%, 92%);
+  --colors-gray-100: hsl(45, 70%, 92%);
+  --colors-gray-200: hsl(45, 90%, 92%);
+  --colors-gray-300: hsl(45, 90%, 82%);
+  --colors-gray-700: hsl(45, 50%, 52%);
 
   --colors-accent: var(--colors-violet);
   --colors-accent-lt: var(--colors-violet-lt);
@@ -40,6 +46,7 @@
   --colors-nav-active-text: var(--colors-pearl);
   --colors-nav-active-background: var(--colors-black);
   --colors-nav-active-ring: var(--colors-pearl);
+
 }
 
 .content-container {
