@@ -9,7 +9,7 @@
   const activeListItem = (link: string) => {
     return link === currentMenuItem?.link
       ? 'hidden'
-      : 'text-shadow bg-black text-gray-200';
+      : 'text-shadow bg-accent text-gray-100';
   };
 
   const pageName = currentMenuItem?.name;
@@ -22,7 +22,7 @@
       type="button"
       aria-controls="mobile-menu"
       aria-expanded="false"
-      class="w-full hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 bg-accent text-gray-100 text-shadow cursor-default"
+      class="w-full hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 bg-tertiary-dk ring-4 ring-tertiary text-gray-100 text-shadow cursor-default"
       on:click={() => (menuOpen = !menuOpen)}
     >
       <span class="w-full mx-4 sm:mx-2 block font-semibold ease-in">
@@ -31,7 +31,7 @@
 
       <!-- Mobile menu button-->
       <div
-        class="inline-flex items-center justify-center rounded-full p-2 -mt-1 absolute right-6"
+        class="inline-flex items-center justify-center rounded-full p-2 -mt-1 absolute right-6 text-tertiary"
       >
         <span class="sr-only">Open main menu</span>
         {#if !menuOpen}
