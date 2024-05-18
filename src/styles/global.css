@@ -20,9 +20,15 @@
   --colors-content-background: var(--colors-black);
   --colors-content-text: var(--colors-pearl);
   --colors-content-border: var(--colors-violet);
+  --colors-content-btt: var(--colors-rock);
   --colors-content-link: var(--colors-rock);
   --colors-content-link-shadow: var(--colors-black);
   --colors-title-border: var(--colors-pearl);
+  --colors-nav-text: var(--colors-pearl);
+  --colors-nav-background: var(--colors-violet);
+  --colors-nav-active-text: var(--colors-pearl);
+  --colors-nav-active-background: var(--colors-violet);
+  --colors-nav-active-ring: var(--colors-pearl);
 }
 
 .content-container {

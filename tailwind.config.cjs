@@ -23,7 +23,15 @@ module.exports = {
         content_text: "var(--colors-content-text)",
         content_border: "var(--colors-content-border)",
         content_link: "var(--colors-content-link)",
+        content_btt: "var(--colors-content-btt)",
         title_border: "var(--colors-title-border)",
+        nav_text: "var(--colors-nav-text)",
+        nav_background: "var(--colors-nav-background)",
+        nav_active_text: "var(--colors-nav-active-text)",
+        nav_active_background: "var(--colors-nav-active-background)",
+        nav_active_ring: "var(--colors-nav-active-ring)",
+
+
         pink: "var(--colors-pink)",
         "pink-lt": "var(--colors-pink-lt)",
         navy: "var(--colors-navy)",
