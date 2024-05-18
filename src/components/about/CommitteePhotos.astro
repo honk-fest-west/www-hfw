@@ -9,10 +9,10 @@ const { photos } = Astro.props;
 ---
 
 <h2
-  class="text-3xl sm:text-4xl text-cobalt text-center tracking-wide mb-8 font-bold bg-accent"
+  class="text-3xl sm:text-4xl text-tertiary-dk text-center tracking-wide mb-8 font-bold bg-accent"
 >
   YOUR
-  <span class="text-accent bg-cobalt px-2">HONK! FEST WEST</span>
+  <span class="text-accent bg-tertiary-dk px-2">HONK! FEST WEST</span>
   COMMITTEE
 </h2>
 <div class="flex flex-wrap justify-around gap-6">
@@ -20,7 +20,7 @@ const { photos } = Astro.props;
     photos.map((member: { image_url: string; name: string }) => (
       <div class="flex flex-col items-center">
         <Image
-          class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-cobalt"
+          class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-tertiary-dk"
           src={member.image_url}
           alt={member.name}
           inferSize
