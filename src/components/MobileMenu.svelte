@@ -22,7 +22,7 @@
       type="button"
       aria-controls="mobile-menu"
       aria-expanded="false"
-      class="w-full hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt bg-pink text-gray-100 text-shadow cursor-default"
+      class="w-full hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt bg-accent text-gray-100 text-shadow cursor-default"
       on:click={() => (menuOpen = !menuOpen)}
     >
       <span class="w-full mx-4 sm:mx-2 block font-semibold ease-in">

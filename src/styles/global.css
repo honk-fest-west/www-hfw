@@ -5,19 +5,26 @@
 
 :root {
   --colors-aqua: hsl(185, 100%, 40%);
-  --colors-pink: hsl(327, 100%, 69%);
-  --colors-pink-lt: hsl(327, 100%, 80%);
+  --colors-accent: hsl(327, 100%, 69%);
+  --colors-accent-lt: hsl(327, 100%, 80%);
   --colors-navy: hsl(210, 100%, 40%);
   --colors-cobalt: hsl(222, 70%, 40%);
 
   --colors-rock: hsl(352, 75%, 60%);
+
   --colors-sky: hsl(165, 50%, 65%);
   --colors-pearl: hsl(45, 90%, 92%);
   --colors-violet: hsl(330, 57%, 43%);
+  --colors-violet-lt: hsl(330, 57%, 63%);
   --colors-black: hsl(120, 100%, 1%);
+
+  --colors-accent: var(--colors-violet);
+  --colors-accent-lt: var(--colors-violet-lt);
+
 
   --colors-site-background: var(--colors-rock);
 
+  --colors-content-title: var(--colors-violet-lt);
   --colors-content-background: var(--colors-black);
   --colors-content-text: var(--colors-pearl);
   --colors-content-border: var(--colors-violet);
@@ -29,8 +36,9 @@
 
   --colors-nav-text: var(--colors-pearl);
   --colors-nav-background: var(--colors-violet);
+  --colors-nav-ring: var(--colors-rock);
   --colors-nav-active-text: var(--colors-pearl);
-  --colors-nav-active-background: var(--colors-violet);
+  --colors-nav-active-background: var(--colors-black);
   --colors-nav-active-ring: var(--colors-pearl);
 }
 

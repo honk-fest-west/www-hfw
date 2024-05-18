@@ -16,7 +16,7 @@ const currentMenuItem = nav.links.find((item) =>
 
 const activeListItem = (link: string) => {
   return currentMenuItem?.link === link
-    ? 'bg-nav_active_background ring-4 ring-nav_active_ring text-nav_active_text text-shadow cursor-default'
+    ? 'bg-nav_active_background ring-nav_active_ring text-nav_active_text text-shadow cursor-default'
     : 'text-shadow bg-nav_background text-nav_text hover:scale-105 hover:bg-nav_active_background';
 };
 ---
@@ -26,7 +26,7 @@ const activeListItem = (link: string) => {
 <!-- H!FW LOGO -->
 
 <div
-  class="flex justify-center w-full relative z-10 py-6 px-6 sm:px-0 sm:py-12 mb-4 bg-black"
+  class="flex justify-center w-full relative z-10 py-6 px-6 sm:px-0 sm:py-12 mb-4 bg-black border-b-4 border-accent"
 >
   <h1 class="w-full">
     <a class="block mx-auto sm:w-2/3 lg:w-2/5 z-0 peer" href="/">
@@ -50,7 +50,7 @@ const activeListItem = (link: string) => {
       {
         nav.links.map((item: { link: string; name: string }) => (
           <li
-            class={`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
+            class={`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ${activeListItem(
               item.link,
             )}`}
           >
@@ -66,12 +66,12 @@ const activeListItem = (link: string) => {
 
       <!-- SOCIAL NAV -->
       <li
-        class="text-2xl text-cobalt opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
+        class="text-2xl text-nav_active_background opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
       >
         {
           Object.keys(social.links).map((key) => (
             <div>
-              <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-pink">
+              <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-nav_active_background">
                 <SocialLink
                   key={key}
                   link={social.links[key]}

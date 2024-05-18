@@ -19,6 +19,7 @@ module.exports = {
       colors: {
         aqua: "var(--colors-aqua)",
         background: "var(--colors-site-background)",
+        content_title: "var(--colors-content-title)",
         content_background: "var(--colors-content-background)",
         content_text: "var(--colors-content-text)",
         content_border: "var(--colors-content-border)",
@@ -27,9 +28,12 @@ module.exports = {
         title_border: "var(--colors-title-border)",
         nav_text: "var(--colors-nav-text)",
         nav_background: "var(--colors-nav-background)",
+        nav_ring: "var(--colors-nav-ring)",
         nav_active_text: "var(--colors-nav-active-text)",
         nav_active_background: "var(--colors-nav-active-background)",
         nav_active_ring: "var(--colors-nav-active-ring)",
+        accent: "var(--colors-accent)",
+        "accent-lt": "var(--colors-accent-lt)",
 
 
         pink: "var(--colors-pink)",

@@ -1,11 +1,9 @@
 ---
-
 const { groups } = Astro.props;
-
 ---
 
 <div class="content">
-  <h3 class="text-shadow text-lg text-pink font-semibold">
+  <h3 class="text-shadow text-lg text-accent font-semibold">
     Board of Directors
   </h3>
   <ul>
@@ -19,7 +17,9 @@ const { groups } = Astro.props;
   </ul>
 </div>
 <div class="content">
-  <h3 class="text-shadow text-lg text-pink font-semibold">Event Production</h3>
+  <h3 class="text-shadow text-lg text-accent font-semibold">
+    Event Production
+  </h3>
   <ul>
     {
       groups['Event Production'].map((member) => (
@@ -31,7 +31,7 @@ const { groups } = Astro.props;
   </ul>
 </div>
 <div class="content">
-  <h3 class="text-shadow text-lg text-pink font-semibold">
+  <h3 class="text-shadow text-lg text-accent font-semibold">
     Creative & Communications
   </h3>
   <ul>
@@ -45,7 +45,7 @@ const { groups } = Astro.props;
   </ul>
 </div>
 <div class="content">
-  <h3 class="text-shadow text-lg text-pink font-semibold">Fundraising</h3>
+  <h3 class="text-shadow text-lg text-accent font-semibold">Fundraising</h3>
   <ul>
     {
       groups['Fundraising'].map((member) => (
@@ -55,7 +55,7 @@ const { groups } = Astro.props;
       ))
     }
   </ul>
-  <h3 class="text-shadow text-lg text-pink font-semibold">Outreach</h3>
+  <h3 class="text-shadow text-lg text-accent font-semibold">Outreach</h3>
   <ul>
     {
       groups['Outreach'].map((member) => (
@@ -84,6 +84,6 @@ const { groups } = Astro.props;
   }
 
   a.button:hover {
-    @apply scale-105 bg-pink transition ease-in-out;
+    @apply scale-105 bg-accent transition ease-in-out;
   }
 </style>
