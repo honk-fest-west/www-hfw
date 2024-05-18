@@ -18,6 +18,12 @@ module.exports = {
       },
       colors: {
         aqua: "var(--colors-aqua)",
+        background: "var(--colors-site-background)",
+        content_background: "var(--colors-content-background)",
+        content_text: "var(--colors-content-text)",
+        content_border: "var(--colors-content-border)",
+        content_link: "var(--colors-content-link)",
+        title_border: "var(--colors-title-border)",
         pink: "var(--colors-pink)",
         "pink-lt": "var(--colors-pink-lt)",
         navy: "var(--colors-navy)",
