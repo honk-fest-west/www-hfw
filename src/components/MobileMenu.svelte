@@ -9,7 +9,7 @@
   const activeListItem = (link: string) => {
     return link === currentMenuItem?.link
       ? 'hidden'
-      : 'text-shadow bg-navy text-gray-200';
+      : 'text-shadow bg-black text-gray-200';
   };
 
   const pageName = currentMenuItem?.name;
@@ -22,7 +22,7 @@
       type="button"
       aria-controls="mobile-menu"
       aria-expanded="false"
-      class="w-full hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt bg-accent text-gray-100 text-shadow cursor-default"
+      class="w-full hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 bg-accent text-gray-100 text-shadow cursor-default"
       on:click={() => (menuOpen = !menuOpen)}
     >
       <span class="w-full mx-4 sm:mx-2 block font-semibold ease-in">
@@ -81,7 +81,7 @@
       <!-- MAIN NAV -->
       {#each nav.links as item}
         <li
-          class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ring-4 ring-cobalt ${activeListItem(
+          class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ${activeListItem(
             item.link,
           )}`}
         >
@@ -94,7 +94,7 @@
         </li>
       {/each}
 
-      <li class="text-2xl text-cobalt flex justify-center">
+      <li class="text-2xl text-black flex justify-center">
         {#each Object.keys(social.links) as key}
           <div>
             <div class="block px-3 h-7">
