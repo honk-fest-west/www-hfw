@@ -3,11 +3,12 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Title from '@components/Title.astro';
 ---
 
-<script>
+<script is:inline>
   window.onload = function () {
     const position = window.location.search
       .replace(/\?position=/, '')
       .replace(/%20/g, ' ');
+    console.log({ position });
     document.getElementById('position').value = position;
     document.getElementById('position-title').innerHTML = position;
   };
