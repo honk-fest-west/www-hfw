@@ -16,7 +16,7 @@ const currentMenuItem = nav.links.find((item) =>
 
 const activeListItem = (link: string) => {
   return currentMenuItem?.link === link
-    ? 'text-shadow  cursor-default rounded-full shadow-lg bg-accent ring-accent-lt ring-4'
+    ? 'text-shadow  cursor-default rounded-full shadow-lg bg-accent ring-accent ring-4'
     : 'text-shadow hover:scale-105 focus:scale-100 hover:focus:scale-90 group-hover:group-focus-within:scale-100 rounded-full shadow-lg bg-tertiary-dk ring-tertiary ring-4';
 };
 ---
