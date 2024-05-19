@@ -79,9 +79,12 @@ import supporters from '@data/supporters.toml';
           >
             {
               supporters.grant.map((supporter: Supporter) => (
-                <a class="block mb-3 sm:mb-0 w-[200px]" href={supporter.url}>
+                <a
+                  class="block mb-3 sm:mb-0 max-w-[200px]"
+                  href={supporter.url}
+                >
                   <Image
-                    class="w-auto rounded bg-white p-2"
+                    class="rounded bg-white p-2"
                     src={supporter.image_url}
                     alt={supporter.name}
                     inferSize
@@ -104,7 +107,10 @@ import supporters from '@data/supporters.toml';
           >
             {
               supporters.art.map((supporter: Supporter) => (
-                <a class="block mb-3 sm:mb-0 w-[200px]" href={supporter.url}>
+                <a
+                  class="block mb-3 sm:mb-0 max-w-[200px]"
+                  href={supporter.url}
+                >
                   <Image
                     class="w-auto rounded bg-white p-2"
                     src={supporter.image_url}
@@ -130,7 +136,7 @@ import supporters from '@data/supporters.toml';
           >
             {
               supporters.shout_out.map((supporter: Supporter) => (
-                <div class="break-inside-avoid mb-6 rounded-lg w-[188px]">
+                <div class="break-inside-avoid mb-6 rounded-lg max-w-[188px] bg-gray-100">
                   <a href={supporter.url}>
                     <Image
                       class="w-auto rounded p-1"
