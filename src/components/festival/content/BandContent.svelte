@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
-  import { fade, fly } from 'svelte/transition';
-  import type { AppStateSend } from '../machines/app.machine';
+  import { getContext } from "svelte";
+  import { fade, fly } from "svelte/transition";
+  import type { AppStateSend } from "../machines/app.machine";
+  import Agab from "./Agab.svelte";
 
-  const { state } = getContext<AppStateSend>('app');
+  const { state } = getContext<AppStateSend>("app");
 
   $: selectedBandKey = $state.context.selectedBandKey;
 
@@ -12,7 +13,7 @@
     : null;
 </script>
 
-{#if $state.value === 'viewingBand' && selectedBand}
+{#if $state.value === "viewingBand" && selectedBand}
   <div
     class="h-full flex flex-col my-7 gap-3 items-center px-8"
     in:fade={{ duration: 200 }}
@@ -29,6 +30,14 @@
         />
       {/if}
     </a>
-    <p class="max-w-xl mt-3">{selectedBand.description}</p>
+    <div class="max-w-xl mt-3">
+      {#if selectedBandKey === "agab"}
+        <Agab wordsetdisplay={selectedBand.description} />
+      {:else}
+        <p>
+          {selectedBand.description}
+        </p>
+      {/if}
+    </div>
   </div>
 {/if}
