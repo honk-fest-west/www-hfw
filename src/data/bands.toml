@@ -19,7 +19,7 @@ description = "West African Drumming & Dance"
 [agab]
 name = "AGAB"
 location = "Seattle, WA"
-url = "aga.band"
+url = "https://aga.band"
 description = "All Goods Are Bads"
 
 [analog]
