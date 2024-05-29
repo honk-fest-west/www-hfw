@@ -8,7 +8,7 @@ description = ""
 name = "8-Bit Brass Band"
 location = "Seattle, WA"
 url = "http://8bitbrassband.com/"
-description = "8-Bit Brass Band is your geeky, mobile brass band specializing in bringing our brand of brassy, bangy, and nerdly to the streets and stages of Seattle — and beyond!"
+description = "8-Bit Brass Band is a cosplaying, mobile party band specializing in video game tunes, anime anthems, movie mashups, and fandom favorites, celebrating everyone’s inner nerd on the streets and stages of Seattle – and beyond!"
 
 [adefua]
 name = "ADEFUA"
@@ -20,7 +20,7 @@ description = "West African Drumming & Dance"
 name = "AGAB"
 location = "Seattle, WA"
 url = "https://aga.band"
-description = "All Goods Are Bads"
+description = "AGAB is a queer joy rebellion playing brass bangers for the theys and gays of every generation in Seattle and beyond."
 
 [analog]
 name = "Analog Brass"
@@ -56,7 +56,7 @@ description = "Seattle-based Maracatu de Baque Virado drumming group. We bring N
 name = "Better as Brass"
 location = "Seattle, WA"
 url = "https://betterasbrass.band"
-description = "Imagine a great mixtape from a school dance (slow dances included plus possibly a little singing and/or karaoke!) but brass and that’s the plan: En Vogue, Boyz II Men, The Police, Radiohead, Soundgarden, Kansas, Lonely Island, Britney Spears, and more!"
+description = "Do you sometimes hear a song and think, “ya know, that would sound better as brass”? Same here! We play tunes that span multiple decades that fill any street or venue to the brim with sonic satisfaction!"
 
 [bigblitz]
 name = "Big Blitz"
@@ -74,7 +74,7 @@ description = "Black Sheep Brass Band is based out of Sonoma County, in the Nort
 name = "Blue Thunder"
 location = "Seattle, WA"
 url = "https://www.seahawks.com/drumline/blue-thunder/"
-description = "Seahawks Blue Thunder is the heartbeat of the fans. This high-energy entertainment drumline was established in 2004 at Lumen Field, performing throughout the stadium before, during and after games."
+description = "The heartbeat of the 12s at Lumen Field since 2004, playing the beats that get you out of your seats!"
 
 [brasscadia]
 name = "Brasscadia"
@@ -98,7 +98,7 @@ description = "Brass Cheeks is a 9-piece brass band featuring UW Alumni speciali
 name = "Brassless Chaps"
 location = "Portland, OR"
 url = "https://www.facebook.com/brasslesschapspdx/"
-description = "We are a Queer community band playing out and proud in the streets of Portland, Oregon on the unceded lands of the Cowlitz, and Confederated Tribes of the Grand Ronde people. Through our performances, we wish to promote Queer joy while highlighting Queer artists and themes, as well as playing traditional brass band standards and antifascist songs. We use our talents to support Queer communities and other causes that reflect our values. We use the joy of music as an act of resistance to achieve queer liberation through music. "
+description = "An all queer, antifascist community brass band from Portland, Oregon. We got sass, brass, and ass."
 
 [brothers]
 name = "Brothers of Brass"
@@ -122,7 +122,7 @@ description = "More fun than your usual amorphous mass of brass instruments, dru
 name = "Chaotic Noise Marching Corps"
 location = "Seattle, WA"
 url = "http://chaoticnoise.com/"
-description = "Chaotic Noise Marching Corps is a Seattle based renegade marching band that is dedicated to keeping the tradition of music, performance, energy, havok, discipline and sheer stupid fun alive in Seattle’s streets."
+description = "Chaotic Noise is a Seattle based renegade marching band that is dedicated to keeping the tradition of music, performance, energy, havoc, discipline, and sheer stupid fun alive in Seattle's streets. Heavily influenced by past projects as well as the likes of the Infernal Noise Brigade, Extra Action Marching Band, and HONK bands from around the world, Chaotic Noise assures that you will have lots of fun forgetting how to think, breathe, and act in your everyday lives."
 
 [chervona]
 name = "Chervona"
@@ -158,7 +158,7 @@ description = "We’re a community of talented musicians, united by our shared l
 name = "Fly By"
 location = "Boston, MA"
 url = "https://flybybrassband.com/"
-description = "We are a 15 piece brass-band out of the greater Boston Area who enjoys playing interesting and approachable music. Born of the local HONK scene we focus on bringing live horn harmonies to the people."
+description = "Fly By Brass Band is a diverse group of musicians based in the Boston area that specializes in bringing live acoustic horn harmonies to the people.  Born from the local HONK! Festival scene, hailing from varied musical backgrounds, and brought together by their love for brass, beats, and boundless energy.  Fly By's eclectic repertoire draws on many inspirations, from New Orleans-inspired second-line jazz to Balkan, klezmer, funk, Latin, rock, and swing.  The main theme is: \"Does this make us feel good and would it delight others?\""
 
 [funkrust]
 name = "Funkrust Brass Band"
@@ -188,7 +188,7 @@ description = "Our band consists of students who have played 2-4 years on a wide
 name = "Good Trouble Brass Band"
 location = "Somerville, MA"
 url = "https://www.goodtroublebrassband.org/"
-description = "Good Trouble Brass Band is a not-for-profit, and politically active New Orleans-style street band based in Somerville and Cambridge, Massachusetts. Our mission is to fight for social justice causes and support community events while having fun and spreading joy through our music."
+description = "Good Trouble Brass Band is a large, not-for-profit, “raucous, stomp-your-foot-and-belt-out-the-choruses” activist New Orleans-style street band based in the Boston area. Our mission involves collaborating with activists and organizations working for a variety of progressive causes."
 
 [allstars]
 name = "HONK! All-Stars (open jam)"
@@ -230,7 +230,7 @@ description = ""
 name = "La Banda Gozona"
 location = "Seattle, WA"
 url = "https://www.facebook.com/people/La-Banda-Gozona/100065180273378/"
-description = "We play traditional fiesta music of Oaxaca, emphasizing the sierra zapoteca, but covering Oaxaca's `siete regiones` in styles such as sones y jarabes, son istmeño, chilenas, zapateados, pasillos, cumbias and danzones."
+description = "La Banda Gozona plays the village music of Oaxaca, Mexico. We will be joined by our friends   and inspiration,  Grupo Cultural Oaxaqueño."
 
 [lovett]
 name = "Lovett Arts"
@@ -242,7 +242,7 @@ description = "Puppet Performance. Beautifully crafted giant puppets are lightwe
 name = "LOUD Neighbors"
 location = "Arcata, CA"
 url = "https://www.instagram.com/loud.neighbors.brass/"
-description = "LOUD Neighbors Brass Band is a Humboldt County, CA based group that loves building community and bringing joy to any willing participant! "
+description = "The LOUD Neighbors are a playful group of community minded musicians with a mission of service, awareness, and access to live music! These joy enthusiasts perform funk, jazz, pop tunes, and traditional street band music for folks to boogie down to together!"
 
 [lbcs]
 name = "Louisa Boren & Cleveland STEM Middle School Band"
@@ -272,7 +272,7 @@ description = "A love letter to your feet from the dance floor, Mission Delirium
 name = "Neon Brass Party"
 location = "Seattle, WA"
 url = "https://www.neonbrassparty.com/"
-description = "We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music."
+description = "Neon Brass Party is a street band based out of Seattle, WA.  We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music. Our goal is to be the party and get people movin and groovin with us wherever we might show up. We play various styles of music ranging from Latin to funk to hip-hop, so long as it grooves, we'll play it!"
 
 [step]
 name = "Northside Step Team"
@@ -332,7 +332,7 @@ description = "The Seattle U Drumline began in 2012, and has grown a lot in the 
 name = "Seismic Sound Drumline"
 location = "Seattle, WA"
 url = "https://www.facebook.com/SeismicSoundDrumline/"
-description = "We are a non-profit percussion ensemble that aims to provide financially accessible and high-quality education for high school and college age students. "
+description = "Seismic Sound is a not-for-profit percussion ensemble for youth ages 15-23. We focus on providing a welcoming and affordable space for youth musicians to grow as percussionists. Our ensemble exposes our members to aspects found in college marching bands, pro-sports drumlines, and DCI/WGI groups. It is a great space for beginner to intermediate level musicians who are interested in challenging themselves and creating relationships with other musicians within the greater Seattle Area."
 
 [shpilkis]
 name = "Shpilkis!"
@@ -350,31 +350,31 @@ description = "Performing a musical mélange of jazz, blues, funk, reggae, and g
 name = "SOUND MACHINE"
 location = "Whidbey Island, WA"
 url = "#"
-description = "SOUND MACHINE is Whidbey Island's own HONK! Band. Open and accessible to players of all ages and abilities, we pride ourselves on playing for our local community and brining joyous noise to our friends and neighbors."
+description = "Get ready to groove with SOUND MACHINE - Whidbey Island's premier HONK! band! You don't want to miss out on the fun covers of your favorite songs that we jam to at our open practices. We love using our music to make a difference in our community by performing for local non-profits and businesses. You can catch us in action at exciting local events like South Whidbey Pride and the Welcome the Whales Parade. We believe in inclusivity and welcome everyone - regardless of age or ability - to join us in making some awesome music. So get ready to dance your tail off to everything from ABBA to the Isley Brothers!"
 
 [soundwave]
 name = "Sound Wave"
 location = "Seattle, WA"
 url = "https://www.soundersfc.com/matchday/sound-wave"
-description = "Sound Wave is the official band of Seattle Sounders FC. In 2009, minority owner Drew Carey conceptualized an ensemble made up of traditional marching percussion and brass instruments to bring the spirit of Sounders FC to life. "
+description = "Sound Wave is the official band of Seattle Sounders FC. In 2009, minority owner Drew Carey conceptualized an ensemble made up of traditional marching percussion and brass instruments to bring the spirit of Sounders FC to life. Sound Wave can be found at Sounders FC home matchdays and entertaining the local community at parades, charitable events, and corporate functions."
 
 [southendpep]
 name = "South End Pep"
 location = "Seattle, WA"
 url = "#"
-description = "The South End Pep Band is a collection of students from three Seattle Public Schools, Franklin High School, Cleveland High School, and Rainier Beach High School.  All three schools have lower numbers of students in band so we join together for certain events to give the students a more exciting high school band experience."
+description = "The South End Pep Band is a collaboration between three Seattle Public Schools.  It brings together musicians from Franklin, Cleveland, and Rainier Beach to celebrate the musicality in the South End."
 
 [sticks]
 name = "Sticks & Bones"
 location = "Olympia, WA"
 url = "https://www.facebook.com/olysnewcommuityactivistband/"
-description = "We are a justice and joy oriented multigenerational all-skill level activist band led by queer folks and women!"
+description = "Sticks and Bones is a women and queer led, multigenerational street band from Olympia! Through our collective leadership we cultivate a safe space for musicians of all skill levels. We love to entertain and empower our communities in our quest for a more just and joyful world."
 
 [tacomarama]
 name = "Tacomarama"
 location = "Tacoma, WA"
 url = "http://instagram.com/tacomarama"
-description = "Tacoma’s community street band. Always recruiting. Beginners welcome."
+description = "Tacomarama is an all ages, all levels \"anyone can join\" band from Tacoma, WA."
 
 [m9]
 name = "The m9"
@@ -386,7 +386,7 @@ description = ""
 name = "TMB"
 location = "Seattle, WA"
 url = "https://linktr.ee/tmbbrass"
-description = "TMB’s style of music is a mixture of New Orleans brass, Jazz, Pop, Funk, and Disco. We want our music to be fun and joyful. We love it when our audience becomes a dance party and a sing-along of raucous merriment!"
+description = "Your first call for Second Line"
 
 [unexpected]
 name = "the UNEXPECTED BRASS BAND"
