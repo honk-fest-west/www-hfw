@@ -73,9 +73,14 @@
     }, 10000 * cycle);
   }
 
-  onMount(() => {
-    wordSetMixer();
-  });
+  onMount(
+    () => {
+      wordSetMixer();
+    },
+    () => {
+      clearInterval(updateWordsIntervalId);
+    },
+  );
 </script>
 
 <p class="text">{wordsetdisplay}</p>
