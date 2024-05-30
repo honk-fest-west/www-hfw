@@ -2,7 +2,6 @@
   import { getContext } from "svelte";
   import { fade, fly } from "svelte/transition";
   import type { AppStateSend } from "../machines/app.machine";
-  import Agab from "./Agab.svelte";
 
   const { state } = getContext<AppStateSend>("app");
 
@@ -31,13 +30,9 @@
       {/if}
     </a>
     <div class="max-w-xl mt-3">
-      {#if selectedBandKey === "agab"}
-        <Agab wordset={selectedBand.description} />
-      {:else}
-        <p class="band-description">
-          {selectedBand.description}
-        </p>
-      {/if}
+      <p class="band-description">
+        {selectedBand.description}
+      </p>
     </div>
   </div>
 {/if}
@@ -46,5 +41,9 @@
   .band-description {
     color: white;
     opacity: 80%;
+  }
+  .band-description::first-line {
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
 </style>
