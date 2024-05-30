@@ -34,10 +34,17 @@
       {#if selectedBandKey === "agab"}
         <Agab wordset={selectedBand.description} />
       {:else}
-        <p>
+        <p class="band-description">
           {selectedBand.description}
         </p>
       {/if}
     </div>
   </div>
 {/if}
+
+<style>
+  .band-description {
+    color: white;
+    opacity: 80%;
+  }
+</style>
