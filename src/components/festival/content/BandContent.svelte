@@ -32,7 +32,7 @@
     </a>
     <div class="max-w-xl mt-3">
       {#if selectedBandKey === "agab"}
-        <Agab wordsetdisplay={selectedBand.description} />
+        <Agab wordset={selectedBand.description} />
       {:else}
         <p>
           {selectedBand.description}

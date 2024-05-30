@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  export let wordsetdisplay;
+  export let wordset;
 
   const wordSets = [
     ["Agile", "Goose", "Asks", "Boldly"],
@@ -48,14 +48,33 @@
   ];
 
   let currentSetIndex = 0;
+  let updateWordsIntervalId = null;
+  let intervalCountDown = 5;
+  let cycle = 1;
+
+  $: wordsetdisplay = wordset;
 
   function updateWords() {
-    wordsetdisplay = wordSets[currentSetIndex].join(" ");
-    currentSetIndex = (currentSetIndex + 1) % wordSets.length;
+    if (intervalCountDown--) {
+      wordsetdisplay = wordSets[currentSetIndex].join(" ");
+      currentSetIndex = (currentSetIndex + 1) % wordSets.length;
+    } else {
+      cycle++;
+      clearInterval(updateWordsIntervalId);
+      intervalCountDown = 5;
+      wordsetdisplay = wordset;
+      wordSetMixer();
+    }
+  }
+
+  function wordSetMixer() {
+    setTimeout(() => {
+      updateWordsIntervalId = setInterval(updateWords, 500);
+    }, 10000 * cycle);
   }
 
   onMount(() => {
-    setInterval(updateWords, 5000);
+    wordSetMixer();
   });
 </script>
 

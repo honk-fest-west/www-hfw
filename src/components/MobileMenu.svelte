@@ -81,7 +81,7 @@
       <!-- MAIN NAV -->
       {#each nav.links as item}
         <li
-          class={`hover:transition ease-in-out focus-within:bg-tertiary-dk active:bg-tertiary-dk focus-within:ring-4 ring-tertiary text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ${activeListItem(
+          class={`hover:transition ease-in-out focus-within:bg-tertiary-dk text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ${activeListItem(
             item.link,
           )}`}
         >
