@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { fly } from 'svelte/transition';
-  import SocialLink from '@components/SocialLink.svelte';
-  import type { Nav, Social, NavLink } from 'src/env';
+  import { fly } from "svelte/transition";
+  import SocialLink from "@components/SocialLink.svelte";
+  import type { Nav, Social, NavLink } from "src/env";
   export let nav: Nav;
   export let social: Social;
   export let currentMenuItem: NavLink | undefined;
 
   const activeListItem = (link: string) => {
     return link === currentMenuItem?.link
-      ? 'hidden'
-      : 'text-shadow bg-accent text-gray-100';
+      ? "hidden"
+      : "text-shadow bg-accent text-gray-100";
   };
 
   const pageName = currentMenuItem?.name;
@@ -26,7 +26,7 @@
       on:click={() => (menuOpen = !menuOpen)}
     >
       <span class="w-full mx-4 sm:mx-2 block font-semibold ease-in">
-        {pageName || 'Menu'}
+        {pageName || "Menu"}
       </span>
 
       <!-- Mobile menu button-->
@@ -81,7 +81,7 @@
       <!-- MAIN NAV -->
       {#each nav.links as item}
         <li
-          class={`hover:transition ease-in-out text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ${activeListItem(
+          class={`hover:transition ease-in-out focus-within:bg-tertiary-dk active:bg-tertiary-dk focus-within:ring-4 ring-tertiary text-2xl sm:text-3xl font-title flex items-center mb-4 bg-opacity-100 pt-2 pb-1 px-2 mx-4 rounded-full shadow-lg z-10 ${activeListItem(
             item.link,
           )}`}
         >
