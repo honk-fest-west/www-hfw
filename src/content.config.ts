@@ -11,4 +11,13 @@ const nav = defineCollection({
 	}),
 });
 
-export const collections = { nav };
+const openPositions = defineCollection({
+	loader: file("src/data/positions.toml", {parser: (text) => parseToml(text).open }),
+	schema: z.object({
+		id: z.string(),
+		title: z.string(),
+		description: z.string(),
+	}),
+});
+
+export const collections = { nav, openPositions };

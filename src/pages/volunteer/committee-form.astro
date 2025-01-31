@@ -1,0 +1,99 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<script is:inline>
+  window.onload = function () {
+    const position = window.location.search
+      .replace(/\?position=/, '')
+      .replace(/%20/g, ' ');
+    console.log({ position });
+    document.getElementById('position').value = position;
+    document.getElementById('position-title').innerHTML = position;
+  };
+</script>
+
+<Layout title="Volunteer Committee Form">
+  <div class="content-container">
+    <form
+      name="Committee Position"
+      action="/volunteer/committee-form-success"
+      method="POST"
+      netlify-honeypot="firsthumanwinkwinkname"
+      data-netlify="true"
+    >
+      <input type="hidden" name="position" id="position" value="" />
+      <h2 class="text-3xl mb-5 title text-accent">
+        <span class="underline title" id="position-title"></span>
+      </h2>
+      <label class="hidden">
+        First Name <input name="firsthumanwinkwinkname" type="text" />
+      </label>
+      <div class="space-y-8 divide-y divide-accent">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <section class="grid grid-cols-1 gap-3">
+            <div>
+              <p>
+                <label for="name">Name</label>
+              </p>
+              <div class="mt-1">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <p>
+                <label for="email">Email</label>
+              </p>
+              <div class="mt-1">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <p>
+                <label for="phone">Phone</label>
+              </p>
+              <div class="mt-1">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+                />
+              </div>
+            </div>
+          </section>
+          <section>
+            <p>
+              <label for="comments"> Comments</label>
+            </p>
+            <textarea
+              name="comments"
+              id="comments"
+              rows="10"
+              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+            ></textarea>
+          </section>
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="text-shadow block font-base text-center rounded antialiased text-gray-200 font-bold flex-none mt-3 bg-tertiary w-fit text-lg bg-opacity-80 px-3 py-2 hover:bg-opacity-90"
+            >Submit</button
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+</Layout>
