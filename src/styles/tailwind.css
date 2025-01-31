@@ -13,7 +13,7 @@
   /* --color-teal-600: */
 	
   --color-teal-700:	oklch(50% 0.0876 213.66);			 
-  --color-teal-800:	oklch(58% 0.094 213.66);	
+  --color-teal-800:	oklch(50% 0.1 213.66);	
   --color-teal-900: oklch(50% 0.0876 213.66);
   --color-teal-950: oklch(55% 0.0676 213.66);
 	--color-teal-1000: oklch(40% 0.0876 213.66);
@@ -59,18 +59,15 @@
 	--color-site-background: var(--color-gold-400);
 	--color-main-background: var(--color-teal-700);
 
-	/* Content */
-	--color-content-background: var(--color-gold-300);
-	--color-content-border: var(--color-gold-500);
 
 	/* Text Color */
 	--color-title: var(--color-gold-700);
 	--color-subtitle: var(--color-teal-700);
 	--color-title-border: var(--color-gold-600);
-	--color-content-text: var(--color-gold-900);
+	--color-content-text: var(--color-gold-800);
+  --color-link: var(--color-teal-800);
 	--color-content-link: var(--color-teal-800);
 	--color-title-shadow: var(--color-gold-200);
-  --color-link: var(--color-teal-500);
 
 	/* Fonts */
 	--font-title: 'Fredoka', serif;
@@ -79,12 +76,15 @@
 	/* Nav Button */
 	--color-button: var(--color-teal-500);
 	--color-button-active: var(--color-gold-600);
-	--color-button-shadow: var(--color-navy-800);
+	--color-button-shadow: var(--color-teal-1000);
 
+	/* Content */
+	--color-content-background: var(--color-gold-300);
+	--color-content-border: var(--color-gray-300);
 }
 
 @utility content-container {
-	@apply bg-content-background p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-3 border-content-border;
+	@apply bg-content-background p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-2 border-content-border;
 }
 
 @utility title {
