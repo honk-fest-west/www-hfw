@@ -86,7 +86,7 @@
 }
 
 @utility content-container {
-	@apply bg-content-background p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-2 border-content-border;
+	@apply bg-content-background p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-1 border-content-border;
 }
 
 @utility title {
