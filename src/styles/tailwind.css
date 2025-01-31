@@ -74,9 +74,11 @@
 	--font-base: 'Fredoka', serif;
 
 	/* Nav Button */
-	--color-button: var(--color-teal-500);
+	--color-button-background: var(--color-teal-500);
 	--color-button-active: var(--color-gold-600);
 	--color-button-shadow: var(--color-teal-1000);
+  --color-button-ring: var(--color-gray-300);
+  --color-button-text: var(--color-gray-200);
 
 	/* Content */
 	--color-content-background: var(--color-gold-300);

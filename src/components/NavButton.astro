@@ -4,13 +4,13 @@
 
  const activeStyle = () => {
   return Astro.url.pathname.includes(href)
-    ? "cursor-default rounded-full shadow-lg bg-button-active ring-button-active"
-    : "hover:scale-105 focus:scale-100 hover:focus-within:bg-button-active hover:focus-within:ring-0 group-hover:group-focus-within:scale-100 rounded-full shadow-lg bg-button ring-gray-300";
+    ? "cursor-default rounded-full bg-button-active ring-button-active"
+    : "hover:scale-105 focus:scale-100 hover:focus-within:bg-button-active hover:focus-within:ring-0 group-hover:group-focus-within:scale-100 rounded-full bg-button-background ring-button-ring";
 };
 ---
 
 <li
-class=`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 ease-in py-2 px-2 mx-4 z-10 text-gray-200 ring-2 ${activeStyle()}`
+class=`hover:transition text-2xl shadow-md sm:text-3xl font-title flex items-center my-2 ease-in py-2 px-2 mx-4 z-10 text-button-text ring-2 ${activeStyle()}`
 >
 <a
 	class="mx-4 sm:mx-2 block ease-in"
