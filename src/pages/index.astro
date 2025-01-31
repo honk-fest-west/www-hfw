@@ -1,29 +1,27 @@
 ---
+import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import BaseLayout from '@layouts/BaseLayout.astro';
-import LinkBlurb from '@components/LinkBlurb.astro';
-import NewsletterForm from '@components/NewsletterForm.astro';
-import Slideshow from '../components/slideshow/Slideshow.svelte';
+import FestivalInfoBlock from '@components/pages/index/FestivalInfoBlock.astro';
+import NewsletterForm from '@components/pages/index/NewsletterForm.astro';
+import HonkAllstars from '@components/pages/index/HonkAllstars.astro';
 import BackToTop from '@components/BackToTop.astro';
-import FestivalInfoBlock from '@components/home/FestivalInfoBlock.astro';
-import HonkAllstars from '@components/home/HonkAllstars.astro';
+import LinkBlurb from '@components/pages/index/LinkBlurb.astro';
+import Slideshow from '@components/pages/index/Slideshow.astro';
 
-// @ts-ignore
-import slideshow from '@data/slideshow.toml';
+import artworkImg from '@assets/images/2025/hfw-2025-artwork.png';
 ---
 
-<BaseLayout title="Home">
-  <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-6 w-full lg:mt-6">
+<Layout>
+	<div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-8 w-full lg:mt-8">
     <FestivalInfoBlock />
 
     <section
       class="mt-5 sm:mt-10 lg:mt-0 col-span-6 lg:col-span-4 row-span-2 flex justify-center rounded-full w-full relative"
     >
       <Image
-        src="https://ik.imagekit.io/thegoldendino/hfw/2024/horn-beast-dwight-vantuyl-2024_wDlB3PKt1.png?updatedAt=1716061749784"
-        alt="2024 H!FW Horn Beast by Dwight VanTuyl"
-        class="object-cover rounded-xl w-full max-h-[470px] object-top"
-        inferSize
+        src={artworkImg}
+        alt="2025 H!FW artwork by Henry Ward"
+        class="object-contain rounded-xl w-full max-h-[470px] object-top"
       />
     </section>
 
@@ -76,7 +74,7 @@ import slideshow from '@data/slideshow.toml';
 
     <!-- SLIDESHOW -->
     <div class="col-span-6 content-container">
-      <Slideshow slides={slideshow.slides} client:idle />
+      <Slideshow></Slideshow>
     </div>
 
     <!-- SUPPORT DUAMISH  -->
@@ -90,11 +88,11 @@ import slideshow from '@data/slideshow.toml';
       </p>
       <br />
       <a
-        class="text-shadow block ease-in font-base link text-accent-lt font-bold text-base sm:text-lg relative hover:scale-105 hover:left-6"
+        class="text-shadow block ease-in font-base link text-link font-bold text-base sm:text-lg relative hover:scale-105 hover:left-6"
         href="https://www.duwamishtribe.org/donate"
       >
         » Please support the Duwamish Tribe
       </a>
     </div>
   </div>
-</BaseLayout>
+</Layout>

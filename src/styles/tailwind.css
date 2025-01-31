@@ -1,0 +1,115 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Alatsi&family=Poppins:wght@400;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+	/* Colors */
+
+  /* Teal */
+  --color-teal-100: oklch(84.96% 0.0592 213.66);
+  /* --color-teal-200:	
+  --color-teal-300:	*/
+  --color-teal-500: oklch(56.2% 0.0943 208.16);
+  /* --color-teal-600: */
+	
+  --color-teal-700:	oklch(50% 0.0876 213.66);			 
+  --color-teal-800:	oklch(58% 0.094 213.66);	
+  --color-teal-900: oklch(50% 0.0876 213.66);
+  --color-teal-950: oklch(55% 0.0676 213.66);
+	--color-teal-1000: oklch(40% 0.0876 213.66);
+
+  /* Gold */
+  --color-gold-100: oklch(93.14% 0.0841 86.23);
+  --color-gold-200: oklch(84.11% 0.0750 86.23);
+  --color-gold-300:	oklch(79.63% 0.0750 86.23); 
+  --color-gold-400: oklch(76.39% 0.0841 86.23);
+  --color-gold-500:	oklch(72.15% 0.0841 86.23); 
+  --color-gold-600:	oklch(62.16% 0.0841 86.23); 
+  --color-gold-700:	oklch(50.00% 0.0841 86.23); 
+  --color-gold-800:	oklch(48.18% 0.0841 86.23); 
+  --color-gold-900: oklch(41.18% 0.0841 86.23);
+
+	/* Navy */
+	--color-navy-600: oklch(39.54% 0.0625 274.13);
+	--color-navy-800: oklch(29.54% 0.0425 274.13);
+
+  /* Brown */
+  /* --color-brown-100:
+  --color-brown-200:
+  --color-brown-300: 
+  --color-brown-400: 
+  --color-brown-500: 
+  --color-brown-600:
+  --color-brown-700: 
+  --color-brown-800:
+  --color-brown-900:  */
+
+  /* Gray */
+  --color-gray-100: oklch(96.08% 0 0);
+  --color-gray-200: oklch(88.16% 0 0);
+  --color-gray-300: oklch(80.24% 0 0);
+  --color-gray-400: oklch(72.32% 0 0);
+  --color-gray-500: oklch(64.4% 0 0);
+  --color-gray-600: oklch(56.48% 0 0);
+  --color-gray-700: oklch(48.56% 0 0);
+  --color-gray-800: oklch(40.64% 0 0);
+  --color-gray-900: oklch(32.72% 0 0);
+
+	/* Backgrounds */
+	--color-site-background: var(--color-gold-400);
+	--color-main-background: var(--color-teal-700);
+
+	/* Content */
+	--color-content-background: var(--color-gold-300);
+	--color-content-border: var(--color-gold-500);
+
+	/* Text Color */
+	--color-title: var(--color-gold-700);
+	--color-subtitle: var(--color-teal-700);
+	--color-title-border: var(--color-gold-600);
+	--color-content-text: var(--color-gold-900);
+	--color-content-link: var(--color-teal-800);
+	--color-title-shadow: var(--color-gold-200);
+  --color-link: var(--color-teal-500);
+
+	/* Fonts */
+	--font-title: 'Fredoka', serif;
+	--font-base: 'Fredoka', serif;
+
+	/* Nav Button */
+	--color-button: var(--color-teal-500);
+	--color-button-active: var(--color-gold-600);
+	--color-button-shadow: var(--color-navy-800);
+
+}
+
+@utility content-container {
+	@apply bg-content-background p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-3 border-content-border;
+}
+
+@utility title {
+  @apply flex flex-wrap text-2xl sm:text-3xl font-title border-title-border mb-6 mt-1 pb-1 font-medium;
+  text-shadow: -1px -1px 3px var(--color-title-shadow),
+    1px -1px 3px var(--color-title-shadow), -1px 1px 3px var(--color-title-shadow),
+    1px 1px 3px var(--color-title-shadow);
+}
+
+.content,
+p {
+  @apply font-base antialiased text-content-text leading-8 text-xl flex-1;
+}
+.content ul {
+  @apply pl-5 sm:pl-10 list-disc;
+}
+.content a,
+p a {
+  @apply text-content-link underline underline-offset-2;
+}
+
+
+
+.text-shadow {
+  text-shadow: -1px -1px 3px var(--color-text-shadow),
+    1px -1px 3px var(--color-text-shadow), -1px 1px 3px var(--color-text-shadow),
+    1px 1px 3px var(--color-text-shadow);
+}

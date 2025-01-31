@@ -1,0 +1,27 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+// Slide.astro
+export interface Props {
+    image: ImageMetadata;
+    isVisible: boolean;
+}
+const { image, isVisible } = Astro.props;
+---
+
+<div class:list={["carousel-slide", { active: isVisible }]}>
+    <Image src={image} alt="HONK! Fest West festival" />
+</div>
+
+<style>
+    .carousel-slide {
+        min-width: 100%;
+        position: relative; /* Allow for absolute positioning of child elements */
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        display: block; /* Remove any extra space below the image */
+    }
+</style>

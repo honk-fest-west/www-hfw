@@ -1,96 +1,19 @@
 ---
-import { Image } from "astro:assets";
-import SocialLink from "@components/SocialLink.svelte";
-import MobileMenu from "@components/MobileMenu.svelte";
-import type { Nav, Social } from "src/env";
+import { Image } from 'astro:assets';
+import logoImg from '@assets/images/2025/hfw-2025-logo.png';
+import { getCollection } from 'astro:content';
+import NavButton from './NavButton.astro';
 
-interface Props {
-  nav: Nav;
-  social: Social;
-}
-const { nav, social } = Astro.props;
-
-const currentMenuItem = nav.links.find((item) =>
-  Astro.url.pathname.includes(item.link),
-);
-
-const activeListItem = (link: string) => {
-  return currentMenuItem?.link === link
-    ? "text-shadow  cursor-default rounded-full shadow-lg bg-accent ring-accent ring-4"
-    : "text-shadow hover:scale-105 focus:scale-100 hover:focus-within:bg-accent hover:focus-within:ring-0 group-hover:group-focus-within:scale-100 rounded-full shadow-lg bg-tertiary-dk ring-tertiary ring-4";
-};
+const nav = await getCollection('nav');
 ---
 
-<a class="absolute right-5 top-0 text-white opacity-10" href="/portal">+</a>
-
-<!-- H!FW LOGO -->
-
-<div
-  class="flex justify-center w-full relative z-10 py-6 px-6 sm:px-0 sm:py-12 mb-4 bg-black border-b-8 border-accent"
->
-  <h1 class="w-full">
-    <a class="block mx-auto sm:w-2/3 lg:w-2/5 z-0 peer" href="/">
-      <Image
-        src="https://ik.imagekit.io/thegoldendino/hfw/2024/logo-transparent-2_dKhnt6rEo.png?updatedAt=1716050361069"
-        alt="HONK! Fest West"
-        class="w-auto mx-auto hover:transition ease-in hover:scale-105"
-        inferSize
-      />
-    </a>
-  </h1>
-</div>
-
-<nav class="w-full pb-8">
-  <div class="w-full block sm:hidden">
-    <MobileMenu {nav} {social} {currentMenuItem} client:visible />
-  </div>
-  <div class="w-full hidden sm:block">
-    <ul class="flex flex-wrap justify-center items-center w-full group">
-      <!-- MAIN NAV -->
-      {
-        nav.links.map((item: { link: string; name: string }) => (
-          <li
-            class={`hover:transition text-2xl sm:text-3xl font-title flex items-center my-2 bg-opacity-100 ease-in pt-2 pb-1 px-2 mx-4 z-10 text-gray-200 ${activeListItem(
-              item.link,
-            )}`}
-          >
-            <a
-              class="mx-4 sm:mx-2 block  font-semibold ease-in"
-              href={item.link}
-            >
-              {item.name}
-            </a>
-          </li>
-        ))
-      }
-
-      <!-- SOCIAL NAV -->
-      <li
-        class="text-2xl text-nav_active_background opacity-90 ml-2 my-2 flex z-10 lg:hidden xl:flex"
-      >
-        {
-          Object.keys(social.links).map((key) => (
-            <div>
-              <div class="hidden sm:block px-1 h-9 hover:transition ease-in hover:scale-105 hover:text-nav_active_background">
-                <SocialLink
-                  key={key}
-                  link={social.links[key]}
-                  size="1.875rem"
-                />
-              </div>
-              <div class="block sm:hidden px-1 h-7">
-                <SocialLink key={key} link={social.links[key]} size="1.5rem" />
-              </div>
-            </div>
-          ))
-        }
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<style>
-  .group:hover .group-focus-within:hover {
-    background-color: initial; /* Reset the background color */
-  }
-</style>
+<div class="grid place-content-center p-4 sm:p-8 sm:pb-16">
+	<Image src={logoImg} alt="HONK! Fest West 2025" />
+	<nav class="w-full relative">
+		<ul class="flex flex-wrap justify-center items-center w-full group relative lg:absolute top-8">
+			{nav.map(link => (
+					<NavButton href={link.data.link}>{link.data.name}</NavButton>
+			))}
+		</ul>
+	</nav>
+</div> 

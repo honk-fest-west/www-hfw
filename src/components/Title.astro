@@ -4,7 +4,7 @@ const {
   subtitle = false,
   center = false,
   id = '',
-  border = true,
+  border = false,
 } = Astro.props;
 
 const _id = id.length ? id : title;
@@ -13,18 +13,18 @@ const _id = id.length ? id : title;
 <h2
   id={_id}
   class={`title  ${center ? 'justify-center' : ''} ${
-    border ? 'border-b-4' : ''
+    border ? 'border-b-3' : ''
   }`}
 >
   <span
-    class={`text-content_title  ${center && subtitle ? 'ml-3' : ''} ${
+    class={`text-title  ${center && subtitle ? 'ml-3' : ''} ${
       subtitle ? 'mr-3' : ''
     } block ${center ? 'text-center' : ''}`}
   >
     {title}
   </span>
   <span
-    class={`text-accent block ${center && subtitle ? 'ml-3' : ''} ${
+    class={`text-subtitle block ${center && subtitle ? 'ml-3' : ''} ${
       subtitle ? 'mr-3' : ''
     } ${center ? 'text-center' : ''}`}
   >

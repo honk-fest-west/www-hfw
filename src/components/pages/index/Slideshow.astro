@@ -1,0 +1,114 @@
+---
+// Carousel.astro
+import type { ImageMetadata } from 'astro';
+import Slide from './Slide.astro';
+// Props for customization
+export interface Props {
+    images?: ImageMetadata[]; // Array of image URLs
+    interval?: number; // Interval for automatic sliding (in milliseconds), default 3000
+}
+
+const { images = [], interval = 3000 } = Astro.props;
+
+// Build unique IDs to prevent conflicts when multiple carousels are used
+const carouselId = Math.random().toString(36).substring(2, 9);
+const prevBtnId = `prevBtn-${carouselId}`;
+const nextBtnId = `nextBtn-${carouselId}`;
+---
+
+<div class="carousel" id={`carousel-${carouselId}`} data-interval={interval}>
+    <div class="carousel-slides">
+        {images.map((image, index) => (
+            <Slide image={image} isVisible={index === 0} />
+        ))}
+    </div>
+    <button id={prevBtnId} class="carousel-control prev">
+        <span>&lt;</span>
+    </button>
+    <button id={nextBtnId} class="carousel-control next">
+        <span>&gt;</span>
+    </button>
+</div>
+
+<style>
+    /* Basic carousel styles (customize as needed) */
+    .carousel {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+    .carousel-control:hover {
+        opacity: 1;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+</style>
+
+<script define:vars={{ prevBtnId, nextBtnId, carouselId }}>
+    // carousel.js content will be placed here by Astro 
+    // Access the vars as if they were locally declared. 
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+    const carousel = document.getElementById(`carousel-${carouselId}`);
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+    const interval = parseInt(carousel.dataset.interval);
+
+    function showSlide(index) {
+        if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else if (index >= slides.length) {
+            currentSlide = 0;
+        } else {
+            currentSlide = index;
+        }
+
+        const offset = -currentSlide * 100;
+        carousel.querySelector('.carousel-slides').style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    let slideInterval = setInterval(nextSlide, interval);
+
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, interval);
+    });
+</script>

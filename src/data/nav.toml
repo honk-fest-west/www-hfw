@@ -1,23 +1,24 @@
-# [[links]]
-# name = "Festival"
-# link = "/festival"
-
 [[links]]
+id = "volunteer"
 name = "Volunteer"
 link = "/volunteer"
 
 [[links]]
+id = "supporters"
 name = "Supporters"
 link = "/supporters"
 
 [[links]]
+id = "donate"
 name = "Donate"
 link = "/donate"
 
 [[links]]
+id = "media"
 name = "Media"
 link = "/media"
 
 [[links]]
+id = "about"
 name = "About"
 link = "/about"

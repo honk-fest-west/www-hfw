@@ -1,9 +1,4 @@
 {
-  "recommendations": [
-    "astro-build.astro-vscode",
-    "bradlc.vscode-tailwindcss",
-    "svelte.svelte-vscode",
-    "ms-vscode-remote.remote-containers"
-  ],
+  "recommendations": ["astro-build.astro-vscode"],
   "unwantedRecommendations": []
 }

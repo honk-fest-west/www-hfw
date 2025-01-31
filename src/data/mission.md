@@ -1,1 +1,0 @@
-HONK! Fest West is dedicated to the activation of public space through energetic musical performance.

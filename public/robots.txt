@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /portal
-Disallow: /volunteer/committee-form
-Disallow: /volunteer/intake-form

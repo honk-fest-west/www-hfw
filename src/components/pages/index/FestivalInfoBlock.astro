@@ -1,0 +1,49 @@
+---
+import Title from "@components/Title.astro";
+---
+
+<!-- INFO BLOCK -->
+<section class="w-full col-span-6 lg:col-span-2 content-container z-10">
+  <!-- <div>
+    <span class="flex flex-col justify-center items-center h-4 mb-4">
+      <a
+        href="https://facebook.com/events/s/honk-fest-west-thursday-kick-o/975021187663582/"
+        class="w-full block text-accent tracking-normal md:mr-2 font-emphasis text-center text-md border-accent border-dashed"
+      >
+        » pre-party Thurs May 30th!
+      </a>
+    </span>
+  </div>
+  <div> -->
+    <Title title="Upcoming Festival" center={true} />
+    <div
+      class="text-shadow flex flex-col items-center h-full text-xl sm:text-3xl font-medium tracking-wide z-10"
+    >
+      <a href="/festival">
+        <span class="text-accent text-center mb-2 hidden font-emphasis">
+          <span class="text-gray-200">HONK!</span> FEST WEST
+        </span>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center w-full"
+        >
+          <span
+            class="block lg:mb-0 text-subtitle tracking-normal md:mr-2 font-emphasis text-center"
+          >
+            <time>May 30 - June 1, 2025</time>
+          </span>
+        </div>
+        <span class="text-gray-100 text-center block font-emphasis mt-2">
+          SEATTLE, WA
+        </span>
+      </a>
+      <!-- <div class="">
+        <a
+          class="block font-base font-bold antialiased text-base sm:text-lg flex-none z-10 mt-5 hover:scale-105 text-link"
+          href="/festival"
+        >
+          » More Info
+        </a>
+      </div> -->
+    </div>
+  </div>
+</section>

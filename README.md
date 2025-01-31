@@ -1,70 +1,48 @@
-# HONK! FEST WEST
+# Astro Starter Kit: Basics
 
-## Stack
-
-- [Astro](https://astro.build): Framework
-- [Tailwind](https://tailwindcss.com): CSS Design System
-- [svelte](https://svelte.dev/)
-- [Netlify](https://app.netlify.com/sites/modest-kalam-fcfd31/overview): Host
-
-## Get Started
-
-[CodeSandbox](https://codesandbox.io/p/github/honk-fest-west/www-hfw/main?layout=%257B%2522activeFilepath%2522%253A%2522%252FREADME.md%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522fullScreenDevtools%2522%253Afalse%252C%2522rootPanelGroup%2522%253A%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522panelType%2522%253A%2522TABS%2522%252C%2522id%2522%253A%2522clgvvetdj00533n6iqta0g05w%2522%257D%255D%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522DEVTOOLS_PANELS%2522%252C%2522sizes%2522%253A%255B100%255D%257D%252C%2522tabbedPanels%2522%253A%257B%2522clgvvetdj00533n6iqta0g05w%2522%253A%257B%2522id%2522%253A%2522clgvvetdj00533n6iqta0g05w%2522%252C%2522activeTabId%2522%253A%2522clgvvevp6008k3n6ijuf2zcsl%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clgvvetdj00523n6iog7hpaqp%2522%252C%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%257D%252C%257B%2522type%2522%253A%2522TASK_PORT%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A3000%252C%2522id%2522%253A%2522clgvvevp6008k3n6ijuf2zcsl%2522%252C%2522path%2522%253A%2522%252F%2522%257D%255D%257D%257D%252C%2522showSidebar%2522%253Atrue%252C%2522showDevtools%2522%253Atrue%252C%2522sidebarPanelSize%2522%253A15%252C%2522editorPanelSize%2522%253A46.85950413223139%252C%2522devtoolsPanelSize%2522%253A36.37741046831957%257D)
-
-
-
-Or
-
-```
-npm install
-npm run dev
+```sh
+npm create astro@latest -- --template basics
 ```
 
-## Content
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-Below are links to content files in this repository. The live site will be updated once these files are modified and commited to the main git branch which triggers a rebuild of the entire site.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-### Home Page
-- [Slideshow](./src/data/slideshow.toml)
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-### Festival Page
-- [Bands](./src/data/bands.toml)
-- [Stages](./src/data/stages.toml)
-- [Schedule](./src/data/schedule.toml)
+## 🚀 Project Structure
 
-### Volunteer Page
-- [Volunteer Positions](./src/pages/volunteer/positions.toml)
+Inside of your Astro project, you'll see the following folders and files:
 
-### Supporters Page
-- [Supporters](./src/data/_supporters.toml)
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-### Donate Page
-- [Info](./src/data/donate_info.md)
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-### Media Page
-- [Media Links](./src/data/media.toml)
-- [Articles](./src/data/articles.md)
+## 🧞 Commands
 
-### About Page
-- [Mission](./src/data/mission.md)
-- [Contact us](./src/data/contact.toml)
-- [Our Story](./src/data/story.md)
-- [Diversity](./src/data/diversity.md)
-- [Join Us!](./src/data/diversity.md)
-- [Committee](./src/data/committee.toml)
-- [HONK! Family](./src/data/family.toml)
+All commands are run from the root of the project, from a terminal:
 
-### Layout
-- [Main Navigation](./src/data/nav.toml)
-- [Social Media Links](./src/data/social.toml)
-- [Footer Supporters](./src/data/footer.toml )
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Festival App
+## 👀 Want to learn more?
 
-### Dependencies
-
-- "svelte": "^4.2.0",
-- "@skeletonlabs/skeleton": "^1.2.5"
-- "xstate": "^4.37.2"
-- "@xstate/svelte": "^2.0.1"
-- "svelte-spa-router": "^3.3.0"
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
