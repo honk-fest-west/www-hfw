@@ -1,0 +1,36 @@
+---
+import { getCollection, type InferEntrySchema } from 'astro:content';
+
+const media = await getCollection('media');
+const years = [...new Set(media.map((item) => `${item.data.year}`))].sort((a, b) => b.localeCompare(a));
+const mediaMap = media.reduce((acc: { [key: string]: InferEntrySchema<"media">[] }, item) => {
+  const year = `${item.data.year}`;
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(item.data);
+  return acc;
+}, {});
+---
+
+<div class="content">
+  {
+    years.map((year) => (
+      <div class="flex mb-5">
+        <div class="text-xl w-20">{year}</div>
+        <div>
+          <ul>
+            {mediaMap[year].map((item) => (
+              <li>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.name}
+                </a>
+                <span>({item.type})</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))
+  }
+</div>

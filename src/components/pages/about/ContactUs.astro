@@ -1,0 +1,18 @@
+---
+const { emails } = Astro.props
+---
+
+<dl class="grid grid-cols-1 md:grid-cols-3">
+  {
+    emails.map((email) => (
+      <>
+        <dt class="md:p-2 font-base antialiased text-gray-200 leading-7 text-lg sm:text-xl flex-1">
+          {email.name}:
+        </dt>
+        <dd class="content pb-2 md:p-2 font-base antialiased text-gray-200 leading-7 text-lg md:text-xl col-span-2">
+          <a href={`mailto:${email.email}`}>{email.email}</a>
+        </dd>
+      </>
+    ))
+  }
+</dl>

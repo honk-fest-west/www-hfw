@@ -83,6 +83,10 @@
 	/* Content */
 	--color-content-background: var(--color-gold-300);
 	--color-content-border: var(--color-gray-300);
+
+
+  --color-accent: var(--color-teal-500);
+  --color-tertiary: var(--color-teal-700);
 }
 
 @utility content-container {
@@ -96,6 +100,10 @@
     1px 1px 3px var(--color-title-shadow);
 }
 
+@utility layout-gap {
+  @apply gap-4 sm:gap-10
+}
+
 .content,
 p {
   @apply font-base antialiased text-content-text leading-8 text-xl flex-1;
@@ -107,7 +115,9 @@ p {
 p a {
   @apply text-content-link underline underline-offset-2;
 }
-
+.content strong {
+  @apply font-semibold;
+}
 
 
 .text-shadow {

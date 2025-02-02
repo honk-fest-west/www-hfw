@@ -8,7 +8,13 @@ const nav = await getCollection('nav');
 ---
 
 <div class="grid place-content-center p-4 sm:p-8 sm:pb-16">
-	<Image src={logoImg} alt="HONK! Fest West 2025" />
+	<a href="/">
+		<Image
+			src={logoImg}
+			alt="HONK! Fest West 2025"
+			loading="eager"
+		/>
+	</a>
 	<nav class="w-full relative">
 		<ul class="flex flex-wrap justify-center items-center w-full group relative lg:absolute top-8">
 			{nav.map(link => (

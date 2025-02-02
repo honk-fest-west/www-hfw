@@ -1,0 +1,84 @@
+---
+type Groups = {
+  [key: string]: { role: string; name: string }[];
+};
+
+const { groups } = Astro.props as { groups: Groups };
+
+---
+
+<div class="content">
+  <h3 class="text-shadow text-lg text-accent font-semibold">
+    Board of Directors
+  </h3>
+  <ul>
+    {
+      groups['Board of Directors'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member.name}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="content">
+  <h3 class="text-shadow text-lg text-accent font-semibold">
+    Event Production
+  </h3>
+  <ul>
+    {
+      groups['Event Production'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member.name}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="content">
+  <h3 class="text-shadow text-lg text-accent font-semibold">
+    Creative & Communications
+  </h3>
+  <ul>
+    {
+      groups['Creative & Communications'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member.name}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="content">
+  <h3 class="text-shadow text-lg text-accent font-semibold">Fundraising</h3>
+  <ul>
+    {
+      groups['Fundraising'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member.name}
+        </li>
+      ))
+    }
+  </ul>
+  <h3 class="text-shadow text-lg text-accent font-semibold">Outreach</h3>
+  <ul>
+    {
+      groups['Outreach'].map((member) => (
+        <li>
+          <span class="underline">{member.role}:</span> {member.name}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="md:col-span-4 flex justify-end items-center mt-4">
+  <span class="content mr-4 text-right">. . . and</span>
+  <div class="rounded-full overflow-hidden animate-bounce">
+    <a
+      href="/volunteer"
+      class="text-shadow block bg-tertiary rounded text-xl text-gray-200 mb-5 last:mb-0 font-base font-bold py-2 px-4 cursor-pointer text-center ease-in-out hover:scale-105 hover:bg-accent transition ease-in-out"
+    >
+      YOU!</a
+    >
+  </div>
+</div>  

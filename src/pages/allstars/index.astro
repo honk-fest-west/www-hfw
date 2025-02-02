@@ -1,0 +1,56 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Title from "@components/Title.astro";
+import BackToTop from "@components/BackToTop.astro";
+---
+
+<Layout title="HONK! All Stars">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="content-container col-span-3 md:col-span-2">
+      <Title title="Jam Night!" subtitle="at Jules Maes Saloon" />
+      <div class="content">
+        <p>
+          <span class="font-bold">When:</span> Every 3rd Wednesday
+        </p>
+        <p>
+          <span class="font-bold">Time:</span> 7:30pm - 9:30pm
+        </p>
+        <p>
+          <span class="font-bold">Location:</span>
+          <a href="https://maps.app.goo.gl/qZArHR8NmdEXx6wMA"
+            >Jules Maes Saloon, 5919 Airport Way S, Seattle, WA 98108</a
+          >
+        </p>
+        <p>
+          <span class="font-bold">Cost:</span> Free!
+        </p>
+        <p>
+          <span class="font-bold">Age:</span> 21+
+        </p>
+        <p>
+          <span class="font-bold">Details:</span> Join us for a night of music and
+          fun at Jules Maes Saloon! We'll be playing all the HONK! All Stars songs
+          and more. Bring your instrument or just hang out and join the fun!
+        </p>
+      </div>
+    </div>
+    <div class="content-container">
+      <Title title="Music Scores" subtitle="" />
+
+      <div class="content">
+        <p>
+          Find all the music scores for the <span class="font-bold"
+            >HONK! All Stars</span
+          > songs here:
+        </p>
+        <br />
+        <a
+          href="https://drive.google.com/drive/folders/1WO2k6tIspmt4BY8wz62tWIBVZOIPIftP?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >&gt;&gt; Download HERE &lt;&lt;
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

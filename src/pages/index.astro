@@ -12,7 +12,7 @@ import artworkImg from '@assets/images/2025/hfw-2025-artwork.png';
 ---
 
 <Layout>
-	<div class="grid grid-cols-1 sm:grid-cols-6 gap-4 sm:gap-8 w-full lg:mt-8">
+	<div class="grid grid-cols-1 sm:grid-cols-6 layout-gap w-full">
     <FestivalInfoBlock />
 
     <section
@@ -22,6 +22,7 @@ import artworkImg from '@assets/images/2025/hfw-2025-artwork.png';
         src={artworkImg}
         alt="2025 H!FW artwork by Henry Ward"
         class="object-contain rounded-xl w-full max-h-[470px] object-top"
+        loading="eager"
       />
     </section>
 

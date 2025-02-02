@@ -1,0 +1,108 @@
+---
+import { Image } from 'astro:assets';
+
+import Layout from '@layouts/Layout.astro';
+import Title from '@components/Title.astro';
+import BackToTop from '@components/BackToTop.astro';
+import CommitteePhotos from '@components/pages/about/CommitteePhotos.astro';
+import CommitteeRoles from '@components/pages/about/CommitteeRoles.astro';
+import HonkFamily from '@components/pages/about/HonkFamily.astro';
+import ContactUs from '@components/pages/about/ContactUs.astro';
+import NavButton from '@components/pages/about/NavButton.astro';
+import MarkdownContent from '@components/MarkdownContent.astro';
+import { rawContent as diversity_content } from '@data/diversity.md';
+import { rawContent as join_us_content } from '@data/join_us.md';
+import { rawContent as mission_content } from '@data/mission.md';
+import { rawContent as story_content } from '@data/story.md';
+
+// @ts-ignore
+import committee from '@data/committee.toml';
+// @ts-ignore
+import family from '@data/family.toml';
+// @ts-ignore
+import contact from '@data/contact.toml';
+---
+
+<Layout title="About">
+  <div class="flex flex-col layout-gap">
+
+  <div class="grid grid-cols-1 md:grid-cols-3 layout-gap">
+    <nav class="content-container md:row-span-2">
+      <div class="menu sticky">
+        <NavButton href="#mission">» Our Mission</NavButton>
+        <NavButton href="#contact">» Contact Us</NavButton>
+        <NavButton href="#story">» Our Story</NavButton>
+        <NavButton href="#diversity"
+          >» Diversity & Inclusion</NavButton
+        >
+        <NavButton href="#join">» Join Us!</NavButton>
+        <NavButton href="#committee">» Committee</NavButton>
+        <NavButton href="#family">» HONK! Family</NavButton>
+      </div>
+    </nav>
+
+    <!-- MISSION -->
+    <section id="mission" class="content-container md:col-span-2">
+      <BackToTop />
+      <Title title="Our" subtitle="Mission" />
+      <MarkdownContent md={mission_content()} />
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="content-container md:col-span-2">
+      <BackToTop />
+      <Title title="Contact Us" />
+      <ContactUs emails={contact.emails} />
+    </section>
+  </div>
+
+  <div class="grid grid-cols-1 layout-gap">
+    <!-- STORY -->
+    <section id="story" class="content-container">
+      <BackToTop />
+      <Title title="Our" subtitle="Story" />
+      <div class="flex flex-col md:flex-row w-full gap-2">
+        <div>
+          <Image
+            class="block w-full md:w-auto md:mr-5 mb-3 sm:mb-0 rounded h-auto"
+            src="https://ik.imagekit.io/thegoldendino/hfw/henryart_0A59z8KGn.png?updatedAt=1628230159141&tr=b-5_FFFFFF"
+            alt="Henry Art for H!FW"
+            width="233"
+            height="300"
+            format="png"
+          />
+        </div>
+        <MarkdownContent md={story_content()} />
+      </div>
+    </section>
+
+    <!-- DIVERSITY -->
+    <section id="diversity" class="content-container">
+      <BackToTop />
+      <Title title="Diversity &" subtitle="Inclusion" />
+      <MarkdownContent md={diversity_content()} />
+    </section>
+
+    <!-- JOIN US! -->
+    <section id="join" class="content-container">
+      <BackToTop />
+      <Title title="Join Us!" />
+      <MarkdownContent md={join_us_content()} />
+    </section>
+
+    <!-- COMMITTEE -->
+    <section id="committee">
+      <CommitteePhotos photos={committee.photos} />
+    </section>
+
+    <!-- COMMITTEE ROLES -->
+    <section class="content-container grid grid-cols-1 md:grid-cols-4">
+      <BackToTop />
+      <CommitteeRoles groups={committee.groups} />
+    </section>
+
+    <!-- HONK! FAMILY -->
+    <HonkFamily family={family} />
+  </div>
+  </div>
+</Layout>

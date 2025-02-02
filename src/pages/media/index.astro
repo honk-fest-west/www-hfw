@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Title from '@components/Title.astro';
+import BackToTop from '@components/BackToTop.astro';
+import PhotosVideo from '@components/pages/media/PhotosVideo.astro';
+import MarkdownContent from '@components/MarkdownContent.astro';
+import { rawContent as articles } from '@data/articles.md';
+
+---
+
+<Layout title="Media">
+  <div class="flex flex-col layout-gap">
+    <section class="content-container ">
+      <BackToTop />
+      <Title title="Photos & Video" />
+      <PhotosVideo />
+    </section>
+
+    <section class="content-container ">
+      <BackToTop />
+      <Title title="Articles" />
+      <MarkdownContent md={articles()} />
+    </section>
+  </div>
+</Layout>
