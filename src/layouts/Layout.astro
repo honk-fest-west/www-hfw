@@ -2,6 +2,7 @@
 import "@styles/global.css";
 import HeadOpenGraph from "@components/head/OpenGraph.astro";
 import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
 
 const { title = false } = Astro.props;
 
@@ -31,14 +32,14 @@ const fullTitle = title ? `${title} - HONK! Fest West` : "HONK! Fest West";
 
       <!-- MAIN -->
       <main class="flex-auto bg-main-background pt-10 border-t-1 border-content-border">
-        <div class="max-w-screen-xl mx-auto w-full px-6 lg:py-8">
+        <div class="max-w-screen-xl mx-auto w-full px-6 lg:pt-8 lg:pb-12">
           <slot />
         </div>
       </main>
 
       <!-- FOOTER -->
       <footer class="mt-auto w-full">
-        <!-- <Footer supporters={footer.supporters} social={social} /> -->
+        <Footer ></Footer>  
       </footer>
     </div>
   </body>

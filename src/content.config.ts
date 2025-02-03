@@ -23,6 +23,7 @@ const openPositions = defineCollection({
 
 const supportersSchema = z.object({
 	id: z.string(),
+	type: z.enum(["art", "grant", "shoutout"]),
 	name: z.string(),
 	footer: z.boolean().default(false),
 	url: z.string().url(),
@@ -31,18 +32,8 @@ const supportersSchema = z.object({
 	height: z.number(),
 });
 
-const artSupporters = defineCollection({
-	loader: file("src/data/supporters.toml", {parser: (text) => parseToml(text).art }),
-	schema: supportersSchema,
-});
-
-const grantSupporters = defineCollection({
-	loader: file("src/data/supporters.toml", {parser: (text) => parseToml(text).grant }),
-	schema: supportersSchema,
-});
-
-const shoutoutSupporters = defineCollection({
-	loader: file("src/data/supporters.toml", {parser: (text) => parseToml(text).shout_out }),
+const supporters = defineCollection({
+	loader: file("src/data/supporters.toml", {parser: (text) => parseToml(text).supporters }),
 	schema: supportersSchema,
 });
 
@@ -57,4 +48,4 @@ const media = defineCollection({
 	}),
 });
 
-export const collections = { nav, openPositions, artSupporters, grantSupporters, shoutoutSupporters, media };
+export const collections = { nav, openPositions, supporters, media };
