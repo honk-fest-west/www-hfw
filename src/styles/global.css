@@ -56,7 +56,7 @@
   --color-gray-900: oklch(32.72% 0 0);
 
 	/* Backgrounds */
-	--color-site-background: var(--color-gold-400);
+	--color-site-background: var(--color-gold-300);
 	--color-main-background: var(--color-teal-700);
 
 
@@ -67,7 +67,7 @@
 	--color-content-text: var(--color-gold-800);
   --color-link: var(--color-teal-800);
 	--color-content-link: var(--color-teal-800);
-	--color-title-shadow: var(--color-gold-200);
+	--color-title-shadow: var(--color-gold-100);
 
 	/* Fonts */
 	--font-title: 'Fredoka', serif;
@@ -81,7 +81,7 @@
   --color-button-text: var(--color-gray-200);
 
 	/* Content */
-	--color-content-background: var(--color-gold-300);
+	--color-content-background: var(--color-gold-200);
 	--color-content-border: var(--color-gray-300);
 
 
@@ -90,7 +90,7 @@
 }
 
 @utility content-container {
-	@apply bg-content-background p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-1 border-content-border;
+	@apply bg-radial-[at_50%_40%] from-content-background from-60% to-gold-500 p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-1 border-content-border;
 }
 
 @utility title {
