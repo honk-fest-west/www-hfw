@@ -1,61 +1,35 @@
 [[photos]]
+image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/ginny_pjQra4hZ3?updatedAt=1651289398764'
+name = 'Ginny'
+[[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Jeanette_9CB7W6rMm2A.jpg?updatedAt=1628536067122'
 name = 'Jeanette'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/dee_B34htmGd_Jf?updatedAt=1628552822116'
-name = 'Dee'
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/luis_kDBcONTRC.jpg?updatedAt=1641620803407'
 name = 'Lu Badu'
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Lizzie_wzAulOj1l.jpg?updatedAt=1628536067160'
 name = 'Lizzy'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Marisa%20photo_i3Rcojs9Y.jpg?updatedAt=1704510471059'
-name = 'Marisa'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Elsbeth_G-ymnIE5av.jpg?updatedAt=1628536068712'
-name = 'Elsbeth'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Charlie_4QG4u-lco.jpg?updatedAt=1628536068329'
-name = 'Charlie'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Susan2_fuCLcqhwc.jpg?updatedAt=1628536067887'
-name = 'Susan'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Ethan_dCbGVPBGtK.jpg?updatedAt=1628536068852'
-name = 'Ethan'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/lazer-dwight_qDmJ89KI9.png?updatedAt=1628555952814'
-name = 'Dwight'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/ginny_pjQra4hZ3?updatedAt=1651289398764'
-name = 'Ginny'
 
 [[groups."Board of Directors"]]
 role = 'President'
-name = 'Jeanette'
-[[groups."Board of Directors"]]
-role = 'Treasurer'
-name = 'Dee'
-[[groups."Board of Directors"]]
-role = 'Secretary'
 name = 'Ginny Trufan'
 [[groups."Board of Directors"]]
-role = 'Member'
-name = 'Lizzy'
+role = 'Treasurer'
+name = 'Jeanette DuBois'
+[[groups."Board of Directors"]]
+role = 'Secretary'
+name = 'Brian Fifer'
 [[groups."Board of Directors"]]
 role = 'Member'
-name = 'Firf'
+name = 'Lizzy Burton'
 [[groups."Board of Directors"]]
 role = 'Member'
 name = 'Lu Badu'
 [[groups."Board of Directors"]]
 role = 'Member'
 name = 'Marcus Pimpleton'
-[[groups."Board of Directors"]]
-role = 'Member'
-name = 'Marisa'
+
 
 [[groups."Event Production"]]
 role = 'Permitting'
@@ -98,19 +72,19 @@ name = "Charlie"
 role = "Merch & Mother of the Golden Dino"
 name = "Susan"
 [[groups."Creative & Communications"]]
-role = "Art & Website"
+role = "Graphic Design"
+name = "Anna"
+[[groups."Creative & Communications"]]
+role = "Website"
 name = "Dwight"
 [[groups."Creative & Communications"]]
 role = "Social Media"
-name = "Jeanette"
+name = "Juliana"
 
 
 [[groups."Fundraising"]]
 role = 'Grants Manager'
 name = 'Jeanette'
-[[groups."Fundraising"]]
-role = 'Fundraising Events'
-name = 'Marisa'
 
 [[groups."Outreach"]]
 role = 'Outreach Lead'
