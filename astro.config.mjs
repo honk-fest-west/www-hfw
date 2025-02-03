@@ -13,4 +13,7 @@ export default defineConfig({
   },
 
   integrations: [svelte()],
+  image: {
+    domains: ['ik.imagekit.io'],
+  }
 });

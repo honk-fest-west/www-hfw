@@ -1,35 +1,44 @@
 [[slides]]
+id = '100'
 description = 'Baque Mare - Bad Jimmys Thursday 2023 - Photo by Espresso Buzz'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/2023-06-01-espressobuzz-baquemare-badjimmys_lcawYDQfe.jpg?updatedAt=1686509391803'
 
 [[slides]]
+id = '200'
 description = 'Seattle Kokon Taiko - Yeslar Terrace Park 2023 Photo by Dylan Lockard'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/HFW-Day-3-YeslerTerrace-DylanLockard-60_ZYg2JIqwO.jpg?updatedAt=1686507405436'
 
 [[slides]]
+id = '300'
 description = '8bit - Yeslar Terrace Park 2023 - Photo by Dylan Lockard'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/HFW-Day-3-YeslerTerrace-DylanLockard-81_MZsz-OQEy.jpg?updatedAt=1686507404286'
 
 [[slides]]
+id = '400'
 description = 'Dancer - Georgetown 2023 - Photo by Dylan Lockard'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/HFW-Day-1-Georgetown-DylanLockard-47_8lANK317eP.jpg?updatedAt=1686507234300'
 
 [[slides]]
+id = '500'
 description = 'TMB Trombone - Columbia City 2023 - Photo by Dylan Lockard'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/HFW-Day-2-ColumbiaCity-DylanLockard-70_jNCYP_N-q.jpg?updatedAt=1686507234192'
 
-[[slides]] 
+[[slides]]
+id = '600'
 description = 'Chaotic Noise Trumpet - Georgetown 2023 - Photo by Dylan Lockard'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/HFW-Day-1-Georgetown-DylanLockard-94_JvY9UB5uE.jpg?updatedAt=1686507234119'
 
 [[slides]]
+id = '700'
 description = 'West Cascade Puppet Brigade - Georgetown 2023 - Photo by Dylan Lockard'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/HFW-Day-1-Georgetown-DylanLockard-85_v21dBvy3r.jpg?updatedAt=1686507232006'
 
 [[slides]]
+id = '800'
 description = 'Lu Badu - Bad Jimmys Thursday 2023 - Photo by Charles Daniels'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/bad_jimmys-thursday-2023-charlesdaniels_oE_UHmIx6?updatedAt=1686508865424'
 
 [[slides]]
+id = '900'
 description = 'Soul Jambalaya - Georgetown 2023 - Photo by Espressobuzz'
 image_url = 'https://ik.imagekit.io/honkfestwest/carousel/soul-jambalaya-georgetown-2023-espressobuzz_eUrb1-md_.jpg?updatedAt=1686509770520'

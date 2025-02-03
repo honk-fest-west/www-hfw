@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+
+import Layout from '@layouts/Layout.astro';
+
+import BackToTop from '@components/BackToTop.astro';
+import FestivalInfoBlock from './_FestivalInfoBlock.astro';
+import NewsletterForm from './_NewsletterForm.astro';
+import LinkBlurb from './_LinkBlurb.astro';
+import Slideshow from './_Slideshow.astro';
+import artworkImg from '@assets/images/2025/hfw-2025-artwork.png';
+
+// POSTS
+
+import HonkAllstars from './_posts/HonkAllstars.astro';
+
+---
+
+<Layout>
+	<div class="grid grid-cols-1 sm:grid-cols-6 layout-gap w-full">
+    <FestivalInfoBlock />
+
+    <section
+      class="mt-5 sm:mt-10 lg:mt-0 col-span-6 lg:col-span-4 row-span-2 flex justify-center rounded-full w-full relative"
+    >
+      <Image
+        src={artworkImg}
+        alt="2025 H!FW artwork by Henry Ward"
+        class="object-contain rounded-xl w-full max-h-[470px] object-top"
+        loading="eager"
+      />
+    </section>
+
+    <!-- NEWSLETTER BLOCK -->
+    <section class="w-full col-span-6 lg:col-span-2 content-container">
+      <NewsletterForm />
+    </section>
+
+    <article
+      class="w-full content-container col-span-6 flex flex-col md:flex-row"
+    >
+      <HonkAllstars />
+    </article>
+
+    <!-- <article
+      class="w-full content-container col-span-6 flex flex-col md:flex-row"
+    >
+      <BackToTop />
+    </article> -->
+    <!-- <article
+      class="w-full content-container col-span-6 flex flex-col md:flex-row"
+    >
+      <BackToTop />
+      <ThursdayFundraiser />
+    </article> -->
+
+    <!-- LINK BLURBS -->
+    <section class="col-span-6 md:col-span-2 content-container">
+      <LinkBlurb title="About" href="/about">
+        HONK! Fest West is an accessible community music festival driven by the
+        energetic performances of street bands in public spaces.
+      </LinkBlurb>
+    </section>
+    <section class="col-span-6 md:col-span-2 content-container">
+      <LinkBlurb title="Volunteer" href="/volunteer">
+        If you want to volunteer, and help make HONK! Fest West magic, please
+        <a class="font-medium inline-block hover:scale-105" href="/volunteer">
+          APPLY HERE</a
+        >
+        and Thank You!!
+      </LinkBlurb>
+    </section>
+    <section class="col-span-6 md:col-span-2 content-container">
+      <LinkBlurb title="Donate" href="/donate">
+        Your contributions help make this event possible. Through the generous
+        efforts of our shared community, we’ll keep bringing music to the
+        streets and parks of Seattle’s neighborhoods.
+      </LinkBlurb>
+    </section>
+
+    <!-- SLIDESHOW -->
+    <div class="col-span-6 content-container">
+      <Slideshow></Slideshow>
+    </div>
+
+    <!-- SUPPORT DUAMISH  -->
+    <div class="col-span-6 content-container">
+      <BackToTop />
+      <p class="content font-base italic">
+        H!FW acknowledges that we are on the traditional land of the first
+        people of Seattle — the Duwamish People past and present — and honor
+        with gratitude the land itself, the Duwamish Tribe, and the Coast Salish
+        people.
+      </p>
+      <br />
+      <a
+        class="text-shadow block ease-in font-base link text-link font-medium text-base sm:text-lg relative hover:scale-105 hover:left-6"
+        href="https://www.duwamishtribe.org/donate"
+      >
+        » Please support the Duwamish Tribe
+      </a>
+    </div>
+  </div>
+</Layout>

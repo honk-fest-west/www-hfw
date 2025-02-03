@@ -48,4 +48,13 @@ const media = defineCollection({
 	}),
 });
 
-export const collections = { nav, openPositions, supporters, media };
+const slideshow = defineCollection({
+	loader: file("src/data/slideshow.toml", {parser: (text) => parseToml(text).slides }),
+	schema: z.object({
+		id: z.string(),
+		description: z.string(),
+		image_url: z.string().url(),
+	}),
+});
+
+export const collections = { nav, openPositions, supporters, media, slideshow };
