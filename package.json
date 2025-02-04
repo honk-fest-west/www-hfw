@@ -9,12 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.3",
     "@astrojs/react": "^4.2.0",
     "@astrojs/svelte": "^7.0.4",
     "@glidejs/glide": "^3.7.1",
+    "@types/alpinejs": "^3.13.11",
     "@types/glidejs__glide": "^3.6.5",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "alpinejs": "^3.14.8",
     "astro": "^5.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
