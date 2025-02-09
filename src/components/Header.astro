@@ -1,25 +1,37 @@
 ---
-import { Image } from 'astro:assets';
-import logoImg from '@assets/images/2025/hfw-2025-logo.png';
-import { getCollection } from 'astro:content';
-import NavButton from './NavButton.astro';
+import { Image } from "astro:assets";
+import logoImg from "@assets/images/2025/hfw-2025-logo.png";
+import { getCollection } from "astro:content";
+import NavButton from "./NavButton.astro";
+import MobileMenu from "./MobileMenu.astro";
 
-const nav = await getCollection('nav');
+const nav = await getCollection("nav");
+
+const currentNav = nav.find((item) =>
+	Astro.url.pathname.includes(item.data.link),
+);
 ---
 
-<div class="grid place-content-center p-4 sm:p-8 sm:pb-16">
+<div class="grid place-content-center p-4 pb-12 lg:pb-16">
 	<a href="/">
-		<Image
-			src={logoImg}
-			alt="HONK! Fest West 2025"
-			loading="eager"
-		/>
+		<Image src={logoImg} alt="HONK! Fest West 2025" loading="eager" />
 	</a>
 	<nav class="w-full relative">
-		<ul class="flex flex-wrap justify-center items-center w-full group relative lg:absolute top-8">
-			{nav.map(link => (
-					<NavButton href={link.data.link}>{link.data.name}</NavButton>
-			))}
-		</ul>
+		<div class="w-full block lg:hidden">
+			<div class="absolute top-6 w-full">
+				<MobileMenu {nav} currentId={currentNav?.id} client:visible />
+			</div>
+		</div>
+		<div class="w-full hidden lg:block">
+			<ul
+				class="flex flex-wrap justify-center items-center w-full group relative lg:absolute top-8"
+			>
+				{
+					nav.map((link) => (
+						<NavButton href={link.data.link}>{link.data.name}</NavButton>
+					))
+				}
+			</ul>
+		</div>
 	</nav>
-</div> 
+</div>
