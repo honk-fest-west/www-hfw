@@ -1,29 +1,31 @@
 ---
- const { href } = Astro.props;
+const { href } = Astro.props;
 
-
- const activeStyle = () => {
-  return Astro.url.pathname.includes(href)
-    ? "cursor-default rounded-full bg-button-active ring-button-active"
-    : "hover:scale-105 focus:scale-100 hover:focus-within:bg-button-active hover:focus-within:ring-0 group-hover:group-focus-within:scale-100 rounded-full bg-button-background ring-button-ring";
+const activeStyle = () => {
+	return Astro.url.pathname.includes(href)
+		? "active rounded-full bg-button-active ring-button-active text-button-text-active"
+		: "text-button-text hover:scale-105 focus:scale-100 hover:focus-within:bg-button-active hover:focus-within:ring-0 group-hover:group-focus-within:scale-100 rounded-full bg-button-background ring-button-ring";
 };
 ---
 
 <li
-class=`hover:transition text-2xl shadow-md sm:text-3xl font-title flex items-center my-2 ease-in py-2 px-2 mx-4 z-10 text-button-text ring-2 ${activeStyle()}`
+	class=`hover:transition text-2xl shadow-md sm:text-3xl font-title flex items-center my-2 ease-in py-2 px-2 mx-4 z-10 ring-2 ${activeStyle()}`
 >
-<a
-	class="mx-4 sm:mx-2 block ease-in"
-	href={href}
->
-	<slot />
-</a>
+	<a class="mx-4 sm:mx-2 block ease-in" href={href}>
+		<slot />
+	</a>
 </li>
 
 <style>
-	a {
-  	text-shadow: -1px -1px 3px var(--color-button-shadow),
-    	1px -1px 3px var(--color-button-shadow), -1px 1px 3px var(--color-button-shadow),
-    	1px 1px 3px var(--color-button-shadow);
+	li > a {
+		text-shadow:
+			-1px -1px 3px var(--color-button-shadow),
+			1px -1px 3px var(--color-button-shadow),
+			-1px 1px 3px var(--color-button-shadow),
+			1px 1px 3px var(--color-button-shadow);
+	}
+
+	li.active > a {
+		text-shadow: none;
 	}
 </style>

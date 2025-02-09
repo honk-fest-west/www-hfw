@@ -1,16 +1,15 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import Layout from '@layouts/Layout.astro';
-import Title from '@components/Title.astro';
-import BackToTop from '@components/BackToTop.astro';
-import { getCollection } from 'astro:content';
+import Layout from "@layouts/Layout.astro";
+import Title from "@components/Title.astro";
+import BackToTop from "@components/BackToTop.astro";
+import { getCollection } from "astro:content";
 
-const supporters = await getCollection('supporters');
-const artSupporters = supporters.filter((s) => s.data.type === 'art');
-const grantSupporters = supporters.filter((s) => s.data.type === 'grant');
-const shoutoutSupporters = supporters.filter((s) => s.data.type === 'shoutout'); 
-
+const supporters = await getCollection("supporters");
+const artSupporters = supporters.filter((s) => s.data.type === "art");
+const grantSupporters = supporters.filter((s) => s.data.type === "grant");
+const shoutoutSupporters = supporters.filter((s) => s.data.type === "shoutout");
 ---
 
 <Layout title="Supporters">
@@ -39,13 +38,13 @@ const shoutoutSupporters = supporters.filter((s) => s.data.type === 'shoutout');
         <p class="content">
           HONK! Festival West is a 501(c)(3) nonprofit organization.
           <br /><br />
-          Tax ID #86-3761255.
+          <span class="font-semibold">Tax ID #86-3761255.</span>
           <br /><br />
           Donations to HONK! Festival West are tax-deductible to the extent allowed
           by law.
           <br /><br />
           Donations can be made via check to:
-          <span class="flex flex-col mt-2 font-bold">
+          <span class="flex flex-col mt-2 font-semibold">
             HONK! Festival West
             <br />
             PO Box 20242
@@ -55,13 +54,15 @@ const shoutoutSupporters = supporters.filter((s) => s.data.type === 'shoutout');
           <br />
           Or securely at:
           <br />
-          <a
-            href="https://connect.clickandpledge.com/w/Form/a6086a7f-ef18-4eb8-a2bc-ffa205759fcc"
-            class="block transition ease-in-out bg-gold-900 hover:scale-105 py-1 px-4 mt-2 text-center rounded-full w-auto"
-          >
-            <span class="block text-lg content text-white">Click & Pledge</span>
-          </a>
         </p>
+        <a
+          href="https://connect.clickandpledge.com/w/Form/a6086a7f-ef18-4eb8-a2bc-ffa205759fcc"
+          class="block transition ease-in-out bg-gold-900 hover:scale-105 py-1 px-4 mt-2 text-center rounded-full w-auto"
+        >
+          <span class="block text-lg font-base font-medium text-button-text"
+            >Click & Pledge</span
+          >
+        </a>
       </section>
     </div>
     <div class="w-full lg:w-2/3 flex flex-col layout-gap">
@@ -71,21 +72,25 @@ const shoutoutSupporters = supporters.filter((s) => s.data.type === 'shoutout');
         <p class="content">
           <span>
             This project is supported in part by the
-            <a href="{supporters.grant[0].url}">{grantSupporters[0].data.name}</a> the
-            <a href="{supporters.grant[1].url}">{grantSupporters[1].data.name}</a>,
-            <a href="{supporters.grant[2].url}">{grantSupporters[2].data.name}</a>,
-            and
-            <a href="{supporters.grant[3].url}">{grantSupporters[3].data.name}</a>.
+            <a href={grantSupporters[0].data.url}
+              >{grantSupporters[0].data.name}</a
+            >, the
+            <a href={grantSupporters[1].data.url}
+              >{grantSupporters[1].data.name}</a
+            >,
+            <a href={grantSupporters[2].data.url}
+              >{grantSupporters[2].data.name}</a
+            >, and
+            <a href={grantSupporters[3].data.url}
+              >{grantSupporters[3].data.name}</a
+            >.
           </span>
           <span
             class="grid grid-cols-2 gap-2 sm:gap-10 mt-2 sm:mb-5 items-center justify-center"
           >
             {
-              grantSupporters.map(({data}) => (
-                <a
-                  class="block mb-3 sm:mb-0 max-w-[200px]"
-                  href={data.url}
-                >
+              grantSupporters.map(({ data }) => (
+                <a class="block mb-3 sm:mb-0 max-w-[200px]" href={data.url}>
                   <Image
                     class="rounded bg-white p-2"
                     src={data.image_url}
@@ -102,18 +107,17 @@ const shoutoutSupporters = supporters.filter((s) => s.data.type === 'shoutout');
 
           <span>
             HONK! Festival West is supported by grants from
-            <a href="{supporters.art[0].url}">{artSupporters[0].data.name}</a> and
-            <a href="{supporters.art[1].url}">{artSupporters[1].data.name}</a>.
+            <a href={artSupporters[0].data.url}>{artSupporters[0].data.name}</a>
+            and
+            <a href={artSupporters[1].data.url}>{artSupporters[1].data.name}</a
+            >.
           </span>
           <span
             class="grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
           >
             {
-              artSupporters.map(({data}) => (
-                <a
-                  class="block mb-3 sm:mb-0 max-w-[200px]"
-                  href={data.url}
-                >
+              artSupporters.map(({ data }) => (
+                <a class="block mb-3 sm:mb-0 max-w-[200px]" href={data.url}>
                   <Image
                     class="w-auto rounded bg-white p-2"
                     src={data.image_url}
@@ -133,12 +137,13 @@ const shoutoutSupporters = supporters.filter((s) => s.data.type === 'shoutout');
             Thank you to our partner organizations for their support in building
             a thriving creative community in Seattle:
           </span>
-        </p><div class="relative flex flex-col justify-center py-6">
+        </p>
+        <div class="relative flex flex-col justify-center py-6">
           <div
             class="columns-2 sm:columns-3 gap-10 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit"
           >
             {
-              shoutoutSupporters.map(({data}) => (
+              shoutoutSupporters.map(({ data }) => (
                 <div class="break-inside-avoid mb-6 rounded-lg max-w-[188px] bg-gray-100">
                   <a href={data.url}>
                     <Image
