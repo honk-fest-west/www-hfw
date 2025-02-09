@@ -35,55 +35,55 @@ const { position } = Astro.props;
           <section class="grid grid-cols-1 gap-3">
             <div>
               <p>
-                <label for="name">Name</label>
+                <label class="content" for="name">Name</label>
               </p>
               <div class="mt-1">
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  class="shadow-sm focus:ring-teal-500 focus:border-indigo-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+                  class="shadow-sm focus:ring-teal-500 focus:border-teal-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
                   required
                 />
               </div>
             </div>
             <div>
               <p>
-                <label for="email">Email</label>
+                <label for="email" class="content">Email</label>
               </p>
               <div class="mt-1">
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+                  class="shadow-sm focus:ring-teal-500 focus:border-teal-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
                   required
                 />
               </div>
             </div>
             <div>
               <p>
-                <label for="phone">Phone</label>
+                <label for="phone" class="content">Phone</label>
               </p>
               <div class="mt-1">
                 <input
                   type="tel"
                   name="phone"
                   id="phone"
-                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+                  class="shadow-sm focus:ring-teal-500 focus:border-teal-500 block w-full bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
                 />
               </div>
             </div>
           </section>
           <section>
             <p>
-              <label for="comments"> Comments</label>
+              <label for="comments" class="content"> Comments</label>
             </p>
             <textarea
               name="comments"
               id="comments"
               rows="10"
-              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
+              class="shadow-sm focus:ring-teal-500 focus:border-teal-500 block w-full sm:text-sm border bg-gray-100 bg-opacity-80 rounded-md px-3 py-2"
             ></textarea>
           </section>
         </div>
