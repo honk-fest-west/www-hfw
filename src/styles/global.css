@@ -73,6 +73,8 @@
 
   --color-accent: var(--color-teal-500);
   --color-tertiary: var(--color-teal-700);
+
+  --color-paypal: rgb(0, 48, 135);
 }
 
 @utility content-container {
