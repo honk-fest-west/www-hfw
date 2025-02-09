@@ -53,6 +53,7 @@
   --color-link: var(--color-teal-800);
   --color-content-link: var(--color-teal-800);
   --color-title-shadow: var(--color-gold-100);
+  --color-content_btt: var(--color-gold-600);
 
   /* Fonts */
   --font-title: 'Fredoka', serif;
