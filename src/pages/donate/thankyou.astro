@@ -1,5 +1,9 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const thankyouImage =
+  "https://ik.imagekit.io/honkfestwest/2023/espressobuzz/2023-06-01-185900-HONK-065_MNtbvEIZB.jpg?tr=w-1080%2Ch-566%2Cfo-auto";
 ---
 
 <Layout title="Thank You!">
@@ -8,7 +12,13 @@ import Layout from '@layouts/Layout.astro';
       <div class="text-6xl font-emphasis text-accent-color text-center mb-5">
         THANK YOU!
       </div>
-      <p>
+      <Image
+        src={thankyouImage}
+        alt="Thank you"
+        class="rounded-lg w-full object-cover h-106 lg:h-auto mx-auto"
+        inferSize
+      />
+      <p class="mt-5">
         Your contributions help make this event possible. Through the generous
         efforts of our shared community, we’ll keep bringing music to the
         streets and parks of Seattle’s neighborhoods.
