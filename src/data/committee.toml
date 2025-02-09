@@ -5,11 +5,18 @@ name = 'Ginny'
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Jeanette_9CB7W6rMm2A.jpg?updatedAt=1628536067122'
 name = 'Jeanette'
 [[photos]]
+image_url = 'https://ik.imagekit.io/honkfestwest/committee/brian-fifer_muORz-mtK.jpg?updatedAt=1739142105185'
+name = 'Firf'
+[[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/luis_kDBcONTRC.jpg?updatedAt=1641620803407'
 name = 'Lu Badu'
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Lizzie_wzAulOj1l.jpg?updatedAt=1628536067160'
 name = 'Lizzy'
+[[photos]]
+image_url = 'https://ik.imagekit.io/honkfestwest/committee/marcus-pimpleton?updatedAt=1739142436229'
+name = 'Dr. Pimpleton'
+
 
 [[groups."Board of Directors"]]
 role = 'President'
@@ -30,37 +37,16 @@ name = 'Lu Badu'
 role = 'Member'
 name = 'Marcus Pimpleton'
 
-
-[[groups."Event Production"]]
-role = 'Permitting'
+[[groups."Finance & Risk"]]
+role = 'Chair'
 name = 'Jeanette'
-[[groups."Event Production"]]
-role = 'Food/Housing'
-name = 'Emily'
-[[groups."Event Production"]]
-role = 'Food/Housing'
-name = 'Ethan'
-[[groups."Event Production"]]
-role = 'Transportation'
-name = 'Miranda'
-[[groups."Event Production"]]
-role = 'Booking Lead'
-name = 'Dee'
-[[groups."Event Production"]]
-role = "Int'l Bands"
-name = 'Chris'
-[[groups."Event Production"]]
-role = 'Volunteer Engagement'
-name = 'Elsbeth'
-[[groups."Event Production"]]
-role = 'Volunteer Coordinator'
-name = 'Ginny'
-[[groups."Event Production"]]
-role = 'Planning Lead'
-name = 'Firf'
-[[groups."Event Production"]]
-role = 'Med Ops'
-name = 'Grace'
+
+[[groups."Fundraising"]]
+role = 'Chair & Grants Manager'
+name = 'Jeanette'
+[[groups."Fundraising"]]
+role = 'Events'
+name = 'JP'
 
 [[groups."Creative & Communications"]]
 role = "Marketing"
@@ -81,35 +67,35 @@ name = "Dwight"
 role = "Social Media"
 name = "Juliana"
 
+[[groups."Outreach"]]
+role = 'Chair'
+name = 'Lu Badu'
+[[groups."Outreach"]]
+role = 'Chair'
+name = 'Luis, Heather, & Marisa'
+[[groups."Outreach"]]
+role = 'HONK! Future'
+name = 'Marcus'
+[[groups."Outreach"]]
+role = 'Community Engagement'
+name = 'Lizzy, Aja, Janine, Elsbeth, Hanna, Katie, Heather, Nick, Paul'
+[[groups."Outreach"]]
+role = 'Partnerships'
+name = 'Luis, Janine'
+
+[[groups."Event Production"]]
+role = 'Chair'
+name = 'Firf'
+[[groups."Event Production"]]
+role = 'Booking Lead'
+name = 'Pete'
+[[groups."Event Production"]]
+role = 'Med Ops'
+name = 'Grace Jones'
+[[groups."Event Production"]]
+role = 'Permitting'
+name = 'Firf'
 
 [[groups."Fundraising"]]
 role = 'Grants Manager'
-name = 'Jeanette'
-
-[[groups."Outreach"]]
-role = 'Outreach Lead'
-name = 'Lu Badu'
-[[groups."Outreach"]]
-role = 'HONK! All-Stars & Jams'
-name = 'Heather'
-[[groups."Outreach"]]
-role = 'HONK! Junior'
-name = 'Aja'
-[[groups."Outreach"]]
-role = 'HONK! Junior'
-name = 'Marcus'
-[[groups."Outreach"]]
-role = 'HONK! Junior'
-name = 'Julia'
-[[groups."Outreach"]]
-role = 'Community Engagement'
-name = 'Paul G.'
-[[groups."Outreach"]]
-role = 'Community Engagement'
-name = 'Al'
-[[groups."Outreach"]]
-role = 'Community Engagement'
-name = 'Lizzy'
-[[groups."Outreach"]]
-role = 'Partnerships'
 name = 'Jeanette'
