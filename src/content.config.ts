@@ -1,10 +1,9 @@
 import { defineCollection, z } from 'astro:content';
 import { file } from 'astro/loaders';
 import { parse as parseToml } from "toml";
-import { boolean } from 'astro:schema';
 
 const nav = defineCollection({
-	loader: file("src/data/nav.toml", {parser: (text) => parseToml(text).links }),
+	loader: file("src/data/nav.toml", { parser: (text) => parseToml(text).links }),
 	schema: z.object({
 		id: z.string(),
 		name: z.string(),
@@ -12,8 +11,17 @@ const nav = defineCollection({
 	}),
 });
 
+const social = defineCollection({
+	loader: file("src/data/media.toml", { parser: (text) => parseToml(text).social }),
+	schema: z.object({
+		id: z.string(),
+		name: z.string(),
+		url: z.string(),
+	}),
+});
+
 const openPositions = defineCollection({
-	loader: file("src/data/positions.toml", {parser: (text) => parseToml(text).open }),
+	loader: file("src/data/positions.toml", { parser: (text) => parseToml(text).open }),
 	schema: z.object({
 		id: z.string(),
 		title: z.string(),
@@ -33,12 +41,12 @@ const supportersSchema = z.object({
 });
 
 const supporters = defineCollection({
-	loader: file("src/data/supporters.toml", {parser: (text) => parseToml(text).supporters }),
+	loader: file("src/data/supporters.toml", { parser: (text) => parseToml(text).supporters }),
 	schema: supportersSchema,
 });
 
 const media = defineCollection({
-	loader: file("src/data/media.toml", {parser: (text) => parseToml(text).media }),
+	loader: file("src/data/media.toml", { parser: (text) => parseToml(text).media }),
 	schema: z.object({
 		id: z.string(),
 		year: z.number(),
@@ -49,7 +57,7 @@ const media = defineCollection({
 });
 
 const slideshow = defineCollection({
-	loader: file("src/data/slideshow.toml", {parser: (text) => parseToml(text).slides }),
+	loader: file("src/data/slideshow.toml", { parser: (text) => parseToml(text).slides }),
 	schema: z.object({
 		id: z.string(),
 		description: z.string(),
@@ -57,4 +65,4 @@ const slideshow = defineCollection({
 	}),
 });
 
-export const collections = { nav, openPositions, supporters, media, slideshow };
+export const collections = { nav, social, openPositions, supporters, media, slideshow };

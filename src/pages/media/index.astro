@@ -1,22 +1,49 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Title from '@components/Title.astro';
-import BackToTop from '@components/BackToTop.astro';
-import PhotosVideo from './_PhotosVideo.astro';
-import MarkdownContent from '@components/MarkdownContent.astro';
-import { rawContent as articles } from '@data/articles.md';
+import Layout from "@layouts/Layout.astro";
+import Title from "@components/Title.astro";
+import BackToTop from "@components/BackToTop.astro";
+import PhotosVideo from "./_PhotosVideo.astro";
+import MarkdownContent from "@components/MarkdownContent.astro";
+import SocialLink from "@components/SocialLink.svelte";
+import { rawContent as articles } from "@data/articles.md";
 
+import { getCollection } from "astro:content";
+
+const social = await getCollection("social");
 ---
 
 <Layout title="Media">
   <div class="flex flex-col layout-gap">
-    <section class="content-container ">
+    <section class="content-container">
+      <BackToTop />
+      <Title title="Social Media" />
+      <ul class="content">
+        {
+          social.map((link) => (
+            <li class="mb-4 flex gap-4 items-center">
+              <SocialLink key={link.data.id} link={link.data.url} />
+              <a
+                href={link.data.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-accent-dk hover:text-accent-lt"
+              >
+                {link.data.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="flex mb-5"></div>
+    </section>
+
+    <section class="content-container">
       <BackToTop />
       <Title title="Photos & Video" />
       <PhotosVideo />
     </section>
 
-    <section class="content-container ">
+    <section class="content-container">
       <BackToTop />
       <Title title="Articles" />
       <MarkdownContent md={articles()} />

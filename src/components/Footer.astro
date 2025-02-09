@@ -1,16 +1,15 @@
 ---
-import SocialLink from '@components/SocialLink.svelte';
-import { Image } from 'astro:assets';
-import GoldenDino from './GoldenDino.svelte'
-import { getCollection } from 'astro:content';
+import SocialLink from "@components/SocialLink.svelte";
+import { Image } from "astro:assets";
+import GoldenDino from "./GoldenDino.svelte";
+import { getCollection } from "astro:content";
 
-const supporters = await getCollection('supporters');
+const supporters = await getCollection("supporters");
+const social = await getCollection("social");
 const footerSupporters = supporters.filter((s) => s.data.footer);
-
-
 ---
 
-<div >
+<div>
   <!-- SPONSORS -->
   <div>
     <div
@@ -22,7 +21,7 @@ const footerSupporters = supporters.filter((s) => s.data.footer);
           class="flex flex-wrap justify-around align-center items-center pt-3"
         >
           <span
-            class="text-xs leading-tight w-1/5 text-gray-200 mr-6 text-justify text-opacity-80 pr-3"
+            class="text-xs leading-tight w-1/5 text-gold-900 mr-6 text-justify text-opacity-80 pr-3"
           >
             This project is supported in part by the National Endowment for the
             Arts and the WA State Arts Commission.
@@ -56,23 +55,23 @@ const footerSupporters = supporters.filter((s) => s.data.footer);
     class="max-w-screen-xl w-full mx-auto p-1 sm:p-0 flex flex-wrap sm:flex-nowrap items-center"
   >
     <a
-      class="w-full text-center text-accent-lt text-lg font-bold font-base block sm:w-1/3 m-1 sm:m-4"
+      class="w-full text-center text-accent-lt text-lg font-medium font-base block sm:w-1/3 m-1 sm:m-4"
       href="/">© {new Date().getFullYear()} HONK! Fest West</a
     >
     <ul
       class="items-center h-full flex-1 w-full sm:w-1/3 m-1 sm:m-4 hidden sm:flex justify-around"
     >
       {
-        // Object.keys(social.links).map((key) => (
-        //   <li class="text-accent-lt">
-        //     <SocialLink key={key} link={social.links[key]} size="1.25rem" />
-        //   </li>
-        // ))
+        social.map((link) => (
+          <li class="text-accent-lt">
+            <SocialLink key={link.id} link={link.data.url} size="1.25rem" />
+          </li>
+        ))
       }
     </ul>
     <GoldenDino client:visible />
     <a
-      class="text-shadow w-full text-center font-base link text-accent-lt font-bold text-lg block sm:w-1/3 m-1 sm:m-4 underline hover:scale-105"
+      class="text-shadow w-full text-center font-base link text-accent-lt font-medium text-lg block sm:w-1/3 m-1 sm:m-4 underline hover:scale-105"
       href="#"
     >
       Back to top
