@@ -83,7 +83,10 @@
 }
 
 @utility title {
-  @apply flex flex-wrap text-2xl sm:text-3xl font-title border-title-border mb-6 mt-1 pb-1 font-medium;
+  @apply flex flex-wrap text-2xl sm:text-3xl font-title border-title-border mb-6 mt-1 pb-1 font-medium title-text-shadow;
+}
+
+@utility title-text-shadow {
   text-shadow: -1px -1px 3px var(--color-title-shadow),
     1px -1px 3px var(--color-title-shadow), -1px 1px 3px var(--color-title-shadow),
     1px 1px 3px var(--color-title-shadow);

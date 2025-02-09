@@ -14,7 +14,7 @@ const openPositions = await getCollection("openPositions");
       <Title title={position.data.title} />
       <p>{position.data.description}</p>
       <a
-        href={`/volunteer/committee-form?position=${position.data.title}`}
+        href={`/volunteer/committee-form/${position.id}`}
         class="text-shadow block font-base text-center rounded antialiased text-gray-200 font-medium flex-none mt-3 bg-gold-900 w-fit text-lg bg-opacity-80 px-2 hover:bg-opacity-90"
       >
         » APPLY
