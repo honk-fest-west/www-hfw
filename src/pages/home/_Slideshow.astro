@@ -1,5 +1,4 @@
 ---
-import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
@@ -15,10 +14,10 @@ const slides = await getCollection("slideshow");
   {
     slides.map((slide, index) => (
       <div
-        class="absolute top-0 left-0 w-full h-full"
+        class="slide absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out"
+        x-cloak
         data-index={index}
-        x-show="current === parseInt($el.dataset.index)"
-        x-transition.opacity
+        :class="current === parseInt($el.dataset.index) ? 'opacity-100 z-10' : 'opacity-0 z-0'"
       >
         <Image
           src={slide.data.image_url}
@@ -30,3 +29,9 @@ const slides = await getCollection("slideshow");
     ))
   }
 </div>
+
+<style>
+  [x-cloak] {
+    display: none;
+  }
+</style>
