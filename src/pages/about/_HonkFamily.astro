@@ -12,21 +12,23 @@ const { family } = Astro.props;
         <BackToTop />
         <Title title={`HONK! Family - ${region}`} center={true} />
         <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-4 sm:gap-7 my-4 sm:my-5">
-          {family[region].map((honk) => (
-            <a
-              class="font-medium text-teal-500 block w-full flex flex-col text-center items-center font-base"
-              href={honk.url}
-            >
-              <div class="block border-gold-300 border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-opacity-100 hover:scale-105">
-                <span class="inline-block relative bottom-4  px-2 rounded-xl bg-opacity-90 text-accent-lt title-text-shadow">
-                  {honk.name}
+          {family[region].map(
+            (honk: { name: string; location: string; url: string }) => (
+              <a
+                class="font-medium text-teal-500 block w-full flex flex-col text-center items-center font-base"
+                href={honk.url}
+              >
+                <div class="block border-gold-300 border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-opacity-100 hover:scale-105">
+                  <span class="inline-block relative bottom-4  px-2 rounded-xl bg-opacity-90 text-accent-lt title-text-shadow">
+                    {honk.name}
+                  </span>
+                </div>
+                <span class="block bg-gold-900 px-2 z-10 text-gray-200 rounded-xl bg-opacity-90">
+                  {honk.location}
                 </span>
-              </div>
-              <span class="block bg-gold-900 px-2 z-10 text-gray-200 rounded-xl bg-opacity-90">
-                {honk.location}
-              </span>
-            </a>
-          ))}
+              </a>
+            ),
+          )}
         </div>
       </section>
     ))

@@ -4,7 +4,7 @@ const { emails } = Astro.props;
 
 <dl class="grid grid-cols-1 md:grid-cols-3">
   {
-    emails.map((email) => (
+    emails.map((email: { name: string; email: string }) => (
       <>
         <dt class="md:p-2 font-base antialiased font-semibold content leading-7 text-lg sm:text-xl flex-1">
           {email.name}:
