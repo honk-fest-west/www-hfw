@@ -94,8 +94,7 @@
 
 
 
-.content,
-p {
+.content {
   @apply font-base antialiased text-content-text leading-8 text-xl flex-1;
 }
 
