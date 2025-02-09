@@ -1,4 +1,4 @@
-[[supporters]]
+[[supporters_hide]]
 id = 'king_county_creative'
 type = 'art'
 name = 'King County CREATIVE'
@@ -14,11 +14,11 @@ type = 'art'
 name = '4Culture'
 footer = true
 url = 'http://www.4culture.org'
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/4culture_IW6D7aOFH.png?updatedAt=1628178274430&tr=b-2_FFFFFF'
+image_url = 'https://ik.imagekit.io/honkfestwest/supporters/4-Culture-logo-2025_vChgS1qbw.png?updatedAt=1739141242751&tr=b-2_FFFFFF'
 width = 1
 height = 1
 
-[[supporters.hide]]
+[[supporters_hide]]
 id = 'arts_fund'
 type = 'art'
 name = 'Arts Fund'
@@ -28,7 +28,7 @@ image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/ScreenArtsFund_Lo
 width = 961
 height = 499
 
-[[supporters]]
+[[supporters_hide]]
 id = 'nea'
 type = 'grant'
 name = 'National Endowment for the Arts'
@@ -38,7 +38,7 @@ image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/nea_logo_xqSse_Pb
 width = 36
 height = 18
 
-[[supporters]]
+[[supporters_hide]]
 type = 'grant'
 id = 'wa_state_arts'
 name = 'WA State Arts Commission'
@@ -48,7 +48,7 @@ image_url = 'https://ik.imagekit.io/thegoldendino/hfw/sponsors/Transparent-backg
 width = 100
 height = 105
 
-[[supporters]]
+[[supporters_hide]]
 type = 'grant'
 id = 'seattle_neighborhoods'
 name = 'Seattle Department of Neighborhoods'

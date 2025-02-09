@@ -74,19 +74,12 @@ const shoutoutSupporters = supporters.filter((s) => s.data.type === "shoutout");
             This project is supported in part by the
             <a href={grantSupporters[0].data.url}
               >{grantSupporters[0].data.name}</a
-            >, the
-            <a href={grantSupporters[1].data.url}
-              >{grantSupporters[1].data.name}</a
-            >,
-            <a href={grantSupporters[2].data.url}
-              >{grantSupporters[2].data.name}</a
-            >, and
-            <a href={grantSupporters[3].data.url}
-              >{grantSupporters[3].data.name}</a
+            > and <a href={artSupporters[0].data.url}
+              >{artSupporters[0].data.name}</a
             >.
           </span>
           <span
-            class="grid grid-cols-2 gap-2 sm:gap-10 mt-2 sm:mb-5 items-center justify-center"
+            class="grid grid-cols-1 gap-2 sm:gap-10 mt-2 sm:mb-5 items-center justify-center"
           >
             {
               grantSupporters.map(({ data }) => (
@@ -100,21 +93,6 @@ const shoutoutSupporters = supporters.filter((s) => s.data.type === "shoutout");
                 </a>
               ))
             }
-          </span>
-          <span
-            class="border-b-4 border-opacity-60 border-accent border-dotted w-full block mb-4"
-          ></span>
-
-          <span>
-            HONK! Festival West is supported by grants from
-            <a href={artSupporters[0].data.url}>{artSupporters[0].data.name}</a>
-            and
-            <a href={artSupporters[1].data.url}>{artSupporters[1].data.name}</a
-            >.
-          </span>
-          <span
-            class="grid grid-cols-3 gap-2 sm:gap-10 sm:flex-nowrap mt-2 sm:mb-5"
-          >
             {
               artSupporters.map(({ data }) => (
                 <a class="block mb-3 sm:mb-0 max-w-[200px]" href={data.url}>

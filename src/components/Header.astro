@@ -19,7 +19,7 @@ const currentNav = nav.find((item) =>
 	<nav class="w-full relative">
 		<div class="w-full block lg:hidden">
 			<div class="absolute top-6 w-full">
-				<MobileMenu {nav} currentId={currentNav?.id} client:visible />
+				<MobileMenu {nav} currentId={currentNav?.id} />
 			</div>
 		</div>
 		<div class="w-full hidden lg:block">
