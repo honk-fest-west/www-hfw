@@ -70,6 +70,7 @@
   --color-content-background: var(--color-gold-200);
   --color-content-border: var(--color-gray-300);
 
+  --color-location-shadow: var(--color-gold-500);
 
   --color-accent: var(--color-teal-500);
   --color-tertiary: var(--color-teal-700);

@@ -1,6 +1,6 @@
 ---
-import BackToTop from '@components/BackToTop.astro';
-import Title from '@components/Title.astro';
+import BackToTop from "@components/BackToTop.astro";
+import Title from "@components/Title.astro";
 
 const { family } = Astro.props;
 ---
@@ -11,13 +11,13 @@ const { family } = Astro.props;
       <section class="content-container">
         <BackToTop />
         <Title title={`HONK! Family - ${region}`} center={true} />
-        <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-4 sm:gap-7 content my-4 sm:my-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-4 sm:gap-7 my-4 sm:my-5">
           {family[region].map((honk) => (
             <a
-              class="font-bold block w-full flex flex-col text-center items-center"
+              class="font-medium text-teal-500 block w-full flex flex-col text-center items-center font-base"
               href={honk.url}
             >
-              <div class="block border-tertiary border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-opacity-100 hover:scale-105">
+              <div class="block border-gold-300 border-4 rounded-xl w-80 relative top-4 text-2xl transition ease-in-out hover:bg-opacity-100 hover:scale-105">
                 <span class="inline-block relative bottom-4  px-2 rounded-xl bg-opacity-90 text-accent-lt">
                   {honk.name}
                 </span>
