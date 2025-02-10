@@ -31,7 +31,7 @@ const openPositions = defineCollection({
 
 const supportersSchema = z.object({
 	id: z.string(),
-	type: z.enum(["art", "grant", "shoutout"]),
+	type: z.enum(["art", "grant", "shoutout", "footer-only"]),
 	name: z.string(),
 	footer: z.boolean().default(false),
 	url: z.string().url(),
