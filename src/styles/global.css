@@ -80,7 +80,7 @@
 }
 
 @utility content-container {
-  @apply bg-radial-[at_50%_40%] from-content-background from-60% to-gold-500 p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-1 border-content-border;
+  @apply bg-gold-200 bg-radial-[at_50%_40%] from-content-background from-60% to-gold-500 p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-1 border-content-border;
 }
 
 @utility title {
