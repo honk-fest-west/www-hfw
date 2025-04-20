@@ -1,23 +1,23 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import Layout from '@layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
 
-import BackToTop from '@components/BackToTop.astro';
-import FestivalInfoBlock from './_FestivalInfoBlock.astro';
-import NewsletterForm from './_NewsletterForm.astro';
-import LinkBlurb from './_LinkBlurb.astro';
-import Slideshow from './_Slideshow.astro';
-import artworkImg from '@assets/images/2025/hfw-2025-artwork.png';
+import BackToTop from "@components/BackToTop.astro";
+import FestivalInfoBlock from "./_FestivalInfoBlock.astro";
+import NewsletterForm from "./_NewsletterForm.astro";
+import LinkBlurb from "./_LinkBlurb.astro";
+import Slideshow from "./_Slideshow.astro";
+import SelectedPost from "./_posts/SelectedPost.astro";
+import artworkImg from "@assets/images/2025/hfw-2025-artwork.png";
 
 // POSTS
 
-import HonkAllstars from './_posts/HonkAllstars.astro';
-
+import HonkAllstars from "./_posts/HonkAllstars.astro";
 ---
 
 <Layout>
-	<div class="grid grid-cols-1 sm:grid-cols-6 layout-gap w-full">
+  <div class="grid grid-cols-1 sm:grid-cols-6 layout-gap w-full">
     <FestivalInfoBlock />
 
     <section
@@ -35,6 +35,8 @@ import HonkAllstars from './_posts/HonkAllstars.astro';
     <section class="w-full col-span-6 lg:col-span-2 content-container">
       <NewsletterForm />
     </section>
+
+    <SelectedPost id="2025/spring-fundraiser" />
 
     <article
       class="w-full content-container col-span-6 flex flex-col md:flex-row"
@@ -80,7 +82,7 @@ import HonkAllstars from './_posts/HonkAllstars.astro';
 
     <!-- SLIDESHOW -->
     <div class="col-span-6 content-container">
-      <Slideshow></Slideshow>
+      <Slideshow />
     </div>
 
     <!-- SUPPORT DUAMISH  -->

@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { file } from 'astro/loaders';
+import { glob, file } from 'astro/loaders';
 import { parse as parseToml } from "toml";
 
 const nav = defineCollection({
@@ -65,4 +65,8 @@ const slideshow = defineCollection({
 	}),
 });
 
-export const collections = { nav, social, openPositions, supporters, media, slideshow };
+const posts = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: "posts" }),
+});
+
+export const collections = { nav, social, openPositions, supporters, media, slideshow, posts };
