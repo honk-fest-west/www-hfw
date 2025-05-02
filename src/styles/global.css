@@ -22,7 +22,7 @@
   --color-gold-100: oklch(90.14% 0.0841 86.23);
   --color-gold-200: oklch(84.11% 0.0750 86.23);
   --color-gold-300: oklch(79.63% 0.0750 86.23);
-  --color-gold-400: oklch(76.39% 0.0841 86.23);
+  --color-gold-400: oklch(83.69% 0.099 87.53);
   --color-gold-500: oklch(72.15% 0.0841 86.23);
   --color-gold-600: oklch(62.16% 0.0841 86.23);
   --color-gold-700: oklch(50.00% 0.0841 86.23);
@@ -41,7 +41,7 @@
   --color-gray-900: oklch(32.72% 0 0);
 
   /* Backgrounds */
-  --color-site-background: var(--color-gold-300);
+  --color-site-background: var(--color-gold-400);
   --color-main-background: var(--color-teal-700);
 
 
