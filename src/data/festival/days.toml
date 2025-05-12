@@ -1,7 +1,21 @@
 ["2025-05-30"]
 startTime = "18:00:00"
 scheduleIncrement = 30
-location = "Georgetown"
+display = "Georgetown"
+locations = [
+	[
+		"*info",
+		"47.549000,-122.317400",
+	],
+	[
+		"*medic",
+		"47.548888,-122.317400",
+	],
+	[
+		"*potty",
+		"47.549100,-122.317450",
+	],
+]
 stages = ["jules", "coffee", "electric", "underpass"]
 schedule = [
 	[
@@ -53,49 +67,26 @@ schedule = [
 		"",
 	],
 ]
-mapUrl = "https://goo.gl/maps/X1TwS4CkwqQyV1DUA"
-mapLocations = [
-	[
-		"jules",
-		"47.5495806",
-		"-122.3174943",
-	],
-	[
-		"coffee",
-		"47.549163",
-		"-122.317331",
-	],
-	[
-		"electric",
-		"47.549168",
-		"-122.318219",
-	],
-	[
-		"underpass",
-		"47.54856",
-		"-122.317336",
-	],
-	[
-		"*info",
-		"47.549000",
-		"-122.317400",
-	],
-	[
-		"*medic",
-		"47.548888",
-		"-122.317400",
-	],
-	[
-		"*potty",
-		"47.549100",
-		"-122.317450",
-	],
-]
+
 
 ["2025-05-31"]
 startTime = "12:00:00"
 scheduleIncrement = 30
-location = "Columbia City"
+display = "Columbia City"
+locations = [
+	[
+		"*info",
+		"47.5588500,-122.287400",
+	],
+	[
+		"*medic",
+		"47.5589600,-122.287400",
+	],
+	[
+		"*potty",
+		"47.558800,-122.287550",
+	],
+]
 stages = ["columbia_hill", "edmunds", "gateway"]
 schedule = [
 	[
@@ -179,44 +170,26 @@ schedule = [
 		"",
 	],
 ]
-mapUrl = "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
-mapLocations = [
-	[
-		"columbia_hill",
-		"47.559480",
-		"-122.287473",
-	],
-	[
-		"edmunds",
-		"47.558683",
-		"-122.288107",
-	],
-	[
-		"gateway",
-		"47.558524",
-		"-122.28659",
-	],
-	[
-		"*info",
-		"47.5588500",
-		"-122.287400",
-	],
-	[
-		"*medic",
-		"47.5589600",
-		"-122.287400",
-	],
-	[
-		"*potty",
-		"47.558800",
-		"-122.287550",
-	],
-]
+
 
 ["2025-06-01"]
 startTime = "12:00:00"
 scheduleIncrement = 30
-location = "Pratt Park"
+display = "Pratt Park"
+locations = [
+	[
+		"*info",
+		"47.6014593,-122.3066500",
+	],
+	[
+		"*medic",
+		"47.6013000,-122.3066500",
+	],
+	[
+		"*potty",
+		"47.6010400,-122.3066500",
+	],
+]
 stages = ["pratt_hill", "pratt_field"]
 schedule = [
 	[
@@ -270,33 +243,5 @@ schedule = [
 	[
 		"",
 		"",
-	],
-]
-mapUrl = "https://goo.gl/maps/AWpWWjvZfAHwrNyv5"
-mapLocations = [
-	[
-		"pratt_hill",
-		"47.6014093",
-		"-122.3073307",
-	],
-	[
-		"pratt_field",
-		"47.6009193",
-		"-122.3079000",
-	],
-	[
-		"*info",
-		"47.6014593",
-		"-122.3066500",
-	],
-	[
-		"*medic",
-		"47.6013000",
-		"-122.3066500",
-	],
-	[
-		"*potty",
-		"47.6010400",
-		"-122.3066500",
 	],
 ]

@@ -1,47 +1,47 @@
 [jules]
 name = "Jules Maes"
-mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
+location = "47.5495806,-122.3174943"
 
 [stables]
 name = "The Stables"
-mapUrl = "https://maps.app.goo.gl/Z59suUFTPvegYmUcA"
+location = "47.5497417,-122.3179972"
 
 [coffee]
 name = "Coffee Stage"
-mapUrl = "https://goo.gl/maps/chBYDyvhdpfS5CHf9"
+location = "47.549163,-122.317331"
 
 [underpass]
 name = "Underpass Stage"
-mapUrl = "https://goo.gl/maps/A6gbnFzCF2YfHJsLA"
+location = "47.54856,-122.317336"
 
 [electric]
 name = "Electric Stage"
-mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
+location = "47.549168,-122.318219"
 
 [columbia_valley]
 name = "Valley Stage"
-mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
+location = "47.558673,-122.288607"
 
 [columbia_hill]
 name = "Columbia Park"
-mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
+location = "47.559480,-122.287473"
 
 [gateway]
 name = "Gateway Park"
-mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
+location = "47.558524,-122.28659"
 
 [rac]
 name = "Rainier Arts Stage"
-mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
+location = "47.556673,-122.287607"
 
 [edmunds]
 name = "Street Stage"
-mapUrl = "https://maps.app.goo.gl/XLbUVWercZPEC9SU8"
+location = "47.558683,-122.288107"
 
 [pratt_hill]
 name = "North Hill"
-mapUrl = "https://maps.app.goo.gl/wLuc4GYbDgv3yMsn9"
+location = "47.6014093,-122.3073307"
 
 [pratt_field]
 name = "South Field"
-mapUrl = "https://maps.app.goo.gl/p6ABBAaRYkgAQ5At7"
+location = "47.6009193,-122.3079000"
