@@ -1,12 +1,12 @@
 ---
-import type { Day, Stage, TimeSlot } from "@thegoldendino/festival-app";
+import type { Day, StageModel, TimeSlot } from "@thegoldendino/festival-app";
 import Title from "@components/Title.astro";
 import BackToTop from "@components/BackToTop.astro";
 import ScheduleSlot from "./_ScheduleSlot.astro";
 
 interface Props {
 	day: Day;
-	daySchedule: { stages: Stage[]; schedule: TimeSlot[] };
+	daySchedule: { stages: StageModel[]; schedule: TimeSlot[] };
 }
 
 const { day, daySchedule } = Astro.props;
@@ -38,7 +38,7 @@ const title = `${dayOfWeek} ${monthDay}`;
 				daySchedule.stages.map((stage) => (
 					<div class="stage-header">
 						<a
-							href={stage.mapUrl}
+							href={stage.directionsUrl}
 							class="font-bold text-accent-dk hover:text-accent-lt"
 						>
 							{stage.name}
