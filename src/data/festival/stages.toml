@@ -1,0 +1,47 @@
+[jules]
+name = "Jules Maes"
+mapUrl = "https://goo.gl/maps/JsmpL3G8BaBYjrpt6"
+
+[stables]
+name = "The Stables"
+mapUrl = "https://maps.app.goo.gl/Z59suUFTPvegYmUcA"
+
+[coffee]
+name = "Coffee Stage"
+mapUrl = "https://goo.gl/maps/chBYDyvhdpfS5CHf9"
+
+[underpass]
+name = "Underpass Stage"
+mapUrl = "https://goo.gl/maps/A6gbnFzCF2YfHJsLA"
+
+[electric]
+name = "Electric Stage"
+mapUrl = "https://goo.gl/maps/NrSbrYAvS5bcco1A8"
+
+[columbia_valley]
+name = "Valley Stage"
+mapUrl = "https://goo.gl/maps/9KWKxR7pyswJPLvx8"
+
+[columbia_hill]
+name = "Columbia Park"
+mapUrl = "https://goo.gl/maps/BLBqFWWAQqHJBhGX8"
+
+[gateway]
+name = "Gateway Park"
+mapUrl = "https://goo.gl/maps/npUKYDL3MdtsQctg8"
+
+[rac]
+name = "Rainier Arts Stage"
+mapUrl = "https://goo.gl/maps/DxAg4xmBYWnQR88d9"
+
+[edmunds]
+name = "Street Stage"
+mapUrl = "https://maps.app.goo.gl/XLbUVWercZPEC9SU8"
+
+[pratt_hill]
+name = "North Hill"
+mapUrl = "https://maps.app.goo.gl/wLuc4GYbDgv3yMsn9"
+
+[pratt_field]
+name = "South Field"
+mapUrl = "https://maps.app.goo.gl/p6ABBAaRYkgAQ5At7"

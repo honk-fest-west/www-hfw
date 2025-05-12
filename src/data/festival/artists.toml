@@ -1,0 +1,413 @@
+[tbd]
+name = "TBD"
+
+[8bit]
+name = "8-Bit Brass Band"
+location = "Seattle, WA"
+infoUrl = "http://8bitbrassband.com/"
+description = "8-Bit Brass Band is a cosplaying, mobile party band specializing in video game tunes, anime anthems, movie mashups, and fandom favorites, celebrating everyone’s inner nerd on the streets and stages of Seattle – and beyond!"
+[8bit.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/8bit_W3CpouFj4.png?updatedAt=1746834572005"
+width = 480
+height = 480
+format = "png"
+
+[adefua]
+name = "ADEFUA"
+location = "Seattle, WA"
+infoUrl = "https://www.adefuacenter.org/"
+description = "West African Drumming & Dance"
+
+[agab]
+name = "AGAB"
+location = "Seattle, WA"
+infoUrl = "https://aga.band"
+description = "AGAB is a queer joy rebellion playing brass bangers for the theys and gays of every generation in Seattle and beyond."
+
+[analog]
+name = "Analog Brass"
+location = "Bellingham, WA"
+infoUrl = "https://www.youtube.com/channel/UCWIBHfojz6xboF6FIICSz4w"
+description = "We make music and like goddamn it's loud."
+
+[artesian]
+name = "Artesian Rumble"
+location = "Olympia, WA"
+infoUrl = "https://oly-wa.us/artesianrumble/"
+description = "We play a myriad of tunes, with mobile, mostly unamplified, melodic and percussive instruments to enliven our spirits, working towards peace and social justice."
+
+[bainbridge]
+name = "Bainbridge High School Spartan Brass Band"
+location = "Bainbridge Island, WA"
+infoUrl = "https://www.bainbridgebands.org/"
+
+[ballard]
+name = "Ballard Brass Band"
+location = "Seattle, WA"
+infoUrl = "https://www.ballardperformingarts.org/"
+
+[baque]
+name = "Baque Maré"
+location = "Seattle, WA"
+infoUrl = "https://www.instagram.com/baquemare/"
+description = "Seattle-based Maracatu de Baque Virado drumming group. We bring Northeastern Afro-Brazilian drumming traditions: Brazil beyond samba!"
+
+[better]
+name = "Better as Brass"
+location = "Seattle, WA"
+infoUrl = "https://betterasbrass.band"
+description = "Do you sometimes hear a song and think, “ya know, that would sound better as brass”? Same here! We play tunes that span multiple decades that fill any street or venue to the brim with sonic satisfaction!"
+
+[bigblitz]
+name = "Big Blitz"
+location = "Pittsburgh, PA"
+infoUrl = "https://www.bigblitzband.com/"
+description = "Whether we perform on the street or stage, Big Blitz will transform any of your preconceived notions of the music that can be created by a saxophone-and-drum trio."
+
+[blacksheep]
+name = "Black Sheep"
+location = "Santa Rosa, CA"
+infoUrl = "https://www.blacksheepbrassband.com/"
+description = "Black Sheep Brass Band is based out of Sonoma County, in the North Bay Area of California. Together they have created their own unique brand of California grown, 100% certified #BRASSfedFUNK, that permeates all layers of being. From the uptown to the get-down, it's time for the Black Sheep to vibrate y'all to the good sound, all around."
+
+[bluethunder]
+name = "Blue Thunder"
+location = "Seattle, WA"
+infoUrl = "https://www.seahawks.com/drumline/blue-thunder/"
+description = "The heartbeat of the 12s at Lumen Field since 2004, playing the beats that get you out of your seats!"
+
+[brasscadia]
+name = "Brasscadia"
+location = "Bellingham, WA"
+infoUrl = "https://www.facebook.com/Brasscadia/"
+description = "Brasscadia is based in Bellingham Washington. We play New Orleans style jazz, as well as brassy twists on old favorites, and international anthems."
+
+[brasscals]
+name = "Brasscals!"
+location = "Santa Barbara County, CA"
+infoUrl = "https://brasscals.weebly.com/"
+description = "A street band made up of people from all around Santa Barbara County who play various brass, woodwind, percussion, and rhythm instruments."
+
+[brasscheeks]
+name = "Brass Cheeks"
+location = "Seattle, WA"
+infoUrl = "https://www.facebook.com/profile.php?id=61554147362162"
+description = "Brass Cheeks is a 9-piece brass band featuring UW Alumni specializing in funk, soul, pop, and sometimes metal when we're feeling intense."
+
+[brassless]
+name = "Brassless Chaps"
+location = "Portland, OR"
+infoUrl = "https://www.facebook.com/brasslesschapspdx/"
+description = "An all queer, antifascist community brass band from Portland, Oregon. We got sass, brass, and ass."
+
+[brothers]
+name = "Brothers of Brass"
+location = "Denver, CO"
+infoUrl = "https://www.brothersofbrass.band/"
+description = "Hard Hitting NOLA brass from Colorado!"
+
+[burnout]
+name = "Burn Out Brass Band"
+location = "Seattle, WA"
+infoUrl = "https://www.burnoutbrassband.com/"
+description = "Founded in June of 2021, Burn Out Brass Band is a Queer HONK! band roving the streets and bringing music to the ears of tired Queers and allies. We've got a team of catgirls, bois, butch punks, daddies and xaddies, them fatales, and perhaps even a few cryptids. Our mission is to celebrate Queer joy and build supportive community all while getting those booties dancing to your favorite gay bar sing-alongs and antifascist anthems!"
+
+[carnival]
+name = "Carnival Band"
+location = "Vancouver, BC"
+infoUrl = "http://www.thecarnivalband.com/carnivalband/"
+description = "More fun than your usual amorphous mass of brass instruments, drums and glitter!"
+
+[chaotic]
+name = "Chaotic Noise Marching Corps"
+location = "Seattle, WA"
+infoUrl = "http://chaoticnoise.com/"
+description = "Chaotic Noise is a Seattle based renegade marching band that is dedicated to keeping the tradition of music, performance, energy, havoc, discipline, and sheer stupid fun alive in Seattle's streets. Heavily influenced by past projects as well as the likes of the Infernal Noise Brigade, Extra Action Marching Band, and HONK bands from around the world, Chaotic Noise assures that you will have lots of fun forgetting how to think, breathe, and act in your everyday lives."
+
+[chervona]
+name = "Chervona"
+location = "Portland, OR"
+infoUrl = "https://www.facebook.com/ChervonaParty/"
+
+[chunky]
+name = "Chunky Hustle Brass Band"
+infoUrl = "https://chunkyhustlebrassband.com/"
+description = "A brassalicious, bouncy castle of spirited song and sound"
+
+[cimarrona]
+name = "Cimarrona La Original Domingueña"
+location = "Santo Domingo, Costa Rica"
+infoUrl = "https://www.facebook.com/cimarronalaoriginal/"
+description = "The Original Domingueña"
+
+[emporer]
+name = "Emperor Norton's Stationary Marching Band"
+location = "Somerville, MA"
+infoUrl = "http://ensmb.com/"
+description = ""
+
+[filthy]
+name = "Filthy FemCorps"
+location = "Seattle, WA"
+infoUrl = "http://www.filthyfemcorps.com/"
+description = "We’re a community of talented musicians, united by our shared love of music and commitment to celebrating the incredible artistry of women, non-binary, and trans artists. Since our formation in 2016 on the streets of Seattle, we’ve marched to the beat of our down drums, breaking down barriers and spreading joy wherever we go."
+[filthy.image]
+src = "/images/artists/filthy.jpg"
+
+[flyby]
+name = "Fly By"
+location = "Boston, MA"
+infoUrl = "https://flybybrassband.com/"
+description = "Fly By Brass Band is a diverse group of musicians based in the Boston area that specializes in bringing live acoustic horn harmonies to the people.  Born from the local HONK! Festival scene, hailing from varied musical backgrounds, and brought together by their love for brass, beats, and boundless energy.  Fly By's eclectic repertoire draws on many inspirations, from New Orleans-inspired second-line jazz to Balkan, klezmer, funk, Latin, rock, and swing.  The main theme is: \"Does this make us feel good and would it delight others?\""
+
+[funkrust]
+name = "Funkrust Brass Band"
+location = "New York, NY"
+infoUrl = "http://funkrust.com/"
+
+[gansango]
+name = "Gansango Music & Dance"
+location = "Seattle, WA"
+infoUrl = "https://gansango.com/"
+description = "Gansango Music & Dance presents traditional and contemporary dance and music from West Africa – drawing on the stunning talent of multicultural dancers and musicians."
+
+[garfield]
+name = "Garfield High Varsity Drumline"
+location = "Seattle, WA"
+infoUrl = "https://www.facebook.com/people/Garfield-High-School-Marching-Band/100067840332627/"
+
+[goat]
+name = "G.O.A.T. Band"
+location = "Seattle, WA"
+description = "Our band consists of students who have played 2-4 years on a wide range of instruments. Everyone is in 7th or 8th grade and dedicated to playing their instruments and bringing joy to our audiences. "
+
+[goodtrouble]
+name = "Good Trouble Brass Band"
+location = "Somerville, MA"
+infoUrl = "https://www.goodtroublebrassband.org/"
+description = "Good Trouble Brass Band is a large, not-for-profit, “raucous, stomp-your-foot-and-belt-out-the-choruses” activist New Orleans-style street band based in the Boston area. Our mission involves collaborating with activists and organizations working for a variety of progressive causes."
+
+[allstars]
+name = "HONK! All-Stars (open jam)"
+location = "Everywhere"
+infoUrl = "https://drive.google.com/drive/folders/1WO2k6tIspmt4BY8wz62tWIBVZOIPIftP?usp=share_link"
+description = "HONK! All-Stars is a collection of the best and the loudest musicians from all over. Anyone who can play is welcome to participate."
+
+[future]
+name = "HONK! Future"
+location = "Seattle, WA"
+description = "Brilliant musicians from the Future here to perform for us now."
+
+[hungry]
+name = "Hungry March Band"
+location = "Brooklyn, NYC"
+infoUrl = "http://hungrymarchband.com"
+description = "Celebrating over 20 years of bringing live musical spectacle to the people of New York City and beyond"
+
+[khmer]
+name = "Khmer Amarak Performing Arts"
+location = "Seattle, WA"
+infoUrl = "https://www.instagram.com/khmeramarakperformingarts"
+description = "Khmer Dance/Pleng troupe full of young intelligent Khmer kids‼️ KCSKC Youth and Art Program!"
+
+[kouyate]
+name = "Kouyaté Arts"
+location = "Seattle, WA"
+infoUrl = "https://www.kouyatearts.com/performance-company"
+description = "Kouyaté Arts is a West African Music, Song And Dance Performance Company, Directed by husband and wife duo Boka and Afua Kouyaté. The sights and the sounds of the Kouyaté Arts is an exotic blend of celebration and awareness. Live music,song, and dance provide a festive and dynamic style of West African culture. All presentations are suitable for the entire family. Everyone can relate to a happy experience!​"
+
+[labamba]
+name = "LA BAMBA"
+location = "Los Angeles, CA"
+infoUrl = "https://labamba.lahonk.org/"
+
+[gozona]
+name = "La Banda Gozona"
+location = "Seattle, WA"
+infoUrl = "https://www.facebook.com/people/La-Banda-Gozona/100065180273378/"
+description = "La Banda Gozona plays the village music of Oaxaca, Mexico. We will be joined by our friends   and inspiration,  Grupo Cultural Oaxaqueño."
+
+[lovett]
+name = "Lovett Arts"
+location = "Seattle, WA"
+infoUrl = "https://www.lovettarts.com/"
+description = "Puppet Performance. Beautifully crafted giant puppets are lightweight and articulated, illuminated - engineered to be easy to move for creative play. Available for Events."
+
+[neighbors]
+name = "LOUD Neighbors"
+location = "Arcata, CA"
+infoUrl = "https://www.instagram.com/loud.neighbors.brass/"
+description = "The LOUD Neighbors are a playful group of community minded musicians with a mission of service, awareness, and access to live music! These joy enthusiasts perform funk, jazz, pop tunes, and traditional street band music for folks to boogie down to together!"
+
+[lbcs]
+name = "Louisa Boren & Cleveland STEM Middle School Band"
+location = "Seattle, WA"
+
+[lynx]
+name = "Lynxcorps"
+location = "Seattle, WA"
+infoUrl = "https://www.instagram.com/lincoln.honk.band/"
+description = "Lynxcorps is Lincoln Highschool's student led honk band. We strive to develop our music skills, foster community, and play music. "
+
+[meownow]
+name = "MeowNow Brass Band"
+location = "Austin, TX"
+infoUrl = "https://www.facebook.com/MeowNowBand/"
+description = "Austin based brass. We play, you dance!"
+
+[mission]
+name = "Mission Delirium"
+location = "San Francisco, CA"
+infoUrl = "https://missiondelirium.com/"
+description = "A love letter to your feet from the dance floor, Mission Delirium is an invitation to revel in pounding drums and facemelting brass."
+
+[neon]
+name = "Neon Brass Party"
+location = "Seattle, WA"
+infoUrl = "https://www.neonbrassparty.com/"
+description = "Neon Brass Party is a street band based out of Seattle, WA.  We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music. Our goal is to be the party and get people movin and groovin with us wherever we might show up. We play various styles of music ranging from Latin to funk to hip-hop, so long as it grooves, we'll play it!"
+
+[step]
+name = "Northside Step Team"
+location = "Seattle, WA"
+infoUrl = "https://www.facebook.com/northsidedrill/"
+description = "Northside Drill and Step Team. Established in 2000 from Seattle, Wa"
+
+[onelove]
+name = "One Love"
+location = "Seattle, WA"
+infoUrl = "http://marcsmason.com/ensembles.html"
+description = "An engaging street band - tuba, horns & percussion - playing music of planet earth at community events, concerts, festivals, rallies, parades, parties and anywhere!"
+
+[queens]
+name = "Queens of HONK!"
+location = "Everywhere"
+infoUrl = "http://www.honkfest.org.au/queens-of-honk.html"
+description = "Queens of HONK! is meant as an active and open invitation to ALL and especially minority and underrepresented populations in the HONK! community."
+
+[phinney]
+name = "Phinney Ridge Steel Band"
+location = "Seattle, WA"
+infoUrl = "https://www.instagram.com/phinneyridgesteelband/"
+description = "The steelpan is one of the world's youngest acoustic instruments, and the Phinney Ridge Steel Band is one of Seattle's most recent ensembles, having only formed in the summer of 2023. We are dedicated to sharing good music with the world and serving the community with steelpan!"
+
+[redalert]
+name = "Red Alert"
+location = "Seattle, WA"
+infoUrl = "https://www.nhl.com/kraken/fans/game-presentation"
+description = "We are the official band for the Seattle Kraken!  We play at all home Kraken games and for events around our community.  We are wrapping up our second season and are committed to excellence, inclusion, and joy!"
+
+[reigncity]
+name = "Reign City Riot"
+location = "Seattle, WA"
+infoUrl = "https://linktr.ee/ReignCityRiot"
+description = "The official pep band for Reign FC. Part of Rainbow City Performing Arts, Seattle’s LGBTQIA+ performance organization."
+
+[riseup]
+name = "Rise Up! Action Band"
+location = "Seattle, WA"
+infoUrl = "https://riseupactionband.com/"
+
+[kokon]
+name = "Seattle Kokon Taiko"
+location = "Seattle, WA"
+infoUrl = "https://seattlekokontaiko.org/"
+description = "Whether dancing at a festival, praying in a temple, watching a theater performance or fighting a battle, the sound of the taiko could be heard as part of everyday Japanese life for hundreds, perhaps thousands, of years."
+
+[seattleu]
+name = "Seattle University Drumline"
+location = "Seattle, WA"
+infoUrl = "https://goseattleu.com/sports/2020/1/15/drumline.aspx"
+description = "The Seattle U Drumline began in 2012, and has grown a lot in the short time since its inception. Drumline plays at all basketball games, as well as some soccer and volleyball games."
+
+[seismic]
+name = "Seismic Sound Drumline"
+location = "Seattle, WA"
+infoUrl = "https://www.facebook.com/SeismicSoundDrumline/"
+description = "Seismic Sound is a not-for-profit percussion ensemble for youth ages 15-23. We focus on providing a welcoming and affordable space for youth musicians to grow as percussionists. Our ensemble exposes our members to aspects found in college marching bands, pro-sports drumlines, and DCI/WGI groups. It is a great space for beginner to intermediate level musicians who are interested in challenging themselves and creating relationships with other musicians within the greater Seattle Area."
+
+[shpilkis]
+name = "Shpilkis!"
+location = "Seattle, WA"
+infoUrl = "https://www.shpilkisseattle.com/"
+
+[jambalaya]
+name = "Soul Jambalaya"
+location = "Seattle, WA"
+infoUrl = "https://www.facebook.com/profile.php?id=100093494289106"
+description = "Performing a musical mélange of jazz, blues, funk, reggae, and gospel, Soul Jambalaya celebrates the love, joy, and resiliency of black and black-influenced song."
+
+[machine]
+name = "SOUND MACHINE"
+location = "Whidbey Island, WA"
+description = "Get ready to groove with SOUND MACHINE - Whidbey Island's premier HONK! band! You don't want to miss out on the fun covers of your favorite songs that we jam to at our open practices. We love using our music to make a difference in our community by performing for local non-profits and businesses. You can catch us in action at exciting local events like South Whidbey Pride and the Welcome the Whales Parade. We believe in inclusivity and welcome everyone - regardless of age or ability - to join us in making some awesome music. So get ready to dance your tail off to everything from ABBA to the Isley Brothers!"
+
+[soundwave]
+name = "Sound Wave"
+location = "Seattle, WA"
+infoUrl = "https://www.soundersfc.com/matchday/sound-wave"
+description = "Sound Wave is the official band of Seattle Sounders FC. In 2009, minority owner Drew Carey conceptualized an ensemble made up of traditional marching percussion and brass instruments to bring the spirit of Sounders FC to life. Sound Wave can be found at Sounders FC home matchdays and entertaining the local community at parades, charitable events, and corporate functions."
+
+[southendpep]
+name = "South End Pep"
+location = "Seattle, WA"
+description = "The South End Pep Band is a collaboration between three Seattle Public Schools.  It brings together musicians from Franklin, Cleveland, and Rainier Beach to celebrate the musicality in the South End."
+
+[sticks]
+name = "Sticks & Bones"
+location = "Olympia, WA"
+infoUrl = "https://www.facebook.com/olysnewcommuityactivistband/"
+description = "Sticks and Bones is a women and queer led, multigenerational street band from Olympia! Through our collective leadership we cultivate a safe space for musicians of all skill levels. We love to entertain and empower our communities in our quest for a more just and joyful world."
+
+[tacomarama]
+name = "Tacomarama"
+location = "Tacoma, WA"
+infoUrl = "http://instagram.com/tacomarama"
+description = "Tacomarama is an all ages, all levels \"anyone can join\" band from Tacoma, WA."
+
+[m9]
+name = "The m9"
+location = "Seattle, WA"
+infoUrl = "http://them9.com/"
+
+[tmb]
+name = "TMB"
+location = "Seattle, WA"
+infoUrl = "https://linktr.ee/tmbbrass"
+description = "Your first call for Second Line"
+
+[unexpected]
+name = "the UNEXPECTED BRASS BAND"
+location = "Port Townsend, WA"
+infoUrl = "https://www.facebook.com/The-Unexpected-Brass-Band-957531164311787/"
+description = "How can we describe the mystery? Why would we describe the mystery?"
+
+[vamola]
+name = "VamoLá"
+location = "Seattle, WA"
+infoUrl = "https://vamola.org/"
+description = "VamoLá is Seattle's Brazilian blast, bringing fiery percussion rhythms and sun-drenched energy straight to the streets. Prepare for infectious grooves, dazzling costumes, and enough samba spirit to turn every possible puddle into a mini Copacabana beach. Get ready to shake, shimmy, and celebrate your way across Brazil, right here in the heart of the Northwest!"
+
+[window]
+name = "Window Smashing Job Creators"
+location = "Olympia, WA"
+infoUrl = "https://thewindowsmashingjobcreators.bandcamp.com/"
+description = "Friendly neighborhood anarchist communist jazz klezmer folk punk band"
+
+[jules]
+name = "After Party"
+location = "Jules Maes"
+infoUrl = "https://www.julesmaessaloon.com/"
+description = "JAM led by Filthy FemCorps"
+
+[westcas]
+name = "West Cascade Puppet Brigade"
+location = "Seattle, WA"
+infoUrl = "https://www.facebook.com/PuppetBrigade/"
+description = "West Cascade Puppet Brigade is a multifaceted, intergenerational group of puppeteers that bring joy & whimsey to parades, festivals, fairs, & events. From giant puppets to shadows, they bring ancient fairy & folk tales to life with a sensibility for modern audiences."
+
+[youngfellaz]
+name = "Young Fellaz Brass Band"
+location = "New Orleans, LA"
+infoUrl = "https://www.youngfellazbrassband.com/"
+description = "Formed in 2006, the Young Fellaz Brass Band has been a staple in the New Orleans live music scene for over 15 years. This enthusiastic and talented group of musicians honor the brass band tradition while innovating their own unique sound. Their new self-produced album Block Party (2022) is out now."

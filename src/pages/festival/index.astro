@@ -1,48 +1,60 @@
 ---
-import HeadOpenGraph from '@layouts/head/OpenGraph.astro';
+import Layout from "@layouts/Layout.astro";
+import { FestivalApp } from "@thegoldendino/festival-app";
+import type { ConfigParams } from "@thegoldendino/festival-app";
+import { FestivalBuilder } from "@thegoldendino/festival-app";
+import "@thegoldendino/festival-app/default.css";
 
+import DaySchedule from "./_DaySchedule.astro";
 
 // import logoImg from '/src/assets/images/logos/2023-logo-white.png';
 
-// // @ts-ignore
-// import schedule from '@data/schedule.toml';
-// // @ts-ignore
-// import bands from '@data/bands.toml';
-// // @ts-ignore
-// import stages from '@data/stages.toml';
+// @ts-ignore
+import days from "@data/festival/days.toml";
+// @ts-ignore
+import artists from "@data/festival/artists.toml";
+// @ts-ignore
+import options from "@data/festival/options.toml";
+// @ts-ignore
+import stages from "@data/festival/stages.toml";
 
-// const mapImgs = await Astro.glob('/src/assets/images/map/*').then((files) =>
-//   files.map((file) => file.default),
-// );
+import honkLogo from "@assets/images/logos/2023-logo-white.png";
+const optionsWithLogo = {
+  ...options,
+  logoImage: honkLogo,
+};
 
-// const bandImgs = await Astro.glob('/src/assets/images/bands/*').then((files) =>
-//   files.map((file) => file.default),
-// );
+const config: ConfigParams = {
+  days,
+  artists,
+  stages,
+  options: optionsWithLogo,
+};
+
+// Initialize festival data server-side
+const festival = new FestivalBuilder(config).build();
+
+function getSchedule(day: { date: string }) {
+  return festival.scheduleByDate(day.date);
+}
 ---
 
-<!doctype html>
-<html lang="en" class="h-full overflow-hidden bg-surface-800">
-  <!-- HEAD -->
-  <head>
-    <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>HONK! Fest West 2025</title>
-    <HeadOpenGraph></HeadOpenGraph>
-  </head>
+<Layout title="2025 Festival" transition={false}>
+  <div class="hidden lg:block">
+    {
+      festival.daysSorted.map((day) => (
+        <DaySchedule day={day} daySchedule={getSchedule(day)} />
+      ))
+    }
+  </div>
+  <div class="z-50 block lg:hidden">
+    <FestivalApp config={config} client:only="svelte" />
+  </div>
+</Layout>
 
-  <body class="h-full overflow-hidden sm:max-w-3xl mx-auto">
-    <div style="display: contents" class="h-full overflow-hidden">
-      <!-- <FestivalApp
-        client:only="svelte"
-        bands={bands}
-        schedule={schedule}
-        stages={stages}
-        logoImg={logoImg}
-        mapImgs={mapImgs}
-        bandImgs={bandImgs}
-      /> -->
-    </div>
-  </body>
-</html>
+<style>
+  :root {
+    --festapp-color-primary-hue: var(--color-teal-hue);
+    --festapp-color-secondary-hue: var(--color-gold-hue);
+  }
+</style>

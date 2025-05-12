@@ -1,0 +1,53 @@
+---
+import type { TimeSlot } from "@thegoldendino/festival-app";
+
+interface Props {
+	timeSlot: TimeSlot;
+}
+
+const { timeSlot } = Astro.props;
+---
+
+<div class="time-slot">
+	<div class="time">
+		{
+			new Date(timeSlot.time).toLocaleTimeString([], {
+				hour: "2-digit",
+				minute: "2-digit",
+			})
+		}
+	</div>
+	{
+		timeSlot.artists.map((artist) => (
+			<div class="artist">
+				{artist && (
+					<a href={artist.infoUrl} class="artist-link">
+						{artist.name}
+					</a>
+				)}
+			</div>
+		))
+	}
+</div>
+
+<style>
+	.time-slot {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 6rem repeat(auto-fit, minmax(0, 1fr));
+	}
+
+	.time {
+		font-weight: bold;
+	}
+
+	.artist-link {
+		text-decoration: none;
+		color: var(--accent);
+		transition: color 0.2s;
+	}
+
+	.artist-link:hover {
+		color: var(--accent-dark);
+	}
+</style>

@@ -5,7 +5,7 @@ import HeadOpenGraph from "./head/OpenGraph.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 
-const { title = false } = Astro.props;
+const { title = false, transition = true } = Astro.props;
 
 const fullTitle = title ? `${title} - HONK! Fest West` : "HONK! Fest West";
 ---
@@ -18,7 +18,7 @@ const fullTitle = title ? `${title} - HONK! Fest West` : "HONK! Fest West";
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{fullTitle}</title>
-    <ClientRouter />
+    {transition && <ClientRouter />}
     <HeadOpenGraph />
   </head>
 

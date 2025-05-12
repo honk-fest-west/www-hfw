@@ -13,6 +13,11 @@ import alpinejs from '@astrojs/alpinejs';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss(), ViteToml()],
+    server: {
+      fs: {
+        allow: ['..'],
+      }
+    }
   },
 
   integrations: [svelte(), alpinejs()],

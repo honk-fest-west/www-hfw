@@ -1,0 +1,71 @@
+---
+import type { Day, Stage, TimeSlot } from "@thegoldendino/festival-app";
+import Title from "@components/Title.astro";
+import BackToTop from "@components/BackToTop.astro";
+import ScheduleSlot from "./_ScheduleSlot.astro";
+
+interface Props {
+	day: Day;
+	daySchedule: { stages: Stage[]; schedule: TimeSlot[] };
+}
+
+const { day, daySchedule } = Astro.props;
+
+// Use toLocaleDateString to get consistent date components respecting the timezone
+const dateOptions: Intl.DateTimeFormatOptions = {
+	weekday: "long",
+	month: "numeric",
+	day: "numeric",
+	timeZone: "UTC",
+};
+const formattedDate = new Date(day.date).toLocaleDateString(
+	"en-US",
+	dateOptions,
+);
+const dateParts = formattedDate.split(", ");
+const dayOfWeek = dateParts[0];
+const monthDay = dateParts[1];
+const title = `${dayOfWeek} ${monthDay}`;
+---
+
+<div class="content-container mb-10">
+	<BackToTop />
+	<Title title={title} />
+	<div class="schedule-grid content">
+		<div class="headers">
+			<div class="blank-header"></div>
+			{
+				daySchedule.stages.map((stage) => (
+					<div class="stage-header">
+						<a
+							href={stage.mapUrl}
+							class="font-bold text-accent-dk hover:text-accent-lt"
+						>
+							{stage.name}
+						</a>
+					</div>
+				))
+			}
+		</div>
+		{
+			daySchedule.schedule.map((timeSlot) => (
+				<ScheduleSlot timeSlot={timeSlot} />
+			))
+		}
+	</div>
+</div>
+
+<style>
+	.schedule-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		width: 100%;
+	}
+
+	.headers {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 6rem repeat(auto-fit, minmax(0, 1fr));
+	}
+</style>

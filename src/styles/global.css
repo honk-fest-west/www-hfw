@@ -12,6 +12,7 @@
   --color-teal-500: oklch(56.2% 0.0943 208.16);
   /* --color-teal-600: */
 
+  --color-teal-hue: 213.66;
   --color-teal-700: oklch(50% 0.0876 213.66);
   --color-teal-800: oklch(50% 0.1 213.66);
   --color-teal-900: oklch(50% 0.0876 213.66);
@@ -19,6 +20,7 @@
   --color-teal-1000: oklch(40% 0.0876 213.66);
 
   /* Gold */
+  --color-gold-hue: 86.23;
   --color-gold-100: oklch(90.14% 0.0841 86.23);
   --color-gold-200: oklch(84.11% 0.0750 86.23);
   --color-gold-300: oklch(79.63% 0.0750 86.23);
