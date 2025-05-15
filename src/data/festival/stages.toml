@@ -18,12 +18,12 @@ location = "47.54856,-122.317336"
 name = "Electric Stage"
 location = "47.549168,-122.318219"
 
-[columbia_valley]
-name = "Valley Stage"
-location = "47.558673,-122.288607"
+[columbia_north]
+name = "North Park"
+location = "47.560180,-122.287153"
 
-[columbia_hill]
-name = "Columbia Park"
+[columbia_south]
+name = "South Park"
 location = "47.559480,-122.287473"
 
 [gateway]

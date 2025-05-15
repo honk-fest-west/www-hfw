@@ -18,54 +18,14 @@ locations = [
 ]
 stages = ["jules", "coffee", "electric", "underpass"]
 schedule = [
-	[
-		"",
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-		"",
-	],
+	[ "",					"",								"",							"" ],
+	[ "",					"sindikat",				"",				"filthy"],
+	[ "brasscheeks",		"bluethunder",						"southendpep",	"agab" ],
+	[ "jazznight","tacomarama",			"baque",				"ballard" ],
+	[ "couch",		"pjamrs",					"sticks",				"chaotic" ],
+	[ "artesian",	"8bit",						"vamola",				"badweather" ],
+	[ "better",		"",								"soundwave",		"funkrust" ],
+	[ "tmb",			"",								"",							"neon" ],
 ]
 
 
@@ -87,88 +47,25 @@ locations = [
 		"47.558800,-122.287550",
 	],
 ]
-stages = ["columbia_hill", "edmunds", "gateway"]
+stages = ["columbia_south", "edmunds", "columbia_north", "gateway"]
 schedule = [
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-		"",
-	],
+	[ "",			"",			"tacomarama", ""],
+	[ "better",			"",			"artesian", 	""],
+	[ "agab",			"phinney",			"couch", 	"brasscheeks"],
+	[ "neon",			"phinney",			"hsmedley", 	"glitch"],
+	[ "reigncity",			"couch",			"ballard", 	"better"],
+	[ "glitch",			"tacomarama",			"sticks", 	"8bit"],
+	[ "badweather",			"agents",			"chaotic", 	"vamola"],
+	[ "funkrust",			"brassless",			"filthy", 	"ballard"],
+	[ "brasscheeks",			"seismic",			"reigncity", 	"tmb"],
+	[ "agents",			"pjamrs",			"neon", 	"baque"],
+	[ "8bit",      "brassless",   "baque", "badweather"],
+	[ "future",			"filthy",			"sticks", 	"seismic"],
+	[ "jambalaya",			"vamola",			"agab", 	""],
+	[ "tmb",			"artesian",			"pjamrs", 	""],
+	[ "chaotic",			"funkrust",			"", 	""],
+	[ "allstars",			"",			"", 	""],
+
 ]
 
 
@@ -192,56 +89,17 @@ locations = [
 ]
 stages = ["pratt_hill", "pratt_field"]
 schedule = [
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
-	[
-		"",
-		"",
-	],
+	[ "better","" ],
+	[ "nsmariachi","" ],
+	[ "couch","glitch" ],
+	[ "brassless","sticks" ],
+	[ "pjamrs","agab" ],
+	[ "sindikat","artesian" ],
+	[ "neon","baque" ],
+	[ "agents","filthy" ],
+	[ "tmb","8bit" ],
+	[ "chaotic","vashonk" ],
+	[ "funkrust","vamola" ],
+	[ "","tacomarama" ],
+	[ "","allstars" ],
 ]

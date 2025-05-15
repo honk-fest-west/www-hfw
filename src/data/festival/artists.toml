@@ -18,11 +18,26 @@ hometown = "Seattle, WA"
 infoUrl = "https://www.adefuacenter.org/"
 description = "West African Drumming & Dance"
 
+[agents]
+name = "Agents of Vibration"
+hometown = "Bremerton, WA"
+description = "We're a brand new brass band out of Bremerton, formed to build solidarity through music. We just came together early this year, and for now are playing mostly Honk! standards."
+
 [agab]
-name = "AGAB"
+name = "Assigned Gay At Band"
 hometown = "Seattle, WA"
 infoUrl = "https://aga.band"
-description = "AGAB is a queer joy rebellion playing brass bangers for the theys and gays of every generation in Seattle and beyond."
+description = "AGAB is a queer joy rebellion playing brass bangers for the theys and gays of every generation in Seattle and beyond!"
+[agab.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/agab_FwpYFrbE0.jpg?updatedAt=1747151141830"
+width = 200
+height = 166
+format = "jpg"
+
+[allbrass]
+name = "All brass no breaks"
+hometown = "Seattle, WA"
+description = "High school brass band with members from all different high schools"
 
 [analog]
 name = "Analog Brass"
@@ -31,10 +46,25 @@ infoUrl = "https://www.youtube.com/channel/UCWIBHfojz6xboF6FIICSz4w"
 description = "We make music and like goddamn it's loud."
 
 [artesian]
-name = "Artesian Rumble"
+name = "Artesian Rumble Arkestra"
 hometown = "Olympia, WA"
-infoUrl = "https://oly-wa.us/artesianrumble/"
-description = "We play a myriad of tunes, with mobile, mostly unamplified, melodic and percussive instruments to enliven our spirits, working towards peace and social justice."
+infoUrl = "http://artrumble.org"
+description = "It all started when our ancestors crawled out of the sea, and in no time at all, with the addition of opposable thumbs, we came together and formed the Artesian Rumble Arkestra. The music of the Artesian Rumble Arkestra is influenced by many traditions, including jazz, Balkan Brass, Brazilian samba, Bollywood film music, traditional hymns and pop tunes. The Artesian Rumble Arkestra works to contribute its portable and mostly unamplified energy to local social and economic justice events."
+[artesian.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/artesian_MgjDIXBZ-.jpg?updatedAt=1746834567703"
+width = 200
+height = 200
+format = "jpg"
+
+[badweather]
+name = "bad Weather Brass"
+hometown = "Seattle, WA"
+infoUrl = "https://www.facebook.com/people/Bad-Weather-Brass/61574985735191/#"
+[badweather.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/badweather_wuXgwSNcV.jpg?updatedAt=1747153956732"
+width = 400
+height = 400
+format = "jpg"
 
 [bainbridge]
 name = "Bainbridge High School Spartan Brass Band"
@@ -42,27 +72,43 @@ hometown = "Bainbridge Island, WA"
 infoUrl = "https://www.bainbridgebands.org/"
 
 [ballard]
-name = "Ballard Brass Band"
+name = "Ballard Brass"
 hometown = "Seattle, WA"
 infoUrl = "https://www.ballardperformingarts.org/"
+description = "We are a classic New Orleans style brass band made up of students from Ballard High School. We play everything from Youngblood Brass Band to Rebirth and everything in between. This band is part of our jazz curriculum at Ballard and we rehearse 1-5 times a week. We busk around the city and play at Kraken games, Seawolf Games, and Ballard FC games every year."
+[ballard.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/ballard_Zp8UI58H3O.png?updatedAt=1746834568550"
+width = 200
+height = 200
+format = "png"
 
 [baque]
-name = "Baque Maré"
+name = "Baque Maré Maracatu"
 hometown = "Seattle, WA"
 infoUrl = "https://www.instagram.com/baquemare/"
-description = "Seattle-based Maracatu de Baque Virado drumming group. We bring Northeastern Afro-Brazilian drumming traditions: Brazil beyond samba!"
+description = "Seattle-based Maracatu de Baque Virado drumming group. We bring Northeastern Afro-Brazilian drumming traditions: Brazil beyond samba! This year we will also feature selected students from an elementary school here in Seattle."
+[baque.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/barque_J0NTDQkvN.png?updatedAt=1746834579366"
+width = 369
+height = 217
+format = "png"
 
 [better]
-name = "Better as Brass"
+name = "Better As Brass"
 hometown = "Seattle, WA"
 infoUrl = "https://betterasbrass.band"
 description = "Do you sometimes hear a song and think, “ya know, that would sound better as brass”? Same here! We play tunes that span multiple decades that fill any street or venue to the brim with sonic satisfaction!"
+[better.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/better_qyXH_RusC.jpg"
+width = 200
+height = 46
+format = "jpg"
 
 [bigblitz]
 name = "Big Blitz"
 hometown = "Pittsburgh, PA"
 infoUrl = "https://www.bigblitzband.com/"
-description = "Whether we perform on the street or stage, Big Blitz will transform any of your preconceived notions of the music that can be created by a saxophone-and-drum trio."
+description = "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, and rock musical influences to create their own dynamic sound. Brothers Lucas Ciesielski (Tenor Sax, Bari Sax) and Mason Ciesielski (Tenor Sax, Bari Sax, Synthesizers) unite with drummer Nick Grabigel to forge their unique, infectious style. The trio’s chemistry, energy, and stage presence makes dancing mandatory, rather than optional."  
 
 [blacksheep]
 name = "Black Sheep"
@@ -70,11 +116,22 @@ hometown = "Santa Rosa, CA"
 infoUrl = "https://www.blacksheepbrassband.com/"
 description = "Black Sheep Brass Band is based out of Sonoma County, in the North Bay Area of California. Together they have created their own unique brand of California grown, 100% certified #BRASSfedFUNK, that permeates all layers of being. From the uptown to the get-down, it's time for the Black Sheep to vibrate y'all to the good sound, all around."
 
+[blowout]
+name = "The Blowout Heavies"
+hometown = "Seattle, WA"
+description = "New Orleans Inspired Brass band doing traditional brass band music with groovy pop covers and heavy original brass band music."
+infoUrl = "https://blowoutband.com/"
+
 [bluethunder]
 name = "Blue Thunder"
 hometown = "Seattle, WA"
 infoUrl = "https://www.seahawks.com/drumline/blue-thunder/"
 description = "The heartbeat of the 12s at Lumen Field since 2004, playing the beats that get you out of your seats!"
+[bluethunder.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/bluethunder__MMOSMhcg.jpg?updatedAt=1746834575019"
+width = 200
+height = 200
+format = "jpg"
 
 [brasscadia]
 name = "Brasscadia"
@@ -92,7 +149,12 @@ description = "A street band made up of people from all around Santa Barbara Cou
 name = "Brass Cheeks"
 hometown = "Seattle, WA"
 infoUrl = "https://www.facebook.com/profile.php?id=61554147362162"
-description = "Brass Cheeks is a 9-piece brass band featuring UW Alumni specializing in funk, soul, pop, and sometimes metal when we're feeling intense."
+description = "Brass Cheeks is a 9-piece brass band specializing in funk, soul, pop, and seasonal covers of your favorite songs. The group is comprised of musicians who have their roots in Seattle’s premiere marching bands including Soundwave, Red Alert, Blue Thunder, and Husky Marching Band."
+[brasscheeks.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/brasscheeks_PvlLUFd-Y.jpg?updatedAt=1747153111352"
+width = 320
+height = 320
+format = "jpg"
 
 [brassless]
 name = "Brassless Chaps"
@@ -112,17 +174,35 @@ hometown = "Seattle, WA"
 infoUrl = "https://www.burnoutbrassband.com/"
 description = "Founded in June of 2021, Burn Out Brass Band is a Queer HONK! band roving the streets and bringing music to the ears of tired Queers and allies. We've got a team of catgirls, bois, butch punks, daddies and xaddies, them fatales, and perhaps even a few cryptids. Our mission is to celebrate Queer joy and build supportive community all while getting those booties dancing to your favorite gay bar sing-alongs and antifascist anthems!"
 
+[california]
+name = "California Repercussions"
+hometown = "San Francisco Bay Area, CA"
+infoUrl = "https://www.facebook.com/CalReapers"
+description = "The California Repercussions are a 30 -50-piece band made of equal parts brass, woodwinds, percussion, and party. Based in the San Francisco Bay Area, the 'Reapers' perform often at public and private events around Northern California. But we also thrill crowds on international tours. We are mostly former members of various college marching bands who may have graduated from school, but never fully grew up. We don’t just stand there and play, we’re there to have fun. Horns wave in the air, bodies dance, and audience members often find themselves part of the show! Though we’re a large band, the show isn’t a constant wall of sound: we mix the power tunes in with others that feature a section of the band or a talented soloist. With the instrumentation and mobility of a marching band, we can play just about anywhere, indoors or outdoors, with no stage or amplification required."
+
+
 [carnival]
 name = "Carnival Band"
 hometown = "Vancouver, BC"
 infoUrl = "http://www.thecarnivalband.com/carnivalband/"
 description = "More fun than your usual amorphous mass of brass instruments, drums and glitter!"
 
+[catnip]
+name = "The Catnip Junkies"
+hometown = "Providence, RI"
+description = "We were inspired by the honk bands of Boston, RI and  the street music of New Orleans.  Our music is played and led by LGTBQ artists and performers and  is on a mission to bring contagious joy and connection to humans across the globe. "
+infoUrl = "https://www.facebook.com/share/1EUVF5C4QZ/?mibextid=wwXIfr"
+
 [chaotic]
 name = "Chaotic Noise Marching Corps"
 hometown = "Seattle, WA"
 infoUrl = "http://chaoticnoise.com/"
-description = "Chaotic Noise is a Seattle based renegade marching band that is dedicated to keeping the tradition of music, performance, energy, havoc, discipline, and sheer stupid fun alive in Seattle's streets. Heavily influenced by past projects as well as the likes of the Infernal Noise Brigade, Extra Action Marching Band, and HONK bands from around the world, Chaotic Noise assures that you will have lots of fun forgetting how to think, breathe, and act in your everyday lives."
+description = "Chaotic Noise Marching Corps is a renegade marching band that is dedicated to keeping the tradition of high energy street performance, discipline, utter havoc, and sheer stupid fun alive in Seattle's streets. With a relentless wall of sound, our shows aren’t just performances—they’re high-voltage, crowd-fueled experiences. Whether tearing through classical, hard rock, or twisted pop tunes, we bring a rare mix of skill, power, and unfiltered mayhem you’ll feel in your bones."
+[chaotic.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/chaotic_NbXBbKLB2.jpg?updatedAt=1746834578722"
+width = 200
+height = 200
+format = "jpg"
 
 [chervona]
 name = "Chervona"
@@ -140,6 +220,22 @@ hometown = "Santo Domingo, Costa Rica"
 infoUrl = "https://www.facebook.com/cimarronalaoriginal/"
 description = "The Original Domingueña"
 
+[couch]
+name = "Couch Brass"
+hometown = "Portland, OR"
+infoUrl = "https://www.youtube.com/@CouchBrass-pc7so"
+description = "Couch Brass is a high-energy brass band bringing the sounds of New Orleans, European street bands, and modern grooves to the Pacific Northwest. We deliver an electrifying mix of traditional brass band music, pop, and EDM—unplugged straight from the soul. We’re dedicated to sharing music with the community, performing at events like Portland Mardi Gras, Honk PDX, Multnomah Days Parade, and Milwaukie Porchfest. Whether on the streets or the stage, Couch Brass is here to bring the party!"
+[couch.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/couch_HU8puPlTu.jpg?updatedAt=1747113861575"
+width = 200
+height = 106
+format = "jpg"
+
+[deadalert]
+name = "Dead Alert"
+hometown = "Seattle, WA"
+description = ""
+
 [emporer]
 name = "Emperor Norton's Stationary Marching Band"
 hometown = "Somerville, MA"
@@ -152,7 +248,10 @@ hometown = "Seattle, WA"
 infoUrl = "http://www.filthyfemcorps.com/"
 description = "We’re a community of talented musicians, united by our shared love of music and commitment to celebrating the incredible artistry of women, non-binary, and trans artists. Since our formation in 2016 on the streets of Seattle, we’ve marched to the beat of our down drums, breaking down barriers and spreading joy wherever we go."
 [filthy.image]
-src = "/images/artists/filthy.jpg"
+src = "https://ik.imagekit.io/honkfestwest/bands/filthy_MT5uIIse1.jpg?updatedAt=1746834571336"
+width = 200
+height = 200
+format = "jpg"
 
 [flyby]
 name = "Fly By"
@@ -164,6 +263,12 @@ description = "Fly By Brass Band is a diverse group of musicians based in the Bo
 name = "Funkrust Brass Band"
 hometown = "New York, NY"
 infoUrl = "http://funkrust.com/"
+description = "Funkrust Brass Band is a 20-piece post-apocalyptic disco-punk brass band playing all original music with megaphone vocals, heavy tuba bass lines, thundering percussion and searing brass melodies. Their explosive live performances feature full band choreography, signature wasteland/glam uniforms and LED lighting effects. The band mixes post-punk, disco, EDM, metal, and funk with Balkan brass and New Orleans second line sounds, and filters that through the medium of a massive street brass band with a punk rock sensibility."
+[funkrust.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/funkrust_p3ZEnQa5H.jpg?updatedAt=1747154177255"
+width = 200
+height = 200
+format = "jpg"
 
 [gansango]
 name = "Gansango Music & Dance"
@@ -175,6 +280,17 @@ description = "Gansango Music & Dance presents traditional and contemporary danc
 name = "Garfield High Varsity Drumline"
 hometown = "Seattle, WA"
 infoUrl = "https://www.facebook.com/people/Garfield-High-School-Marching-Band/100067840332627/"
+
+[glitch]
+name = "Glitch Kibbitz"
+hometown = "Seattle, WA"
+infoUrl = "https://glitchkibbitz.com/"
+description = "Glitch Kibbitz is possibly the first band of its kind - a vgm cover band specializing in klezmerized interpretations of classic video game tunes. Formed in 2019 to perform at PAX West, Glitch Kibbitz has gone on to perform at Magfest and release a full length album in 2021."
+[glitch.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/glitch_VuRPARoLn.jpg?updatedAt=1747113011037"
+width = 200
+height = 200
+format = "jpg"
 
 [goat]
 name = "G.O.A.T. Band"
@@ -227,6 +343,17 @@ hometown = "Seattle, WA"
 infoUrl = "https://www.facebook.com/people/La-Banda-Gozona/100065180273378/"
 description = "La Banda Gozona plays the village music of Oaxaca, Mexico. We will be joined by our friends   and inspiration,  Grupo Cultural Oaxaqueño."
 
+[jazznight]
+name = "Jazz Night School Sax & Rhythm Band"
+hometown = "Seattle, WA"
+infoUrl = "https://www.jazznightschool.org/"
+description = "Jazz Night School is a community-based nonprofit dedicated to promoting the appreciation and celebration of Black American music. Our passion lies in advocating for the universal right of individuals to participate in and learn music according to their unique identities and to foster cross-cultural connections and community."
+[jazznight.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/jazznight_EJLSi1xWV.jpg?updatedAt=1747113273482"
+width = 200
+height = 200
+format = "jpg"
+
 [lovett]
 name = "Lovett Arts"
 hometown = "Seattle, WA"
@@ -261,11 +388,29 @@ hometown = "San Francisco, CA"
 infoUrl = "https://missiondelirium.com/"
 description = "A love letter to your feet from the dance floor, Mission Delirium is an invitation to revel in pounding drums and facemelting brass."
 
+[mutiny]
+name = "Mutiny Bay Brass Band"
+hometown = "South Whidbey Island, WA"
+description = "Hailing from beautiful Whidbey Island, Mutiny Bay Brass Band brings the joy of music to life with an exciting mix of familiar songs from every genre. As a passionate community band, we love to participate in local celebrations like South Whidbey Pride, the Welcome the Whales Parade, and an array of lively family events throughout South Whidbey Island. Join us for unforgettable performances that will have you dancing and singing along!"
+infoUrl = "https://www.facebook.com/MutinyBayBrassBand"
+
+
 [neon]
 name = "Neon Brass Party"
 hometown = "Seattle, WA"
 infoUrl = "https://www.neonbrassparty.com/"
 description = "Neon Brass Party is a street band based out of Seattle, WA.  We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music. Our goal is to be the party and get people movin and groovin with us wherever we might show up. We play various styles of music ranging from Latin to funk to hip-hop, so long as it grooves, we'll play it!"
+[neon.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/funkrust_p3ZEnQa5H.jpg?updatedAt=1747154177255"
+width = 200
+height = 200
+format = "jpg"
+
+[nsmariachi]
+name = "North Seattle Mariachi"
+hometown = "Seattle, WA"
+infoUrl = "https://www.orquestanw.org/mariachi"
+description = "North Seattle Mariachi is comprised of Seattle-area middle and high school students who learn and perform traditional mariachi music. The group is a partnership between Orquesta Northwest and Seattle Public Schools and is based at Ingraham High School in north Seattle."
 
 [step]
 name = "Northside Step Team"
@@ -279,6 +424,17 @@ hometown = "Seattle, WA"
 infoUrl = "http://marcsmason.com/ensembles.html"
 description = "An engaging street band - tuba, horns & percussion - playing music of planet earth at community events, concerts, festivals, rallies, parades, parties and anywhere!"
 
+[pjamrs]
+name = "The Mighty PJAMRS"
+hometown = "Spokane, WA"
+infoUrl = "https://pjamrs.com"
+description = "PJAMRS is acronym for Peace and Justice Activist Musical Rascals of Spokane - the community Honk! band serving E. Washington and N. Idaho"
+[pjamrs.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/pjamrs_UvrRiv-_U.jpg?updatedAt=1747151875681"
+width = 200
+height = 184
+format = "jpg"
+
 [queens]
 name = "Queens of HONK!"
 hometown = "Everywhere"
@@ -288,7 +444,7 @@ description = "Queens of HONK! is meant as an active and open invitation to ALL 
 [phinney]
 name = "Phinney Ridge Steel Band"
 hometown = "Seattle, WA"
-infoUrl = "https://www.instagram.com/phinneyridgesteelband/"
+infoUrl = "https://phinneyridgesteel.band/"
 description = "The steelpan is one of the world's youngest acoustic instruments, and the Phinney Ridge Steel Band is one of Seattle's most recent ensembles, having only formed in the summer of 2023. We are dedicated to sharing good music with the world and serving the community with steelpan!"
 
 [redalert]
@@ -300,8 +456,8 @@ description = "We are the official band for the Seattle Kraken!  We play at all 
 [reigncity]
 name = "Reign City Riot"
 hometown = "Seattle, WA"
-infoUrl = "https://linktr.ee/ReignCityRiot"
-description = "The official pep band for Reign FC. Part of Rainbow City Performing Arts, Seattle’s LGBTQIA+ performance organization."
+infoUrl = "https://rainbowcity.org/ensembles/reign-city-riot/"
+description = "Reign City Riot is Seattle's most inclusive sports band, supplying high-energy entertainment before, during, and after home matches for Reign FC, Seattle's NWSL soccer team. A joint venture of Reign FC and Rainbow City Performing Arts, Reign City Riot is unique in its grass-roots make-up of volunteer community members from across the greater Seattle area, united by our passion for music, women's sports, and sharing the spirit of the Reign!"
 
 [riseup]
 name = "Rise Up! Action Band"
@@ -331,11 +487,22 @@ name = "Shpilkis!"
 hometown = "Seattle, WA"
 infoUrl = "https://www.shpilkisseattle.com/"
 
+[sindikat]
+name = "Sindikat Sina Roza"
+hometown = "Seattle, WA"
+infoUrl = "https://www.instagram.com/sinaroza_brass/reel/DHW3RCrSmnn/"
+description = "A new Seattle Balkan Band  composed of former members of the M9, Gora Gora Orkestar, Bucharest Drinking Team, and still active members of Dunava, Sindikat Sina Roza has honing our setlist for our debut at Balkan Night NW in March. We aim to foster community and connection, creating an immersive, participatory experience that unites people through music and seek to introduce new audiences to the richness of Balkan music while preserving and evolving its traditions, advocating for Romani liberation, and celebrating folk heritage."
+[sindikat.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/sindikat_FBrKLkvw3.jpg?updatedAt=1747114853935"
+width = 200
+height = 250
+format = "jpg"
+
 [jambalaya]
 name = "Soul Jambalaya"
 hometown = "Seattle, WA"
 infoUrl = "https://www.facebook.com/profile.php?id=100093494289106"
-description = "Performing a musical mélange of jazz, blues, funk, reggae, and gospel, Soul Jambalaya celebrates the love, joy, and resiliency of black and black-influenced song."
+description = " Through a musical mélange of jazz, blues, funk, reggae, and gospel, Soul Jambalaya seeks to celebrate the love, joy, and resiliency infused in black and black-inspired song, through a New Orleans style brass band that reflects the beautiful diversity of the Pacific Northwest."
 
 [machine]
 name = "SOUND MACHINE"
@@ -347,23 +514,44 @@ name = "Sound Wave"
 hometown = "Seattle, WA"
 infoUrl = "https://www.soundersfc.com/matchday/sound-wave"
 description = "Sound Wave is the official band of Seattle Sounders FC. In 2009, minority owner Drew Carey conceptualized an ensemble made up of traditional marching percussion and brass instruments to bring the spirit of Sounders FC to life. Sound Wave can be found at Sounders FC home matchdays and entertaining the local community at parades, charitable events, and corporate functions."
+[soundwave.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/soundwave_285Nqe1n8a.png?updatedAt=1746834567623"
+width = 1367
+height = 1504
+format = "png"
 
 [southendpep]
 name = "South End Pep"
 hometown = "Seattle, WA"
-description = "The South End Pep Band is a collaboration between three Seattle Public Schools.  It brings together musicians from Franklin, Cleveland, and Rainier Beach to celebrate the musicality in the South End."
+infoUrl = "https://www.southendpepband.org/"
+description = "We are a collaboration of band members from Franklin High School, Rainier Beach High School, and Cleveland High School who rehearse and play together at different school and community events."
+[southendpep.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/southendpep_0AlmxBf6Y.avif?updatedAt=1747152267536"
+width = 270
+height = 236
+format = "avif"
 
 [sticks]
 name = "Sticks & Bones"
 hometown = "Olympia, WA"
 infoUrl = "https://www.facebook.com/olysnewcommuityactivistband/"
-description = "Sticks and Bones is a women and queer led, multigenerational street band from Olympia! Through our collective leadership we cultivate a safe space for musicians of all skill levels. We love to entertain and empower our communities in our quest for a more just and joyful world."
+description = "Sticks and Bones is a Women and Queer-led multigenerational street band from Olympia, WA. Through our collective leadership we cultivate a safe space for musicians of all skill levels. We love to entertain and empower our communities in our quest for a more just and joyful world."
+[sticks.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/sticks_yKYRweGWO.jpg?updatedAt=1746834575581"
+width = 188
+height = 188
+format = "jpg"
 
 [tacomarama]
 name = "Tacomarama"
 hometown = "Tacoma, WA"
-infoUrl = "http://instagram.com/tacomarama"
-description = "Tacomarama is an all ages, all levels \"anyone can join\" band from Tacoma, WA."
+infoUrl = "https://facebook.com/tacomarama"
+description = "All-ages, all-levels community street band from Tacoma."
+[tacomarama.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/tacomarama_bm9EpCmsUn.jpg?updatedAt=1746834568557"
+width = 200
+height = 200
+format = "jpg"
 
 [m9]
 name = "The m9"
@@ -371,10 +559,15 @@ hometown = "Seattle, WA"
 infoUrl = "http://them9.com/"
 
 [tmb]
-name = "TMB"
+name = "This Much Brass (TMB)"
 hometown = "Seattle, WA"
-infoUrl = "https://linktr.ee/tmbbrass"
-description = "Your first call for Second Line"
+infoUrl = "http://www.tmbbrass.com"
+description = "This Much Brass (TMB) is Seattle’s New Orleans-style brass band, blending Second Line with Pop, Funk, and Disco since 2010. Formed by students at Roosevelt High School as ‘Ten Man Brass Band’, TMB is a product of Seattle Public Schools’ outstanding music education programs. We are passionate about making music in our community, schools, and passing it on to future generations. We love HONK! for the same reasons."
+[tmb.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/tmb_oy2ej8X48.jpg?updatedAt=1746834573767"
+width = 200
+height = 200
+format = "jpg"
 
 [unexpected]
 name = "the UNEXPECTED BRASS BAND"
@@ -386,7 +579,18 @@ description = "How can we describe the mystery? Why would we describe the myster
 name = "VamoLá"
 hometown = "Seattle, WA"
 infoUrl = "https://vamola.org/"
-description = "VamoLá is Seattle's Brazilian blast, bringing fiery percussion rhythms and sun-drenched energy straight to the streets. Prepare for infectious grooves, dazzling costumes, and enough samba spirit to turn every possible puddle into a mini Copacabana beach. Get ready to shake, shimmy, and celebrate your way across Brazil, right here in the heart of the Northwest!"
+description = "VamoLá brings the vibrant pulse of Brazil to life with infectious rhythms and powerful drumming. This Seattle-based ensemble ignites the spirit of Brazilian music, showcasing a diverse range of beats from across Brazil. Prepare to be swept away by the energy and join the celebration!"
+[vamola.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/vamola_XCTs3ejuFz.jpg?updatedAt=1746834572487"
+width = 148
+height = 148
+format = "jpg"
+
+[vashonk]
+name = "VasHonK!"
+hometown = "Vashon, WA"
+description = "VasHonK! is a DIY community street band playing parade, party, and funeral music for the  people of Vashon-Maury Island. Open to brass/wind/percussion players of any skill level from beginner to GOAT, we focus on learning, fun, and fellowship."
+infoUrl = "https://facebook.com/vashonkband"
 
 [window]
 name = "Window Smashing Job Creators"
@@ -410,4 +614,7 @@ description = "West Cascade Puppet Brigade is a multifaceted, intergenerational 
 name = "Young Fellaz Brass Band"
 hometown = "New Orleans, LA"
 infoUrl = "https://www.youngfellazbrassband.com/"
-description = "Formed in 2006, the Young Fellaz Brass Band has been a staple in the New Orleans live music scene for over 15 years. This enthusiastic and talented group of musicians honor the brass band tradition while innovating their own unique sound. Their new self-produced album Block Party (2022) is out now."
+description = "a band of upcoming musicians who live and breathe authentic new orleans culture"
+
+[hsmedley]
+name = "HS Medley"
