@@ -22,6 +22,11 @@ description = "West African Drumming & Dance"
 name = "Agents of Vibration"
 hometown = "Bremerton, WA"
 description = "We're a brand new brass band out of Bremerton, formed to build solidarity through music. We just came together early this year, and for now are playing mostly Honk! standards."
+[agents.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/agents_cyffnkpkR.jpeg?updatedAt=1747425138525"
+width = 200
+height = 200
+format = "jpg"
 
 [agab]
 name = "Assigned Gay At Band"
@@ -57,7 +62,7 @@ height = 200
 format = "jpg"
 
 [badweather]
-name = "bad Weather Brass"
+name = "Bad Weather Brass"
 hometown = "Seattle, WA"
 infoUrl = "https://www.facebook.com/people/Bad-Weather-Brass/61574985735191/#"
 [badweather.image]
@@ -161,6 +166,11 @@ name = "Brassless Chaps"
 hometown = "Portland, OR"
 infoUrl = "https://www.facebook.com/brasslesschapspdx/"
 description = "An all queer, antifascist community brass band from Portland, Oregon. We got sass, brass, and ass."
+[brassless.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/brassless_zzQGAS1Sj.jpg?updatedAt=1746834578170"
+width = 200
+height = 200
+format = "jpg"
 
 [brothers]
 name = "Brothers of Brass"
@@ -308,6 +318,11 @@ name = "HONK! All-Stars (open jam)"
 hometown = "Everywhere"
 infoUrl = "https://drive.google.com/drive/folders/1WO2k6tIspmt4BY8wz62tWIBVZOIPIftP?usp=share_link"
 description = "HONK! All-Stars is a collection of the best and the loudest musicians from all over. Anyone who can play is welcome to participate."
+[allstars.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/allstars_9WgDmhX1M.jpg?updatedAt=1746834578725"
+width = 300
+height = 300
+format = "jpg"
 
 [future]
 name = "HONK! Future"
@@ -401,7 +416,7 @@ hometown = "Seattle, WA"
 infoUrl = "https://www.neonbrassparty.com/"
 description = "Neon Brass Party is a street band based out of Seattle, WA.  We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music. Our goal is to be the party and get people movin and groovin with us wherever we might show up. We play various styles of music ranging from Latin to funk to hip-hop, so long as it grooves, we'll play it!"
 [neon.image]
-src = "https://ik.imagekit.io/honkfestwest/bands/funkrust_p3ZEnQa5H.jpg?updatedAt=1747154177255"
+src = "https://ik.imagekit.io/honkfestwest/bands/neon_wInXbsBDWu.jpg?updatedAt=1746834581402"
 width = 200
 height = 200
 format = "jpg"
@@ -446,6 +461,11 @@ name = "Phinney Ridge Steel Band"
 hometown = "Seattle, WA"
 infoUrl = "https://phinneyridgesteel.band/"
 description = "The steelpan is one of the world's youngest acoustic instruments, and the Phinney Ridge Steel Band is one of Seattle's most recent ensembles, having only formed in the summer of 2023. We are dedicated to sharing good music with the world and serving the community with steelpan!"
+[phinney.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/phinney_w8VRvH2kL.jpg?updatedAt=1747425447875"
+width = 300
+height = 225
+format = "jpg"
 
 [redalert]
 name = "Red Alert"
@@ -458,6 +478,11 @@ name = "Reign City Riot"
 hometown = "Seattle, WA"
 infoUrl = "https://rainbowcity.org/ensembles/reign-city-riot/"
 description = "Reign City Riot is Seattle's most inclusive sports band, supplying high-energy entertainment before, during, and after home matches for Reign FC, Seattle's NWSL soccer team. A joint venture of Reign FC and Rainbow City Performing Arts, Reign City Riot is unique in its grass-roots make-up of volunteer community members from across the greater Seattle area, united by our passion for music, women's sports, and sharing the spirit of the Reign!"
+[reigncity.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/reigncity_Fs9mV-zW_T.jpg?updatedAt=1746834571747"
+width = 218
+height = 300
+format = "jpg"
 
 [riseup]
 name = "Rise Up! Action Band"
@@ -481,6 +506,11 @@ name = "Seismic Sound Drumline"
 hometown = "Seattle, WA"
 infoUrl = "https://www.facebook.com/SeismicSoundDrumline/"
 description = "Seismic Sound is a not-for-profit percussion ensemble for youth ages 15-23. We focus on providing a welcoming and affordable space for youth musicians to grow as percussionists. Our ensemble exposes our members to aspects found in college marching bands, pro-sports drumlines, and DCI/WGI groups. It is a great space for beginner to intermediate level musicians who are interested in challenging themselves and creating relationships with other musicians within the greater Seattle Area."
+[seismic.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/seismic_4IiavY7dx.jpg"
+width = 200
+height = 200
+format = "jpg"
 
 [shpilkis]
 name = "Shpilkis!"
