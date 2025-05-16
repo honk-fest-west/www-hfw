@@ -37,6 +37,10 @@ const { timeSlot } = Astro.props;
 		grid-template-columns: 6rem repeat(auto-fit, minmax(0, 1fr));
 	}
 
+	.time-slot:nth-child(odd) {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
 	.time {
 		font-weight: bold;
 	}

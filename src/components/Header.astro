@@ -12,26 +12,26 @@ const currentNav = nav.find((item) =>
 );
 ---
 
-<div class="grid place-content-center p-4 pb-12 lg:pb-16">
+<div class="grid place-content-center p-8 pb-0 lg:pb-16">
 	<a href="/">
 		<Image src={logoImg} alt="HONK! Fest West 2025" loading="eager" />
 	</a>
-	<nav class="w-full relative">
-		<div class="w-full block lg:hidden">
-			<div class="w-full top-8 relative">
-				<MobileMenu {nav} currentId={currentNav?.id} />
-			</div>
-		</div>
-		<div class="w-full hidden lg:block">
-			<ul
-				class="flex flex-wrap justify-center items-center w-full group relative lg:absolute top-8"
-			>
-				{
-					nav.map((link) => (
-						<NavButton href={link.data.link}>{link.data.name}</NavButton>
-					))
-				}
-			</ul>
-		</div>
-	</nav>
 </div>
+<nav class="w-full relative">
+	<div class="w-full block lg:hidden">
+		<div class="w-full top-8 relative">
+			<MobileMenu {nav} currentId={currentNav?.id} />
+		</div>
+	</div>
+	<div class="w-full hidden lg:block relative">
+		<ul
+			class="flex flex-wrap justify-center items-center w-full group relative lg:absolute -top-8"
+		>
+			{
+				nav.map((link) => (
+					<NavButton href={link.data.link}>{link.data.name}</NavButton>
+				))
+			}
+		</ul>
+	</div>
+</nav>

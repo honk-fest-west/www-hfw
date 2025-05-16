@@ -1,4 +1,9 @@
 [[links]]
+id = "festival"
+name = "Festival"
+link = "/festival"
+
+[[links]]
 id = "volunteer"
 name = "Volunteer"
 link = "/volunteer"

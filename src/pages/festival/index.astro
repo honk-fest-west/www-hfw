@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { FestivalApp } from "@thegoldendino/festival-app";
-import type { ConfigParams } from "@thegoldendino/festival-app";
+import type { ConfigParams, Day } from "@thegoldendino/festival-app";
 import { FestivalBuilder } from "@thegoldendino/festival-app";
 import "@thegoldendino/festival-app/default.css";
 
@@ -19,6 +19,8 @@ import options from "@data/festival/options.toml";
 import stages from "@data/festival/stages.toml";
 
 import honkLogo from "@assets/images/logos/2023-logo-white.png";
+import { Image } from "astro:assets";
+import qrcode from "@assets/images/festival-qr.png";
 const optionsWithLogo = {
   ...options,
   logoImage: honkLogo,
@@ -37,10 +39,47 @@ const festival = new FestivalBuilder(config).build();
 function getSchedule(day: { date: string }) {
   return festival.scheduleByDate(day.date);
 }
+
+function getDayTitle(day: Day) {
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    month: "numeric",
+    day: "numeric",
+    timeZone: "UTC",
+  };
+  const formattedDate = new Date(day.date).toLocaleDateString(
+    "en-US",
+    dateOptions,
+  );
+  const dateParts = formattedDate.split(", ");
+  const dayOfWeek = dateParts[0];
+  const monthDay = dateParts[1];
+  return `${dayOfWeek} ${monthDay}`;
+}
 ---
 
 <Layout title="2025 Festival" transition={false}>
   <div class="hidden lg:block">
+    <div class="content-container mb-10">
+      <div class="flex justify-around items-center">
+        <ul class="flex flex-col gap-4">
+          {
+            festival.daysSorted.map((day) => (
+              <li class="flex items-center gap-4 content">
+                <div class="h-2 w-2 bg-gold-600 rounded-full" />
+                <span class="text-2xl font-semibold">{getDayTitle(day)}</span>
+                <a href={`#${getDayTitle(day)}`}>(schedule)</a>
+                <a href={getSchedule(day).day.directionsUrl}>(directions)</a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="flex-none px-20 flex flex-col items-center gap-2">
+          <Image src={qrcode} alt="QR Code" width="150" height="150" />
+          <span class="content font-semibold">Mobile HONK!</span>
+        </div>
+      </div>
+    </div>
     {
       festival.daysSorted.map((day) => (
         <DaySchedule day={day} daySchedule={getSchedule(day)} />
