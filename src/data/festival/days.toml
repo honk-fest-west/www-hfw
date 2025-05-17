@@ -87,7 +87,7 @@ locations = [
 		"47.6010400,-122.3066500",
 	],
 ]
-stages = ["pratt_hill", "pratt_field"]
+stages = ["pratt_field", "pratt_hill"]
 schedule = [
 	[ "better","" ],
 	[ "nsmariachi","" ],
