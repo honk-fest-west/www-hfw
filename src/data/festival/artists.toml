@@ -408,7 +408,11 @@ name = "Mutiny Bay Brass Band"
 hometown = "South Whidbey Island, WA"
 description = "Hailing from beautiful Whidbey Island, Mutiny Bay Brass Band brings the joy of music to life with an exciting mix of familiar songs from every genre. As a passionate community band, we love to participate in local celebrations like South Whidbey Pride, the Welcome the Whales Parade, and an array of lively family events throughout South Whidbey Island. Join us for unforgettable performances that will have you dancing and singing along!"
 infoUrl = "https://www.facebook.com/MutinyBayBrassBand"
-
+[mutiny.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/mutiny_lQJgYUIPP.jpg"
+width = 200
+height = 200
+format = "jpg"
 
 [neon]
 name = "Neon Brass Party"
