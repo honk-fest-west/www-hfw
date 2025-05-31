@@ -18,7 +18,7 @@ locations = [
 ]
 stages = ["jules", "coffee", "electric", "underpass"]
 schedule = [
-	[ "",					"",								"",							"" ],
+	[ "",					"sindikat",								"",							"" ],
 	[ "",					"mutiny",				"",				"filthy"],
 	[ "brasscheeks",		"bluethunder",						"southendpep",	"agab" ],
 	[ "jazznight","tacomarama",			"baque",				"ballard" ],

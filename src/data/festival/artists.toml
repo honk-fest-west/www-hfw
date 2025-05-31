@@ -153,7 +153,7 @@ description = "A street band made up of people from all around Santa Barbara Cou
 [brasscheeks]
 name = "Brass Cheeks"
 hometown = "Seattle, WA"
-infoUrl = "https://www.facebook.com/profile.php?id=61554147362162"
+infoUrl = "https://www.instagram.com/brasscheeks"
 description = "Brass Cheeks is a 9-piece brass band specializing in funk, soul, pop, and seasonal covers of your favorite songs. The group is comprised of musicians who have their roots in Seattle’s premiere marching bands including Soundwave, Red Alert, Blue Thunder, and Husky Marching Band."
 [brasscheeks.image]
 src = "https://ik.imagekit.io/honkfestwest/bands/brasscheeks_PvlLUFd-Y.jpg?updatedAt=1747153111352"
@@ -408,7 +408,11 @@ name = "Mutiny Bay Brass Band"
 hometown = "South Whidbey Island, WA"
 description = "Hailing from beautiful Whidbey Island, Mutiny Bay Brass Band brings the joy of music to life with an exciting mix of familiar songs from every genre. As a passionate community band, we love to participate in local celebrations like South Whidbey Pride, the Welcome the Whales Parade, and an array of lively family events throughout South Whidbey Island. Join us for unforgettable performances that will have you dancing and singing along!"
 infoUrl = "https://www.facebook.com/MutinyBayBrassBand"
-
+[mutiny.image]
+src = "https://ik.imagekit.io/honkfestwest/bands/mutiny_lQJgYUIPP.jpg"
+width = 200
+height = 200
+format = "jpg"
 
 [neon]
 name = "Neon Brass Party"
