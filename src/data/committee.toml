@@ -1,18 +1,9 @@
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/ginny_pjQra4hZ3?updatedAt=1651289398764'
-name = 'Ginny'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Jeanette_9CB7W6rMm2A.jpg?updatedAt=1628536067122'
-name = 'Jeanette'
-[[photos]]
-image_url = 'https://ik.imagekit.io/honkfestwest/committee/brian-fifer_muORz-mtK.jpg?updatedAt=1739142105185'
-name = 'Firf'
+name = 'Ginny Trufan'
 [[photos]]
 image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/luis_kDBcONTRC.jpg?updatedAt=1641620803407'
 name = 'Lu Badu'
-[[photos]]
-image_url = 'https://ik.imagekit.io/thegoldendino/hfw/people/Lizzie_wzAulOj1l.jpg?updatedAt=1628536067160'
-name = 'Lizzy'
 [[photos]]
 image_url = 'https://ik.imagekit.io/honkfestwest/committee/marcus-pimpleton?updatedAt=1739142436229'
 name = 'Dr. Pimpleton'
@@ -23,13 +14,13 @@ role = 'President'
 name = 'Ginny Trufan'
 [[groups."Board of Directors"]]
 role = 'Treasurer'
-name = 'Jeanette DuBois'
+name = 'Adam Fryer'
 [[groups."Board of Directors"]]
 role = 'Secretary'
-name = 'Brian Fifer'
+name = '~ vacant ~'
 [[groups."Board of Directors"]]
 role = 'Member'
-name = 'Lizzy Burton'
+name = 'Anna Ballasiotes'
 [[groups."Board of Directors"]]
 role = 'Member'
 name = 'Lu Badu'
@@ -46,11 +37,14 @@ role = 'Chair & Grants Manager'
 name = 'Jeanette'
 [[groups."Fundraising"]]
 role = 'Events'
-name = 'JP'
+name = 'Erik Ness'
 
 [[groups."Creative & Communications"]]
-role = "Marketing"
-name = "Jeanette"
+role = "Chair"
+name = "Anna Ballasiotes"
+[[groups."Creative & Communications"]]
+role = "PR/Media"
+name = "Anna"
 [[groups."Creative & Communications"]]
 role = "Videographer"
 name = "Charlie"
@@ -78,14 +72,14 @@ role = 'HONK! Future'
 name = 'Marcus'
 [[groups."Outreach"]]
 role = 'Community Engagement'
-name = 'Lizzy, Aja, Janine, Elsbeth, Hanna, Katie, Heather, Nick, Paul'
+name = 'Aja, Janine, Elsbeth, Nick, Paul'
 [[groups."Outreach"]]
 role = 'Partnerships'
 name = 'Luis, Janine'
 
 [[groups."Event Production"]]
 role = 'Chair'
-name = 'Firf'
+name = 'Ginny'
 [[groups."Event Production"]]
 role = 'Booking Lead'
 name = 'Pete'
@@ -94,8 +88,4 @@ role = 'Med Ops'
 name = 'Grace Jones'
 [[groups."Event Production"]]
 role = 'Permitting'
-name = 'Firf'
-
-[[groups."Fundraising"]]
-role = 'Grants Manager'
 name = 'Jeanette'
