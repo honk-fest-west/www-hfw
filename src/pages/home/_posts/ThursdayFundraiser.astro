@@ -1,6 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import Title from "@components/Title.astro";
+import { getThursdayKickoff } from '@util/dates';
+
+const thursday = getThursdayKickoff();
+const weekday = thursday.date.toLocaleDateString('en-US', {
+  weekday: 'long',
+  timeZone: 'UTC'
+});
 ---
 
 <div class="flex-none md:pr-6 mb-3 md:mb-0 z-10">
@@ -12,13 +19,16 @@ import Title from "@components/Title.astro";
   />
 </div>
 <div class="z-10">
-  <Title title="Thursday Kickoff Opening Night" subtitle="June 1nd, Thursday" />
+  <Title
+    title="Thursday Kickoff Opening Night"
+    subtitle={`${thursday.formatted}, ${weekday}`}
+  />
   <p>
     HONK! Fest West’s Start Up Party at Bad Jimmy’s Brewing company is tonight!
     Come shake! Come clap! Come HONK!
   </p>
   <br />
-  <p>When: June 1st, at 7PM</p>
+  <p>When: {thursday.formatted}, at 7PM</p>
   <br />
   <p>
     Where: <a href="https://goo.gl/maps/DU3K51nfPz2QezWq5"

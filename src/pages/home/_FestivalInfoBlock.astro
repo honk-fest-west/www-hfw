@@ -1,5 +1,6 @@
 ---
 import Title from "@components/Title.astro";
+import { formatDateRange } from '@util/dates';
 ---
 
 <!-- INFO BLOCK -->
@@ -27,7 +28,7 @@ import Title from "@components/Title.astro";
         <span
           class="block lg:mb-0 text-subtitle tracking-normal md:mr-2 font-emphasis text-center"
         >
-          <time>May 30 - June 1, 2025</time>
+          <time>{formatDateRange()}</time>
         </span>
       </div>
       <span

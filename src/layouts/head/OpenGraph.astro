@@ -1,5 +1,6 @@
 ---
 import socialmediaImg from "@assets/images/2025/2025-opengraph.png";
+import { getOpenGraphStartTime, getOpenGraphEndTime } from '@util/dates';
 ---
 
 <meta property="og:url" content="https://honkfestwest.org/" />
@@ -13,13 +14,13 @@ import socialmediaImg from "@assets/images/2025/2025-opengraph.png";
 <meta property="og:image:height" content={`${socialmediaImg.height}`} />
 <meta property="og:type" content="event" />
 <meta property="og:event_type" content="Festival" />
-<meta property="og:start_time" content="2025-05-30T00:00:00-0700" />
-<meta property="og:end_time" content="2025-06-01T23:59:59-07:00" />
+<meta property="og:start_time" content={getOpenGraphStartTime()} />
+<meta property="og:end_time" content={getOpenGraphEndTime()} />
 <meta property="og:location" content="Seattle, WA" />
 <meta property="og:street_address" content="Varies throughout Seattle" />
 
-<meta property="event:start_time" content="2025-05-30T00:00:00-07:00" />
-<meta property="event:end_time" content="2025-06-01T23:59:59-07:00" />
+<meta property="event:start_time" content={getOpenGraphStartTime()} />
+<meta property="event:end_time" content={getOpenGraphEndTime()} />
 <meta
     property="event:venue"
     content="Seattle, WA (Fri: Georgetown, Sat: Columbia City Park, Sun: TBD)"

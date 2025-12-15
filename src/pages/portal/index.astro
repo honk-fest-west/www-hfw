@@ -1,5 +1,6 @@
 ---
 import FestivalCountDown from "./_FestivalCountDown.svelte";
+import { formatCountdownDate } from '@util/dates';
 import "@styles/global.css";
 ---
 
@@ -38,7 +39,7 @@ import "@styles/global.css";
                   <span class="text-2xl">HONK! Fest West</span>
                   <span class="text-lg text-red-500"> &nbsp; begins in:</span>
                 </h2>
-                <FestivalCountDown client:load date="May 30, 2025" />
+                <FestivalCountDown client:load date={formatCountdownDate()} />
               </div>
             </div>
           </section>

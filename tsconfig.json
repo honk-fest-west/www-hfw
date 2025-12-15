@@ -29,6 +29,9 @@
       ],
       "@styles/*": [
         "src/styles/*"
+      ],
+      "@util/*": [
+        "src/util/*"
       ]
     }
   }
