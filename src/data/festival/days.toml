@@ -18,14 +18,7 @@ locations = [
 ]
 stages = ["jules", "coffee", "electric", "underpass"]
 schedule = [
-	[ "",					"sindikat",								"",							"" ],
-	[ "",					"mutiny",				"",				"filthy"],
-	[ "brasscheeks",		"bluethunder",						"southendpep",	"agab" ],
-	[ "jazznight","tacomarama",			"baque",				"ballard" ],
-	[ "couch",		"badweather",					"sticks",				"chaotic" ],
-	[ "artesian",	"8bit",						"vamola",				"pjamrs" ],
-	[ "better",		"",								"soundwave",		"funkrust" ],
-	[ "tmb",			"",								"",							"neon" ],
+	[ "",					"",								"",							"" ],
 ]
 
 
@@ -49,23 +42,7 @@ locations = [
 ]
 stages = ["columbia_south", "edmunds", "columbia_north", "gateway"]
 schedule = [
-	[ "",			"",			"tacomarama", ""],
-	[ "better",			"",			"artesian", 	"ballard"],
-	[ "agab",			"phinney",			"couch", 	"brasscheeks"],
-	[ "neon",			"phinney",			"hsmedley", 	"glitch"],
-	[ "reigncity",			"couch",			"ballard", 	"better"],
-	[ "glitch",			"tacomarama",			"sticks", 	"8bit"],
-	[ "badweather",			"agents",			"chaotic", 	"vamola"],
-	[ "funkrust",			"brassless",			"filthy", 	"jambalaya"],
-	[ "brasscheeks",			"seismic",			"reigncity", 	"tmb"],
-	[ "agents",			"pjamrs",			"neon", 	"baque"],
-	[ "8bit",      "badweather",   "seismic", "brassless"],
-	[ "future",			"filthy",			"sticks", 	""],
-	[ "jambalaya",			"vamola",			"agab", 	""],
-	[ "tmb",			"artesian",			"pjamrs", 	""],
-	[ "chaotic",			"funkrust",			"", 	""],
-	[ "allstars",			"",			"", 	""],
-
+	[ "",			"",			"", ""],
 ]
 
 
@@ -89,17 +66,5 @@ locations = [
 ]
 stages = ["pratt_field", "pratt_hill"]
 schedule = [
-	[ "better","" ],
-	[ "nsmariachi","" ],
-	[ "couch","glitch" ],
-	[ "brassless","sticks" ],
-	[ "pjamrs","agab" ],
-	[ "sindikat","artesian" ],
-	[ "neon","baque" ],
-	[ "agents","filthy" ],
-	[ "tmb","8bit" ],
-	[ "chaotic","vashonk" ],
-	[ "funkrust","tacomarama" ],
-	[ "","allstars" ],
 	[ "","" ],
 ]
