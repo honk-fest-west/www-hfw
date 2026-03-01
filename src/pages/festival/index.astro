@@ -66,7 +66,7 @@ function getDayTitle(day: Day) {
           {
             festival.daysSorted.map((day) => (
               <li class="flex items-center gap-4 content">
-                <div class="h-2 w-2 bg-gold-600 rounded-full" />
+                <div class="h-2 w-2 bg-yellow-600 rounded-full" />
                 <span class="text-2xl font-semibold">{getDayTitle(day)}</span>
                 <a href={`#${getDayTitle(day)}`}>(schedule)</a>
                 <a href={getSchedule(day).day.directionsUrl}>(directions)</a>
@@ -93,7 +93,7 @@ function getDayTitle(day: Day) {
 
 <style>
   :root {
-    --festapp-color-primary-hue: var(--color-teal-hue);
-    --festapp-color-secondary-hue: var(--color-gold-hue);
+    --festapp-color-primary-hue: var(--color-aqua-hue);
+    --festapp-color-secondary-hue: var(--color-yellow-hue);
   }
 </style>

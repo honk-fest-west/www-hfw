@@ -7,6 +7,21 @@ name = 'Lu Badu'
 [[photos]]
 image_url = 'https://ik.imagekit.io/honkfestwest/committee/marcus-pimpleton?updatedAt=1739142436229'
 name = 'Dr. Pimpleton'
+[[photos]]
+image_url = 'https://ik.imagekit.io/hfw/AnnaHFWheadshot.jpg'
+name = 'Anna Ballasiotes'
+
+[[photos]]
+image_url = 'https://ik.imagekit.io/hfw/circle-logo-sticker.png'
+name = 'Adam Fryer'
+
+[[photos]]
+image_url = 'https://ik.imagekit.io/hfw/circle-logo-sticker.png'
+name = 'Angelina Allen'
+
+[[photos]]
+image_url = 'https://ik.imagekit.io/hfw/circle-logo-sticker.png'
+name = 'Josh Chan'
 
 
 [[groups."Board of Directors"]]
@@ -17,16 +32,19 @@ role = 'Treasurer'
 name = 'Adam Fryer'
 [[groups."Board of Directors"]]
 role = 'Secretary'
-name = '~ vacant ~'
-[[groups."Board of Directors"]]
-role = 'Member'
 name = 'Anna Ballasiotes'
 [[groups."Board of Directors"]]
 role = 'Member'
 name = 'Lu Badu'
 [[groups."Board of Directors"]]
 role = 'Member'
-name = 'Marcus Pimpleton'
+name = 'Dr. Marcus Pimpleton'
+[[groups."Board of Directors"]]
+role = 'Member'
+name = 'Angelina Allen'
+[[groups."Board of Directors"]]
+role = 'Member'
+name = 'Josh Chan'
 
 [[groups."Finance & Risk"]]
 role = 'Chair'
@@ -56,7 +74,7 @@ role = "Graphic Design"
 name = "Anna"
 [[groups."Creative & Communications"]]
 role = "Website"
-name = "Dwight"
+name = "Dwight / Anna"
 [[groups."Creative & Communications"]]
 role = "Social Media"
 name = "Juliana"
@@ -65,14 +83,11 @@ name = "Juliana"
 role = 'Chair'
 name = 'Lu Badu'
 [[groups."Outreach"]]
-role = 'Chair'
-name = 'Luis, Heather, & Marisa'
-[[groups."Outreach"]]
 role = 'HONK! Future'
 name = 'Marcus'
 [[groups."Outreach"]]
 role = 'Community Engagement'
-name = 'Aja, Janine, Elsbeth, Nick, Paul'
+name = 'Janine, Elsbeth, Nick, Paul'
 [[groups."Outreach"]]
 role = 'Partnerships'
 name = 'Luis, Janine'

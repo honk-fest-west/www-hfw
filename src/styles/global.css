@@ -3,86 +3,105 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
 
-  /* Teal */
-  --color-teal-100: oklch(84.96% 0.0592 213.66);
-  /* --color-teal-200:	
-  --color-teal-300:	*/
-  --color-teal-500: oklch(56.2% 0.0943 208.16);
-  /* --color-teal-600: */
-
-  --color-teal-hue: 213.66;
-  --color-teal-700: oklch(50% 0.0876 213.66);
-  --color-teal-800: oklch(50% 0.1 213.66);
-  --color-teal-900: oklch(50% 0.0876 213.66);
-  --color-teal-950: oklch(55% 0.0676 213.66);
-  --color-teal-1000: oklch(40% 0.0876 213.66);
-
-  /* Gold */
-  --color-gold-hue: 86.23;
-  --color-gold-100: oklch(90.14% 0.0841 86.23);
-  --color-gold-200: oklch(84.11% 0.0750 86.23);
-  --color-gold-300: oklch(79.63% 0.0750 86.23);
-  --color-gold-400: oklch(83.69% 0.099 87.53);
-  --color-gold-500: oklch(72.15% 0.0841 86.23);
-  --color-gold-600: oklch(62.16% 0.0841 86.23);
-  --color-gold-700: oklch(50.00% 0.0841 86.23);
-  --color-gold-800: oklch(48.18% 0.0841 86.23);
-  --color-gold-900: oklch(41.18% 0.0841 86.23);
-
-  /* Gray */
-  --color-gray-100: oklch(96.08% 0 0);
-  --color-gray-200: oklch(88.16% 0 0);
-  --color-gray-300: oklch(80.24% 0 0);
-  --color-gray-400: oklch(72.32% 0 0);
-  --color-gray-500: oklch(64.4% 0 0);
-  --color-gray-600: oklch(56.48% 0 0);
-  --color-gray-700: oklch(48.56% 0 0);
-  --color-gray-800: oklch(40.64% 0 0);
-  --color-gray-900: oklch(32.72% 0 0);
-
-  /* Backgrounds */
-  --color-site-background: var(--color-gold-400);
-  --color-main-background: var(--color-teal-700);
+  /* AQUA — #009c9d */
+  --color-aqua-50:  oklch(98% 0.02 190);
+  --color-aqua-100: oklch(94% 0.04 190);
+  --color-aqua-200: oklch(88% 0.07 190);
+  --color-aqua-300: oklch(80% 0.10 190);
+  --color-aqua-400: oklch(72% 0.13 190);
+  --color-aqua-500: oklch(64% 0.15 190); /* ≈ #009c9d */
+  --color-aqua-600: oklch(56% 0.13 190);
+  --color-aqua-700: oklch(48% 0.10 190);
+  --color-aqua-800: oklch(40% 0.08 190);
+  --color-aqua-900: oklch(32% 0.06 190);
+  --color-aqua-1000: oklch(20% 0.06 190);
 
 
-  /* Text Color */
-  --color-title: var(--color-gold-700);
-  --color-subtitle: var(--color-teal-700);
-  --color-title-border: var(--color-gold-600);
-  --color-content-text: var(--color-gold-800);
-  --color-link: var(--color-teal-800);
-  --color-content-link: var(--color-teal-800);
-  --color-title-shadow: var(--color-gold-100);
-  --color-content_btt: var(--color-gold-600);
-  --color-accent-lt: var(--color-teal-800);
-  /* Fonts */
+  /* YELLOW — #fdc329 */
+  --color-yellow-50:  oklch(99% 0.03 95);
+  --color-yellow-100: oklch(96% 0.06 95);
+  --color-yellow-200: oklch(92% 0.10 95);
+  --color-yellow-300: oklch(86% 0.16 95);
+  --color-yellow-400: oklch(80% 0.21 95);
+  --color-yellow-500: oklch(74% 0.23 95); /* ≈ #fdc329 */
+  --color-yellow-600: oklch(66% 0.20 95);
+  --color-yellow-700: oklch(58% 0.17 95);
+  --color-yellow-800: oklch(50% 0.13 95);
+
+  /* PINK — #cb4579 */
+  --color-pink-50:  oklch(98% 0.03 20);
+  --color-pink-100: oklch(94% 0.06 20);
+  --color-pink-200: oklch(88% 0.10 20);
+  --color-pink-300: oklch(80% 0.14 20);
+  --color-pink-400: oklch(72% 0.18 20);
+  --color-pink-500: oklch(64% 0.20 20); /* ≈ #cb4579 */
+  --color-pink-600: oklch(56% 0.17 20);
+  --color-pink-700: oklch(48% 0.13 20);
+
+  /* NAVY — #19335d */
+  --color-navy-50:  oklch(98% 0.01 255);
+  --color-navy-100: oklch(94% 0.02 255);
+  --color-navy-200: oklch(88% 0.03 255);
+  --color-navy-300: oklch(78% 0.04 255);
+  --color-navy-400: oklch(68% 0.05 255);
+  --color-navy-500: oklch(58% 0.055 255);
+  --color-navy-600: oklch(48% 0.05 255);
+  --color-navy-700: oklch(38% 0.045 255);
+  --color-navy-800: oklch(28% 0.04 255);
+  --color-navy-900: oklch(20% 0.035 255); /* ≈ #19335d */
+
+
+  /* Color Assignments */
+
+  --color-site-background: var(--color-yellow-200);
+  --color-main-background: var(--color-yellow-100);
+
+  --color-button-background: var(--color-aqua-400);
+  --color-button-active: var(--color-aqua-500);
+  --color-button-shadow: var(--color-aqua-500);
+  --color-button-ring: var(--color-aqua-600);
+
+  --color-button-secondary: var(--color-pink-500);
+  
+  --color-button-text: var(--color-yellow-100);
+  --color-button-text-active: var(--color-yellow-100);
+
+  --color-content-background: var(--color-yellow-50);
+  --color-content-border: var(--color-yellow-300);
+  
   --font-title: 'Fredoka', serif;
   --font-base: 'Fredoka', serif;
+  --color-content-text: black;
 
-  /* Nav Button */
-  --color-button-background: var(--color-teal-500);
-  --color-button-active: var(--color-teal-1000);
-  --color-button-shadow: var(--color-teal-1000);
-  --color-button-ring: var(--color-gray-300);
-  --color-button-text: var(--color-gray-200);
-  --color-button-text-active: var(--color-gray-200);
+  --color-title: var(--color-yellow-300);
+  --color-subtitle: var(--color-aqua-500);
+  
+  --color-text-shadow: black;
+  --color-title-shadow: black;
 
-  /* Content */
-  --color-content-background: var(--color-gold-200);
-  --color-content-border: var(--color-gray-300);
+  --color-title-border: var(--color-yellow-300);
 
-  --color-location-shadow: var(--color-gold-500);
+  --color-link: var(--color-pink-600);
+  --color-content-link: var(--color-pink-600);
 
-  --color-accent: var(--color-teal-500);
-  --color-tertiary: var(--color-teal-700);
+  --color-content_btt: var(--color-yellow-100);
+  --color-accent-lt: var(--color-aqua-800);
+
+  --color-location-shadow: var(--color-yellow-700);
+
+  --color-accent: var(--color-aqua-500);
+  --color-tertiary: var(--color-pink-500);
 
   --color-paypal: rgb(0, 48, 135);
 }
 
 @utility content-container {
-  @apply bg-gold-200 bg-radial-[at_50%_40%] from-content-background from-60% to-gold-500 p-3 sm:p-5 overflow-hidden relative shadow-lg rounded-lg border-1 border-content-border;
+  @apply bg-yellow-400 bg-radial-[at_50%_40%]
+    from-yellow-200 from-60%
+    to-yellow-300
+    p-3 sm:p-5 overflow-hidden relative shadow-lg
+    rounded-lg border border-content-border;
 }
 
 @utility title {
@@ -90,9 +109,9 @@
 }
 
 @utility title-text-shadow {
-  text-shadow: -1px -1px 3px var(--color-title-shadow),
-    1px -1px 3px var(--color-title-shadow), -1px 1px 3px var(--color-title-shadow),
-    1px 1px 3px var(--color-title-shadow);
+  text-shadow: 1px 1px 2px var(--color-title-shadow),
+    1px 1px 2px var(--color-title-shadow), 2px 1px 2px var(--color-title-shadow),
+    1px 1px 2px var(--color-title-shadow);
 }
 
 @utility layout-gap {
@@ -120,7 +139,7 @@ p a {
 
 
 .text-shadow {
-  text-shadow: -1px -1px 3px var(--color-text-shadow),
-    1px -1px 3px var(--color-text-shadow), -1px 1px 3px var(--color-text-shadow),
-    1px 1px 3px var(--color-text-shadow);
+   text-shadow: 1px 1px 2px var(--color-title-shadow),
+    1px 1px 2px var(--color-title-shadow), 2px 1px 2px var(--color-title-shadow),
+    1px 1px 2px var(--color-title-shadow);
 }

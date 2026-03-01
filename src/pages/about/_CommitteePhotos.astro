@@ -9,10 +9,10 @@ const { photos } = Astro.props;
 ---
 
 <h2
-  class="text-3xl sm:text-4xl text-gray-200 text-center tracking-wide mb-8 font-bold bg-accent"
+  class="text-3xl sm:text-4xl text-yellow-100 bg-aqua-400 text-center tracking-wide mb-8 font-bold bg-accent"
 >
   YOUR
-  <span class="text-gray-200 bg-teal-1000 px-2">HONK! FEST WEST</span>
+  <span class="text-aqua-300 bg-aqua-800 px-2">HONK! FEST WEST</span>
   COMMITTEE
 </h2>
 <div class="flex flex-wrap justify-around gap-6">
@@ -20,13 +20,13 @@ const { photos } = Astro.props;
     photos.map((member: { image_url: string; name: string }) => (
       <div class="flex flex-col items-center">
         <Image
-          class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-teal-1000"
+          class="rounded-full h-32 w-auto mb-2 border-[.5rem] border-aqua-500"
           src={member.image_url}
           alt={member.name}
           inferSize
         />
         <p class="content text-center ">
-          <span class="text-shadow text-gray-200 text-xl font-semibold">
+          <span class="text-shadow text-aqua-500 text-xl font-semibold">
             {member.name}
           </span>
         </p>
@@ -38,9 +38,8 @@ const { photos } = Astro.props;
 <style>
   .text-shadow {
     text-shadow:
-      -1px -1px 3px var(--colors-accent),
-      1px -1px 3px var(--colors-accent),
-      -1px 1px 3px var(--colors-accent),
-      1px 1px 3px var(--colors-accent);
+    px 1px 2px var(--color-title-shadow),
+    1px 1px 2px var(--color-title-shadow), 2px 1px 2px var(--color-title-shadow),
+    1px 1px 2px var(--color-title-shadow);
   }
 </style>

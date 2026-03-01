@@ -33,10 +33,6 @@ name = 'PITTONKATONK'
 location = 'Pittsburgh PA USA'
 url = 'http://pittonkatonk.org/'
 [["North America"]]
-name = 'CRASH DETROIT'
-location = 'Detroit MI USA'
-url = 'http://crashdetroit.org/'
-[["North America"]]
 name = 'HONK! TX'
 location = 'Austin TX USA'
 url = 'http://www.honktx.org/'
