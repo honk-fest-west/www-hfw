@@ -8,8 +8,6 @@ Bands at HONK! Fest West travel from all over the country to temporarily transfo
 
 We have called Georgetown our home since the festival’s inception, and have also celebrated in Columbia City, White Center, South Park, The Waterfront, Fremont/Gas Works Park, Capitol Hill, Central District, Pioneer Square, Downtown, Seattle Center, and West Seattle.
 
-**Join us! May 29 - May 31.**
-
+**Join us! May 29 - May 31, 2026**
 <!-- Note: To update festival dates, modify src/data/festival/days.toml -->
-
-We can't wait to kick off Summer in Seattle with you in 2026.
+We can't wait to kick off Summer in Seattle with you in 2026!

@@ -8,7 +8,7 @@ const { groups } = Astro.props as { groups: Groups };
 ---
 
 <div class="content">
-  <h3 class="text-shadow text-lg text-accent font-semibold">
+  <h3 class="text-lg text-subtitle font-bold">
     Board of Directors
   </h3>
   <ul>
@@ -22,7 +22,7 @@ const { groups } = Astro.props as { groups: Groups };
   </ul>
 </div>
 <div class="content">
-  <h3 class="text-shadow text-lg text-accent font-semibold">
+  <h3 class="text-lg text-subtitle font-bold">
     Event Production
   </h3>
   <ul>
@@ -36,7 +36,7 @@ const { groups } = Astro.props as { groups: Groups };
   </ul>
 </div>
 <div class="content">
-  <h3 class="text-shadow text-lg text-accent font-semibold">
+  <h3 class="text-lg text-subtitle font-bold">
     Creative & Communications
   </h3>
   <ul>
@@ -50,7 +50,7 @@ const { groups } = Astro.props as { groups: Groups };
   </ul>
 </div>
 <div class="content">
-  <h3 class="text-shadow text-lg text-accent font-semibold">Fundraising</h3>
+  <h3 class="text-lg text-subtitle font-bold">Fundraising</h3>
   <ul>
     {
       groups['Fundraising'].map((member) => (
@@ -60,7 +60,7 @@ const { groups } = Astro.props as { groups: Groups };
       ))
     }
   </ul>
-  <h3 class="text-shadow text-lg text-accent font-semibold">Outreach</h3>
+  <h3 class="text-lg text-subtitle font-bold">Outreach</h3>
   <ul>
     {
       groups['Outreach'].map((member) => (
@@ -76,7 +76,7 @@ const { groups } = Astro.props as { groups: Groups };
   <div class="rounded-full overflow-hidden animate-bounce">
     <a
       href="/volunteer"
-      class="text-shadow block bg-tertiary rounded text-xl text-gray-200 mb-5 last:mb-0 font-base font-bold py-2 px-4 cursor-pointer text-center ease-in-out hover:scale-105 hover:bg-accent transition ease-in-out"
+      class="text-shadow block bg-tertiary rounded text-xl text-yellow-100 mb-5 last:mb-0 font-base font-bold py-2 px-4 cursor-pointer text-center ease-in-out hover:scale-105 hover:bg-accent transition ease-in-out"
     >
       YOU!</a
     >
