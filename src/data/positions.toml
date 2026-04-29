@@ -13,7 +13,7 @@ id = 'general_committee_helpers'
 title = 'General Committee Helpers (Super-Volunteers)'
 description = 'Assist different Committees with specific tasks as needed and with what fits your skill set and desires. This could include assisting the housing coordinator match housing to bands; assisting the marketing lead find calendars to post the event; assisting the outreach team with community notifications; or even just helping out the merch lead prepare t-shirts the week before the festival. It’s a cornucopia of opportunity!'
 
-[[open]]
+[[closed]]
 id = 'social_media_lead'
 title = 'Social Media Lead'
 description = 'The Social Media Lead is responsible for managing the Facebook page Twitter account Instagram page YouTube and any other social media that we may have. This includes posting relevant content answering direct emails and posts retweeting/reposting tagging posting events and posting advertising as requested'

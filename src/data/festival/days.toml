@@ -40,9 +40,9 @@ locations = [
 		"47.558800,-122.287550",
 	],
 ]
-stages = ["columbia_south", "edmunds", "columbia_north", "gateway"]
+stages = ["columbia_south", "edmunds", "columbia_north"]
 schedule = [
-	[ "",			"",			"", ""],
+	[ "",			"",			""],
 ]
 
 

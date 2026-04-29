@@ -58,7 +58,7 @@ function getDayTitle(day: Day) {
 }
 ---
 
-<Layout title="2025 Festival" transition={false}>
+<Layout title="2026 Festival" transition={false}>
   <div class="hidden lg:block">
     <div class="content-container mb-10">
       <div class="flex justify-around items-center">
@@ -79,7 +79,10 @@ function getDayTitle(day: Day) {
           <span class="content font-semibold">Mobile HONK!</span>
         </div>
       </div>
-    </div>
+      <div class="flex-none px-20 flex flex-col items-center gap-2">
+              <ul> <span  class="block font-base font-bold antialiased text-base sm:text-lg flex-none z-10 mt-5 text-link"> More schedule details coming soon!</span></ul>
+      </div>
+      </div>
     {
       festival.daysSorted.map((day) => (
         <DaySchedule day={day} daySchedule={getSchedule(day)} />
