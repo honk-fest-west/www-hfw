@@ -16,7 +16,7 @@ image_url = 'https://ik.imagekit.io/hfw/AdamHFW.jpeg'
 name = 'Adam Fryer'
 
 [[photos]]
-image_url = 'https://ik.imagekit.io/hfw/circle-logo-sticker.png'
+image_url = 'https://ik.imagekit.io/hfw/angelinaHFW?updatedAt=1777697175179'
 name = 'Angelina Allen'
 
 [[photos]]
@@ -48,11 +48,14 @@ name = 'Josh Chan'
 
 [[groups."Finance & Risk"]]
 role = 'Chair'
-name = 'Jeanette'
+name = 'Adam'
 
 [[groups."Fundraising"]]
-role = 'Chair & Grants Manager'
-name = 'Jeanette'
+role = 'Chair'
+name = 'Vacant'
+[[groups."Fundraising"]]
+role = 'Grants Manager'
+name = 'Dee'
 [[groups."Fundraising"]]
 role = 'Events'
 name = 'Erik Ness'
@@ -77,7 +80,7 @@ role = "Website"
 name = "Anna"
 [[groups."Creative & Communications"]]
 role = "Social Media"
-name = "Juliana"
+name = "Colin, Paul, & Jessie"
 
 [[groups."Outreach"]]
 role = 'Chair'
@@ -94,7 +97,7 @@ name = 'Luis, Janine'
 
 [[groups."Event Production"]]
 role = 'Chair'
-name = 'Ginny'
+name = 'Ginny Trufan'
 [[groups."Event Production"]]
 role = 'Booking Lead'
 name = 'Pete'
@@ -103,4 +106,4 @@ role = 'Med Ops'
 name = 'Grace Jones'
 [[groups."Event Production"]]
 role = 'Permitting'
-name = 'Jeanette'
+name = 'Josh'
