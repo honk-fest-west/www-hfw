@@ -16,9 +16,16 @@ locations = [
 		"47.549100,-122.317450",
 	],
 ]
-stages = ["jules", "coffee", "electric", "underpass"]
+stages = ["jules", "electric", "coffee", "underpass"]
 schedule = [
-	[ "",					"",								"",							"" ],
+	[ "524",					"",	             "",							"rolling" ],
+	[ "better",				 "vamola",    "franklin",		  				      "neon"],
+	[ "brasscheeks",		"mutiny",	      "agab",			             "soundwave" ],
+	[ "tmb",                "tacomarama",    "sticks",							"bluethunder" ],
+	[ "pjamrs",		       "baque",            "8bit",								"filthy" ],
+	[ "sindikat",	         "ballard",        "bwb",		 				"solidarity" ],
+	[ "",		               "",           "hartford",				         "chaotic" ],
+	[ "",			        	"",	     	"calreapers",		                 "" ],
 ]
 
 
@@ -40,9 +47,25 @@ locations = [
 		"47.558800,-122.287550",
 	],
 ]
-stages = ["columbia_south", "edmunds", "columbia_north"]
+stages = ["columbia_south", "edmunds", "columbia_north", "street"]
 schedule = [
-	[ "",			"",			""],
+	[ "calreapers",			"",			"",             ""],
+	[ "calreapers",			"",			"", 	        ""],
+	[ "8bit",			"sticks",		"", 	       "rcdl"],
+	[ "filthy",			"agab",			"vamola", 	   "future"],
+	[ "bwb",			"brassless",	"sindikat",   "agents"],
+	[ "hartford",	     "tmb",			"tacomarama", 	"riot"],
+	[ "pjamrs",			"seismic",		"rolling", 	   "chaotic"],
+	[ "524",			"8bit",			"bwb",   	  "solidarity"],
+	[ "agab",			"artesian",		"agents", 	"sonicbloom"],
+	[ "sticks",			"neon",			"karma", 	   "tmb"],
+	[ "vamola",          "tacomarama",   "riot",      "sindikat"],
+	[ "solidarity",		 "pjamrs",		"chaotic",   	"seismic"],
+	[ "artesian",		  "filthy",		"brassless", 	"karma"],
+	[ "rolling",			"artesian",	  "524",    	"neon"],
+	[ "",			         "",			"", 	      ""],
+	[ "allstars",			"",			    "", 	      ""],
+
 ]
 
 
@@ -66,5 +89,17 @@ locations = [
 ]
 stages = ["pratt_field", "pratt_hill"]
 schedule = [
-	[ "","" ],
+	[ "","vashon" ],
+	[ "","hartford" ],
+	[ "","chaotic" ],
+	[ "sticks","agents" ],
+	[ "filthy","pjamrs" ],
+	[ "neon","brassless" ],
+	[ "tacomarama","jazzed" ],
+	[ "baque","sindikat" ],
+	[ "rolling","bwb" ],
+	[ "8bit","524" ],
+	[ "tmb","agab" ],
+	[ "solidarity","" ],
+	[ "allstars","" ],
 ]

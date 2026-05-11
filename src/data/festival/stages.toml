@@ -26,16 +26,16 @@ location = "47.560180,-122.287153"
 name = "South Park"
 location = "47.559480,-122.287473"
 
-[gateway]
-name = "Gateway Park"
-location = "47.558524,-122.28659"
+[street]
+name = "37th Ave Stage"
+location = "47.558421, -122.286158"
 
 [rac]
 name = "Rainier Arts Stage"
 location = "47.556673,-122.287607"
 
 [edmunds]
-name = "Street Stage"
+name = "Edmunds St Stage"
 location = "47.558683,-122.288107"
 
 [pratt_hill]

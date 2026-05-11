@@ -61,11 +61,11 @@ width = 200
 height = 200
 format = "jpg"
 
-[badweather]
+[bwb]
 name = "Bad Weather Brass"
 hometown = "Seattle, WA"
 infoUrl = "https://www.facebook.com/people/Bad-Weather-Brass/61574985735191/#"
-[badweather.image]
+[bwb.image]
 src = "https://ik.imagekit.io/honkfestwest/bands/badweather_wuXgwSNcV.jpg?updatedAt=1747153956732"
 width = 400
 height = 400
@@ -172,6 +172,18 @@ width = 200
 height = 200
 format = "jpg"
 
+[solidarity]
+name = "Brass Solidarity"
+hometown = "Minneapolis, MN"
+infoUrl = "https://brasssolidarity.com/"
+description = "Brass Solidarity is a collective of musicians, activists, and community members using their sound as a voice for justice.  We perform as a sonic occupation to heal, spread joy, inspire hope, and share love while dismantling white supremacy and oppressive constructs. We were birthed from the movement for Black Liberation in George Floyd square, meeting there weekly as a continuous offering to the community. The music is by the people and for the people as a passionate campaign to celebrate community, educate, and uplift marginalized groups."
+[solidarity.image]
+src = "https://ik.imagekit.io/hfw/brasssolidarity.png"
+width = 200
+height = 200
+format = "png"
+
+
 [brothers]
 name = "Brothers of Brass"
 hometown = "Denver, CO"
@@ -184,12 +196,16 @@ hometown = "Seattle, WA"
 infoUrl = "https://www.burnoutbrassband.com/"
 description = "Founded in June of 2021, Burn Out Brass Band is a Queer HONK! band roving the streets and bringing music to the ears of tired Queers and allies. We've got a team of catgirls, bois, butch punks, daddies and xaddies, them fatales, and perhaps even a few cryptids. Our mission is to celebrate Queer joy and build supportive community all while getting those booties dancing to your favorite gay bar sing-alongs and antifascist anthems!"
 
-[california]
+[calreapers]
 name = "California Repercussions"
 hometown = "San Francisco Bay Area, CA"
 infoUrl = "https://www.facebook.com/CalReapers"
 description = "The California Repercussions are a 30 -50-piece band made of equal parts brass, woodwinds, percussion, and party. Based in the San Francisco Bay Area, the 'Reapers' perform often at public and private events around Northern California. But we also thrill crowds on international tours. We are mostly former members of various college marching bands who may have graduated from school, but never fully grew up. We don’t just stand there and play, we’re there to have fun. Horns wave in the air, bodies dance, and audience members often find themselves part of the show! Though we’re a large band, the show isn’t a constant wall of sound: we mix the power tunes in with others that feature a section of the band or a talented soloist. With the instrumentation and mobility of a marching band, we can play just about anywhere, indoors or outdoors, with no stage or amplification required."
-
+[calreapers.image]
+src = "https://ik.imagekit.io/hfw/CRlogoOnly.png"
+width = 200
+height = 200
+format = "png"
 
 [carnival]
 name = "Carnival Band"
@@ -241,11 +257,6 @@ width = 200
 height = 106
 format = "jpg"
 
-[deadalert]
-name = "Dead Alert"
-hometown = "Seattle, WA"
-description = ""
-
 [emporer]
 name = "Emperor Norton's Stationary Marching Band"
 hometown = "Somerville, MA"
@@ -255,10 +266,21 @@ description = ""
 [filthy]
 name = "Filthy FemCorps"
 hometown = "Seattle, WA"
-infoUrl = "http://www.filthyfemcorps.com/"
+infoUrl = "https://www.filthyfemcorps.com/about-us"
 description = "We’re a community of talented musicians, united by our shared love of music and commitment to celebrating the incredible artistry of women, non-binary, and trans artists. Since our formation in 2016 on the streets of Seattle, we’ve marched to the beat of our down drums, breaking down barriers and spreading joy wherever we go."
 [filthy.image]
 src = "https://ik.imagekit.io/honkfestwest/bands/filthy_MT5uIIse1.jpg?updatedAt=1746834571336"
+width = 200
+height = 200
+format = "jpg"
+
+[karma]
+name = "Fighting Instruments of Karma Marching Chamber Band/Orchestra"
+hometown = "Portland, OR"
+infoUrl = "https://www.facebook.com/FightingInstrumentsofKarma/"
+description = "Our journey began more than 50 years ago, when the stage musicians for the vaudeville acts at the Oregon Country Fair decided to parade around the path and onto the stage, while luring patrons to the stage pied-piper style (bigger audience = bigger hat). As the music for the acts covers a wide variety of styles, the band is comprised of accomplished classically trained musicians who are dedicated to giving the styles their due reverence. In order for the band to continue indefinitely into the future, the experienced members recruit promising younger players, forming a multi-generational force that hopes to help the audience find their own joyful spark and learn how to share it willingly."
+[karma.image]
+src = "https://ik.imagekit.io/hfw/fightingkarma.jpg"
 width = 200
 height = 200
 format = "jpg"
@@ -268,6 +290,17 @@ name = "Fly By"
 hometown = "Boston, MA"
 infoUrl = "https://flybybrassband.com/"
 description = "Fly By Brass Band is a diverse group of musicians based in the Boston area that specializes in bringing live acoustic horn harmonies to the people.  Born from the local HONK! Festival scene, hailing from varied musical backgrounds, and brought together by their love for brass, beats, and boundless energy.  Fly By's eclectic repertoire draws on many inspirations, from New Orleans-inspired second-line jazz to Balkan, klezmer, funk, Latin, rock, and swing.  The main theme is: \"Does this make us feel good and would it delight others?\""
+
+[franklin]
+name = "Franklin High School"
+hometown = "Seattle, WA"
+infoUrl = "https://franklinhs.seattleschools.org/academics/arts-programs/#g01af18742682"
+description = "This band is for all intermediate and advanced band members at Franklin High School, a title one local, Seattle school.\""
+[franklin.image]
+src = "https://ik.imagekit.io/hfw/franklinhs.png"
+width = 200
+height = 200
+format = "jpg"
 
 [funkrust]
 name = "Funkrust Brass Band"
@@ -313,6 +346,20 @@ hometown = "Somerville, MA"
 infoUrl = "https://www.goodtroublebrassband.org/"
 description = "Good Trouble Brass Band is a large, not-for-profit, “raucous, stomp-your-foot-and-belt-out-the-choruses” activist New Orleans-style street band based in the Boston area. Our mission involves collaborating with activists and organizations working for a variety of progressive causes."
 
+[hartford]
+name = "Hartford Hot Several"
+hometown = "Hartford, CT"
+infoUrl = "https://drive.google.com/drive/folders/1WO2k6tIspmt4BY8wz62tWIBVZOIPIftP?usp=share_link"
+description = "We're a Hartford, Connecticut-rooted brass band bringing a mix of rock, hiphop, Latin American & New Orleans second line inspired funk & ruckus to make you smile & dance! Call and if several of us are available we will bring the funk to parties, weddings, funerals, parades, festivals, bar/bat mitzvahs, protests, in the streets, under bridges, in bars and chain furniture stores - anywhere there's a 96” clearance (for the sousaphone). Our original grooves and brassy interpretations of pop & classic hits have been making people move for over a decade in over SIX states!"
+[hartford.image]
+src = "https://ik.imagekit.io/hfw/hartfordhotseveral.png"
+width = 300
+height = 300
+format = "png"
+
+
+
+
 [allstars]
 name = "HONK! All-Stars (open jam)"
 hometown = "Everywhere"
@@ -334,6 +381,18 @@ name = "Hungry March Band"
 hometown = "Brooklyn, NYC"
 infoUrl = "http://hungrymarchband.com"
 description = "Celebrating over 20 years of bringing live musical spectacle to the people of New York City and beyond"
+
+
+[rolling]
+name = "Keep It Rolling Brass Band"
+hometown = "New Orleans, LA"
+infoUrl = "https://www.keepitrollingbrassband.com/"
+description = "The Keep It Rolling Brass Band is a young, talented group of musicians from New Orleans, Louisiana. The band was founded in 2017 while the members were still in high school. They cut their chops the same way as most of the legendary brass bands of the past 50 years: by putting in time playing in storied locales like Jackson Square, Bourbon Street, the French Market, and Frenchmen Street.  With plans to soon put their music on wax, audiences can rest assured that Keep It Rolling Brass Band will stay true to their name by continuing to push the brass band tradition forward."
+[rolling.image]
+src = "https://ik.imagekit.io/hfw/keepitrolling.png"
+width = 200
+height = 200
+format = "png"
 
 [khmer]
 name = "Khmer Amarak Performing Arts"
@@ -477,13 +536,24 @@ hometown = "Seattle, WA"
 infoUrl = "https://www.nhl.com/kraken/fans/game-presentation"
 description = "We are the official band for the Seattle Kraken!  We play at all home Kraken games and for events around our community.  We are wrapping up our second season and are committed to excellence, inclusion, and joy!"
 
-[reigncity]
+[riot]
 name = "Reign City Riot"
 hometown = "Seattle, WA"
 infoUrl = "https://rainbowcity.org/ensembles/reign-city-riot/"
 description = "Reign City Riot is Seattle's most inclusive sports band, supplying high-energy entertainment before, during, and after home matches for Reign FC, Seattle's NWSL soccer team. A joint venture of Reign FC and Rainbow City Performing Arts, Reign City Riot is unique in its grass-roots make-up of volunteer community members from across the greater Seattle area, united by our passion for music, women's sports, and sharing the spirit of the Reign!"
-[reigncity.image]
+[riot.image]
 src = "https://ik.imagekit.io/honkfestwest/bands/reigncity_Fs9mV-zW_T.jpg?updatedAt=1746834571747"
+width = 218
+height = 300
+format = "jpg"
+
+[rcdl]
+name = "Rainbow City Drumline"
+hometown = "Seattle, WA"
+infoUrl = "https://rainbowcity.org/ensembles/drumline/"
+description = "Rainbow City Drumline (RCD) has been the beating heart of Seattle parades for over twenty five years! We march and perform in festivals across western Washington, such as Seattle Pride, as well as play throughout all OL Reign home soccer matches from March to October.  We're a tight knit group of drummers with a communal family atmosphere to lift us all up together to have an amazing time playing for the public."
+[rcdl.image]
+src = "https://ik.imagekit.io/hfw/rcdrumline.png"
 width = 218
 height = 300
 format = "jpg"
@@ -504,6 +574,17 @@ name = "Seattle University Drumline"
 hometown = "Seattle, WA"
 infoUrl = "https://goseattleu.com/sports/2020/1/15/drumline.aspx"
 description = "The Seattle U Drumline began in 2012, and has grown a lot in the short time since its inception. Drumline plays at all basketball games, as well as some soccer and volleyball games."
+
+[jazzed]
+name = "Seattle JazzED Second Line Project"
+hometown = "Seattle, WA"
+infoUrl = "https://www.seattlejazzed.org/aboutus"
+description = "JazzED’s Second Line Project brings the vibrant jazz tradition of second line to Seattle‑area students. It invites students to fill the streets with music and joy while being part of something powerful and fun!"
+[jazzed.image]
+src = "https://ik.imagekit.io/hfw/jazzed.png"
+width = 300
+height = 300
+format = "jpg"
 
 [seismic]
 name = "Seismic Sound Drumline"
@@ -531,6 +612,17 @@ src = "https://ik.imagekit.io/honkfestwest/bands/sindikat_FBrKLkvw3.jpg?updatedA
 width = 200
 height = 250
 format = "jpg"
+
+[sonicbloom]
+name = "Sonic Bloom Drumline"
+hometown = "Seattle, WA"
+infoUrl = "https://www.instagram.com/sonicbloomdrumline/"
+description = "We are Sonic Bloom Drumline -- a nonprofit youth drumline for cis and trans girls, women, and non-binary individuals. We are for beginner- to intermediate-level youth between the ages of 15 and 23 who want to play marching bass drum, cymbals, snare drum, or tenor drums. Sonic Bloom's mission is to provide a high-quality learning environment where girls, women, and non-binary youth can grow as musicians, performers, and individuals. Our goal is to build a community where these young drummers have fun and can feel safe and empowered to be themselves in a culture that tends to be male-dominated."
+[sonicbloom.image]
+src = "https://ik.imagekit.io/hfw/sonicbloom.png"
+width = 300
+height = 300
+format = "png"
 
 [jambalaya]
 name = "Soul Jambalaya"
@@ -587,6 +679,17 @@ width = 200
 height = 200
 format = "jpg"
 
+[524]
+name = "The 524"
+hometown = "Seattle, WA"
+infoUrl = "https://www.524brass.com/"
+description = "Based out of San Diego, CA, The 524 is a 9-piece brass band that promises electric vibes and irrepressible dancing. Both steeped in tradition and committed to cultivating original sounds, we take influences from the likes of No BS! Brass, Michael Jackson, Cut Capers, and James Brown to provide you a show you won’t soon forget."
+[524.image]
+src = "https://ik.imagekit.io/hfw/524fullcolor.png"
+width = 300
+height = 300
+format = "png"
+
 [m9]
 name = "The m9"
 hometown = "Seattle, WA"
@@ -620,11 +723,16 @@ width = 148
 height = 148
 format = "jpg"
 
-[vashonk]
-name = "VasHonK!"
+[vashon]
+name = "Vashon Community Street Band"
 hometown = "Vashon, WA"
-description = "VasHonK! is a DIY community street band playing parade, party, and funeral music for the  people of Vashon-Maury Island. Open to brass/wind/percussion players of any skill level from beginner to GOAT, we focus on learning, fun, and fellowship."
-infoUrl = "https://facebook.com/vashonkband"
+description = "We are Vashon’s Community Street Band; a Brass, Woodwind, and Percussion crew open to members age 13 and up. We welcome all levels of players from beginners-to-ringers. Our practices and performances are substance-free."
+infoUrl = "https://vashoncommunitystreetband.org/"
+[vashon.image]
+src = "https://ik.imagekit.io/hfw/vashon.png"
+width = 200
+height = 200
+format = "png"
 
 [window]
 name = "Window Smashing Job Creators"
