@@ -7,8 +7,6 @@ import "@thegoldendino/festival-app/default.css";
 
 import DaySchedule from "./_DaySchedule.astro";
 
-// import logoImg from '/src/assets/images/logos/2023-logo-white.png';
-
 // @ts-ignore
 import days from "@data/festival/days.toml";
 // @ts-ignore
@@ -56,6 +54,26 @@ function getDayTitle(day: Day) {
   const monthDay = dateParts[1];
   return `${dayOfWeek} ${monthDay}`;
 }
+
+
+function getScheduleUpdate() {
+
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  const todayFormatted = `${month}-${day}-${year}`;
+
+  const timeFormatted = today.toLocaleTimeString('en-US', {
+    timeZone: 'America/Los_Angeles',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  });
+
+  return `${todayFormatted} ${timeFormatted}`;
+
+}
 ---
 
 <Layout title="2026 Festival" transition={false}>
@@ -80,8 +98,10 @@ function getDayTitle(day: Day) {
         </div>
       </div>
       <div class="flex-none px-20 flex flex-col items-center gap-2">
-              <ul> <span  class="block font-base font-bold antialiased text-base sm:text-lg flex-none z-10 mt-5 text-link">*Any changes to the schedule will be updated here*</span></ul>
-      </div>
+              <ul> <span  class="block font-base font-bold antialiased text-base sm:text-lg flex-none z-10 mt-3 text-link">*Any changes to the schedule will be reflected here*</span></ul>
+                            <ul> <span  class="block font-base font-bold antialiased text-base sm:text-lg flex-none z-10 text-link">Last updated: {getScheduleUpdate()}</span></ul>
+
+            </div>
       </div>
     {
       festival.daysSorted.map((day) => (
