@@ -23,7 +23,7 @@ schedule = [
 	[ "brasscheeks",		"mutiny",	      "agab",			             "soundwave" ],
 	[ "tmb",                "tacomarama",    "sticks",							"bluethunder" ],
 	[ "pjamrs",		       "baque",            "8bit",								"filthy" ],
-	[ "sindikat",	         "ballard",        "bwb",		 				"solidarity" ],
+	[ "",	               "ballard",        "bwb",		 				"solidarity" ],
 	[ "",		               "",           "hartford",				         "chaotic" ],
 	[ "",			        	"",	     	"calreapers",		                 "" ],
 ]
@@ -90,16 +90,15 @@ locations = [
 stages = ["pratt_field", "pratt_hill"]
 schedule = [
 	[ "","vashon" ],
-	[ "","hartford" ],
-	[ "","chaotic" ],
+	[ "jazzed","hartford" ],
+	[ "tmb","chaotic" ],
 	[ "sticks","agents" ],
 	[ "filthy","pjamrs" ],
 	[ "neon","brassless" ],
-	[ "tacomarama","jazzed" ],
+	[ "","tacomarama" ],
 	[ "baque","sindikat" ],
 	[ "rolling","bwb" ],
 	[ "8bit","524" ],
-	[ "tmb","agab" ],
-	[ "solidarity","" ],
-	[ "allstars","" ],
+	[ "solidarity","agab" ],
+	[ "","allstars" ]
 ]
