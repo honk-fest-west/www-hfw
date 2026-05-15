@@ -476,7 +476,7 @@ format = "jpg"
 [neon]
 name = "Neon Brass Party"
 hometown = "Seattle, WA"
-infoUrl = "https://www.neonbrassparty.com/"
+infoUrl = "http://www.neonbrassparty.com" 
 description = "Neon Brass Party is a street band based out of Seattle, WA.  We believe in creating space in the world to celebrate our individuality together and amplify joy throughout the community through our music. Our goal is to be the party and get people movin and groovin with us wherever we might show up. We play various styles of music ranging from Latin to funk to hip-hop, so long as it grooves, we'll play it!"
 [neon.image]
 src = "https://ik.imagekit.io/honkfestwest/bands/neon_wInXbsBDWu.jpg?updatedAt=1746834581402"
