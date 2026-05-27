@@ -58,7 +58,7 @@ role = 'Grants Manager'
 name = 'Dee'
 [[groups."Fundraising"]]
 role = 'Events'
-name = 'Erik Ness'
+name = 'Erik Ness, João Paulo "JP" Rechi Vita'
 
 [[groups."Creative & Communications"]]
 role = "Chair"
@@ -100,7 +100,7 @@ role = 'Chair'
 name = 'Ginny Trufan'
 [[groups."Event Production"]]
 role = 'Booking Lead'
-name = 'Pete'
+name = 'Pete, João Paulo "JP" Rechi Vita'
 [[groups."Event Production"]]
 role = 'Med Ops'
 name = 'Grace Jones'
