@@ -6,6 +6,26 @@ url = "https://www.facebook.com/HONKFestWest/"
 id = "instagram"
 name = "Instagram"
 url = "https://www.instagram.com/honkfestwest/"
+
+
+[[media]]
+id = '2026-espresso-buzz'
+year = 2026
+name = 'Espresso Buzz'
+type = 'photos'
+url = 'https://www.espressobuzz.net/Events/2026/HonkFest'
+[[media]]
+id = '2026-wayne-buck'
+year = 2026
+name = 'Wayne Buck'
+type = 'photos'
+url = 'https://www.flickr.com/photos/waynebuck/albums/72177720333304084/'
+[[media]]
+id = '2026-kevin-freitas'
+year = 2026
+name = 'Kevin Freitas'
+type = 'photos'
+url = 'https://kevinfreitas.net/galleries/honk-2026/'
 [[media]]
 id = '2025-espresso-buzz'
 year = 2025
